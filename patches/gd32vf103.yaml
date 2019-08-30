@@ -1,0 +1,10 @@
+_svd: ../GD32VF103.svd
+
+RTC:
+  "PSCH,PSCL":
+    _modify:
+      PSC:
+        access: write-only
+  _modify:
+    "ALRMH,ALRML":
+      access: write-only
