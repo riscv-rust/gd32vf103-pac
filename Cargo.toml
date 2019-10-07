@@ -2,6 +2,7 @@
 name = "gd32vf103-pac"
 version = "0.1.0"
 authors = ["The RISC-V Team <risc-v@teams.rust-embedded.org>"]
+repository = "https://github.com/riscv-rust/gd32vf103-pac"
 categories = ["embedded", "hardware-support", "no-std"]
 description = "Peripheral access API for GD32VF103 chips"
 keywords = ["riscv", "gd32", "register", "peripheral"]
