@@ -1,41 +1,11 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-impl super::DAC1_DO {
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-}
-#[doc = r" Value of the field"]
-pub struct DAC1_DOR {
-    bits: u16,
-}
-impl DAC1_DOR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
-}
+#[doc = "Reader of register DAC1_DO"]
+pub type R = crate::R<u32, super::DAC1_DO>;
+#[doc = "Reader of field `DAC1_DO`"]
+pub type DAC1_DO_R = crate::R<u16, u16>;
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:11 - DAC1 data output"]
-    #[inline]
-    pub fn dac1_do(&self) -> DAC1_DOR {
-        let bits = {
-            const MASK: u16 = 0x0fff;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u16
-        };
-        DAC1_DOR { bits }
+    #[inline(always)]
+    pub fn dac1_do(&self) -> DAC1_DO_R {
+        DAC1_DO_R::new((self.bits & 0x0fff) as u16)
     }
 }

@@ -1,104 +1,32 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-impl super::GRSTATP_DEVICE {
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EPNUMR {
-    bits: u8,
-}
-impl EPNUMR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct BCOUNTR {
-    bits: u16,
-}
-impl BCOUNTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct DPIDR {
-    bits: u8,
-}
-impl DPIDR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RPCKSTR {
-    bits: u8,
-}
-impl RPCKSTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
+#[doc = "Reader of register GRSTATP_Device"]
+pub type R = crate::R<u32, super::GRSTATP_DEVICE>;
+#[doc = "Reader of field `EPNUM`"]
+pub type EPNUM_R = crate::R<u8, u8>;
+#[doc = "Reader of field `BCOUNT`"]
+pub type BCOUNT_R = crate::R<u16, u16>;
+#[doc = "Reader of field `DPID`"]
+pub type DPID_R = crate::R<u8, u8>;
+#[doc = "Reader of field `RPCKST`"]
+pub type RPCKST_R = crate::R<u8, u8>;
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:3 - Endpoint number"]
-    #[inline]
-    pub fn epnum(&self) -> EPNUMR {
-        let bits = {
-            const MASK: u8 = 0x0f;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        EPNUMR { bits }
+    #[inline(always)]
+    pub fn epnum(&self) -> EPNUM_R {
+        EPNUM_R::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bits 4:14 - Byte count"]
-    #[inline]
-    pub fn bcount(&self) -> BCOUNTR {
-        let bits = {
-            const MASK: u16 = 0x07ff;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u16
-        };
-        BCOUNTR { bits }
+    #[inline(always)]
+    pub fn bcount(&self) -> BCOUNT_R {
+        BCOUNT_R::new(((self.bits >> 4) & 0x07ff) as u16)
     }
     #[doc = "Bits 15:16 - Data PID"]
-    #[inline]
-    pub fn dpid(&self) -> DPIDR {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 15;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        DPIDR { bits }
+    #[inline(always)]
+    pub fn dpid(&self) -> DPID_R {
+        DPID_R::new(((self.bits >> 15) & 0x03) as u8)
     }
     #[doc = "Bits 17:20 - Recieve packet status"]
-    #[inline]
-    pub fn rpckst(&self) -> RPCKSTR {
-        let bits = {
-            const MASK: u8 = 0x0f;
-            const OFFSET: u8 = 17;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        RPCKSTR { bits }
+    #[inline(always)]
+    pub fn rpckst(&self) -> RPCKST_R {
+        RPCKST_R::new(((self.bits >> 17) & 0x0f) as u8)
     }
 }

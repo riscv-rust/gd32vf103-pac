@@ -1,720 +1,400 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::CTL0 {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register CTL0"]
+pub type R = crate::R<u32, super::CTL0>;
+#[doc = "Writer for register CTL0"]
+pub type W = crate::W<u32, super::CTL0>;
+#[doc = "Register CTL0 `reset()`'s with value 0x4444_4444"]
+impl crate::ResetValue for super::CTL0 {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0x4444_4444
     }
 }
-#[doc = r" Value of the field"]
-pub struct CTL7R {
-    bits: u8,
-}
-impl CTL7R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct MD7R {
-    bits: u8,
-}
-impl MD7R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CTL6R {
-    bits: u8,
-}
-impl CTL6R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct MD6R {
-    bits: u8,
-}
-impl MD6R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CTL5R {
-    bits: u8,
-}
-impl CTL5R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct MD5R {
-    bits: u8,
-}
-impl MD5R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CTL4R {
-    bits: u8,
-}
-impl CTL4R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct MD4R {
-    bits: u8,
-}
-impl MD4R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CTL3R {
-    bits: u8,
-}
-impl CTL3R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct MD3R {
-    bits: u8,
-}
-impl MD3R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CTL2R {
-    bits: u8,
-}
-impl CTL2R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct MD2R {
-    bits: u8,
-}
-impl MD2R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CTL1R {
-    bits: u8,
-}
-impl CTL1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct MD1R {
-    bits: u8,
-}
-impl MD1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CTL0R {
-    bits: u8,
-}
-impl CTL0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct MD0R {
-    bits: u8,
-}
-impl MD0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _CTL7W<'a> {
+#[doc = "Reader of field `CTL7`"]
+pub type CTL7_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CTL7`"]
+pub struct CTL7_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CTL7W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CTL7_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 30;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 30)) | (((value as u32) & 0x03) << 30);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _MD7W<'a> {
+#[doc = "Reader of field `MD7`"]
+pub type MD7_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `MD7`"]
+pub struct MD7_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _MD7W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> MD7_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 28;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 28)) | (((value as u32) & 0x03) << 28);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CTL6W<'a> {
+#[doc = "Reader of field `CTL6`"]
+pub type CTL6_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CTL6`"]
+pub struct CTL6_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CTL6W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CTL6_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 26;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 26)) | (((value as u32) & 0x03) << 26);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _MD6W<'a> {
+#[doc = "Reader of field `MD6`"]
+pub type MD6_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `MD6`"]
+pub struct MD6_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _MD6W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> MD6_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 24;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 24)) | (((value as u32) & 0x03) << 24);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CTL5W<'a> {
+#[doc = "Reader of field `CTL5`"]
+pub type CTL5_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CTL5`"]
+pub struct CTL5_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CTL5W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CTL5_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 22;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 22)) | (((value as u32) & 0x03) << 22);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _MD5W<'a> {
+#[doc = "Reader of field `MD5`"]
+pub type MD5_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `MD5`"]
+pub struct MD5_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _MD5W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> MD5_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 20;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 20)) | (((value as u32) & 0x03) << 20);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CTL4W<'a> {
+#[doc = "Reader of field `CTL4`"]
+pub type CTL4_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CTL4`"]
+pub struct CTL4_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CTL4W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CTL4_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 18;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 18)) | (((value as u32) & 0x03) << 18);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _MD4W<'a> {
+#[doc = "Reader of field `MD4`"]
+pub type MD4_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `MD4`"]
+pub struct MD4_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _MD4W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> MD4_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 16)) | (((value as u32) & 0x03) << 16);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CTL3W<'a> {
+#[doc = "Reader of field `CTL3`"]
+pub type CTL3_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CTL3`"]
+pub struct CTL3_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CTL3W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CTL3_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 14;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 14)) | (((value as u32) & 0x03) << 14);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _MD3W<'a> {
+#[doc = "Reader of field `MD3`"]
+pub type MD3_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `MD3`"]
+pub struct MD3_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _MD3W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> MD3_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 12)) | (((value as u32) & 0x03) << 12);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CTL2W<'a> {
+#[doc = "Reader of field `CTL2`"]
+pub type CTL2_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CTL2`"]
+pub struct CTL2_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CTL2W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CTL2_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 10;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 10)) | (((value as u32) & 0x03) << 10);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _MD2W<'a> {
+#[doc = "Reader of field `MD2`"]
+pub type MD2_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `MD2`"]
+pub struct MD2_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _MD2W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> MD2_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 8)) | (((value as u32) & 0x03) << 8);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CTL1W<'a> {
+#[doc = "Reader of field `CTL1`"]
+pub type CTL1_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CTL1`"]
+pub struct CTL1_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CTL1W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CTL1_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 6;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 6)) | (((value as u32) & 0x03) << 6);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _MD1W<'a> {
+#[doc = "Reader of field `MD1`"]
+pub type MD1_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `MD1`"]
+pub struct MD1_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _MD1W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> MD1_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 4)) | (((value as u32) & 0x03) << 4);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CTL0W<'a> {
+#[doc = "Reader of field `CTL0`"]
+pub type CTL0_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CTL0`"]
+pub struct CTL0_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CTL0W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CTL0_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 2)) | (((value as u32) & 0x03) << 2);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _MD0W<'a> {
+#[doc = "Reader of field `MD0`"]
+pub type MD0_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `MD0`"]
+pub struct MD0_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _MD0W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> MD0_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x03) | ((value as u32) & 0x03);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 30:31 - Port x configuration bits (x = 7)"]
-    #[inline]
-    pub fn ctl7(&self) -> CTL7R {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 30;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CTL7R { bits }
+    #[inline(always)]
+    pub fn ctl7(&self) -> CTL7_R {
+        CTL7_R::new(((self.bits >> 30) & 0x03) as u8)
     }
     #[doc = "Bits 28:29 - Port x mode bits (x = 7)"]
-    #[inline]
-    pub fn md7(&self) -> MD7R {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 28;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        MD7R { bits }
+    #[inline(always)]
+    pub fn md7(&self) -> MD7_R {
+        MD7_R::new(((self.bits >> 28) & 0x03) as u8)
     }
     #[doc = "Bits 26:27 - Port x configuration bits (x = 6)"]
-    #[inline]
-    pub fn ctl6(&self) -> CTL6R {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 26;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CTL6R { bits }
+    #[inline(always)]
+    pub fn ctl6(&self) -> CTL6_R {
+        CTL6_R::new(((self.bits >> 26) & 0x03) as u8)
     }
     #[doc = "Bits 24:25 - Port x mode bits (x = 6)"]
-    #[inline]
-    pub fn md6(&self) -> MD6R {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 24;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        MD6R { bits }
+    #[inline(always)]
+    pub fn md6(&self) -> MD6_R {
+        MD6_R::new(((self.bits >> 24) & 0x03) as u8)
     }
     #[doc = "Bits 22:23 - Port x configuration bits (x = 5)"]
-    #[inline]
-    pub fn ctl5(&self) -> CTL5R {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 22;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CTL5R { bits }
+    #[inline(always)]
+    pub fn ctl5(&self) -> CTL5_R {
+        CTL5_R::new(((self.bits >> 22) & 0x03) as u8)
     }
     #[doc = "Bits 20:21 - Port x mode bits (x = 5)"]
-    #[inline]
-    pub fn md5(&self) -> MD5R {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 20;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        MD5R { bits }
+    #[inline(always)]
+    pub fn md5(&self) -> MD5_R {
+        MD5_R::new(((self.bits >> 20) & 0x03) as u8)
     }
     #[doc = "Bits 18:19 - Port x configuration bits (x = 4)"]
-    #[inline]
-    pub fn ctl4(&self) -> CTL4R {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 18;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CTL4R { bits }
+    #[inline(always)]
+    pub fn ctl4(&self) -> CTL4_R {
+        CTL4_R::new(((self.bits >> 18) & 0x03) as u8)
     }
     #[doc = "Bits 16:17 - Port x mode bits (x = 4)"]
-    #[inline]
-    pub fn md4(&self) -> MD4R {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        MD4R { bits }
+    #[inline(always)]
+    pub fn md4(&self) -> MD4_R {
+        MD4_R::new(((self.bits >> 16) & 0x03) as u8)
     }
     #[doc = "Bits 14:15 - Port x configuration bits (x = 3)"]
-    #[inline]
-    pub fn ctl3(&self) -> CTL3R {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 14;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CTL3R { bits }
+    #[inline(always)]
+    pub fn ctl3(&self) -> CTL3_R {
+        CTL3_R::new(((self.bits >> 14) & 0x03) as u8)
     }
     #[doc = "Bits 12:13 - Port x mode bits (x = 3 )"]
-    #[inline]
-    pub fn md3(&self) -> MD3R {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        MD3R { bits }
+    #[inline(always)]
+    pub fn md3(&self) -> MD3_R {
+        MD3_R::new(((self.bits >> 12) & 0x03) as u8)
     }
     #[doc = "Bits 10:11 - Port x configuration bits (x = 2)"]
-    #[inline]
-    pub fn ctl2(&self) -> CTL2R {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CTL2R { bits }
+    #[inline(always)]
+    pub fn ctl2(&self) -> CTL2_R {
+        CTL2_R::new(((self.bits >> 10) & 0x03) as u8)
     }
     #[doc = "Bits 8:9 - Port x mode bits (x = 2 )"]
-    #[inline]
-    pub fn md2(&self) -> MD2R {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        MD2R { bits }
+    #[inline(always)]
+    pub fn md2(&self) -> MD2_R {
+        MD2_R::new(((self.bits >> 8) & 0x03) as u8)
     }
     #[doc = "Bits 6:7 - Port x configuration bits (x = 1)"]
-    #[inline]
-    pub fn ctl1(&self) -> CTL1R {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CTL1R { bits }
+    #[inline(always)]
+    pub fn ctl1(&self) -> CTL1_R {
+        CTL1_R::new(((self.bits >> 6) & 0x03) as u8)
     }
     #[doc = "Bits 4:5 - Port x mode bits (x = 1)"]
-    #[inline]
-    pub fn md1(&self) -> MD1R {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        MD1R { bits }
+    #[inline(always)]
+    pub fn md1(&self) -> MD1_R {
+        MD1_R::new(((self.bits >> 4) & 0x03) as u8)
     }
     #[doc = "Bits 2:3 - Port x configuration bits (x = 0)"]
-    #[inline]
-    pub fn ctl0(&self) -> CTL0R {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CTL0R { bits }
+    #[inline(always)]
+    pub fn ctl0(&self) -> CTL0_R {
+        CTL0_R::new(((self.bits >> 2) & 0x03) as u8)
     }
     #[doc = "Bits 0:1 - Port x mode bits (x = 0)"]
-    #[inline]
-    pub fn md0(&self) -> MD0R {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        MD0R { bits }
+    #[inline(always)]
+    pub fn md0(&self) -> MD0_R {
+        MD0_R::new((self.bits & 0x03) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0x4444_4444 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 30:31 - Port x configuration bits (x = 7)"]
-    #[inline]
-    pub fn ctl7(&mut self) -> _CTL7W {
-        _CTL7W { w: self }
+    #[inline(always)]
+    pub fn ctl7(&mut self) -> CTL7_W {
+        CTL7_W { w: self }
     }
     #[doc = "Bits 28:29 - Port x mode bits (x = 7)"]
-    #[inline]
-    pub fn md7(&mut self) -> _MD7W {
-        _MD7W { w: self }
+    #[inline(always)]
+    pub fn md7(&mut self) -> MD7_W {
+        MD7_W { w: self }
     }
     #[doc = "Bits 26:27 - Port x configuration bits (x = 6)"]
-    #[inline]
-    pub fn ctl6(&mut self) -> _CTL6W {
-        _CTL6W { w: self }
+    #[inline(always)]
+    pub fn ctl6(&mut self) -> CTL6_W {
+        CTL6_W { w: self }
     }
     #[doc = "Bits 24:25 - Port x mode bits (x = 6)"]
-    #[inline]
-    pub fn md6(&mut self) -> _MD6W {
-        _MD6W { w: self }
+    #[inline(always)]
+    pub fn md6(&mut self) -> MD6_W {
+        MD6_W { w: self }
     }
     #[doc = "Bits 22:23 - Port x configuration bits (x = 5)"]
-    #[inline]
-    pub fn ctl5(&mut self) -> _CTL5W {
-        _CTL5W { w: self }
+    #[inline(always)]
+    pub fn ctl5(&mut self) -> CTL5_W {
+        CTL5_W { w: self }
     }
     #[doc = "Bits 20:21 - Port x mode bits (x = 5)"]
-    #[inline]
-    pub fn md5(&mut self) -> _MD5W {
-        _MD5W { w: self }
+    #[inline(always)]
+    pub fn md5(&mut self) -> MD5_W {
+        MD5_W { w: self }
     }
     #[doc = "Bits 18:19 - Port x configuration bits (x = 4)"]
-    #[inline]
-    pub fn ctl4(&mut self) -> _CTL4W {
-        _CTL4W { w: self }
+    #[inline(always)]
+    pub fn ctl4(&mut self) -> CTL4_W {
+        CTL4_W { w: self }
     }
     #[doc = "Bits 16:17 - Port x mode bits (x = 4)"]
-    #[inline]
-    pub fn md4(&mut self) -> _MD4W {
-        _MD4W { w: self }
+    #[inline(always)]
+    pub fn md4(&mut self) -> MD4_W {
+        MD4_W { w: self }
     }
     #[doc = "Bits 14:15 - Port x configuration bits (x = 3)"]
-    #[inline]
-    pub fn ctl3(&mut self) -> _CTL3W {
-        _CTL3W { w: self }
+    #[inline(always)]
+    pub fn ctl3(&mut self) -> CTL3_W {
+        CTL3_W { w: self }
     }
     #[doc = "Bits 12:13 - Port x mode bits (x = 3 )"]
-    #[inline]
-    pub fn md3(&mut self) -> _MD3W {
-        _MD3W { w: self }
+    #[inline(always)]
+    pub fn md3(&mut self) -> MD3_W {
+        MD3_W { w: self }
     }
     #[doc = "Bits 10:11 - Port x configuration bits (x = 2)"]
-    #[inline]
-    pub fn ctl2(&mut self) -> _CTL2W {
-        _CTL2W { w: self }
+    #[inline(always)]
+    pub fn ctl2(&mut self) -> CTL2_W {
+        CTL2_W { w: self }
     }
     #[doc = "Bits 8:9 - Port x mode bits (x = 2 )"]
-    #[inline]
-    pub fn md2(&mut self) -> _MD2W {
-        _MD2W { w: self }
+    #[inline(always)]
+    pub fn md2(&mut self) -> MD2_W {
+        MD2_W { w: self }
     }
     #[doc = "Bits 6:7 - Port x configuration bits (x = 1)"]
-    #[inline]
-    pub fn ctl1(&mut self) -> _CTL1W {
-        _CTL1W { w: self }
+    #[inline(always)]
+    pub fn ctl1(&mut self) -> CTL1_W {
+        CTL1_W { w: self }
     }
     #[doc = "Bits 4:5 - Port x mode bits (x = 1)"]
-    #[inline]
-    pub fn md1(&mut self) -> _MD1W {
-        _MD1W { w: self }
+    #[inline(always)]
+    pub fn md1(&mut self) -> MD1_W {
+        MD1_W { w: self }
     }
     #[doc = "Bits 2:3 - Port x configuration bits (x = 0)"]
-    #[inline]
-    pub fn ctl0(&mut self) -> _CTL0W {
-        _CTL0W { w: self }
+    #[inline(always)]
+    pub fn ctl0(&mut self) -> CTL0_W {
+        CTL0_W { w: self }
     }
     #[doc = "Bits 0:1 - Port x mode bits (x = 0)"]
-    #[inline]
-    pub fn md0(&mut self) -> _MD0W {
-        _MD0W { w: self }
+    #[inline(always)]
+    pub fn md0(&mut self) -> MD0_W {
+        MD0_W { w: self }
     }
 }

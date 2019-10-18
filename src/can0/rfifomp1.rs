@@ -1,83 +1,25 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-impl super::RFIFOMP1 {
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-}
-#[doc = r" Value of the field"]
-pub struct TSR {
-    bits: u16,
-}
-impl TSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct FIR {
-    bits: u8,
-}
-impl FIR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct DLENCR {
-    bits: u8,
-}
-impl DLENCR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
+#[doc = "Reader of register RFIFOMP1"]
+pub type R = crate::R<u32, super::RFIFOMP1>;
+#[doc = "Reader of field `TS`"]
+pub type TS_R = crate::R<u16, u16>;
+#[doc = "Reader of field `FI`"]
+pub type FI_R = crate::R<u8, u8>;
+#[doc = "Reader of field `DLENC`"]
+pub type DLENC_R = crate::R<u8, u8>;
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 16:31 - Time stamp"]
-    #[inline]
-    pub fn ts(&self) -> TSR {
-        let bits = {
-            const MASK: u16 = 0xffff;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) as u16
-        };
-        TSR { bits }
+    #[inline(always)]
+    pub fn ts(&self) -> TS_R {
+        TS_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
     #[doc = "Bits 8:15 - Filtering index"]
-    #[inline]
-    pub fn fi(&self) -> FIR {
-        let bits = {
-            const MASK: u8 = 0xff;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        FIR { bits }
+    #[inline(always)]
+    pub fn fi(&self) -> FI_R {
+        FI_R::new(((self.bits >> 8) & 0xff) as u8)
     }
     #[doc = "Bits 0:3 - Data length code"]
-    #[inline]
-    pub fn dlenc(&self) -> DLENCR {
-        let bits = {
-            const MASK: u8 = 0x0f;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        DLENCR { bits }
+    #[inline(always)]
+    pub fn dlenc(&self) -> DLENC_R {
+        DLENC_R::new((self.bits & 0x0f) as u8)
     }
 }

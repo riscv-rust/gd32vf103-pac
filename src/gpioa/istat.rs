@@ -1,516 +1,116 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-impl super::ISTAT {
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ISTAT15R {
-    bits: bool,
-}
-impl ISTAT15R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ISTAT14R {
-    bits: bool,
-}
-impl ISTAT14R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ISTAT13R {
-    bits: bool,
-}
-impl ISTAT13R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ISTAT12R {
-    bits: bool,
-}
-impl ISTAT12R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ISTAT11R {
-    bits: bool,
-}
-impl ISTAT11R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ISTAT10R {
-    bits: bool,
-}
-impl ISTAT10R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ISTAT9R {
-    bits: bool,
-}
-impl ISTAT9R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ISTAT8R {
-    bits: bool,
-}
-impl ISTAT8R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ISTAT7R {
-    bits: bool,
-}
-impl ISTAT7R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ISTAT6R {
-    bits: bool,
-}
-impl ISTAT6R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ISTAT5R {
-    bits: bool,
-}
-impl ISTAT5R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ISTAT4R {
-    bits: bool,
-}
-impl ISTAT4R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ISTAT3R {
-    bits: bool,
-}
-impl ISTAT3R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ISTAT2R {
-    bits: bool,
-}
-impl ISTAT2R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ISTAT1R {
-    bits: bool,
-}
-impl ISTAT1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ISTAT0R {
-    bits: bool,
-}
-impl ISTAT0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
+#[doc = "Reader of register ISTAT"]
+pub type R = crate::R<u32, super::ISTAT>;
+#[doc = "Reader of field `ISTAT15`"]
+pub type ISTAT15_R = crate::R<bool, bool>;
+#[doc = "Reader of field `ISTAT14`"]
+pub type ISTAT14_R = crate::R<bool, bool>;
+#[doc = "Reader of field `ISTAT13`"]
+pub type ISTAT13_R = crate::R<bool, bool>;
+#[doc = "Reader of field `ISTAT12`"]
+pub type ISTAT12_R = crate::R<bool, bool>;
+#[doc = "Reader of field `ISTAT11`"]
+pub type ISTAT11_R = crate::R<bool, bool>;
+#[doc = "Reader of field `ISTAT10`"]
+pub type ISTAT10_R = crate::R<bool, bool>;
+#[doc = "Reader of field `ISTAT9`"]
+pub type ISTAT9_R = crate::R<bool, bool>;
+#[doc = "Reader of field `ISTAT8`"]
+pub type ISTAT8_R = crate::R<bool, bool>;
+#[doc = "Reader of field `ISTAT7`"]
+pub type ISTAT7_R = crate::R<bool, bool>;
+#[doc = "Reader of field `ISTAT6`"]
+pub type ISTAT6_R = crate::R<bool, bool>;
+#[doc = "Reader of field `ISTAT5`"]
+pub type ISTAT5_R = crate::R<bool, bool>;
+#[doc = "Reader of field `ISTAT4`"]
+pub type ISTAT4_R = crate::R<bool, bool>;
+#[doc = "Reader of field `ISTAT3`"]
+pub type ISTAT3_R = crate::R<bool, bool>;
+#[doc = "Reader of field `ISTAT2`"]
+pub type ISTAT2_R = crate::R<bool, bool>;
+#[doc = "Reader of field `ISTAT1`"]
+pub type ISTAT1_R = crate::R<bool, bool>;
+#[doc = "Reader of field `ISTAT0`"]
+pub type ISTAT0_R = crate::R<bool, bool>;
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bit 15 - Port input status"]
-    #[inline]
-    pub fn istat15(&self) -> ISTAT15R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 15;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ISTAT15R { bits }
+    #[inline(always)]
+    pub fn istat15(&self) -> ISTAT15_R {
+        ISTAT15_R::new(((self.bits >> 15) & 0x01) != 0)
     }
     #[doc = "Bit 14 - Port input status"]
-    #[inline]
-    pub fn istat14(&self) -> ISTAT14R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 14;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ISTAT14R { bits }
+    #[inline(always)]
+    pub fn istat14(&self) -> ISTAT14_R {
+        ISTAT14_R::new(((self.bits >> 14) & 0x01) != 0)
     }
     #[doc = "Bit 13 - Port input status"]
-    #[inline]
-    pub fn istat13(&self) -> ISTAT13R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 13;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ISTAT13R { bits }
+    #[inline(always)]
+    pub fn istat13(&self) -> ISTAT13_R {
+        ISTAT13_R::new(((self.bits >> 13) & 0x01) != 0)
     }
     #[doc = "Bit 12 - Port input status"]
-    #[inline]
-    pub fn istat12(&self) -> ISTAT12R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ISTAT12R { bits }
+    #[inline(always)]
+    pub fn istat12(&self) -> ISTAT12_R {
+        ISTAT12_R::new(((self.bits >> 12) & 0x01) != 0)
     }
     #[doc = "Bit 11 - Port input status"]
-    #[inline]
-    pub fn istat11(&self) -> ISTAT11R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 11;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ISTAT11R { bits }
+    #[inline(always)]
+    pub fn istat11(&self) -> ISTAT11_R {
+        ISTAT11_R::new(((self.bits >> 11) & 0x01) != 0)
     }
     #[doc = "Bit 10 - Port input status"]
-    #[inline]
-    pub fn istat10(&self) -> ISTAT10R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ISTAT10R { bits }
+    #[inline(always)]
+    pub fn istat10(&self) -> ISTAT10_R {
+        ISTAT10_R::new(((self.bits >> 10) & 0x01) != 0)
     }
     #[doc = "Bit 9 - Port input status"]
-    #[inline]
-    pub fn istat9(&self) -> ISTAT9R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ISTAT9R { bits }
+    #[inline(always)]
+    pub fn istat9(&self) -> ISTAT9_R {
+        ISTAT9_R::new(((self.bits >> 9) & 0x01) != 0)
     }
     #[doc = "Bit 8 - Port input status"]
-    #[inline]
-    pub fn istat8(&self) -> ISTAT8R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ISTAT8R { bits }
+    #[inline(always)]
+    pub fn istat8(&self) -> ISTAT8_R {
+        ISTAT8_R::new(((self.bits >> 8) & 0x01) != 0)
     }
     #[doc = "Bit 7 - Port input status"]
-    #[inline]
-    pub fn istat7(&self) -> ISTAT7R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 7;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ISTAT7R { bits }
+    #[inline(always)]
+    pub fn istat7(&self) -> ISTAT7_R {
+        ISTAT7_R::new(((self.bits >> 7) & 0x01) != 0)
     }
     #[doc = "Bit 6 - Port input status"]
-    #[inline]
-    pub fn istat6(&self) -> ISTAT6R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ISTAT6R { bits }
+    #[inline(always)]
+    pub fn istat6(&self) -> ISTAT6_R {
+        ISTAT6_R::new(((self.bits >> 6) & 0x01) != 0)
     }
     #[doc = "Bit 5 - Port input status"]
-    #[inline]
-    pub fn istat5(&self) -> ISTAT5R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ISTAT5R { bits }
+    #[inline(always)]
+    pub fn istat5(&self) -> ISTAT5_R {
+        ISTAT5_R::new(((self.bits >> 5) & 0x01) != 0)
     }
     #[doc = "Bit 4 - Port input status"]
-    #[inline]
-    pub fn istat4(&self) -> ISTAT4R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ISTAT4R { bits }
+    #[inline(always)]
+    pub fn istat4(&self) -> ISTAT4_R {
+        ISTAT4_R::new(((self.bits >> 4) & 0x01) != 0)
     }
     #[doc = "Bit 3 - Port input status"]
-    #[inline]
-    pub fn istat3(&self) -> ISTAT3R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ISTAT3R { bits }
+    #[inline(always)]
+    pub fn istat3(&self) -> ISTAT3_R {
+        ISTAT3_R::new(((self.bits >> 3) & 0x01) != 0)
     }
     #[doc = "Bit 2 - Port input status"]
-    #[inline]
-    pub fn istat2(&self) -> ISTAT2R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ISTAT2R { bits }
+    #[inline(always)]
+    pub fn istat2(&self) -> ISTAT2_R {
+        ISTAT2_R::new(((self.bits >> 2) & 0x01) != 0)
     }
     #[doc = "Bit 1 - Port input status"]
-    #[inline]
-    pub fn istat1(&self) -> ISTAT1R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ISTAT1R { bits }
+    #[inline(always)]
+    pub fn istat1(&self) -> ISTAT1_R {
+        ISTAT1_R::new(((self.bits >> 1) & 0x01) != 0)
     }
     #[doc = "Bit 0 - Port input status"]
-    #[inline]
-    pub fn istat0(&self) -> ISTAT0R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ISTAT0R { bits }
+    #[inline(always)]
+    pub fn istat0(&self) -> ISTAT0_R {
+        ISTAT0_R::new((self.bits & 0x01) != 0)
     }
 }

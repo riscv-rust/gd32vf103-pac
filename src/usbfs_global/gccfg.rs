@@ -1,359 +1,186 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::GCCFG {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register GCCFG"]
+pub type R = crate::R<u32, super::GCCFG>;
+#[doc = "Writer for register GCCFG"]
+pub type W = crate::W<u32, super::GCCFG>;
+#[doc = "Register GCCFG `reset()`'s with value 0"]
+impl crate::ResetValue for super::GCCFG {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct PWRONR {
-    bits: bool,
-}
-impl PWRONR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct VBUSACENR {
-    bits: bool,
-}
-impl VBUSACENR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct VBUSBCENR {
-    bits: bool,
-}
-impl VBUSBCENR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SOFOENR {
-    bits: bool,
-}
-impl SOFOENR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct VBUSIGR {
-    bits: bool,
-}
-impl VBUSIGR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PWRONW<'a> {
+#[doc = "Reader of field `PWRON`"]
+pub type PWRON_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `PWRON`"]
+pub struct PWRON_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PWRONW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> PWRON_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _VBUSACENW<'a> {
+#[doc = "Reader of field `VBUSACEN`"]
+pub type VBUSACEN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `VBUSACEN`"]
+pub struct VBUSACEN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _VBUSACENW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> VBUSACEN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 18;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 18)) | (((value as u32) & 0x01) << 18);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _VBUSBCENW<'a> {
+#[doc = "Reader of field `VBUSBCEN`"]
+pub type VBUSBCEN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `VBUSBCEN`"]
+pub struct VBUSBCEN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _VBUSBCENW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> VBUSBCEN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 19;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 19)) | (((value as u32) & 0x01) << 19);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SOFOENW<'a> {
+#[doc = "Reader of field `SOFOEN`"]
+pub type SOFOEN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SOFOEN`"]
+pub struct SOFOEN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SOFOENW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SOFOEN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 20;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 20)) | (((value as u32) & 0x01) << 20);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _VBUSIGW<'a> {
+#[doc = "Reader of field `VBUSIG`"]
+pub type VBUSIG_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `VBUSIG`"]
+pub struct VBUSIG_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _VBUSIGW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> VBUSIG_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 21;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 21)) | (((value as u32) & 0x01) << 21);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bit 16 - Power on"]
-    #[inline]
-    pub fn pwron(&self) -> PWRONR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PWRONR { bits }
+    #[inline(always)]
+    pub fn pwron(&self) -> PWRON_R {
+        PWRON_R::new(((self.bits >> 16) & 0x01) != 0)
     }
     #[doc = "Bit 18 - The VBUS A-device Comparer enable"]
-    #[inline]
-    pub fn vbusacen(&self) -> VBUSACENR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 18;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        VBUSACENR { bits }
+    #[inline(always)]
+    pub fn vbusacen(&self) -> VBUSACEN_R {
+        VBUSACEN_R::new(((self.bits >> 18) & 0x01) != 0)
     }
     #[doc = "Bit 19 - The VBUS B-device Comparer enable"]
-    #[inline]
-    pub fn vbusbcen(&self) -> VBUSBCENR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 19;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        VBUSBCENR { bits }
+    #[inline(always)]
+    pub fn vbusbcen(&self) -> VBUSBCEN_R {
+        VBUSBCEN_R::new(((self.bits >> 19) & 0x01) != 0)
     }
     #[doc = "Bit 20 - SOF output enable"]
-    #[inline]
-    pub fn sofoen(&self) -> SOFOENR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 20;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SOFOENR { bits }
+    #[inline(always)]
+    pub fn sofoen(&self) -> SOFOEN_R {
+        SOFOEN_R::new(((self.bits >> 20) & 0x01) != 0)
     }
     #[doc = "Bit 21 - VBUS ignored"]
-    #[inline]
-    pub fn vbusig(&self) -> VBUSIGR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 21;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        VBUSIGR { bits }
+    #[inline(always)]
+    pub fn vbusig(&self) -> VBUSIG_R {
+        VBUSIG_R::new(((self.bits >> 21) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bit 16 - Power on"]
-    #[inline]
-    pub fn pwron(&mut self) -> _PWRONW {
-        _PWRONW { w: self }
+    #[inline(always)]
+    pub fn pwron(&mut self) -> PWRON_W {
+        PWRON_W { w: self }
     }
     #[doc = "Bit 18 - The VBUS A-device Comparer enable"]
-    #[inline]
-    pub fn vbusacen(&mut self) -> _VBUSACENW {
-        _VBUSACENW { w: self }
+    #[inline(always)]
+    pub fn vbusacen(&mut self) -> VBUSACEN_W {
+        VBUSACEN_W { w: self }
     }
     #[doc = "Bit 19 - The VBUS B-device Comparer enable"]
-    #[inline]
-    pub fn vbusbcen(&mut self) -> _VBUSBCENW {
-        _VBUSBCENW { w: self }
+    #[inline(always)]
+    pub fn vbusbcen(&mut self) -> VBUSBCEN_W {
+        VBUSBCEN_W { w: self }
     }
     #[doc = "Bit 20 - SOF output enable"]
-    #[inline]
-    pub fn sofoen(&mut self) -> _SOFOENW {
-        _SOFOENW { w: self }
+    #[inline(always)]
+    pub fn sofoen(&mut self) -> SOFOEN_W {
+        SOFOEN_W { w: self }
     }
     #[doc = "Bit 21 - VBUS ignored"]
-    #[inline]
-    pub fn vbusig(&mut self) -> _VBUSIGW {
-        _VBUSIGW { w: self }
+    #[inline(always)]
+    pub fn vbusig(&mut self) -> VBUSIG_W {
+        VBUSIG_W { w: self }
     }
 }

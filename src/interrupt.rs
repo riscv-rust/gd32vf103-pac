@@ -1,4 +1,4 @@
-#[doc = r" Enumeration of all the interrupts"]
+#[doc = r"Enumeration of all the interrupts"]
 #[derive(Copy, Clone, Debug)]
 pub enum Interrupt {
     #[doc = "0 - WWDGT"]
@@ -118,7 +118,7 @@ pub enum Interrupt {
     #[doc = "86 - USBFS"]
     USBFS,
 }
-unsafe impl ::bare_metal::Nr for Interrupt {
+unsafe impl bare_metal::Nr for Interrupt {
     #[inline]
     fn nr(&self) -> u8 {
         match *self {

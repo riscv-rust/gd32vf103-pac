@@ -1,146 +1,64 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::GP {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register GP"]
+pub type R = crate::R<u32, super::GP>;
+#[doc = "Writer for register GP"]
+pub type W = crate::W<u32, super::GP>;
+#[doc = "Register GP `reset()`'s with value 0"]
+impl crate::ResetValue for super::GP {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct GUATR {
-    bits: u8,
-}
-impl GUATR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PSCR {
-    bits: u8,
-}
-impl PSCR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _GUATW<'a> {
+#[doc = "Reader of field `GUAT`"]
+pub type GUAT_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `GUAT`"]
+pub struct GUAT_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _GUATW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> GUAT_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0xff;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0xff << 8)) | (((value as u32) & 0xff) << 8);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _PSCW<'a> {
+#[doc = "Reader of field `PSC`"]
+pub type PSC_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `PSC`"]
+pub struct PSC_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PSCW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> PSC_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0xff;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0xff) | ((value as u32) & 0xff);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 8:15 - Guard time value in Smartcard mode"]
-    #[inline]
-    pub fn guat(&self) -> GUATR {
-        let bits = {
-            const MASK: u8 = 0xff;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GUATR { bits }
+    #[inline(always)]
+    pub fn guat(&self) -> GUAT_R {
+        GUAT_R::new(((self.bits >> 8) & 0xff) as u8)
     }
     #[doc = "Bits 0:7 - Prescaler value"]
-    #[inline]
-    pub fn psc(&self) -> PSCR {
-        let bits = {
-            const MASK: u8 = 0xff;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        PSCR { bits }
+    #[inline(always)]
+    pub fn psc(&self) -> PSC_R {
+        PSC_R::new((self.bits & 0xff) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 8:15 - Guard time value in Smartcard mode"]
-    #[inline]
-    pub fn guat(&mut self) -> _GUATW {
-        _GUATW { w: self }
+    #[inline(always)]
+    pub fn guat(&mut self) -> GUAT_W {
+        GUAT_W { w: self }
     }
     #[doc = "Bits 0:7 - Prescaler value"]
-    #[inline]
-    pub fn psc(&mut self) -> _PSCW {
-        _PSCW { w: self }
+    #[inline(always)]
+    pub fn psc(&mut self) -> PSC_W {
+        PSC_W { w: self }
     }
 }

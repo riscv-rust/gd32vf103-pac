@@ -1,164 +1,74 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u8,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u8,
-}
-impl super::CLICINTATTR {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register CLICINTATTR"]
+pub type R = crate::R<u8, super::CLICINTATTR>;
+#[doc = "Writer for register CLICINTATTR"]
+pub type W = crate::W<u8, super::CLICINTATTR>;
+#[doc = "Register CLICINTATTR `reset()`'s with value 0"]
+impl crate::ResetValue for super::CLICINTATTR {
+    type Type = u8;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct SHVR {
-    bits: bool,
-}
-impl SHVR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct TRIGR {
-    bits: u8,
-}
-impl TRIGR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _SHVW<'a> {
+#[doc = "Reader of field `SHV`"]
+pub type SHV_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SHV`"]
+pub struct SHV_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SHVW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SHV_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u8) << OFFSET);
-        self.w.bits |= ((value & MASK) as u8) << OFFSET;
+        self.w.bits = (self.w.bits & !0x01) | ((value as u8) & 0x01);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _TRIGW<'a> {
+#[doc = "Reader of field `TRIG`"]
+pub type TRIG_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `TRIG`"]
+pub struct TRIG_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _TRIGW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> TRIG_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 1;
-        self.w.bits &= !((MASK as u8) << OFFSET);
-        self.w.bits |= ((value & MASK) as u8) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 1)) | (((value as u8) & 0x03) << 1);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
     #[doc = "Bit 0 - SHV"]
-    #[inline]
-    pub fn shv(&self) -> SHVR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u8) != 0
-        };
-        SHVR { bits }
+    #[inline(always)]
+    pub fn shv(&self) -> SHV_R {
+        SHV_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bits 1:2 - TRIG"]
-    #[inline]
-    pub fn trig(&self) -> TRIGR {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u8) as u8
-        };
-        TRIGR { bits }
+    #[inline(always)]
+    pub fn trig(&self) -> TRIG_R {
+        TRIG_R::new(((self.bits >> 1) & 0x03) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bit 0 - SHV"]
-    #[inline]
-    pub fn shv(&mut self) -> _SHVW {
-        _SHVW { w: self }
+    #[inline(always)]
+    pub fn shv(&mut self) -> SHV_W {
+        SHV_W { w: self }
     }
     #[doc = "Bits 1:2 - TRIG"]
-    #[inline]
-    pub fn trig(&mut self) -> _TRIGW {
-        _TRIGW { w: self }
+    #[inline(always)]
+    pub fn trig(&mut self) -> TRIG_W {
+        TRIG_W { w: self }
     }
 }

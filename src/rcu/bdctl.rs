@@ -1,372 +1,183 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::BDCTL {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register BDCTL"]
+pub type R = crate::R<u32, super::BDCTL>;
+#[doc = "Writer for register BDCTL"]
+pub type W = crate::W<u32, super::BDCTL>;
+#[doc = "Register BDCTL `reset()`'s with value 0x18"]
+impl crate::ResetValue for super::BDCTL {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0x18
     }
 }
-#[doc = r" Value of the field"]
-pub struct LXTALENR {
-    bits: bool,
-}
-impl LXTALENR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct LXTALSTBR {
-    bits: bool,
-}
-impl LXTALSTBR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct LXTALBPSR {
-    bits: bool,
-}
-impl LXTALBPSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RTCSRCR {
-    bits: u8,
-}
-impl RTCSRCR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RTCENR {
-    bits: bool,
-}
-impl RTCENR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct BKPRSTR {
-    bits: bool,
-}
-impl BKPRSTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Proxy"]
-pub struct _LXTALENW<'a> {
+#[doc = "Reader of field `LXTALEN`"]
+pub type LXTALEN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `LXTALEN`"]
+pub struct LXTALEN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _LXTALENW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> LXTALEN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _LXTALBPSW<'a> {
+#[doc = "Reader of field `LXTALSTB`"]
+pub type LXTALSTB_R = crate::R<bool, bool>;
+#[doc = "Reader of field `LXTALBPS`"]
+pub type LXTALBPS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `LXTALBPS`"]
+pub struct LXTALBPS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _LXTALBPSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> LXTALBPS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _RTCSRCW<'a> {
+#[doc = "Reader of field `RTCSRC`"]
+pub type RTCSRC_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `RTCSRC`"]
+pub struct RTCSRC_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _RTCSRCW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> RTCSRC_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 8)) | (((value as u32) & 0x03) << 8);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _RTCENW<'a> {
+#[doc = "Reader of field `RTCEN`"]
+pub type RTCEN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `RTCEN`"]
+pub struct RTCEN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _RTCENW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> RTCEN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 15;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u32) & 0x01) << 15);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _BKPRSTW<'a> {
+#[doc = "Reader of field `BKPRST`"]
+pub type BKPRST_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `BKPRST`"]
+pub struct BKPRST_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _BKPRSTW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> BKPRST_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bit 0 - LXTAL enable"]
-    #[inline]
-    pub fn lxtalen(&self) -> LXTALENR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        LXTALENR { bits }
+    #[inline(always)]
+    pub fn lxtalen(&self) -> LXTALEN_R {
+        LXTALEN_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - External low-speed oscillator stabilization"]
-    #[inline]
-    pub fn lxtalstb(&self) -> LXTALSTBR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        LXTALSTBR { bits }
+    #[inline(always)]
+    pub fn lxtalstb(&self) -> LXTALSTB_R {
+        LXTALSTB_R::new(((self.bits >> 1) & 0x01) != 0)
     }
     #[doc = "Bit 2 - LXTAL bypass mode enable"]
-    #[inline]
-    pub fn lxtalbps(&self) -> LXTALBPSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        LXTALBPSR { bits }
+    #[inline(always)]
+    pub fn lxtalbps(&self) -> LXTALBPS_R {
+        LXTALBPS_R::new(((self.bits >> 2) & 0x01) != 0)
     }
     #[doc = "Bits 8:9 - RTC clock entry selection"]
-    #[inline]
-    pub fn rtcsrc(&self) -> RTCSRCR {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        RTCSRCR { bits }
+    #[inline(always)]
+    pub fn rtcsrc(&self) -> RTCSRC_R {
+        RTCSRC_R::new(((self.bits >> 8) & 0x03) as u8)
     }
     #[doc = "Bit 15 - RTC clock enable"]
-    #[inline]
-    pub fn rtcen(&self) -> RTCENR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 15;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        RTCENR { bits }
+    #[inline(always)]
+    pub fn rtcen(&self) -> RTCEN_R {
+        RTCEN_R::new(((self.bits >> 15) & 0x01) != 0)
     }
     #[doc = "Bit 16 - Backup domain reset"]
-    #[inline]
-    pub fn bkprst(&self) -> BKPRSTR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        BKPRSTR { bits }
+    #[inline(always)]
+    pub fn bkprst(&self) -> BKPRST_R {
+        BKPRST_R::new(((self.bits >> 16) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0x18 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bit 0 - LXTAL enable"]
-    #[inline]
-    pub fn lxtalen(&mut self) -> _LXTALENW {
-        _LXTALENW { w: self }
+    #[inline(always)]
+    pub fn lxtalen(&mut self) -> LXTALEN_W {
+        LXTALEN_W { w: self }
     }
     #[doc = "Bit 2 - LXTAL bypass mode enable"]
-    #[inline]
-    pub fn lxtalbps(&mut self) -> _LXTALBPSW {
-        _LXTALBPSW { w: self }
+    #[inline(always)]
+    pub fn lxtalbps(&mut self) -> LXTALBPS_W {
+        LXTALBPS_W { w: self }
     }
     #[doc = "Bits 8:9 - RTC clock entry selection"]
-    #[inline]
-    pub fn rtcsrc(&mut self) -> _RTCSRCW {
-        _RTCSRCW { w: self }
+    #[inline(always)]
+    pub fn rtcsrc(&mut self) -> RTCSRC_W {
+        RTCSRC_W { w: self }
     }
     #[doc = "Bit 15 - RTC clock enable"]
-    #[inline]
-    pub fn rtcen(&mut self) -> _RTCENW {
-        _RTCENW { w: self }
+    #[inline(always)]
+    pub fn rtcen(&mut self) -> RTCEN_W {
+        RTCEN_W { w: self }
     }
     #[doc = "Bit 16 - Backup domain reset"]
-    #[inline]
-    pub fn bkprst(&mut self) -> _BKPRSTW {
-        _BKPRSTW { w: self }
+    #[inline(always)]
+    pub fn bkprst(&mut self) -> BKPRST_W {
+        BKPRST_W { w: self }
     }
 }

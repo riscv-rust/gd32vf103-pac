@@ -1,310 +1,160 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u16,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u16,
-}
-impl super::CHCTL0_INPUT {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register CHCTL0_Input"]
+pub type R = crate::R<u16, super::CHCTL0_INPUT>;
+#[doc = "Writer for register CHCTL0_Input"]
+pub type W = crate::W<u16, super::CHCTL0_INPUT>;
+#[doc = "Register CHCTL0_Input `reset()`'s with value 0"]
+impl crate::ResetValue for super::CHCTL0_INPUT {
+    type Type = u16;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct CH1CAPFLTR {
-    bits: u8,
-}
-impl CH1CAPFLTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CH1CAPPSCR {
-    bits: u8,
-}
-impl CH1CAPPSCR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CH1MSR {
-    bits: u8,
-}
-impl CH1MSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CH0CAPFLTR {
-    bits: u8,
-}
-impl CH0CAPFLTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CH0CAPPSCR {
-    bits: u8,
-}
-impl CH0CAPPSCR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CH0MSR {
-    bits: u8,
-}
-impl CH0MSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _CH1CAPFLTW<'a> {
+#[doc = "Reader of field `CH1CAPFLT`"]
+pub type CH1CAPFLT_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CH1CAPFLT`"]
+pub struct CH1CAPFLT_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CH1CAPFLTW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CH1CAPFLT_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x0f;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u16) << OFFSET);
-        self.w.bits |= ((value & MASK) as u16) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 12)) | (((value as u16) & 0x0f) << 12);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CH1CAPPSCW<'a> {
+#[doc = "Reader of field `CH1CAPPSC`"]
+pub type CH1CAPPSC_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CH1CAPPSC`"]
+pub struct CH1CAPPSC_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CH1CAPPSCW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CH1CAPPSC_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 10;
-        self.w.bits &= !((MASK as u16) << OFFSET);
-        self.w.bits |= ((value & MASK) as u16) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 10)) | (((value as u16) & 0x03) << 10);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CH1MSW<'a> {
+#[doc = "Reader of field `CH1MS`"]
+pub type CH1MS_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CH1MS`"]
+pub struct CH1MS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CH1MSW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CH1MS_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u16) << OFFSET);
-        self.w.bits |= ((value & MASK) as u16) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 8)) | (((value as u16) & 0x03) << 8);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CH0CAPFLTW<'a> {
+#[doc = "Reader of field `CH0CAPFLT`"]
+pub type CH0CAPFLT_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CH0CAPFLT`"]
+pub struct CH0CAPFLT_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CH0CAPFLTW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CH0CAPFLT_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x0f;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u16) << OFFSET);
-        self.w.bits |= ((value & MASK) as u16) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 4)) | (((value as u16) & 0x0f) << 4);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CH0CAPPSCW<'a> {
+#[doc = "Reader of field `CH0CAPPSC`"]
+pub type CH0CAPPSC_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CH0CAPPSC`"]
+pub struct CH0CAPPSC_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CH0CAPPSCW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CH0CAPPSC_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u16) << OFFSET);
-        self.w.bits |= ((value & MASK) as u16) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 2)) | (((value as u16) & 0x03) << 2);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CH0MSW<'a> {
+#[doc = "Reader of field `CH0MS`"]
+pub type CH0MS_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CH0MS`"]
+pub struct CH0MS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CH0MSW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CH0MS_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u16) << OFFSET);
-        self.w.bits |= ((value & MASK) as u16) << OFFSET;
+        self.w.bits = (self.w.bits & !0x03) | ((value as u16) & 0x03);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
     #[doc = "Bits 12:15 - Channel 1 input capture filter control"]
-    #[inline]
-    pub fn ch1capflt(&self) -> CH1CAPFLTR {
-        let bits = {
-            const MASK: u8 = 0x0f;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u16) as u8
-        };
-        CH1CAPFLTR { bits }
+    #[inline(always)]
+    pub fn ch1capflt(&self) -> CH1CAPFLT_R {
+        CH1CAPFLT_R::new(((self.bits >> 12) & 0x0f) as u8)
     }
     #[doc = "Bits 10:11 - Channel 1 input capture prescaler"]
-    #[inline]
-    pub fn ch1cappsc(&self) -> CH1CAPPSCR {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u16) as u8
-        };
-        CH1CAPPSCR { bits }
+    #[inline(always)]
+    pub fn ch1cappsc(&self) -> CH1CAPPSC_R {
+        CH1CAPPSC_R::new(((self.bits >> 10) & 0x03) as u8)
     }
     #[doc = "Bits 8:9 - Channel 1 mode selection"]
-    #[inline]
-    pub fn ch1ms(&self) -> CH1MSR {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u16) as u8
-        };
-        CH1MSR { bits }
+    #[inline(always)]
+    pub fn ch1ms(&self) -> CH1MS_R {
+        CH1MS_R::new(((self.bits >> 8) & 0x03) as u8)
     }
     #[doc = "Bits 4:7 - Channel 0 input capture filter control"]
-    #[inline]
-    pub fn ch0capflt(&self) -> CH0CAPFLTR {
-        let bits = {
-            const MASK: u8 = 0x0f;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u16) as u8
-        };
-        CH0CAPFLTR { bits }
+    #[inline(always)]
+    pub fn ch0capflt(&self) -> CH0CAPFLT_R {
+        CH0CAPFLT_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
     #[doc = "Bits 2:3 - Channel 0 input capture prescaler"]
-    #[inline]
-    pub fn ch0cappsc(&self) -> CH0CAPPSCR {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u16) as u8
-        };
-        CH0CAPPSCR { bits }
+    #[inline(always)]
+    pub fn ch0cappsc(&self) -> CH0CAPPSC_R {
+        CH0CAPPSC_R::new(((self.bits >> 2) & 0x03) as u8)
     }
     #[doc = "Bits 0:1 - Channel 0 mode selection"]
-    #[inline]
-    pub fn ch0ms(&self) -> CH0MSR {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u16) as u8
-        };
-        CH0MSR { bits }
+    #[inline(always)]
+    pub fn ch0ms(&self) -> CH0MS_R {
+        CH0MS_R::new((self.bits & 0x03) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 12:15 - Channel 1 input capture filter control"]
-    #[inline]
-    pub fn ch1capflt(&mut self) -> _CH1CAPFLTW {
-        _CH1CAPFLTW { w: self }
+    #[inline(always)]
+    pub fn ch1capflt(&mut self) -> CH1CAPFLT_W {
+        CH1CAPFLT_W { w: self }
     }
     #[doc = "Bits 10:11 - Channel 1 input capture prescaler"]
-    #[inline]
-    pub fn ch1cappsc(&mut self) -> _CH1CAPPSCW {
-        _CH1CAPPSCW { w: self }
+    #[inline(always)]
+    pub fn ch1cappsc(&mut self) -> CH1CAPPSC_W {
+        CH1CAPPSC_W { w: self }
     }
     #[doc = "Bits 8:9 - Channel 1 mode selection"]
-    #[inline]
-    pub fn ch1ms(&mut self) -> _CH1MSW {
-        _CH1MSW { w: self }
+    #[inline(always)]
+    pub fn ch1ms(&mut self) -> CH1MS_W {
+        CH1MS_W { w: self }
     }
     #[doc = "Bits 4:7 - Channel 0 input capture filter control"]
-    #[inline]
-    pub fn ch0capflt(&mut self) -> _CH0CAPFLTW {
-        _CH0CAPFLTW { w: self }
+    #[inline(always)]
+    pub fn ch0capflt(&mut self) -> CH0CAPFLT_W {
+        CH0CAPFLT_W { w: self }
     }
     #[doc = "Bits 2:3 - Channel 0 input capture prescaler"]
-    #[inline]
-    pub fn ch0cappsc(&mut self) -> _CH0CAPPSCW {
-        _CH0CAPPSCW { w: self }
+    #[inline(always)]
+    pub fn ch0cappsc(&mut self) -> CH0CAPPSC_W {
+        CH0CAPPSC_W { w: self }
     }
     #[doc = "Bits 0:1 - Channel 0 mode selection"]
-    #[inline]
-    pub fn ch0ms(&mut self) -> _CH0MSW {
-        _CH0MSW { w: self }
+    #[inline(always)]
+    pub fn ch0ms(&mut self) -> CH0MS_W {
+        CH0MS_W { w: self }
     }
 }

@@ -1,474 +1,256 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::SAMPT1 {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register SAMPT1"]
+pub type R = crate::R<u32, super::SAMPT1>;
+#[doc = "Writer for register SAMPT1"]
+pub type W = crate::W<u32, super::SAMPT1>;
+#[doc = "Register SAMPT1 `reset()`'s with value 0"]
+impl crate::ResetValue for super::SAMPT1 {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct SPT0R {
-    bits: u8,
-}
-impl SPT0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SPT1R {
-    bits: u8,
-}
-impl SPT1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SPT2R {
-    bits: u8,
-}
-impl SPT2R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SPT3R {
-    bits: u8,
-}
-impl SPT3R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SPT4R {
-    bits: u8,
-}
-impl SPT4R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SPT5R {
-    bits: u8,
-}
-impl SPT5R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SPT6R {
-    bits: u8,
-}
-impl SPT6R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SPT7R {
-    bits: u8,
-}
-impl SPT7R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SPT8R {
-    bits: u8,
-}
-impl SPT8R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SPT9R {
-    bits: u8,
-}
-impl SPT9R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _SPT0W<'a> {
+#[doc = "Reader of field `SPT0`"]
+pub type SPT0_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SPT0`"]
+pub struct SPT0_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SPT0W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> SPT0_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x07;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x07) | ((value as u32) & 0x07);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SPT1W<'a> {
+#[doc = "Reader of field `SPT1`"]
+pub type SPT1_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SPT1`"]
+pub struct SPT1_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SPT1W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> SPT1_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x07;
-        const OFFSET: u8 = 3;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x07 << 3)) | (((value as u32) & 0x07) << 3);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SPT2W<'a> {
+#[doc = "Reader of field `SPT2`"]
+pub type SPT2_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SPT2`"]
+pub struct SPT2_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SPT2W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> SPT2_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x07;
-        const OFFSET: u8 = 6;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x07 << 6)) | (((value as u32) & 0x07) << 6);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SPT3W<'a> {
+#[doc = "Reader of field `SPT3`"]
+pub type SPT3_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SPT3`"]
+pub struct SPT3_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SPT3W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> SPT3_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x07;
-        const OFFSET: u8 = 9;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x07 << 9)) | (((value as u32) & 0x07) << 9);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SPT4W<'a> {
+#[doc = "Reader of field `SPT4`"]
+pub type SPT4_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SPT4`"]
+pub struct SPT4_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SPT4W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> SPT4_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x07;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x07 << 12)) | (((value as u32) & 0x07) << 12);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SPT5W<'a> {
+#[doc = "Reader of field `SPT5`"]
+pub type SPT5_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SPT5`"]
+pub struct SPT5_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SPT5W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> SPT5_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x07;
-        const OFFSET: u8 = 15;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x07 << 15)) | (((value as u32) & 0x07) << 15);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SPT6W<'a> {
+#[doc = "Reader of field `SPT6`"]
+pub type SPT6_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SPT6`"]
+pub struct SPT6_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SPT6W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> SPT6_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x07;
-        const OFFSET: u8 = 18;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x07 << 18)) | (((value as u32) & 0x07) << 18);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SPT7W<'a> {
+#[doc = "Reader of field `SPT7`"]
+pub type SPT7_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SPT7`"]
+pub struct SPT7_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SPT7W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> SPT7_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x07;
-        const OFFSET: u8 = 21;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x07 << 21)) | (((value as u32) & 0x07) << 21);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SPT8W<'a> {
+#[doc = "Reader of field `SPT8`"]
+pub type SPT8_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SPT8`"]
+pub struct SPT8_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SPT8W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> SPT8_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x07;
-        const OFFSET: u8 = 24;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x07 << 24)) | (((value as u32) & 0x07) << 24);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SPT9W<'a> {
+#[doc = "Reader of field `SPT9`"]
+pub type SPT9_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SPT9`"]
+pub struct SPT9_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SPT9W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> SPT9_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x07;
-        const OFFSET: u8 = 27;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x07 << 27)) | (((value as u32) & 0x07) << 27);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:2 - Channel 0 sample time selection"]
-    #[inline]
-    pub fn spt0(&self) -> SPT0R {
-        let bits = {
-            const MASK: u8 = 0x07;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SPT0R { bits }
+    #[inline(always)]
+    pub fn spt0(&self) -> SPT0_R {
+        SPT0_R::new((self.bits & 0x07) as u8)
     }
     #[doc = "Bits 3:5 - Channel 1 sample time selection"]
-    #[inline]
-    pub fn spt1(&self) -> SPT1R {
-        let bits = {
-            const MASK: u8 = 0x07;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SPT1R { bits }
+    #[inline(always)]
+    pub fn spt1(&self) -> SPT1_R {
+        SPT1_R::new(((self.bits >> 3) & 0x07) as u8)
     }
     #[doc = "Bits 6:8 - Channel 2 sample time selection"]
-    #[inline]
-    pub fn spt2(&self) -> SPT2R {
-        let bits = {
-            const MASK: u8 = 0x07;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SPT2R { bits }
+    #[inline(always)]
+    pub fn spt2(&self) -> SPT2_R {
+        SPT2_R::new(((self.bits >> 6) & 0x07) as u8)
     }
     #[doc = "Bits 9:11 - Channel 3 sample time selection"]
-    #[inline]
-    pub fn spt3(&self) -> SPT3R {
-        let bits = {
-            const MASK: u8 = 0x07;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SPT3R { bits }
+    #[inline(always)]
+    pub fn spt3(&self) -> SPT3_R {
+        SPT3_R::new(((self.bits >> 9) & 0x07) as u8)
     }
     #[doc = "Bits 12:14 - Channel 4 sample time selection"]
-    #[inline]
-    pub fn spt4(&self) -> SPT4R {
-        let bits = {
-            const MASK: u8 = 0x07;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SPT4R { bits }
+    #[inline(always)]
+    pub fn spt4(&self) -> SPT4_R {
+        SPT4_R::new(((self.bits >> 12) & 0x07) as u8)
     }
     #[doc = "Bits 15:17 - Channel 5 sample time selection"]
-    #[inline]
-    pub fn spt5(&self) -> SPT5R {
-        let bits = {
-            const MASK: u8 = 0x07;
-            const OFFSET: u8 = 15;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SPT5R { bits }
+    #[inline(always)]
+    pub fn spt5(&self) -> SPT5_R {
+        SPT5_R::new(((self.bits >> 15) & 0x07) as u8)
     }
     #[doc = "Bits 18:20 - Channel 6 sample time selection"]
-    #[inline]
-    pub fn spt6(&self) -> SPT6R {
-        let bits = {
-            const MASK: u8 = 0x07;
-            const OFFSET: u8 = 18;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SPT6R { bits }
+    #[inline(always)]
+    pub fn spt6(&self) -> SPT6_R {
+        SPT6_R::new(((self.bits >> 18) & 0x07) as u8)
     }
     #[doc = "Bits 21:23 - Channel 7 sample time selection"]
-    #[inline]
-    pub fn spt7(&self) -> SPT7R {
-        let bits = {
-            const MASK: u8 = 0x07;
-            const OFFSET: u8 = 21;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SPT7R { bits }
+    #[inline(always)]
+    pub fn spt7(&self) -> SPT7_R {
+        SPT7_R::new(((self.bits >> 21) & 0x07) as u8)
     }
     #[doc = "Bits 24:26 - Channel 8 sample time selection"]
-    #[inline]
-    pub fn spt8(&self) -> SPT8R {
-        let bits = {
-            const MASK: u8 = 0x07;
-            const OFFSET: u8 = 24;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SPT8R { bits }
+    #[inline(always)]
+    pub fn spt8(&self) -> SPT8_R {
+        SPT8_R::new(((self.bits >> 24) & 0x07) as u8)
     }
     #[doc = "Bits 27:29 - Channel 9 sample time selection"]
-    #[inline]
-    pub fn spt9(&self) -> SPT9R {
-        let bits = {
-            const MASK: u8 = 0x07;
-            const OFFSET: u8 = 27;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SPT9R { bits }
+    #[inline(always)]
+    pub fn spt9(&self) -> SPT9_R {
+        SPT9_R::new(((self.bits >> 27) & 0x07) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:2 - Channel 0 sample time selection"]
-    #[inline]
-    pub fn spt0(&mut self) -> _SPT0W {
-        _SPT0W { w: self }
+    #[inline(always)]
+    pub fn spt0(&mut self) -> SPT0_W {
+        SPT0_W { w: self }
     }
     #[doc = "Bits 3:5 - Channel 1 sample time selection"]
-    #[inline]
-    pub fn spt1(&mut self) -> _SPT1W {
-        _SPT1W { w: self }
+    #[inline(always)]
+    pub fn spt1(&mut self) -> SPT1_W {
+        SPT1_W { w: self }
     }
     #[doc = "Bits 6:8 - Channel 2 sample time selection"]
-    #[inline]
-    pub fn spt2(&mut self) -> _SPT2W {
-        _SPT2W { w: self }
+    #[inline(always)]
+    pub fn spt2(&mut self) -> SPT2_W {
+        SPT2_W { w: self }
     }
     #[doc = "Bits 9:11 - Channel 3 sample time selection"]
-    #[inline]
-    pub fn spt3(&mut self) -> _SPT3W {
-        _SPT3W { w: self }
+    #[inline(always)]
+    pub fn spt3(&mut self) -> SPT3_W {
+        SPT3_W { w: self }
     }
     #[doc = "Bits 12:14 - Channel 4 sample time selection"]
-    #[inline]
-    pub fn spt4(&mut self) -> _SPT4W {
-        _SPT4W { w: self }
+    #[inline(always)]
+    pub fn spt4(&mut self) -> SPT4_W {
+        SPT4_W { w: self }
     }
     #[doc = "Bits 15:17 - Channel 5 sample time selection"]
-    #[inline]
-    pub fn spt5(&mut self) -> _SPT5W {
-        _SPT5W { w: self }
+    #[inline(always)]
+    pub fn spt5(&mut self) -> SPT5_W {
+        SPT5_W { w: self }
     }
     #[doc = "Bits 18:20 - Channel 6 sample time selection"]
-    #[inline]
-    pub fn spt6(&mut self) -> _SPT6W {
-        _SPT6W { w: self }
+    #[inline(always)]
+    pub fn spt6(&mut self) -> SPT6_W {
+        SPT6_W { w: self }
     }
     #[doc = "Bits 21:23 - Channel 7 sample time selection"]
-    #[inline]
-    pub fn spt7(&mut self) -> _SPT7W {
-        _SPT7W { w: self }
+    #[inline(always)]
+    pub fn spt7(&mut self) -> SPT7_W {
+        SPT7_W { w: self }
     }
     #[doc = "Bits 24:26 - Channel 8 sample time selection"]
-    #[inline]
-    pub fn spt8(&mut self) -> _SPT8W {
-        _SPT8W { w: self }
+    #[inline(always)]
+    pub fn spt8(&mut self) -> SPT8_W {
+        SPT8_W { w: self }
     }
     #[doc = "Bits 27:29 - Channel 9 sample time selection"]
-    #[inline]
-    pub fn spt9(&mut self) -> _SPT9W {
-        _SPT9W { w: self }
+    #[inline(always)]
+    pub fn spt9(&mut self) -> SPT9_W {
+        SPT9_W { w: self }
     }
 }

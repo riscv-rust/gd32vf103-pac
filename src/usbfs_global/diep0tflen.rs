@@ -1,146 +1,64 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::DIEP0TFLEN {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register DIEP0TFLEN"]
+pub type R = crate::R<u32, super::DIEP0TFLEN>;
+#[doc = "Writer for register DIEP0TFLEN"]
+pub type W = crate::W<u32, super::DIEP0TFLEN>;
+#[doc = "Register DIEP0TFLEN `reset()`'s with value 0x0200_0200"]
+impl crate::ResetValue for super::DIEP0TFLEN {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0x0200_0200
     }
 }
-#[doc = r" Value of the field"]
-pub struct IEP0TXFDR {
-    bits: u16,
-}
-impl IEP0TXFDR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct IEP0TXRSARR {
-    bits: u16,
-}
-impl IEP0TXRSARR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _IEP0TXFDW<'a> {
+#[doc = "Reader of field `IEP0TXFD`"]
+pub type IEP0TXFD_R = crate::R<u16, u16>;
+#[doc = "Write proxy for field `IEP0TXFD`"]
+pub struct IEP0TXFD_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _IEP0TXFDW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> IEP0TXFD_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        const MASK: u16 = 0xffff;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0xffff << 16)) | (((value as u32) & 0xffff) << 16);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _IEP0TXRSARW<'a> {
+#[doc = "Reader of field `IEP0TXRSAR`"]
+pub type IEP0TXRSAR_R = crate::R<u16, u16>;
+#[doc = "Write proxy for field `IEP0TXRSAR`"]
+pub struct IEP0TXRSAR_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _IEP0TXRSARW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> IEP0TXRSAR_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        const MASK: u16 = 0xffff;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0xffff) | ((value as u32) & 0xffff);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 16:31 - in endpoint 0 Tx FIFO depth"]
-    #[inline]
-    pub fn iep0txfd(&self) -> IEP0TXFDR {
-        let bits = {
-            const MASK: u16 = 0xffff;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) as u16
-        };
-        IEP0TXFDR { bits }
+    #[inline(always)]
+    pub fn iep0txfd(&self) -> IEP0TXFD_R {
+        IEP0TXFD_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
     #[doc = "Bits 0:15 - in endpoint 0 Tx RAM start address"]
-    #[inline]
-    pub fn iep0txrsar(&self) -> IEP0TXRSARR {
-        let bits = {
-            const MASK: u16 = 0xffff;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u16
-        };
-        IEP0TXRSARR { bits }
+    #[inline(always)]
+    pub fn iep0txrsar(&self) -> IEP0TXRSAR_R {
+        IEP0TXRSAR_R::new((self.bits & 0xffff) as u16)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0x0200_0200 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 16:31 - in endpoint 0 Tx FIFO depth"]
-    #[inline]
-    pub fn iep0txfd(&mut self) -> _IEP0TXFDW {
-        _IEP0TXFDW { w: self }
+    #[inline(always)]
+    pub fn iep0txfd(&mut self) -> IEP0TXFD_W {
+        IEP0TXFD_W { w: self }
     }
     #[doc = "Bits 0:15 - in endpoint 0 Tx RAM start address"]
-    #[inline]
-    pub fn iep0txrsar(&mut self) -> _IEP0TXRSARW {
-        _IEP0TXRSARW { w: self }
+    #[inline(always)]
+    pub fn iep0txrsar(&mut self) -> IEP0TXRSAR_W {
+        IEP0TXRSAR_W { w: self }
     }
 }

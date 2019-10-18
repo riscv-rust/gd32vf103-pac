@@ -1,282 +1,142 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u16,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u16,
-}
-impl super::OCTL {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register OCTL"]
+pub type R = crate::R<u16, super::OCTL>;
+#[doc = "Writer for register OCTL"]
+pub type W = crate::W<u16, super::OCTL>;
+#[doc = "Register OCTL `reset()`'s with value 0"]
+impl crate::ResetValue for super::OCTL {
+    type Type = u16;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct ROSELR {
-    bits: bool,
-}
-impl ROSELR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ASOENR {
-    bits: bool,
-}
-impl ASOENR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct COENR {
-    bits: bool,
-}
-impl COENR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RCCVR {
-    bits: u8,
-}
-impl RCCVR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _ROSELW<'a> {
+#[doc = "Reader of field `ROSEL`"]
+pub type ROSEL_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `ROSEL`"]
+pub struct ROSEL_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _ROSELW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> ROSEL_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 9;
-        self.w.bits &= !((MASK as u16) << OFFSET);
-        self.w.bits |= ((value & MASK) as u16) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u16) & 0x01) << 9);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _ASOENW<'a> {
+#[doc = "Reader of field `ASOEN`"]
+pub type ASOEN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `ASOEN`"]
+pub struct ASOEN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _ASOENW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> ASOEN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u16) << OFFSET);
-        self.w.bits |= ((value & MASK) as u16) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u16) & 0x01) << 8);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _COENW<'a> {
+#[doc = "Reader of field `COEN`"]
+pub type COEN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `COEN`"]
+pub struct COEN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _COENW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> COEN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 7;
-        self.w.bits &= !((MASK as u16) << OFFSET);
-        self.w.bits |= ((value & MASK) as u16) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u16) & 0x01) << 7);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _RCCVW<'a> {
+#[doc = "Reader of field `RCCV`"]
+pub type RCCV_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `RCCV`"]
+pub struct RCCV_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _RCCVW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> RCCV_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x7f;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u16) << OFFSET);
-        self.w.bits |= ((value & MASK) as u16) << OFFSET;
+        self.w.bits = (self.w.bits & !0x7f) | ((value as u16) & 0x7f);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
     #[doc = "Bit 9 - RTC output selection"]
-    #[inline]
-    pub fn rosel(&self) -> ROSELR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u16) != 0
-        };
-        ROSELR { bits }
+    #[inline(always)]
+    pub fn rosel(&self) -> ROSEL_R {
+        ROSEL_R::new(((self.bits >> 9) & 0x01) != 0)
     }
     #[doc = "Bit 8 - RTC alarm or second signal output enable"]
-    #[inline]
-    pub fn asoen(&self) -> ASOENR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u16) != 0
-        };
-        ASOENR { bits }
+    #[inline(always)]
+    pub fn asoen(&self) -> ASOEN_R {
+        ASOEN_R::new(((self.bits >> 8) & 0x01) != 0)
     }
     #[doc = "Bit 7 - RTC clock calibration output enable"]
-    #[inline]
-    pub fn coen(&self) -> COENR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 7;
-            ((self.bits >> OFFSET) & MASK as u16) != 0
-        };
-        COENR { bits }
+    #[inline(always)]
+    pub fn coen(&self) -> COEN_R {
+        COEN_R::new(((self.bits >> 7) & 0x01) != 0)
     }
     #[doc = "Bits 0:6 - RTC clock calibration value"]
-    #[inline]
-    pub fn rccv(&self) -> RCCVR {
-        let bits = {
-            const MASK: u8 = 0x7f;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u16) as u8
-        };
-        RCCVR { bits }
+    #[inline(always)]
+    pub fn rccv(&self) -> RCCV_R {
+        RCCV_R::new((self.bits & 0x7f) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bit 9 - RTC output selection"]
-    #[inline]
-    pub fn rosel(&mut self) -> _ROSELW {
-        _ROSELW { w: self }
+    #[inline(always)]
+    pub fn rosel(&mut self) -> ROSEL_W {
+        ROSEL_W { w: self }
     }
     #[doc = "Bit 8 - RTC alarm or second signal output enable"]
-    #[inline]
-    pub fn asoen(&mut self) -> _ASOENW {
-        _ASOENW { w: self }
+    #[inline(always)]
+    pub fn asoen(&mut self) -> ASOEN_W {
+        ASOEN_W { w: self }
     }
     #[doc = "Bit 7 - RTC clock calibration output enable"]
-    #[inline]
-    pub fn coen(&mut self) -> _COENW {
-        _COENW { w: self }
+    #[inline(always)]
+    pub fn coen(&mut self) -> COEN_W {
+        COEN_W { w: self }
     }
     #[doc = "Bits 0:6 - RTC clock calibration value"]
-    #[inline]
-    pub fn rccv(&mut self) -> _RCCVW {
-        _RCCVW { w: self }
+    #[inline(always)]
+    pub fn rccv(&mut self) -> RCCV_W {
+        RCCV_W { w: self }
     }
 }

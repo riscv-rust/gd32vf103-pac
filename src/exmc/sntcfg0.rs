@@ -1,228 +1,112 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::SNTCFG0 {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register SNTCFG0"]
+pub type R = crate::R<u32, super::SNTCFG0>;
+#[doc = "Writer for register SNTCFG0"]
+pub type W = crate::W<u32, super::SNTCFG0>;
+#[doc = "Register SNTCFG0 `reset()`'s with value 0x0fff_ffff"]
+impl crate::ResetValue for super::SNTCFG0 {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0x0fff_ffff
     }
 }
-#[doc = r" Value of the field"]
-pub struct BUSLATR {
-    bits: u8,
-}
-impl BUSLATR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct DSETR {
-    bits: u8,
-}
-impl DSETR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct AHLDR {
-    bits: u8,
-}
-impl AHLDR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ASETR {
-    bits: u8,
-}
-impl ASETR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _BUSLATW<'a> {
+#[doc = "Reader of field `BUSLAT`"]
+pub type BUSLAT_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `BUSLAT`"]
+pub struct BUSLAT_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _BUSLATW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> BUSLAT_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x0f;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 16)) | (((value as u32) & 0x0f) << 16);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _DSETW<'a> {
+#[doc = "Reader of field `DSET`"]
+pub type DSET_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `DSET`"]
+pub struct DSET_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _DSETW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> DSET_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0xff;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0xff << 8)) | (((value as u32) & 0xff) << 8);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _AHLDW<'a> {
+#[doc = "Reader of field `AHLD`"]
+pub type AHLD_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `AHLD`"]
+pub struct AHLD_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _AHLDW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> AHLD_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x0f;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 4)) | (((value as u32) & 0x0f) << 4);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _ASETW<'a> {
+#[doc = "Reader of field `ASET`"]
+pub type ASET_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `ASET`"]
+pub struct ASET_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _ASETW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> ASET_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x0f;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 16:19 - Bus latency"]
-    #[inline]
-    pub fn buslat(&self) -> BUSLATR {
-        let bits = {
-            const MASK: u8 = 0x0f;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        BUSLATR { bits }
+    #[inline(always)]
+    pub fn buslat(&self) -> BUSLAT_R {
+        BUSLAT_R::new(((self.bits >> 16) & 0x0f) as u8)
     }
     #[doc = "Bits 8:15 - Data setup time"]
-    #[inline]
-    pub fn dset(&self) -> DSETR {
-        let bits = {
-            const MASK: u8 = 0xff;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        DSETR { bits }
+    #[inline(always)]
+    pub fn dset(&self) -> DSET_R {
+        DSET_R::new(((self.bits >> 8) & 0xff) as u8)
     }
     #[doc = "Bits 4:7 - Address hold time"]
-    #[inline]
-    pub fn ahld(&self) -> AHLDR {
-        let bits = {
-            const MASK: u8 = 0x0f;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        AHLDR { bits }
+    #[inline(always)]
+    pub fn ahld(&self) -> AHLD_R {
+        AHLD_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
     #[doc = "Bits 0:3 - Address setup time"]
-    #[inline]
-    pub fn aset(&self) -> ASETR {
-        let bits = {
-            const MASK: u8 = 0x0f;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        ASETR { bits }
+    #[inline(always)]
+    pub fn aset(&self) -> ASET_R {
+        ASET_R::new((self.bits & 0x0f) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0x0fff_ffff }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 16:19 - Bus latency"]
-    #[inline]
-    pub fn buslat(&mut self) -> _BUSLATW {
-        _BUSLATW { w: self }
+    #[inline(always)]
+    pub fn buslat(&mut self) -> BUSLAT_W {
+        BUSLAT_W { w: self }
     }
     #[doc = "Bits 8:15 - Data setup time"]
-    #[inline]
-    pub fn dset(&mut self) -> _DSETW {
-        _DSETW { w: self }
+    #[inline(always)]
+    pub fn dset(&mut self) -> DSET_W {
+        DSET_W { w: self }
     }
     #[doc = "Bits 4:7 - Address hold time"]
-    #[inline]
-    pub fn ahld(&mut self) -> _AHLDW {
-        _AHLDW { w: self }
+    #[inline(always)]
+    pub fn ahld(&mut self) -> AHLD_W {
+        AHLD_W { w: self }
     }
     #[doc = "Bits 0:3 - Address setup time"]
-    #[inline]
-    pub fn aset(&mut self) -> _ASETW {
-        _ASETW { w: self }
+    #[inline(always)]
+    pub fn aset(&mut self) -> ASET_W {
+        ASET_W { w: self }
     }
 }

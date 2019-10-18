@@ -1,310 +1,160 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::RSQ1 {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register RSQ1"]
+pub type R = crate::R<u32, super::RSQ1>;
+#[doc = "Writer for register RSQ1"]
+pub type W = crate::W<u32, super::RSQ1>;
+#[doc = "Register RSQ1 `reset()`'s with value 0"]
+impl crate::ResetValue for super::RSQ1 {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct RSQ11R {
-    bits: u8,
-}
-impl RSQ11R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RSQ10R {
-    bits: u8,
-}
-impl RSQ10R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RSQ9R {
-    bits: u8,
-}
-impl RSQ9R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RSQ8R {
-    bits: u8,
-}
-impl RSQ8R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RSQ7R {
-    bits: u8,
-}
-impl RSQ7R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RSQ6R {
-    bits: u8,
-}
-impl RSQ6R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _RSQ11W<'a> {
+#[doc = "Reader of field `RSQ11`"]
+pub type RSQ11_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `RSQ11`"]
+pub struct RSQ11_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _RSQ11W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> RSQ11_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x1f;
-        const OFFSET: u8 = 25;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x1f << 25)) | (((value as u32) & 0x1f) << 25);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _RSQ10W<'a> {
+#[doc = "Reader of field `RSQ10`"]
+pub type RSQ10_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `RSQ10`"]
+pub struct RSQ10_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _RSQ10W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> RSQ10_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x1f;
-        const OFFSET: u8 = 20;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x1f << 20)) | (((value as u32) & 0x1f) << 20);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _RSQ9W<'a> {
+#[doc = "Reader of field `RSQ9`"]
+pub type RSQ9_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `RSQ9`"]
+pub struct RSQ9_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _RSQ9W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> RSQ9_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x1f;
-        const OFFSET: u8 = 15;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x1f << 15)) | (((value as u32) & 0x1f) << 15);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _RSQ8W<'a> {
+#[doc = "Reader of field `RSQ8`"]
+pub type RSQ8_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `RSQ8`"]
+pub struct RSQ8_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _RSQ8W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> RSQ8_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x1f;
-        const OFFSET: u8 = 10;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x1f << 10)) | (((value as u32) & 0x1f) << 10);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _RSQ7W<'a> {
+#[doc = "Reader of field `RSQ7`"]
+pub type RSQ7_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `RSQ7`"]
+pub struct RSQ7_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _RSQ7W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> RSQ7_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x1f;
-        const OFFSET: u8 = 5;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x1f << 5)) | (((value as u32) & 0x1f) << 5);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _RSQ6W<'a> {
+#[doc = "Reader of field `RSQ6`"]
+pub type RSQ6_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `RSQ6`"]
+pub struct RSQ6_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _RSQ6W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> RSQ6_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x1f;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x1f) | ((value as u32) & 0x1f);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 25:29 - 12th conversion in regular sequence"]
-    #[inline]
-    pub fn rsq11(&self) -> RSQ11R {
-        let bits = {
-            const MASK: u8 = 0x1f;
-            const OFFSET: u8 = 25;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        RSQ11R { bits }
+    #[inline(always)]
+    pub fn rsq11(&self) -> RSQ11_R {
+        RSQ11_R::new(((self.bits >> 25) & 0x1f) as u8)
     }
     #[doc = "Bits 20:24 - 11th conversion in regular sequence"]
-    #[inline]
-    pub fn rsq10(&self) -> RSQ10R {
-        let bits = {
-            const MASK: u8 = 0x1f;
-            const OFFSET: u8 = 20;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        RSQ10R { bits }
+    #[inline(always)]
+    pub fn rsq10(&self) -> RSQ10_R {
+        RSQ10_R::new(((self.bits >> 20) & 0x1f) as u8)
     }
     #[doc = "Bits 15:19 - 10th conversion in regular sequence"]
-    #[inline]
-    pub fn rsq9(&self) -> RSQ9R {
-        let bits = {
-            const MASK: u8 = 0x1f;
-            const OFFSET: u8 = 15;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        RSQ9R { bits }
+    #[inline(always)]
+    pub fn rsq9(&self) -> RSQ9_R {
+        RSQ9_R::new(((self.bits >> 15) & 0x1f) as u8)
     }
     #[doc = "Bits 10:14 - 9th conversion in regular sequence"]
-    #[inline]
-    pub fn rsq8(&self) -> RSQ8R {
-        let bits = {
-            const MASK: u8 = 0x1f;
-            const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        RSQ8R { bits }
+    #[inline(always)]
+    pub fn rsq8(&self) -> RSQ8_R {
+        RSQ8_R::new(((self.bits >> 10) & 0x1f) as u8)
     }
     #[doc = "Bits 5:9 - 8th conversion in regular sequence"]
-    #[inline]
-    pub fn rsq7(&self) -> RSQ7R {
-        let bits = {
-            const MASK: u8 = 0x1f;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        RSQ7R { bits }
+    #[inline(always)]
+    pub fn rsq7(&self) -> RSQ7_R {
+        RSQ7_R::new(((self.bits >> 5) & 0x1f) as u8)
     }
     #[doc = "Bits 0:4 - 7th conversion in regular sequence"]
-    #[inline]
-    pub fn rsq6(&self) -> RSQ6R {
-        let bits = {
-            const MASK: u8 = 0x1f;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        RSQ6R { bits }
+    #[inline(always)]
+    pub fn rsq6(&self) -> RSQ6_R {
+        RSQ6_R::new((self.bits & 0x1f) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 25:29 - 12th conversion in regular sequence"]
-    #[inline]
-    pub fn rsq11(&mut self) -> _RSQ11W {
-        _RSQ11W { w: self }
+    #[inline(always)]
+    pub fn rsq11(&mut self) -> RSQ11_W {
+        RSQ11_W { w: self }
     }
     #[doc = "Bits 20:24 - 11th conversion in regular sequence"]
-    #[inline]
-    pub fn rsq10(&mut self) -> _RSQ10W {
-        _RSQ10W { w: self }
+    #[inline(always)]
+    pub fn rsq10(&mut self) -> RSQ10_W {
+        RSQ10_W { w: self }
     }
     #[doc = "Bits 15:19 - 10th conversion in regular sequence"]
-    #[inline]
-    pub fn rsq9(&mut self) -> _RSQ9W {
-        _RSQ9W { w: self }
+    #[inline(always)]
+    pub fn rsq9(&mut self) -> RSQ9_W {
+        RSQ9_W { w: self }
     }
     #[doc = "Bits 10:14 - 9th conversion in regular sequence"]
-    #[inline]
-    pub fn rsq8(&mut self) -> _RSQ8W {
-        _RSQ8W { w: self }
+    #[inline(always)]
+    pub fn rsq8(&mut self) -> RSQ8_W {
+        RSQ8_W { w: self }
     }
     #[doc = "Bits 5:9 - 8th conversion in regular sequence"]
-    #[inline]
-    pub fn rsq7(&mut self) -> _RSQ7W {
-        _RSQ7W { w: self }
+    #[inline(always)]
+    pub fn rsq7(&mut self) -> RSQ7_W {
+        RSQ7_W { w: self }
     }
     #[doc = "Bits 0:4 - 7th conversion in regular sequence"]
-    #[inline]
-    pub fn rsq6(&mut self) -> _RSQ6W {
-        _RSQ6W { w: self }
+    #[inline(always)]
+    pub fn rsq6(&mut self) -> RSQ6_W {
+        RSQ6_W { w: self }
     }
 }

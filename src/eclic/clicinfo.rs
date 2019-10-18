@@ -1,83 +1,25 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-impl super::CLICINFO {
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-}
-#[doc = r" Value of the field"]
-pub struct NUM_INTERRUPTR {
-    bits: u16,
-}
-impl NUM_INTERRUPTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct VERSIONR {
-    bits: u8,
-}
-impl VERSIONR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CLICINTCTLBITSR {
-    bits: u8,
-}
-impl CLICINTCTLBITSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
+#[doc = "Reader of register CLICINFO"]
+pub type R = crate::R<u32, super::CLICINFO>;
+#[doc = "Reader of field `NUM_INTERRUPT`"]
+pub type NUM_INTERRUPT_R = crate::R<u16, u16>;
+#[doc = "Reader of field `VERSION`"]
+pub type VERSION_R = crate::R<u8, u8>;
+#[doc = "Reader of field `CLICINTCTLBITS`"]
+pub type CLICINTCTLBITS_R = crate::R<u8, u8>;
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:12 - NUM_INTERRUPT"]
-    #[inline]
-    pub fn num_interrupt(&self) -> NUM_INTERRUPTR {
-        let bits = {
-            const MASK: u16 = 0x1fff;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u16
-        };
-        NUM_INTERRUPTR { bits }
+    #[inline(always)]
+    pub fn num_interrupt(&self) -> NUM_INTERRUPT_R {
+        NUM_INTERRUPT_R::new((self.bits & 0x1fff) as u16)
     }
     #[doc = "Bits 13:20 - VERSION"]
-    #[inline]
-    pub fn version(&self) -> VERSIONR {
-        let bits = {
-            const MASK: u8 = 0xff;
-            const OFFSET: u8 = 13;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        VERSIONR { bits }
+    #[inline(always)]
+    pub fn version(&self) -> VERSION_R {
+        VERSION_R::new(((self.bits >> 13) & 0xff) as u8)
     }
     #[doc = "Bits 21:24 - CLICINTCTLBITS"]
-    #[inline]
-    pub fn clicintctlbits(&self) -> CLICINTCTLBITSR {
-        let bits = {
-            const MASK: u8 = 0x0f;
-            const OFFSET: u8 = 21;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CLICINTCTLBITSR { bits }
+    #[inline(always)]
+    pub fn clicintctlbits(&self) -> CLICINTCTLBITS_R {
+        CLICINTCTLBITS_R::new(((self.bits >> 21) & 0x0f) as u8)
     }
 }

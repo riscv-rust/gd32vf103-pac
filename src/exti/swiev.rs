@@ -1,1185 +1,662 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::SWIEV {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register SWIEV"]
+pub type R = crate::R<u32, super::SWIEV>;
+#[doc = "Writer for register SWIEV"]
+pub type W = crate::W<u32, super::SWIEV>;
+#[doc = "Register SWIEV `reset()`'s with value 0"]
+impl crate::ResetValue for super::SWIEV {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct SWIEV0R {
-    bits: bool,
-}
-impl SWIEV0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV1R {
-    bits: bool,
-}
-impl SWIEV1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV2R {
-    bits: bool,
-}
-impl SWIEV2R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV3R {
-    bits: bool,
-}
-impl SWIEV3R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV4R {
-    bits: bool,
-}
-impl SWIEV4R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV5R {
-    bits: bool,
-}
-impl SWIEV5R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV6R {
-    bits: bool,
-}
-impl SWIEV6R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV7R {
-    bits: bool,
-}
-impl SWIEV7R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV8R {
-    bits: bool,
-}
-impl SWIEV8R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV9R {
-    bits: bool,
-}
-impl SWIEV9R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV10R {
-    bits: bool,
-}
-impl SWIEV10R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV11R {
-    bits: bool,
-}
-impl SWIEV11R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV12R {
-    bits: bool,
-}
-impl SWIEV12R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV13R {
-    bits: bool,
-}
-impl SWIEV13R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV14R {
-    bits: bool,
-}
-impl SWIEV14R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV15R {
-    bits: bool,
-}
-impl SWIEV15R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV16R {
-    bits: bool,
-}
-impl SWIEV16R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV17R {
-    bits: bool,
-}
-impl SWIEV17R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SWIEV18R {
-    bits: bool,
-}
-impl SWIEV18R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Proxy"]
-pub struct _SWIEV0W<'a> {
+#[doc = "Reader of field `SWIEV0`"]
+pub type SWIEV0_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV0`"]
+pub struct SWIEV0_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV0W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV0_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV1W<'a> {
+#[doc = "Reader of field `SWIEV1`"]
+pub type SWIEV1_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV1`"]
+pub struct SWIEV1_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV1W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV1_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 1;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV2W<'a> {
+#[doc = "Reader of field `SWIEV2`"]
+pub type SWIEV2_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV2`"]
+pub struct SWIEV2_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV2W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV2_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV3W<'a> {
+#[doc = "Reader of field `SWIEV3`"]
+pub type SWIEV3_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV3`"]
+pub struct SWIEV3_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV3W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV3_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 3;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV4W<'a> {
+#[doc = "Reader of field `SWIEV4`"]
+pub type SWIEV4_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV4`"]
+pub struct SWIEV4_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV4W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV4_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV5W<'a> {
+#[doc = "Reader of field `SWIEV5`"]
+pub type SWIEV5_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV5`"]
+pub struct SWIEV5_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV5W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV5_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 5;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV6W<'a> {
+#[doc = "Reader of field `SWIEV6`"]
+pub type SWIEV6_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV6`"]
+pub struct SWIEV6_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV6W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV6_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 6;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV7W<'a> {
+#[doc = "Reader of field `SWIEV7`"]
+pub type SWIEV7_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV7`"]
+pub struct SWIEV7_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV7W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV7_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 7;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV8W<'a> {
+#[doc = "Reader of field `SWIEV8`"]
+pub type SWIEV8_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV8`"]
+pub struct SWIEV8_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV8W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV8_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV9W<'a> {
+#[doc = "Reader of field `SWIEV9`"]
+pub type SWIEV9_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV9`"]
+pub struct SWIEV9_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV9W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV9_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 9;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV10W<'a> {
+#[doc = "Reader of field `SWIEV10`"]
+pub type SWIEV10_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV10`"]
+pub struct SWIEV10_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV10W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV10_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 10;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV11W<'a> {
+#[doc = "Reader of field `SWIEV11`"]
+pub type SWIEV11_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV11`"]
+pub struct SWIEV11_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV11W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV11_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 11;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV12W<'a> {
+#[doc = "Reader of field `SWIEV12`"]
+pub type SWIEV12_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV12`"]
+pub struct SWIEV12_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV12W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV12_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV13W<'a> {
+#[doc = "Reader of field `SWIEV13`"]
+pub type SWIEV13_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV13`"]
+pub struct SWIEV13_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV13W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV13_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 13;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV14W<'a> {
+#[doc = "Reader of field `SWIEV14`"]
+pub type SWIEV14_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV14`"]
+pub struct SWIEV14_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV14W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV14_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 14;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV15W<'a> {
+#[doc = "Reader of field `SWIEV15`"]
+pub type SWIEV15_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV15`"]
+pub struct SWIEV15_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV15W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV15_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 15;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u32) & 0x01) << 15);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV16W<'a> {
+#[doc = "Reader of field `SWIEV16`"]
+pub type SWIEV16_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV16`"]
+pub struct SWIEV16_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV16W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV16_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV17W<'a> {
+#[doc = "Reader of field `SWIEV17`"]
+pub type SWIEV17_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV17`"]
+pub struct SWIEV17_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV17W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV17_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 17;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 17)) | (((value as u32) & 0x01) << 17);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SWIEV18W<'a> {
+#[doc = "Reader of field `SWIEV18`"]
+pub type SWIEV18_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SWIEV18`"]
+pub struct SWIEV18_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SWIEV18W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SWIEV18_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 18;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 18)) | (((value as u32) & 0x01) << 18);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bit 0 - Interrupt/Event software trigger on line 0"]
-    #[inline]
-    pub fn swiev0(&self) -> SWIEV0R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV0R { bits }
+    #[inline(always)]
+    pub fn swiev0(&self) -> SWIEV0_R {
+        SWIEV0_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - Interrupt/Event software trigger on line 1"]
-    #[inline]
-    pub fn swiev1(&self) -> SWIEV1R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV1R { bits }
+    #[inline(always)]
+    pub fn swiev1(&self) -> SWIEV1_R {
+        SWIEV1_R::new(((self.bits >> 1) & 0x01) != 0)
     }
     #[doc = "Bit 2 - Interrupt/Event software trigger on line 2"]
-    #[inline]
-    pub fn swiev2(&self) -> SWIEV2R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV2R { bits }
+    #[inline(always)]
+    pub fn swiev2(&self) -> SWIEV2_R {
+        SWIEV2_R::new(((self.bits >> 2) & 0x01) != 0)
     }
     #[doc = "Bit 3 - Interrupt/Event software trigger on line 3"]
-    #[inline]
-    pub fn swiev3(&self) -> SWIEV3R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV3R { bits }
+    #[inline(always)]
+    pub fn swiev3(&self) -> SWIEV3_R {
+        SWIEV3_R::new(((self.bits >> 3) & 0x01) != 0)
     }
     #[doc = "Bit 4 - Interrupt/Event software trigger on line 4"]
-    #[inline]
-    pub fn swiev4(&self) -> SWIEV4R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV4R { bits }
+    #[inline(always)]
+    pub fn swiev4(&self) -> SWIEV4_R {
+        SWIEV4_R::new(((self.bits >> 4) & 0x01) != 0)
     }
     #[doc = "Bit 5 - Interrupt/Event software trigger on line 5"]
-    #[inline]
-    pub fn swiev5(&self) -> SWIEV5R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV5R { bits }
+    #[inline(always)]
+    pub fn swiev5(&self) -> SWIEV5_R {
+        SWIEV5_R::new(((self.bits >> 5) & 0x01) != 0)
     }
     #[doc = "Bit 6 - Interrupt/Event software trigger on line 6"]
-    #[inline]
-    pub fn swiev6(&self) -> SWIEV6R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV6R { bits }
+    #[inline(always)]
+    pub fn swiev6(&self) -> SWIEV6_R {
+        SWIEV6_R::new(((self.bits >> 6) & 0x01) != 0)
     }
     #[doc = "Bit 7 - Interrupt/Event software trigger on line 7"]
-    #[inline]
-    pub fn swiev7(&self) -> SWIEV7R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 7;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV7R { bits }
+    #[inline(always)]
+    pub fn swiev7(&self) -> SWIEV7_R {
+        SWIEV7_R::new(((self.bits >> 7) & 0x01) != 0)
     }
     #[doc = "Bit 8 - Interrupt/Event software trigger on line 8"]
-    #[inline]
-    pub fn swiev8(&self) -> SWIEV8R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV8R { bits }
+    #[inline(always)]
+    pub fn swiev8(&self) -> SWIEV8_R {
+        SWIEV8_R::new(((self.bits >> 8) & 0x01) != 0)
     }
     #[doc = "Bit 9 - Interrupt/Event software trigger on line 9"]
-    #[inline]
-    pub fn swiev9(&self) -> SWIEV9R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV9R { bits }
+    #[inline(always)]
+    pub fn swiev9(&self) -> SWIEV9_R {
+        SWIEV9_R::new(((self.bits >> 9) & 0x01) != 0)
     }
     #[doc = "Bit 10 - Interrupt/Event software trigger on line 10"]
-    #[inline]
-    pub fn swiev10(&self) -> SWIEV10R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV10R { bits }
+    #[inline(always)]
+    pub fn swiev10(&self) -> SWIEV10_R {
+        SWIEV10_R::new(((self.bits >> 10) & 0x01) != 0)
     }
     #[doc = "Bit 11 - Interrupt/Event software trigger on line 11"]
-    #[inline]
-    pub fn swiev11(&self) -> SWIEV11R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 11;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV11R { bits }
+    #[inline(always)]
+    pub fn swiev11(&self) -> SWIEV11_R {
+        SWIEV11_R::new(((self.bits >> 11) & 0x01) != 0)
     }
     #[doc = "Bit 12 - Interrupt/Event software trigger on line 12"]
-    #[inline]
-    pub fn swiev12(&self) -> SWIEV12R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV12R { bits }
+    #[inline(always)]
+    pub fn swiev12(&self) -> SWIEV12_R {
+        SWIEV12_R::new(((self.bits >> 12) & 0x01) != 0)
     }
     #[doc = "Bit 13 - Interrupt/Event software trigger on line 13"]
-    #[inline]
-    pub fn swiev13(&self) -> SWIEV13R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 13;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV13R { bits }
+    #[inline(always)]
+    pub fn swiev13(&self) -> SWIEV13_R {
+        SWIEV13_R::new(((self.bits >> 13) & 0x01) != 0)
     }
     #[doc = "Bit 14 - Interrupt/Event software trigger on line 14"]
-    #[inline]
-    pub fn swiev14(&self) -> SWIEV14R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 14;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV14R { bits }
+    #[inline(always)]
+    pub fn swiev14(&self) -> SWIEV14_R {
+        SWIEV14_R::new(((self.bits >> 14) & 0x01) != 0)
     }
     #[doc = "Bit 15 - Interrupt/Event software trigger on line 15"]
-    #[inline]
-    pub fn swiev15(&self) -> SWIEV15R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 15;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV15R { bits }
+    #[inline(always)]
+    pub fn swiev15(&self) -> SWIEV15_R {
+        SWIEV15_R::new(((self.bits >> 15) & 0x01) != 0)
     }
     #[doc = "Bit 16 - Interrupt/Event software trigger on line 16"]
-    #[inline]
-    pub fn swiev16(&self) -> SWIEV16R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV16R { bits }
+    #[inline(always)]
+    pub fn swiev16(&self) -> SWIEV16_R {
+        SWIEV16_R::new(((self.bits >> 16) & 0x01) != 0)
     }
     #[doc = "Bit 17 - Interrupt/Event software trigger on line 17"]
-    #[inline]
-    pub fn swiev17(&self) -> SWIEV17R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 17;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV17R { bits }
+    #[inline(always)]
+    pub fn swiev17(&self) -> SWIEV17_R {
+        SWIEV17_R::new(((self.bits >> 17) & 0x01) != 0)
     }
     #[doc = "Bit 18 - Interrupt/Event software trigger on line 18"]
-    #[inline]
-    pub fn swiev18(&self) -> SWIEV18R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 18;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SWIEV18R { bits }
+    #[inline(always)]
+    pub fn swiev18(&self) -> SWIEV18_R {
+        SWIEV18_R::new(((self.bits >> 18) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bit 0 - Interrupt/Event software trigger on line 0"]
-    #[inline]
-    pub fn swiev0(&mut self) -> _SWIEV0W {
-        _SWIEV0W { w: self }
+    #[inline(always)]
+    pub fn swiev0(&mut self) -> SWIEV0_W {
+        SWIEV0_W { w: self }
     }
     #[doc = "Bit 1 - Interrupt/Event software trigger on line 1"]
-    #[inline]
-    pub fn swiev1(&mut self) -> _SWIEV1W {
-        _SWIEV1W { w: self }
+    #[inline(always)]
+    pub fn swiev1(&mut self) -> SWIEV1_W {
+        SWIEV1_W { w: self }
     }
     #[doc = "Bit 2 - Interrupt/Event software trigger on line 2"]
-    #[inline]
-    pub fn swiev2(&mut self) -> _SWIEV2W {
-        _SWIEV2W { w: self }
+    #[inline(always)]
+    pub fn swiev2(&mut self) -> SWIEV2_W {
+        SWIEV2_W { w: self }
     }
     #[doc = "Bit 3 - Interrupt/Event software trigger on line 3"]
-    #[inline]
-    pub fn swiev3(&mut self) -> _SWIEV3W {
-        _SWIEV3W { w: self }
+    #[inline(always)]
+    pub fn swiev3(&mut self) -> SWIEV3_W {
+        SWIEV3_W { w: self }
     }
     #[doc = "Bit 4 - Interrupt/Event software trigger on line 4"]
-    #[inline]
-    pub fn swiev4(&mut self) -> _SWIEV4W {
-        _SWIEV4W { w: self }
+    #[inline(always)]
+    pub fn swiev4(&mut self) -> SWIEV4_W {
+        SWIEV4_W { w: self }
     }
     #[doc = "Bit 5 - Interrupt/Event software trigger on line 5"]
-    #[inline]
-    pub fn swiev5(&mut self) -> _SWIEV5W {
-        _SWIEV5W { w: self }
+    #[inline(always)]
+    pub fn swiev5(&mut self) -> SWIEV5_W {
+        SWIEV5_W { w: self }
     }
     #[doc = "Bit 6 - Interrupt/Event software trigger on line 6"]
-    #[inline]
-    pub fn swiev6(&mut self) -> _SWIEV6W {
-        _SWIEV6W { w: self }
+    #[inline(always)]
+    pub fn swiev6(&mut self) -> SWIEV6_W {
+        SWIEV6_W { w: self }
     }
     #[doc = "Bit 7 - Interrupt/Event software trigger on line 7"]
-    #[inline]
-    pub fn swiev7(&mut self) -> _SWIEV7W {
-        _SWIEV7W { w: self }
+    #[inline(always)]
+    pub fn swiev7(&mut self) -> SWIEV7_W {
+        SWIEV7_W { w: self }
     }
     #[doc = "Bit 8 - Interrupt/Event software trigger on line 8"]
-    #[inline]
-    pub fn swiev8(&mut self) -> _SWIEV8W {
-        _SWIEV8W { w: self }
+    #[inline(always)]
+    pub fn swiev8(&mut self) -> SWIEV8_W {
+        SWIEV8_W { w: self }
     }
     #[doc = "Bit 9 - Interrupt/Event software trigger on line 9"]
-    #[inline]
-    pub fn swiev9(&mut self) -> _SWIEV9W {
-        _SWIEV9W { w: self }
+    #[inline(always)]
+    pub fn swiev9(&mut self) -> SWIEV9_W {
+        SWIEV9_W { w: self }
     }
     #[doc = "Bit 10 - Interrupt/Event software trigger on line 10"]
-    #[inline]
-    pub fn swiev10(&mut self) -> _SWIEV10W {
-        _SWIEV10W { w: self }
+    #[inline(always)]
+    pub fn swiev10(&mut self) -> SWIEV10_W {
+        SWIEV10_W { w: self }
     }
     #[doc = "Bit 11 - Interrupt/Event software trigger on line 11"]
-    #[inline]
-    pub fn swiev11(&mut self) -> _SWIEV11W {
-        _SWIEV11W { w: self }
+    #[inline(always)]
+    pub fn swiev11(&mut self) -> SWIEV11_W {
+        SWIEV11_W { w: self }
     }
     #[doc = "Bit 12 - Interrupt/Event software trigger on line 12"]
-    #[inline]
-    pub fn swiev12(&mut self) -> _SWIEV12W {
-        _SWIEV12W { w: self }
+    #[inline(always)]
+    pub fn swiev12(&mut self) -> SWIEV12_W {
+        SWIEV12_W { w: self }
     }
     #[doc = "Bit 13 - Interrupt/Event software trigger on line 13"]
-    #[inline]
-    pub fn swiev13(&mut self) -> _SWIEV13W {
-        _SWIEV13W { w: self }
+    #[inline(always)]
+    pub fn swiev13(&mut self) -> SWIEV13_W {
+        SWIEV13_W { w: self }
     }
     #[doc = "Bit 14 - Interrupt/Event software trigger on line 14"]
-    #[inline]
-    pub fn swiev14(&mut self) -> _SWIEV14W {
-        _SWIEV14W { w: self }
+    #[inline(always)]
+    pub fn swiev14(&mut self) -> SWIEV14_W {
+        SWIEV14_W { w: self }
     }
     #[doc = "Bit 15 - Interrupt/Event software trigger on line 15"]
-    #[inline]
-    pub fn swiev15(&mut self) -> _SWIEV15W {
-        _SWIEV15W { w: self }
+    #[inline(always)]
+    pub fn swiev15(&mut self) -> SWIEV15_W {
+        SWIEV15_W { w: self }
     }
     #[doc = "Bit 16 - Interrupt/Event software trigger on line 16"]
-    #[inline]
-    pub fn swiev16(&mut self) -> _SWIEV16W {
-        _SWIEV16W { w: self }
+    #[inline(always)]
+    pub fn swiev16(&mut self) -> SWIEV16_W {
+        SWIEV16_W { w: self }
     }
     #[doc = "Bit 17 - Interrupt/Event software trigger on line 17"]
-    #[inline]
-    pub fn swiev17(&mut self) -> _SWIEV17W {
-        _SWIEV17W { w: self }
+    #[inline(always)]
+    pub fn swiev17(&mut self) -> SWIEV17_W {
+        SWIEV17_W { w: self }
     }
     #[doc = "Bit 18 - Interrupt/Event software trigger on line 18"]
-    #[inline]
-    pub fn swiev18(&mut self) -> _SWIEV18W {
-        _SWIEV18W { w: self }
+    #[inline(always)]
+    pub fn swiev18(&mut self) -> SWIEV18_W {
+        SWIEV18_W { w: self }
     }
 }

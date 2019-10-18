@@ -1,164 +1,74 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u16,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u16,
-}
-impl super::SADDR1 {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register SADDR1"]
+pub type R = crate::R<u16, super::SADDR1>;
+#[doc = "Writer for register SADDR1"]
+pub type W = crate::W<u16, super::SADDR1>;
+#[doc = "Register SADDR1 `reset()`'s with value 0"]
+impl crate::ResetValue for super::SADDR1 {
+    type Type = u16;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct ADDRESS2R {
-    bits: u8,
-}
-impl ADDRESS2R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct DUADENR {
-    bits: bool,
-}
-impl DUADENR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Proxy"]
-pub struct _ADDRESS2W<'a> {
+#[doc = "Reader of field `ADDRESS2`"]
+pub type ADDRESS2_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `ADDRESS2`"]
+pub struct ADDRESS2_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _ADDRESS2W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> ADDRESS2_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x7f;
-        const OFFSET: u8 = 1;
-        self.w.bits &= !((MASK as u16) << OFFSET);
-        self.w.bits |= ((value & MASK) as u16) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x7f << 1)) | (((value as u16) & 0x7f) << 1);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _DUADENW<'a> {
+#[doc = "Reader of field `DUADEN`"]
+pub type DUADEN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `DUADEN`"]
+pub struct DUADEN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _DUADENW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> DUADEN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u16) << OFFSET);
-        self.w.bits |= ((value & MASK) as u16) << OFFSET;
+        self.w.bits = (self.w.bits & !0x01) | ((value as u16) & 0x01);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
     #[doc = "Bits 1:7 - Second I2C address for the slave in Dual-Address mode"]
-    #[inline]
-    pub fn address2(&self) -> ADDRESS2R {
-        let bits = {
-            const MASK: u8 = 0x7f;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u16) as u8
-        };
-        ADDRESS2R { bits }
+    #[inline(always)]
+    pub fn address2(&self) -> ADDRESS2_R {
+        ADDRESS2_R::new(((self.bits >> 1) & 0x7f) as u8)
     }
     #[doc = "Bit 0 - Dual-Address mode switch"]
-    #[inline]
-    pub fn duaden(&self) -> DUADENR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u16) != 0
-        };
-        DUADENR { bits }
+    #[inline(always)]
+    pub fn duaden(&self) -> DUADEN_R {
+        DUADEN_R::new((self.bits & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 1:7 - Second I2C address for the slave in Dual-Address mode"]
-    #[inline]
-    pub fn address2(&mut self) -> _ADDRESS2W {
-        _ADDRESS2W { w: self }
+    #[inline(always)]
+    pub fn address2(&mut self) -> ADDRESS2_W {
+        ADDRESS2_W { w: self }
     }
     #[doc = "Bit 0 - Dual-Address mode switch"]
-    #[inline]
-    pub fn duaden(&mut self) -> _DUADENW {
-        _DUADENW { w: self }
+    #[inline(always)]
+    pub fn duaden(&mut self) -> DUADEN_W {
+        DUADEN_W { w: self }
     }
 }

@@ -1,1008 +1,560 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::OCTL {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register OCTL"]
+pub type R = crate::R<u32, super::OCTL>;
+#[doc = "Writer for register OCTL"]
+pub type W = crate::W<u32, super::OCTL>;
+#[doc = "Register OCTL `reset()`'s with value 0"]
+impl crate::ResetValue for super::OCTL {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct OCTL15R {
-    bits: bool,
-}
-impl OCTL15R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct OCTL14R {
-    bits: bool,
-}
-impl OCTL14R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct OCTL13R {
-    bits: bool,
-}
-impl OCTL13R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct OCTL12R {
-    bits: bool,
-}
-impl OCTL12R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct OCTL11R {
-    bits: bool,
-}
-impl OCTL11R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct OCTL10R {
-    bits: bool,
-}
-impl OCTL10R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct OCTL9R {
-    bits: bool,
-}
-impl OCTL9R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct OCTL8R {
-    bits: bool,
-}
-impl OCTL8R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct OCTL7R {
-    bits: bool,
-}
-impl OCTL7R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct OCTL6R {
-    bits: bool,
-}
-impl OCTL6R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct OCTL5R {
-    bits: bool,
-}
-impl OCTL5R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct OCTL4R {
-    bits: bool,
-}
-impl OCTL4R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct OCTL3R {
-    bits: bool,
-}
-impl OCTL3R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct OCTL2R {
-    bits: bool,
-}
-impl OCTL2R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct OCTL1R {
-    bits: bool,
-}
-impl OCTL1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct OCTL0R {
-    bits: bool,
-}
-impl OCTL0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Proxy"]
-pub struct _OCTL15W<'a> {
+#[doc = "Reader of field `OCTL15`"]
+pub type OCTL15_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `OCTL15`"]
+pub struct OCTL15_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCTL15W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> OCTL15_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 15;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u32) & 0x01) << 15);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _OCTL14W<'a> {
+#[doc = "Reader of field `OCTL14`"]
+pub type OCTL14_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `OCTL14`"]
+pub struct OCTL14_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCTL14W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> OCTL14_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 14;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _OCTL13W<'a> {
+#[doc = "Reader of field `OCTL13`"]
+pub type OCTL13_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `OCTL13`"]
+pub struct OCTL13_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCTL13W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> OCTL13_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 13;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _OCTL12W<'a> {
+#[doc = "Reader of field `OCTL12`"]
+pub type OCTL12_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `OCTL12`"]
+pub struct OCTL12_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCTL12W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> OCTL12_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _OCTL11W<'a> {
+#[doc = "Reader of field `OCTL11`"]
+pub type OCTL11_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `OCTL11`"]
+pub struct OCTL11_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCTL11W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> OCTL11_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 11;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _OCTL10W<'a> {
+#[doc = "Reader of field `OCTL10`"]
+pub type OCTL10_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `OCTL10`"]
+pub struct OCTL10_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCTL10W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> OCTL10_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 10;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _OCTL9W<'a> {
+#[doc = "Reader of field `OCTL9`"]
+pub type OCTL9_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `OCTL9`"]
+pub struct OCTL9_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCTL9W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> OCTL9_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 9;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _OCTL8W<'a> {
+#[doc = "Reader of field `OCTL8`"]
+pub type OCTL8_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `OCTL8`"]
+pub struct OCTL8_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCTL8W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> OCTL8_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _OCTL7W<'a> {
+#[doc = "Reader of field `OCTL7`"]
+pub type OCTL7_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `OCTL7`"]
+pub struct OCTL7_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCTL7W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> OCTL7_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 7;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _OCTL6W<'a> {
+#[doc = "Reader of field `OCTL6`"]
+pub type OCTL6_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `OCTL6`"]
+pub struct OCTL6_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCTL6W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> OCTL6_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 6;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _OCTL5W<'a> {
+#[doc = "Reader of field `OCTL5`"]
+pub type OCTL5_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `OCTL5`"]
+pub struct OCTL5_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCTL5W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> OCTL5_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 5;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _OCTL4W<'a> {
+#[doc = "Reader of field `OCTL4`"]
+pub type OCTL4_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `OCTL4`"]
+pub struct OCTL4_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCTL4W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> OCTL4_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _OCTL3W<'a> {
+#[doc = "Reader of field `OCTL3`"]
+pub type OCTL3_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `OCTL3`"]
+pub struct OCTL3_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCTL3W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> OCTL3_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 3;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _OCTL2W<'a> {
+#[doc = "Reader of field `OCTL2`"]
+pub type OCTL2_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `OCTL2`"]
+pub struct OCTL2_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCTL2W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> OCTL2_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _OCTL1W<'a> {
+#[doc = "Reader of field `OCTL1`"]
+pub type OCTL1_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `OCTL1`"]
+pub struct OCTL1_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCTL1W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> OCTL1_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 1;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _OCTL0W<'a> {
+#[doc = "Reader of field `OCTL0`"]
+pub type OCTL0_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `OCTL0`"]
+pub struct OCTL0_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _OCTL0W<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> OCTL0_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bit 15 - Port output control"]
-    #[inline]
-    pub fn octl15(&self) -> OCTL15R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 15;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        OCTL15R { bits }
+    #[inline(always)]
+    pub fn octl15(&self) -> OCTL15_R {
+        OCTL15_R::new(((self.bits >> 15) & 0x01) != 0)
     }
     #[doc = "Bit 14 - Port output control"]
-    #[inline]
-    pub fn octl14(&self) -> OCTL14R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 14;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        OCTL14R { bits }
+    #[inline(always)]
+    pub fn octl14(&self) -> OCTL14_R {
+        OCTL14_R::new(((self.bits >> 14) & 0x01) != 0)
     }
     #[doc = "Bit 13 - Port output control"]
-    #[inline]
-    pub fn octl13(&self) -> OCTL13R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 13;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        OCTL13R { bits }
+    #[inline(always)]
+    pub fn octl13(&self) -> OCTL13_R {
+        OCTL13_R::new(((self.bits >> 13) & 0x01) != 0)
     }
     #[doc = "Bit 12 - Port output control"]
-    #[inline]
-    pub fn octl12(&self) -> OCTL12R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        OCTL12R { bits }
+    #[inline(always)]
+    pub fn octl12(&self) -> OCTL12_R {
+        OCTL12_R::new(((self.bits >> 12) & 0x01) != 0)
     }
     #[doc = "Bit 11 - Port output control"]
-    #[inline]
-    pub fn octl11(&self) -> OCTL11R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 11;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        OCTL11R { bits }
+    #[inline(always)]
+    pub fn octl11(&self) -> OCTL11_R {
+        OCTL11_R::new(((self.bits >> 11) & 0x01) != 0)
     }
     #[doc = "Bit 10 - Port output control"]
-    #[inline]
-    pub fn octl10(&self) -> OCTL10R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        OCTL10R { bits }
+    #[inline(always)]
+    pub fn octl10(&self) -> OCTL10_R {
+        OCTL10_R::new(((self.bits >> 10) & 0x01) != 0)
     }
     #[doc = "Bit 9 - Port output control"]
-    #[inline]
-    pub fn octl9(&self) -> OCTL9R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        OCTL9R { bits }
+    #[inline(always)]
+    pub fn octl9(&self) -> OCTL9_R {
+        OCTL9_R::new(((self.bits >> 9) & 0x01) != 0)
     }
     #[doc = "Bit 8 - Port output control"]
-    #[inline]
-    pub fn octl8(&self) -> OCTL8R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        OCTL8R { bits }
+    #[inline(always)]
+    pub fn octl8(&self) -> OCTL8_R {
+        OCTL8_R::new(((self.bits >> 8) & 0x01) != 0)
     }
     #[doc = "Bit 7 - Port output control"]
-    #[inline]
-    pub fn octl7(&self) -> OCTL7R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 7;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        OCTL7R { bits }
+    #[inline(always)]
+    pub fn octl7(&self) -> OCTL7_R {
+        OCTL7_R::new(((self.bits >> 7) & 0x01) != 0)
     }
     #[doc = "Bit 6 - Port output control"]
-    #[inline]
-    pub fn octl6(&self) -> OCTL6R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        OCTL6R { bits }
+    #[inline(always)]
+    pub fn octl6(&self) -> OCTL6_R {
+        OCTL6_R::new(((self.bits >> 6) & 0x01) != 0)
     }
     #[doc = "Bit 5 - Port output control"]
-    #[inline]
-    pub fn octl5(&self) -> OCTL5R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        OCTL5R { bits }
+    #[inline(always)]
+    pub fn octl5(&self) -> OCTL5_R {
+        OCTL5_R::new(((self.bits >> 5) & 0x01) != 0)
     }
     #[doc = "Bit 4 - Port output control"]
-    #[inline]
-    pub fn octl4(&self) -> OCTL4R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        OCTL4R { bits }
+    #[inline(always)]
+    pub fn octl4(&self) -> OCTL4_R {
+        OCTL4_R::new(((self.bits >> 4) & 0x01) != 0)
     }
     #[doc = "Bit 3 - Port output control"]
-    #[inline]
-    pub fn octl3(&self) -> OCTL3R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        OCTL3R { bits }
+    #[inline(always)]
+    pub fn octl3(&self) -> OCTL3_R {
+        OCTL3_R::new(((self.bits >> 3) & 0x01) != 0)
     }
     #[doc = "Bit 2 - Port output control"]
-    #[inline]
-    pub fn octl2(&self) -> OCTL2R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        OCTL2R { bits }
+    #[inline(always)]
+    pub fn octl2(&self) -> OCTL2_R {
+        OCTL2_R::new(((self.bits >> 2) & 0x01) != 0)
     }
     #[doc = "Bit 1 - Port output control"]
-    #[inline]
-    pub fn octl1(&self) -> OCTL1R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        OCTL1R { bits }
+    #[inline(always)]
+    pub fn octl1(&self) -> OCTL1_R {
+        OCTL1_R::new(((self.bits >> 1) & 0x01) != 0)
     }
     #[doc = "Bit 0 - Port output control"]
-    #[inline]
-    pub fn octl0(&self) -> OCTL0R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        OCTL0R { bits }
+    #[inline(always)]
+    pub fn octl0(&self) -> OCTL0_R {
+        OCTL0_R::new((self.bits & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bit 15 - Port output control"]
-    #[inline]
-    pub fn octl15(&mut self) -> _OCTL15W {
-        _OCTL15W { w: self }
+    #[inline(always)]
+    pub fn octl15(&mut self) -> OCTL15_W {
+        OCTL15_W { w: self }
     }
     #[doc = "Bit 14 - Port output control"]
-    #[inline]
-    pub fn octl14(&mut self) -> _OCTL14W {
-        _OCTL14W { w: self }
+    #[inline(always)]
+    pub fn octl14(&mut self) -> OCTL14_W {
+        OCTL14_W { w: self }
     }
     #[doc = "Bit 13 - Port output control"]
-    #[inline]
-    pub fn octl13(&mut self) -> _OCTL13W {
-        _OCTL13W { w: self }
+    #[inline(always)]
+    pub fn octl13(&mut self) -> OCTL13_W {
+        OCTL13_W { w: self }
     }
     #[doc = "Bit 12 - Port output control"]
-    #[inline]
-    pub fn octl12(&mut self) -> _OCTL12W {
-        _OCTL12W { w: self }
+    #[inline(always)]
+    pub fn octl12(&mut self) -> OCTL12_W {
+        OCTL12_W { w: self }
     }
     #[doc = "Bit 11 - Port output control"]
-    #[inline]
-    pub fn octl11(&mut self) -> _OCTL11W {
-        _OCTL11W { w: self }
+    #[inline(always)]
+    pub fn octl11(&mut self) -> OCTL11_W {
+        OCTL11_W { w: self }
     }
     #[doc = "Bit 10 - Port output control"]
-    #[inline]
-    pub fn octl10(&mut self) -> _OCTL10W {
-        _OCTL10W { w: self }
+    #[inline(always)]
+    pub fn octl10(&mut self) -> OCTL10_W {
+        OCTL10_W { w: self }
     }
     #[doc = "Bit 9 - Port output control"]
-    #[inline]
-    pub fn octl9(&mut self) -> _OCTL9W {
-        _OCTL9W { w: self }
+    #[inline(always)]
+    pub fn octl9(&mut self) -> OCTL9_W {
+        OCTL9_W { w: self }
     }
     #[doc = "Bit 8 - Port output control"]
-    #[inline]
-    pub fn octl8(&mut self) -> _OCTL8W {
-        _OCTL8W { w: self }
+    #[inline(always)]
+    pub fn octl8(&mut self) -> OCTL8_W {
+        OCTL8_W { w: self }
     }
     #[doc = "Bit 7 - Port output control"]
-    #[inline]
-    pub fn octl7(&mut self) -> _OCTL7W {
-        _OCTL7W { w: self }
+    #[inline(always)]
+    pub fn octl7(&mut self) -> OCTL7_W {
+        OCTL7_W { w: self }
     }
     #[doc = "Bit 6 - Port output control"]
-    #[inline]
-    pub fn octl6(&mut self) -> _OCTL6W {
-        _OCTL6W { w: self }
+    #[inline(always)]
+    pub fn octl6(&mut self) -> OCTL6_W {
+        OCTL6_W { w: self }
     }
     #[doc = "Bit 5 - Port output control"]
-    #[inline]
-    pub fn octl5(&mut self) -> _OCTL5W {
-        _OCTL5W { w: self }
+    #[inline(always)]
+    pub fn octl5(&mut self) -> OCTL5_W {
+        OCTL5_W { w: self }
     }
     #[doc = "Bit 4 - Port output control"]
-    #[inline]
-    pub fn octl4(&mut self) -> _OCTL4W {
-        _OCTL4W { w: self }
+    #[inline(always)]
+    pub fn octl4(&mut self) -> OCTL4_W {
+        OCTL4_W { w: self }
     }
     #[doc = "Bit 3 - Port output control"]
-    #[inline]
-    pub fn octl3(&mut self) -> _OCTL3W {
-        _OCTL3W { w: self }
+    #[inline(always)]
+    pub fn octl3(&mut self) -> OCTL3_W {
+        OCTL3_W { w: self }
     }
     #[doc = "Bit 2 - Port output control"]
-    #[inline]
-    pub fn octl2(&mut self) -> _OCTL2W {
-        _OCTL2W { w: self }
+    #[inline(always)]
+    pub fn octl2(&mut self) -> OCTL2_W {
+        OCTL2_W { w: self }
     }
     #[doc = "Bit 1 - Port output control"]
-    #[inline]
-    pub fn octl1(&mut self) -> _OCTL1W {
-        _OCTL1W { w: self }
+    #[inline(always)]
+    pub fn octl1(&mut self) -> OCTL1_W {
+        OCTL1_W { w: self }
     }
     #[doc = "Bit 0 - Port output control"]
-    #[inline]
-    pub fn octl0(&mut self) -> _OCTL0W {
-        _OCTL0W { w: self }
+    #[inline(always)]
+    pub fn octl0(&mut self) -> OCTL0_W {
+        OCTL0_W { w: self }
     }
 }

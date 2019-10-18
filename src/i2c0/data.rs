@@ -1,105 +1,40 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u16,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u16,
-}
-impl super::DATA {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register DATA"]
+pub type R = crate::R<u16, super::DATA>;
+#[doc = "Writer for register DATA"]
+pub type W = crate::W<u16, super::DATA>;
+#[doc = "Register DATA `reset()`'s with value 0"]
+impl crate::ResetValue for super::DATA {
+    type Type = u16;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct TRBR {
-    bits: u8,
-}
-impl TRBR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _TRBW<'a> {
+#[doc = "Reader of field `TRB`"]
+pub type TRB_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `TRB`"]
+pub struct TRB_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _TRBW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> TRB_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0xff;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u16) << OFFSET);
-        self.w.bits |= ((value & MASK) as u16) << OFFSET;
+        self.w.bits = (self.w.bits & !0xff) | ((value as u16) & 0xff);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
     #[doc = "Bits 0:7 - Transmission or reception data buffer register"]
-    #[inline]
-    pub fn trb(&self) -> TRBR {
-        let bits = {
-            const MASK: u8 = 0xff;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u16) as u8
-        };
-        TRBR { bits }
+    #[inline(always)]
+    pub fn trb(&self) -> TRB_R {
+        TRB_R::new((self.bits & 0xff) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:7 - Transmission or reception data buffer register"]
-    #[inline]
-    pub fn trb(&mut self) -> _TRBW {
-        _TRBW { w: self }
+    #[inline(always)]
+    pub fn trb(&mut self) -> TRB_W {
+        TRB_W { w: self }
     }
 }

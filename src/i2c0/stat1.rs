@@ -1,258 +1,60 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u16,
-}
-impl super::STAT1 {
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PECVR {
-    bits: u8,
-}
-impl PECVR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct DUMODFR {
-    bits: bool,
-}
-impl DUMODFR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct HSTSMBR {
-    bits: bool,
-}
-impl HSTSMBR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct DEFSMBR {
-    bits: bool,
-}
-impl DEFSMBR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RXGCR {
-    bits: bool,
-}
-impl RXGCR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct TRR {
-    bits: bool,
-}
-impl TRR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct I2CBSYR {
-    bits: bool,
-}
-impl I2CBSYR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct MASTERR {
-    bits: bool,
-}
-impl MASTERR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
+#[doc = "Reader of register STAT1"]
+pub type R = crate::R<u16, super::STAT1>;
+#[doc = "Reader of field `PECV`"]
+pub type PECV_R = crate::R<u8, u8>;
+#[doc = "Reader of field `DUMODF`"]
+pub type DUMODF_R = crate::R<bool, bool>;
+#[doc = "Reader of field `HSTSMB`"]
+pub type HSTSMB_R = crate::R<bool, bool>;
+#[doc = "Reader of field `DEFSMB`"]
+pub type DEFSMB_R = crate::R<bool, bool>;
+#[doc = "Reader of field `RXGC`"]
+pub type RXGC_R = crate::R<bool, bool>;
+#[doc = "Reader of field `TR`"]
+pub type TR_R = crate::R<bool, bool>;
+#[doc = "Reader of field `I2CBSY`"]
+pub type I2CBSY_R = crate::R<bool, bool>;
+#[doc = "Reader of field `MASTER`"]
+pub type MASTER_R = crate::R<bool, bool>;
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
     #[doc = "Bits 8:15 - Packet Error Checking Value that calculated by hardware when PEC is enabled"]
-    #[inline]
-    pub fn pecv(&self) -> PECVR {
-        let bits = {
-            const MASK: u8 = 0xff;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u16) as u8
-        };
-        PECVR { bits }
+    #[inline(always)]
+    pub fn pecv(&self) -> PECV_R {
+        PECV_R::new(((self.bits >> 8) & 0xff) as u8)
     }
     #[doc = "Bit 7 - Dual Flag in slave mode"]
-    #[inline]
-    pub fn dumodf(&self) -> DUMODFR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 7;
-            ((self.bits >> OFFSET) & MASK as u16) != 0
-        };
-        DUMODFR { bits }
+    #[inline(always)]
+    pub fn dumodf(&self) -> DUMODF_R {
+        DUMODF_R::new(((self.bits >> 7) & 0x01) != 0)
     }
     #[doc = "Bit 6 - SMBus Host Header detected in slave mode"]
-    #[inline]
-    pub fn hstsmb(&self) -> HSTSMBR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u16) != 0
-        };
-        HSTSMBR { bits }
+    #[inline(always)]
+    pub fn hstsmb(&self) -> HSTSMB_R {
+        HSTSMB_R::new(((self.bits >> 6) & 0x01) != 0)
     }
     #[doc = "Bit 5 - Default address of SMBusDevice"]
-    #[inline]
-    pub fn defsmb(&self) -> DEFSMBR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u16) != 0
-        };
-        DEFSMBR { bits }
+    #[inline(always)]
+    pub fn defsmb(&self) -> DEFSMB_R {
+        DEFSMB_R::new(((self.bits >> 5) & 0x01) != 0)
     }
     #[doc = "Bit 4 - General call address (00h) received"]
-    #[inline]
-    pub fn rxgc(&self) -> RXGCR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u16) != 0
-        };
-        RXGCR { bits }
+    #[inline(always)]
+    pub fn rxgc(&self) -> RXGC_R {
+        RXGC_R::new(((self.bits >> 4) & 0x01) != 0)
     }
     #[doc = "Bit 2 - Whether the I2C is a transmitter or a receiver"]
-    #[inline]
-    pub fn tr(&self) -> TRR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u16) != 0
-        };
-        TRR { bits }
+    #[inline(always)]
+    pub fn tr(&self) -> TR_R {
+        TR_R::new(((self.bits >> 2) & 0x01) != 0)
     }
     #[doc = "Bit 1 - Busy flag"]
-    #[inline]
-    pub fn i2cbsy(&self) -> I2CBSYR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u16) != 0
-        };
-        I2CBSYR { bits }
+    #[inline(always)]
+    pub fn i2cbsy(&self) -> I2CBSY_R {
+        I2CBSY_R::new(((self.bits >> 1) & 0x01) != 0)
     }
     #[doc = "Bit 0 - A flag indicating whether I2C block is in master or slave mode"]
-    #[inline]
-    pub fn master(&self) -> MASTERR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u16) != 0
-        };
-        MASTERR { bits }
+    #[inline(always)]
+    pub fn master(&self) -> MASTER_R {
+        MASTER_R::new((self.bits & 0x01) != 0)
     }
 }

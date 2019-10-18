@@ -1,223 +1,108 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u16,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u16,
-}
-impl super::CKCFG {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register CKCFG"]
+pub type R = crate::R<u16, super::CKCFG>;
+#[doc = "Writer for register CKCFG"]
+pub type W = crate::W<u16, super::CKCFG>;
+#[doc = "Register CKCFG `reset()`'s with value 0"]
+impl crate::ResetValue for super::CKCFG {
+    type Type = u16;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct FASTR {
-    bits: bool,
-}
-impl FASTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct DTCYR {
-    bits: bool,
-}
-impl DTCYR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CLKCR {
-    bits: u16,
-}
-impl CLKCR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _FASTW<'a> {
+#[doc = "Reader of field `FAST`"]
+pub type FAST_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `FAST`"]
+pub struct FAST_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _FASTW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> FAST_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 15;
-        self.w.bits &= !((MASK as u16) << OFFSET);
-        self.w.bits |= ((value & MASK) as u16) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u16) & 0x01) << 15);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _DTCYW<'a> {
+#[doc = "Reader of field `DTCY`"]
+pub type DTCY_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `DTCY`"]
+pub struct DTCY_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _DTCYW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> DTCY_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 14;
-        self.w.bits &= !((MASK as u16) << OFFSET);
-        self.w.bits |= ((value & MASK) as u16) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u16) & 0x01) << 14);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CLKCW<'a> {
+#[doc = "Reader of field `CLKC`"]
+pub type CLKC_R = crate::R<u16, u16>;
+#[doc = "Write proxy for field `CLKC`"]
+pub struct CLKC_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CLKCW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CLKC_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        const MASK: u16 = 0x0fff;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u16) << OFFSET);
-        self.w.bits |= ((value & MASK) as u16) << OFFSET;
+        self.w.bits = (self.w.bits & !0x0fff) | ((value as u16) & 0x0fff);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
     #[doc = "Bit 15 - I2C speed selection in master mode"]
-    #[inline]
-    pub fn fast(&self) -> FASTR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 15;
-            ((self.bits >> OFFSET) & MASK as u16) != 0
-        };
-        FASTR { bits }
+    #[inline(always)]
+    pub fn fast(&self) -> FAST_R {
+        FAST_R::new(((self.bits >> 15) & 0x01) != 0)
     }
     #[doc = "Bit 14 - Duty cycle in fast mode"]
-    #[inline]
-    pub fn dtcy(&self) -> DTCYR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 14;
-            ((self.bits >> OFFSET) & MASK as u16) != 0
-        };
-        DTCYR { bits }
+    #[inline(always)]
+    pub fn dtcy(&self) -> DTCY_R {
+        DTCY_R::new(((self.bits >> 14) & 0x01) != 0)
     }
     #[doc = "Bits 0:11 - I2C Clock control in master mode"]
-    #[inline]
-    pub fn clkc(&self) -> CLKCR {
-        let bits = {
-            const MASK: u16 = 0x0fff;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u16) as u16
-        };
-        CLKCR { bits }
+    #[inline(always)]
+    pub fn clkc(&self) -> CLKC_R {
+        CLKC_R::new((self.bits & 0x0fff) as u16)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bit 15 - I2C speed selection in master mode"]
-    #[inline]
-    pub fn fast(&mut self) -> _FASTW {
-        _FASTW { w: self }
+    #[inline(always)]
+    pub fn fast(&mut self) -> FAST_W {
+        FAST_W { w: self }
     }
     #[doc = "Bit 14 - Duty cycle in fast mode"]
-    #[inline]
-    pub fn dtcy(&mut self) -> _DTCYW {
-        _DTCYW { w: self }
+    #[inline(always)]
+    pub fn dtcy(&mut self) -> DTCY_W {
+        DTCY_W { w: self }
     }
     #[doc = "Bits 0:11 - I2C Clock control in master mode"]
-    #[inline]
-    pub fn clkc(&mut self) -> _CLKCW {
-        _CLKCW { w: self }
+    #[inline(always)]
+    pub fn clkc(&mut self) -> CLKC_W {
+        CLKC_W { w: self }
     }
 }

@@ -1,41 +1,11 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-impl super::HACHINT {
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-}
-#[doc = r" Value of the field"]
-pub struct HACHINTR {
-    bits: u8,
-}
-impl HACHINTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
+#[doc = "Reader of register HACHINT"]
+pub type R = crate::R<u32, super::HACHINT>;
+#[doc = "Reader of field `HACHINT`"]
+pub type HACHINT_R = crate::R<u8, u8>;
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:7 - Host all channel interrupts"]
-    #[inline]
-    pub fn hachint(&self) -> HACHINTR {
-        let bits = {
-            const MASK: u8 = 0xff;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        HACHINTR { bits }
+    #[inline(always)]
+    pub fn hachint(&self) -> HACHINT_R {
+        HACHINT_R::new((self.bits & 0xff) as u8)
     }
 }

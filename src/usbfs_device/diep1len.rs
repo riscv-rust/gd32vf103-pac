@@ -1,187 +1,88 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::DIEP1LEN {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits };
-        let mut w = W { bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register DIEP1LEN"]
+pub type R = crate::R<u32, super::DIEP1LEN>;
+#[doc = "Writer for register DIEP1LEN"]
+pub type W = crate::W<u32, super::DIEP1LEN>;
+#[doc = "Register DIEP1LEN `reset()`'s with value 0"]
+impl crate::ResetValue for super::DIEP1LEN {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct MCPFR {
-    bits: u8,
-}
-impl MCPFR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PCNTR {
-    bits: u16,
-}
-impl PCNTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct TLENR {
-    bits: u32,
-}
-impl TLENR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _MCPFW<'a> {
+#[doc = "Reader of field `MCPF`"]
+pub type MCPF_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `MCPF`"]
+pub struct MCPF_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _MCPFW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> MCPF_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 0x03;
-        const OFFSET: u8 = 29;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 29)) | (((value as u32) & 0x03) << 29);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _PCNTW<'a> {
+#[doc = "Reader of field `PCNT`"]
+pub type PCNT_R = crate::R<u16, u16>;
+#[doc = "Write proxy for field `PCNT`"]
+pub struct PCNT_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PCNTW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> PCNT_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        const MASK: u16 = 0x03ff;
-        const OFFSET: u8 = 19;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03ff << 19)) | (((value as u32) & 0x03ff) << 19);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _TLENW<'a> {
+#[doc = "Reader of field `TLEN`"]
+pub type TLEN_R = crate::R<u32, u32>;
+#[doc = "Write proxy for field `TLEN`"]
+pub struct TLEN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _TLENW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> TLEN_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        const MASK: u32 = 0x0007_ffff;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x0007_ffff) | ((value as u32) & 0x0007_ffff);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 29:30 - Multi packet count per frame"]
-    #[inline]
-    pub fn mcpf(&self) -> MCPFR {
-        let bits = {
-            const MASK: u8 = 0x03;
-            const OFFSET: u8 = 29;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        MCPFR { bits }
+    #[inline(always)]
+    pub fn mcpf(&self) -> MCPF_R {
+        MCPF_R::new(((self.bits >> 29) & 0x03) as u8)
     }
     #[doc = "Bits 19:28 - Packet count"]
-    #[inline]
-    pub fn pcnt(&self) -> PCNTR {
-        let bits = {
-            const MASK: u16 = 0x03ff;
-            const OFFSET: u8 = 19;
-            ((self.bits >> OFFSET) & MASK as u32) as u16
-        };
-        PCNTR { bits }
+    #[inline(always)]
+    pub fn pcnt(&self) -> PCNT_R {
+        PCNT_R::new(((self.bits >> 19) & 0x03ff) as u16)
     }
     #[doc = "Bits 0:18 - Transfer length"]
-    #[inline]
-    pub fn tlen(&self) -> TLENR {
-        let bits = {
-            const MASK: u32 = 0x0007_ffff;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u32
-        };
-        TLENR { bits }
+    #[inline(always)]
+    pub fn tlen(&self) -> TLEN_R {
+        TLEN_R::new((self.bits & 0x0007_ffff) as u32)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 29:30 - Multi packet count per frame"]
-    #[inline]
-    pub fn mcpf(&mut self) -> _MCPFW {
-        _MCPFW { w: self }
+    #[inline(always)]
+    pub fn mcpf(&mut self) -> MCPF_W {
+        MCPF_W { w: self }
     }
     #[doc = "Bits 19:28 - Packet count"]
-    #[inline]
-    pub fn pcnt(&mut self) -> _PCNTW {
-        _PCNTW { w: self }
+    #[inline(always)]
+    pub fn pcnt(&mut self) -> PCNT_W {
+        PCNT_W { w: self }
     }
     #[doc = "Bits 0:18 - Transfer length"]
-    #[inline]
-    pub fn tlen(&mut self) -> _TLENW {
-        _TLENW { w: self }
+    #[inline(always)]
+    pub fn tlen(&mut self) -> TLEN_W {
+        TLEN_W { w: self }
     }
 }
