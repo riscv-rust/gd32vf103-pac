@@ -8,3 +8,35 @@ RTC:
   _modify:
     "ALRMH,ALRML":
       access: write-only
+
+ECLIC:
+  _modify:
+# Fix offsets
+    CLICINTIP_85:
+      addressOffset: "0x1154"
+    CLICINTIP_86:
+      addressOffset: "0x1158"
+
+# Fix displayName:
+# * CLICINTATTR_* registers have CLICINTIE_* there
+# * Prepare for merging into a cluster: strip the "_xx" part
+    "CLICINTIP_*":
+      displayName: CLICINTIP
+    "CLICINTIE_*":
+      displayName: CLICINTIE
+    "CLICINTATTR_*":
+      displayName: CLICINTATTR
+    "CLICINTCTL_*":
+      displayName: CLICINTCTL
+
+  _cluster:
+    "CLICINTS[%s]":
+      description: "Core-local Interrupt Controller Interrupt Registers"
+      "CLICINTIP_*":
+        name: CLICINTIP
+      "CLICINTIE_*":
+        name: CLICINTIE
+      "CLICINTATTR_*":
+        name: CLICINTATTR
+      "CLICINTCTL_*":
+        name: CLICINTCTL
