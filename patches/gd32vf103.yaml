@@ -40,3 +40,53 @@ ECLIC:
         name: CLICINTATTR
       "CLICINTCTL_*":
         name: CLICINTCTL
+
+_add:
+  CTIMER:
+    description: "Core timer"
+    baseAddress: 0xD1000000
+    addressBlock:
+      offset: 0x0000
+      size: 0x1000
+      usage: registers
+    registers:
+      mtime_lo:
+        description: Timer value (lower half)
+        addressOffset: 0x000
+        access: read-write
+        resetValue: 0x00000000
+      mtime_hi:
+        description: Timer value (upper half)
+        addressOffset: 0x004
+        access: read-write
+        resetValue: 0x00000000
+      mtimecmp_lo:
+        description: Timer comparison value (lower half)
+        addressOffset: 0x008
+        access: read-write
+        resetValue: 0xffffffff
+      mtimecmp_hi:
+        description: Timer comparison value (upper half)
+        addressOffset: 0x00c
+        access: read-write
+        resetValue: 0xffffffff
+      mstop:
+        description: Timer control register
+        addressOffset: 0xff8
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          TIMESTOP:
+            description: Pause (1) or run (0) the timer
+            bitOffset: 0
+            bitWidth: 1
+      msip:
+        description: Software interrupt register
+        addressOffset: 0xffc
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          MSIP:
+            description: Generate software interrupts
+            bitOffset: 0
+            bitWidth: 1
