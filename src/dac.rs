@@ -28,7 +28,7 @@ pub struct RegisterBlock {
     #[doc = "0x30 - DAC1 data output register"]
     pub dac1_do: DAC1_DO,
 }
-#[doc = "control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ctl](ctl) module"]
+#[doc = "control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl](ctl) module"]
 pub type CTL = crate::Reg<u32, _CTL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -39,7 +39,7 @@ impl crate::Readable for CTL {}
 impl crate::Writable for CTL {}
 #[doc = "control register"]
 pub mod ctl;
-#[doc = "software trigger register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [swt](swt) module"]
+#[doc = "software trigger register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swt](swt) module"]
 pub type SWT = crate::Reg<u32, _SWT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -48,7 +48,7 @@ pub struct _SWT;
 impl crate::Writable for SWT {}
 #[doc = "software trigger register"]
 pub mod swt;
-#[doc = "DAC0 12-bit right-aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [dac0_r12dh](dac0_r12dh) module"]
+#[doc = "DAC0 12-bit right-aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dac0_r12dh](dac0_r12dh) module"]
 pub type DAC0_R12DH = crate::Reg<u32, _DAC0_R12DH>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -59,7 +59,7 @@ impl crate::Readable for DAC0_R12DH {}
 impl crate::Writable for DAC0_R12DH {}
 #[doc = "DAC0 12-bit right-aligned data holding register"]
 pub mod dac0_r12dh;
-#[doc = "DAC0 12-bit left-aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [dac0_l12dh](dac0_l12dh) module"]
+#[doc = "DAC0 12-bit left-aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dac0_l12dh](dac0_l12dh) module"]
 pub type DAC0_L12DH = crate::Reg<u32, _DAC0_L12DH>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -70,7 +70,7 @@ impl crate::Readable for DAC0_L12DH {}
 impl crate::Writable for DAC0_L12DH {}
 #[doc = "DAC0 12-bit left-aligned data holding register"]
 pub mod dac0_l12dh;
-#[doc = "DAC0 8-bit right aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [dac0_r8dh](dac0_r8dh) module"]
+#[doc = "DAC0 8-bit right aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dac0_r8dh](dac0_r8dh) module"]
 pub type DAC0_R8DH = crate::Reg<u32, _DAC0_R8DH>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -81,7 +81,7 @@ impl crate::Readable for DAC0_R8DH {}
 impl crate::Writable for DAC0_R8DH {}
 #[doc = "DAC0 8-bit right aligned data holding register"]
 pub mod dac0_r8dh;
-#[doc = "DAC1 12-bit right-aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [dac1_r12dh](dac1_r12dh) module"]
+#[doc = "DAC1 12-bit right-aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dac1_r12dh](dac1_r12dh) module"]
 pub type DAC1_R12DH = crate::Reg<u32, _DAC1_R12DH>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -92,7 +92,7 @@ impl crate::Readable for DAC1_R12DH {}
 impl crate::Writable for DAC1_R12DH {}
 #[doc = "DAC1 12-bit right-aligned data holding register"]
 pub mod dac1_r12dh;
-#[doc = "DAC1 12-bit left aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [dac1_l12dh](dac1_l12dh) module"]
+#[doc = "DAC1 12-bit left aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dac1_l12dh](dac1_l12dh) module"]
 pub type DAC1_L12DH = crate::Reg<u32, _DAC1_L12DH>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -103,7 +103,7 @@ impl crate::Readable for DAC1_L12DH {}
 impl crate::Writable for DAC1_L12DH {}
 #[doc = "DAC1 12-bit left aligned data holding register"]
 pub mod dac1_l12dh;
-#[doc = "DAC1 8-bit right aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [dac1_r8dh](dac1_r8dh) module"]
+#[doc = "DAC1 8-bit right aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dac1_r8dh](dac1_r8dh) module"]
 pub type DAC1_R8DH = crate::Reg<u32, _DAC1_R8DH>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -114,7 +114,7 @@ impl crate::Readable for DAC1_R8DH {}
 impl crate::Writable for DAC1_R8DH {}
 #[doc = "DAC1 8-bit right aligned data holding register"]
 pub mod dac1_r8dh;
-#[doc = "DAC concurrent mode 12-bit right-aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [dacc_r12dh](dacc_r12dh) module"]
+#[doc = "DAC concurrent mode 12-bit right-aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dacc_r12dh](dacc_r12dh) module"]
 pub type DACC_R12DH = crate::Reg<u32, _DACC_R12DH>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -125,7 +125,7 @@ impl crate::Readable for DACC_R12DH {}
 impl crate::Writable for DACC_R12DH {}
 #[doc = "DAC concurrent mode 12-bit right-aligned data holding register"]
 pub mod dacc_r12dh;
-#[doc = "DAC concurrent mode 12-bit left aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [dacc_l12dh](dacc_l12dh) module"]
+#[doc = "DAC concurrent mode 12-bit left aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dacc_l12dh](dacc_l12dh) module"]
 pub type DACC_L12DH = crate::Reg<u32, _DACC_L12DH>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -136,7 +136,7 @@ impl crate::Readable for DACC_L12DH {}
 impl crate::Writable for DACC_L12DH {}
 #[doc = "DAC concurrent mode 12-bit left aligned data holding register"]
 pub mod dacc_l12dh;
-#[doc = "DAC concurrent mode 8-bit right aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [dacc_r8dh](dacc_r8dh) module"]
+#[doc = "DAC concurrent mode 8-bit right aligned data holding register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dacc_r8dh](dacc_r8dh) module"]
 pub type DACC_R8DH = crate::Reg<u32, _DACC_R8DH>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -147,7 +147,7 @@ impl crate::Readable for DACC_R8DH {}
 impl crate::Writable for DACC_R8DH {}
 #[doc = "DAC concurrent mode 8-bit right aligned data holding register"]
 pub mod dacc_r8dh;
-#[doc = "DAC0 data output register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [dac0_do](dac0_do) module"]
+#[doc = "DAC0 data output register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dac0_do](dac0_do) module"]
 pub type DAC0_DO = crate::Reg<u32, _DAC0_DO>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -156,7 +156,7 @@ pub struct _DAC0_DO;
 impl crate::Readable for DAC0_DO {}
 #[doc = "DAC0 data output register"]
 pub mod dac0_do;
-#[doc = "DAC1 data output register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [dac1_do](dac1_do) module"]
+#[doc = "DAC1 data output register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dac1_do](dac1_do) module"]
 pub type DAC1_DO = crate::Reg<u32, _DAC1_DO>;
 #[allow(missing_docs)]
 #[doc(hidden)]

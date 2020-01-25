@@ -1,7 +1,25 @@
-#![doc = "Peripheral access API for GD32VF103 microcontrollers (generated using svd2rust v0.16.1)\n\nYou can find an overview of the API [here].\n\n[here]: https://docs.rs/svd2rust/0.16.1/svd2rust/#peripheral-api"]
+#![doc = "Peripheral access API for GD32VF103 microcontrollers (generated using svd2rust v0.17.0)\n\nYou can find an overview of the API [here].\n\n[here]: https://docs.rs/svd2rust/0.17.0/svd2rust/#peripheral-api"]
+#![deny(const_err)]
+#![deny(dead_code)]
+#![deny(improper_ctypes)]
+#![deny(legacy_directory_ownership)]
 #![deny(missing_docs)]
-#![deny(warnings)]
+#![deny(no_mangle_generic_items)]
+#![deny(non_shorthand_field_patterns)]
+#![deny(overflowing_literals)]
+#![deny(path_statements)]
+#![deny(patterns_in_fns_without_body)]
+#![deny(plugin_as_library)]
+#![deny(private_in_public)]
+#![deny(safe_extern_statics)]
+#![deny(unconditional_recursion)]
+#![deny(unions_with_drop_fields)]
+#![deny(unused_allocation)]
+#![deny(unused_comparisons)]
+#![deny(unused_parens)]
+#![deny(while_true)]
 #![allow(non_camel_case_types)]
+#![allow(non_snake_case)]
 #![no_std]
 extern crate bare_metal;
 extern crate riscv;
@@ -33,6 +51,7 @@ impl ADC0 {
 }
 impl Deref for ADC0 {
     type Target = adc0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*ADC0::ptr() }
     }
@@ -53,6 +72,7 @@ impl ADC1 {
 }
 impl Deref for ADC1 {
     type Target = adc1::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*ADC1::ptr() }
     }
@@ -73,6 +93,7 @@ impl AFIO {
 }
 impl Deref for AFIO {
     type Target = afio::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*AFIO::ptr() }
     }
@@ -93,6 +114,7 @@ impl BKP {
 }
 impl Deref for BKP {
     type Target = bkp::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*BKP::ptr() }
     }
@@ -113,6 +135,7 @@ impl CAN0 {
 }
 impl Deref for CAN0 {
     type Target = can0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN0::ptr() }
     }
@@ -133,6 +156,7 @@ impl CAN1 {
 }
 impl Deref for CAN1 {
     type Target = can0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CAN1::ptr() }
     }
@@ -151,6 +175,7 @@ impl CRC {
 }
 impl Deref for CRC {
     type Target = crc::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*CRC::ptr() }
     }
@@ -171,6 +196,7 @@ impl DAC {
 }
 impl Deref for DAC {
     type Target = dac::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*DAC::ptr() }
     }
@@ -191,6 +217,7 @@ impl DBG {
 }
 impl Deref for DBG {
     type Target = dbg::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*DBG::ptr() }
     }
@@ -211,6 +238,7 @@ impl DMA0 {
 }
 impl Deref for DMA0 {
     type Target = dma0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*DMA0::ptr() }
     }
@@ -231,6 +259,7 @@ impl DMA1 {
 }
 impl Deref for DMA1 {
     type Target = dma1::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*DMA1::ptr() }
     }
@@ -251,6 +280,7 @@ impl EXMC {
 }
 impl Deref for EXMC {
     type Target = exmc::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*EXMC::ptr() }
     }
@@ -271,6 +301,7 @@ impl EXTI {
 }
 impl Deref for EXTI {
     type Target = exti::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*EXTI::ptr() }
     }
@@ -291,6 +322,7 @@ impl FMC {
 }
 impl Deref for FMC {
     type Target = fmc::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*FMC::ptr() }
     }
@@ -311,6 +343,7 @@ impl FWDGT {
 }
 impl Deref for FWDGT {
     type Target = fwdgt::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*FWDGT::ptr() }
     }
@@ -331,6 +364,7 @@ impl GPIOA {
 }
 impl Deref for GPIOA {
     type Target = gpioa::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*GPIOA::ptr() }
     }
@@ -351,6 +385,7 @@ impl GPIOB {
 }
 impl Deref for GPIOB {
     type Target = gpioa::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*GPIOB::ptr() }
     }
@@ -369,6 +404,7 @@ impl GPIOC {
 }
 impl Deref for GPIOC {
     type Target = gpioa::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*GPIOC::ptr() }
     }
@@ -387,6 +423,7 @@ impl GPIOD {
 }
 impl Deref for GPIOD {
     type Target = gpioa::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*GPIOD::ptr() }
     }
@@ -405,6 +442,7 @@ impl GPIOE {
 }
 impl Deref for GPIOE {
     type Target = gpioa::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*GPIOE::ptr() }
     }
@@ -423,6 +461,7 @@ impl I2C0 {
 }
 impl Deref for I2C0 {
     type Target = i2c0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*I2C0::ptr() }
     }
@@ -443,6 +482,7 @@ impl I2C1 {
 }
 impl Deref for I2C1 {
     type Target = i2c0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*I2C1::ptr() }
     }
@@ -461,6 +501,7 @@ impl ECLIC {
 }
 impl Deref for ECLIC {
     type Target = eclic::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*ECLIC::ptr() }
     }
@@ -481,6 +522,7 @@ impl PMU {
 }
 impl Deref for PMU {
     type Target = pmu::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*PMU::ptr() }
     }
@@ -501,6 +543,7 @@ impl RCU {
 }
 impl Deref for RCU {
     type Target = rcu::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*RCU::ptr() }
     }
@@ -521,6 +564,7 @@ impl RTC {
 }
 impl Deref for RTC {
     type Target = rtc::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*RTC::ptr() }
     }
@@ -541,6 +585,7 @@ impl SPI0 {
 }
 impl Deref for SPI0 {
     type Target = spi0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*SPI0::ptr() }
     }
@@ -561,6 +606,7 @@ impl SPI1 {
 }
 impl Deref for SPI1 {
     type Target = spi0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*SPI1::ptr() }
     }
@@ -579,6 +625,7 @@ impl SPI2 {
 }
 impl Deref for SPI2 {
     type Target = spi0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*SPI2::ptr() }
     }
@@ -597,6 +644,7 @@ impl TIMER0 {
 }
 impl Deref for TIMER0 {
     type Target = timer0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*TIMER0::ptr() }
     }
@@ -617,6 +665,7 @@ impl TIMER1 {
 }
 impl Deref for TIMER1 {
     type Target = timer1::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*TIMER1::ptr() }
     }
@@ -637,6 +686,7 @@ impl TIMER2 {
 }
 impl Deref for TIMER2 {
     type Target = timer1::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*TIMER2::ptr() }
     }
@@ -655,6 +705,7 @@ impl TIMER3 {
 }
 impl Deref for TIMER3 {
     type Target = timer1::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*TIMER3::ptr() }
     }
@@ -673,6 +724,7 @@ impl TIMER4 {
 }
 impl Deref for TIMER4 {
     type Target = timer1::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*TIMER4::ptr() }
     }
@@ -691,6 +743,7 @@ impl TIMER5 {
 }
 impl Deref for TIMER5 {
     type Target = timer5::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*TIMER5::ptr() }
     }
@@ -711,6 +764,7 @@ impl TIMER6 {
 }
 impl Deref for TIMER6 {
     type Target = timer5::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*TIMER6::ptr() }
     }
@@ -729,6 +783,7 @@ impl USART0 {
 }
 impl Deref for USART0 {
     type Target = usart0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USART0::ptr() }
     }
@@ -749,6 +804,7 @@ impl USART1 {
 }
 impl Deref for USART1 {
     type Target = usart0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USART1::ptr() }
     }
@@ -767,6 +823,7 @@ impl USART2 {
 }
 impl Deref for USART2 {
     type Target = usart0::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USART2::ptr() }
     }
@@ -785,6 +842,7 @@ impl UART3 {
 }
 impl Deref for UART3 {
     type Target = uart3::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*UART3::ptr() }
     }
@@ -805,6 +863,7 @@ impl UART4 {
 }
 impl Deref for UART4 {
     type Target = uart3::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*UART4::ptr() }
     }
@@ -823,6 +882,7 @@ impl USBFS_GLOBAL {
 }
 impl Deref for USBFS_GLOBAL {
     type Target = usbfs_global::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USBFS_GLOBAL::ptr() }
     }
@@ -843,6 +903,7 @@ impl USBFS_HOST {
 }
 impl Deref for USBFS_HOST {
     type Target = usbfs_host::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USBFS_HOST::ptr() }
     }
@@ -863,6 +924,7 @@ impl USBFS_DEVICE {
 }
 impl Deref for USBFS_DEVICE {
     type Target = usbfs_device::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USBFS_DEVICE::ptr() }
     }
@@ -883,6 +945,7 @@ impl USBFS_PWRCLK {
 }
 impl Deref for USBFS_PWRCLK {
     type Target = usbfs_pwrclk::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*USBFS_PWRCLK::ptr() }
     }
@@ -903,12 +966,34 @@ impl WWDGT {
 }
 impl Deref for WWDGT {
     type Target = wwdgt::RegisterBlock;
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*WWDGT::ptr() }
     }
 }
 #[doc = "Window watchdog timer"]
 pub mod wwdgt;
+#[doc = "Core timer"]
+pub struct CTIMER {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for CTIMER {}
+impl CTIMER {
+    #[doc = r"Returns a pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const ctimer::RegisterBlock {
+        0xd100_0000 as *const _
+    }
+}
+impl Deref for CTIMER {
+    type Target = ctimer::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*CTIMER::ptr() }
+    }
+}
+#[doc = "Core timer"]
+pub mod ctimer;
 #[no_mangle]
 static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r"All the peripherals"]
@@ -1006,6 +1091,8 @@ pub struct Peripherals {
     pub USBFS_PWRCLK: USBFS_PWRCLK,
     #[doc = "WWDGT"]
     pub WWDGT: WWDGT,
+    #[doc = "CTIMER"]
+    pub CTIMER: CTIMER,
 }
 impl Peripherals {
     #[doc = r"Returns all the peripherals *once*"]
@@ -1020,6 +1107,7 @@ impl Peripherals {
         })
     }
     #[doc = r"Unchecked version of `Peripherals::take`"]
+    #[inline]
     pub unsafe fn steal() -> Self {
         DEVICE_PERIPHERALS = true;
         Peripherals {
@@ -1159,6 +1247,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             WWDGT: WWDGT {
+                _marker: PhantomData,
+            },
+            CTIMER: CTIMER {
                 _marker: PhantomData,
             },
         }

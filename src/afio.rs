@@ -17,7 +17,7 @@ pub struct RegisterBlock {
     #[doc = "0x1c - AFIO port configuration register 1"]
     pub pcf1: PCF1,
 }
-#[doc = "Event control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ec](ec) module"]
+#[doc = "Event control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ec](ec) module"]
 pub type EC = crate::Reg<u32, _EC>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -28,7 +28,7 @@ impl crate::Readable for EC {}
 impl crate::Writable for EC {}
 #[doc = "Event control register"]
 pub mod ec;
-#[doc = "AFIO port configuration register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [pcf0](pcf0) module"]
+#[doc = "AFIO port configuration register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pcf0](pcf0) module"]
 pub type PCF0 = crate::Reg<u32, _PCF0>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -39,7 +39,7 @@ impl crate::Readable for PCF0 {}
 impl crate::Writable for PCF0 {}
 #[doc = "AFIO port configuration register 0"]
 pub mod pcf0;
-#[doc = "EXTI sources selection register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [extiss0](extiss0) module"]
+#[doc = "EXTI sources selection register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [extiss0](extiss0) module"]
 pub type EXTISS0 = crate::Reg<u32, _EXTISS0>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -50,7 +50,7 @@ impl crate::Readable for EXTISS0 {}
 impl crate::Writable for EXTISS0 {}
 #[doc = "EXTI sources selection register 0"]
 pub mod extiss0;
-#[doc = "EXTI sources selection register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [extiss1](extiss1) module"]
+#[doc = "EXTI sources selection register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [extiss1](extiss1) module"]
 pub type EXTISS1 = crate::Reg<u32, _EXTISS1>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -61,7 +61,7 @@ impl crate::Readable for EXTISS1 {}
 impl crate::Writable for EXTISS1 {}
 #[doc = "EXTI sources selection register 1"]
 pub mod extiss1;
-#[doc = "EXTI sources selection register 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [extiss2](extiss2) module"]
+#[doc = "EXTI sources selection register 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [extiss2](extiss2) module"]
 pub type EXTISS2 = crate::Reg<u32, _EXTISS2>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -72,7 +72,7 @@ impl crate::Readable for EXTISS2 {}
 impl crate::Writable for EXTISS2 {}
 #[doc = "EXTI sources selection register 2"]
 pub mod extiss2;
-#[doc = "EXTI sources selection register 3\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [extiss3](extiss3) module"]
+#[doc = "EXTI sources selection register 3\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [extiss3](extiss3) module"]
 pub type EXTISS3 = crate::Reg<u32, _EXTISS3>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -83,7 +83,7 @@ impl crate::Readable for EXTISS3 {}
 impl crate::Writable for EXTISS3 {}
 #[doc = "EXTI sources selection register 3"]
 pub mod extiss3;
-#[doc = "AFIO port configuration register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [pcf1](pcf1) module"]
+#[doc = "AFIO port configuration register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pcf1](pcf1) module"]
 pub type PCF1 = crate::Reg<u32, _PCF1>;
 #[allow(missing_docs)]
 #[doc(hidden)]

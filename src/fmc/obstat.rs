@@ -24,7 +24,8 @@ impl R {
     pub fn user(&self) -> USER_R {
         USER_R::new(((self.bits >> 2) & 0xff) as u8)
     }
-    #[doc = "Bits 10:25 - Store DATA\\[15:0\\] of option bytes block after system reset"]
+    #[doc = "Bits 10:25 - Store DATA\\[15:0\\]
+of option bytes block after system reset"]
     #[inline(always)]
     pub fn data(&self) -> DATA_R {
         DATA_R::new(((self.bits >> 10) & 0xffff) as u16)

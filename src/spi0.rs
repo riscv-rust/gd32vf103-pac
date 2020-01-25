@@ -28,7 +28,7 @@ pub struct RegisterBlock {
     #[doc = "0x20 - I2S prescaler register"]
     pub i2spsc: I2SPSC,
 }
-#[doc = "control register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ctl0](ctl0) module"]
+#[doc = "control register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl0](ctl0) module"]
 pub type CTL0 = crate::Reg<u16, _CTL0>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -39,7 +39,7 @@ impl crate::Readable for CTL0 {}
 impl crate::Writable for CTL0 {}
 #[doc = "control register 0"]
 pub mod ctl0;
-#[doc = "control register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ctl1](ctl1) module"]
+#[doc = "control register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl1](ctl1) module"]
 pub type CTL1 = crate::Reg<u16, _CTL1>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -50,7 +50,7 @@ impl crate::Readable for CTL1 {}
 impl crate::Writable for CTL1 {}
 #[doc = "control register 1"]
 pub mod ctl1;
-#[doc = "status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [stat](stat) module"]
+#[doc = "status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [stat](stat) module"]
 pub type STAT = crate::Reg<u16, _STAT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -61,7 +61,7 @@ impl crate::Readable for STAT {}
 impl crate::Writable for STAT {}
 #[doc = "status register"]
 pub mod stat;
-#[doc = "data register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [data](data) module"]
+#[doc = "data register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [data](data) module"]
 pub type DATA = crate::Reg<u16, _DATA>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -72,7 +72,7 @@ impl crate::Readable for DATA {}
 impl crate::Writable for DATA {}
 #[doc = "data register"]
 pub mod data;
-#[doc = "CRC polynomial register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [crcpoly](crcpoly) module"]
+#[doc = "CRC polynomial register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [crcpoly](crcpoly) module"]
 pub type CRCPOLY = crate::Reg<u16, _CRCPOLY>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -83,7 +83,7 @@ impl crate::Readable for CRCPOLY {}
 impl crate::Writable for CRCPOLY {}
 #[doc = "CRC polynomial register"]
 pub mod crcpoly;
-#[doc = "RX CRC register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [rcrc](rcrc) module"]
+#[doc = "RX CRC register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rcrc](rcrc) module"]
 pub type RCRC = crate::Reg<u16, _RCRC>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -92,7 +92,7 @@ pub struct _RCRC;
 impl crate::Readable for RCRC {}
 #[doc = "RX CRC register"]
 pub mod rcrc;
-#[doc = "TX CRC register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [tcrc](tcrc) module"]
+#[doc = "TX CRC register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tcrc](tcrc) module"]
 pub type TCRC = crate::Reg<u16, _TCRC>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -101,7 +101,7 @@ pub struct _TCRC;
 impl crate::Readable for TCRC {}
 #[doc = "TX CRC register"]
 pub mod tcrc;
-#[doc = "I2S control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [i2sctl](i2sctl) module"]
+#[doc = "I2S control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [i2sctl](i2sctl) module"]
 pub type I2SCTL = crate::Reg<u16, _I2SCTL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -112,7 +112,7 @@ impl crate::Readable for I2SCTL {}
 impl crate::Writable for I2SCTL {}
 #[doc = "I2S control register"]
 pub mod i2sctl;
-#[doc = "I2S prescaler register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [i2spsc](i2spsc) module"]
+#[doc = "I2S prescaler register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [i2spsc](i2spsc) module"]
 pub type I2SPSC = crate::Reg<u16, _I2SPSC>;
 #[allow(missing_docs)]
 #[doc(hidden)]

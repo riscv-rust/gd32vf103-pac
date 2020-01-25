@@ -28,7 +28,7 @@ pub struct CLICINTS {
 #[doc = r"Register block"]
 #[doc = "Core-local Interrupt Controller Interrupt Registers"]
 pub mod clicints;
-#[doc = "cliccfg Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [cliccfg](cliccfg) module"]
+#[doc = "cliccfg Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cliccfg](cliccfg) module"]
 pub type CLICCFG = crate::Reg<u8, _CLICCFG>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -39,7 +39,7 @@ impl crate::Readable for CLICCFG {}
 impl crate::Writable for CLICCFG {}
 #[doc = "cliccfg Register"]
 pub mod cliccfg;
-#[doc = "clicinfo Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [clicinfo](clicinfo) module"]
+#[doc = "clicinfo Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clicinfo](clicinfo) module"]
 pub type CLICINFO = crate::Reg<u32, _CLICINFO>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -48,7 +48,7 @@ pub struct _CLICINFO;
 impl crate::Readable for CLICINFO {}
 #[doc = "clicinfo Register"]
 pub mod clicinfo;
-#[doc = "MTH Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [mth](mth) module"]
+#[doc = "MTH Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mth](mth) module"]
 pub type MTH = crate::Reg<u8, _MTH>;
 #[allow(missing_docs)]
 #[doc(hidden)]

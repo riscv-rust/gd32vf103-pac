@@ -45,7 +45,7 @@ pub struct RegisterBlock {
     #[doc = "0x80 - Oversample control register"]
     pub ovsampctl: OVSAMPCTL,
 }
-#[doc = "status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [stat](stat) module"]
+#[doc = "status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [stat](stat) module"]
 pub type STAT = crate::Reg<u32, _STAT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -56,7 +56,7 @@ impl crate::Readable for STAT {}
 impl crate::Writable for STAT {}
 #[doc = "status register"]
 pub mod stat;
-#[doc = "control register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ctl0](ctl0) module"]
+#[doc = "control register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl0](ctl0) module"]
 pub type CTL0 = crate::Reg<u32, _CTL0>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -67,7 +67,7 @@ impl crate::Readable for CTL0 {}
 impl crate::Writable for CTL0 {}
 #[doc = "control register 0"]
 pub mod ctl0;
-#[doc = "control register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ctl1](ctl1) module"]
+#[doc = "control register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl1](ctl1) module"]
 pub type CTL1 = crate::Reg<u32, _CTL1>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -78,7 +78,7 @@ impl crate::Readable for CTL1 {}
 impl crate::Writable for CTL1 {}
 #[doc = "control register 1"]
 pub mod ctl1;
-#[doc = "Sample time register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [sampt0](sampt0) module"]
+#[doc = "Sample time register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sampt0](sampt0) module"]
 pub type SAMPT0 = crate::Reg<u32, _SAMPT0>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -89,7 +89,7 @@ impl crate::Readable for SAMPT0 {}
 impl crate::Writable for SAMPT0 {}
 #[doc = "Sample time register 0"]
 pub mod sampt0;
-#[doc = "Sample time register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [sampt1](sampt1) module"]
+#[doc = "Sample time register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sampt1](sampt1) module"]
 pub type SAMPT1 = crate::Reg<u32, _SAMPT1>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -100,7 +100,7 @@ impl crate::Readable for SAMPT1 {}
 impl crate::Writable for SAMPT1 {}
 #[doc = "Sample time register 1"]
 pub mod sampt1;
-#[doc = "Inserted channel data offset register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ioff0](ioff0) module"]
+#[doc = "Inserted channel data offset register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ioff0](ioff0) module"]
 pub type IOFF0 = crate::Reg<u32, _IOFF0>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -111,7 +111,7 @@ impl crate::Readable for IOFF0 {}
 impl crate::Writable for IOFF0 {}
 #[doc = "Inserted channel data offset register 0"]
 pub mod ioff0;
-#[doc = "Inserted channel data offset register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ioff1](ioff1) module"]
+#[doc = "Inserted channel data offset register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ioff1](ioff1) module"]
 pub type IOFF1 = crate::Reg<u32, _IOFF1>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -122,7 +122,7 @@ impl crate::Readable for IOFF1 {}
 impl crate::Writable for IOFF1 {}
 #[doc = "Inserted channel data offset register 1"]
 pub mod ioff1;
-#[doc = "Inserted channel data offset register 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ioff2](ioff2) module"]
+#[doc = "Inserted channel data offset register 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ioff2](ioff2) module"]
 pub type IOFF2 = crate::Reg<u32, _IOFF2>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -133,7 +133,7 @@ impl crate::Readable for IOFF2 {}
 impl crate::Writable for IOFF2 {}
 #[doc = "Inserted channel data offset register 2"]
 pub mod ioff2;
-#[doc = "Inserted channel data offset register 3\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ioff3](ioff3) module"]
+#[doc = "Inserted channel data offset register 3\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ioff3](ioff3) module"]
 pub type IOFF3 = crate::Reg<u32, _IOFF3>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -144,7 +144,7 @@ impl crate::Readable for IOFF3 {}
 impl crate::Writable for IOFF3 {}
 #[doc = "Inserted channel data offset register 3"]
 pub mod ioff3;
-#[doc = "watchdog higher threshold register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [wdht](wdht) module"]
+#[doc = "watchdog higher threshold register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [wdht](wdht) module"]
 pub type WDHT = crate::Reg<u32, _WDHT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -155,7 +155,7 @@ impl crate::Readable for WDHT {}
 impl crate::Writable for WDHT {}
 #[doc = "watchdog higher threshold register"]
 pub mod wdht;
-#[doc = "watchdog lower threshold register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [wdlt](wdlt) module"]
+#[doc = "watchdog lower threshold register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [wdlt](wdlt) module"]
 pub type WDLT = crate::Reg<u32, _WDLT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -166,7 +166,7 @@ impl crate::Readable for WDLT {}
 impl crate::Writable for WDLT {}
 #[doc = "watchdog lower threshold register"]
 pub mod wdlt;
-#[doc = "regular sequence register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [rsq0](rsq0) module"]
+#[doc = "regular sequence register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rsq0](rsq0) module"]
 pub type RSQ0 = crate::Reg<u32, _RSQ0>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -177,7 +177,7 @@ impl crate::Readable for RSQ0 {}
 impl crate::Writable for RSQ0 {}
 #[doc = "regular sequence register 0"]
 pub mod rsq0;
-#[doc = "regular sequence register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [rsq1](rsq1) module"]
+#[doc = "regular sequence register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rsq1](rsq1) module"]
 pub type RSQ1 = crate::Reg<u32, _RSQ1>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -188,7 +188,7 @@ impl crate::Readable for RSQ1 {}
 impl crate::Writable for RSQ1 {}
 #[doc = "regular sequence register 1"]
 pub mod rsq1;
-#[doc = "regular sequence register 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [rsq2](rsq2) module"]
+#[doc = "regular sequence register 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rsq2](rsq2) module"]
 pub type RSQ2 = crate::Reg<u32, _RSQ2>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -199,7 +199,7 @@ impl crate::Readable for RSQ2 {}
 impl crate::Writable for RSQ2 {}
 #[doc = "regular sequence register 2"]
 pub mod rsq2;
-#[doc = "Inserted sequence register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [isq](isq) module"]
+#[doc = "Inserted sequence register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [isq](isq) module"]
 pub type ISQ = crate::Reg<u32, _ISQ>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -210,7 +210,7 @@ impl crate::Readable for ISQ {}
 impl crate::Writable for ISQ {}
 #[doc = "Inserted sequence register"]
 pub mod isq;
-#[doc = "Inserted data register 0\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [idata0](idata0) module"]
+#[doc = "Inserted data register 0\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [idata0](idata0) module"]
 pub type IDATA0 = crate::Reg<u32, _IDATA0>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -219,7 +219,7 @@ pub struct _IDATA0;
 impl crate::Readable for IDATA0 {}
 #[doc = "Inserted data register 0"]
 pub mod idata0;
-#[doc = "Inserted data register 1\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [idata1](idata1) module"]
+#[doc = "Inserted data register 1\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [idata1](idata1) module"]
 pub type IDATA1 = crate::Reg<u32, _IDATA1>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -228,7 +228,7 @@ pub struct _IDATA1;
 impl crate::Readable for IDATA1 {}
 #[doc = "Inserted data register 1"]
 pub mod idata1;
-#[doc = "Inserted data register 2\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [idata2](idata2) module"]
+#[doc = "Inserted data register 2\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [idata2](idata2) module"]
 pub type IDATA2 = crate::Reg<u32, _IDATA2>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -237,7 +237,7 @@ pub struct _IDATA2;
 impl crate::Readable for IDATA2 {}
 #[doc = "Inserted data register 2"]
 pub mod idata2;
-#[doc = "Inserted data register 3\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [idata3](idata3) module"]
+#[doc = "Inserted data register 3\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [idata3](idata3) module"]
 pub type IDATA3 = crate::Reg<u32, _IDATA3>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -246,7 +246,7 @@ pub struct _IDATA3;
 impl crate::Readable for IDATA3 {}
 #[doc = "Inserted data register 3"]
 pub mod idata3;
-#[doc = "regular data register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [rdata](rdata) module"]
+#[doc = "regular data register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rdata](rdata) module"]
 pub type RDATA = crate::Reg<u32, _RDATA>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -255,7 +255,7 @@ pub struct _RDATA;
 impl crate::Readable for RDATA {}
 #[doc = "regular data register"]
 pub mod rdata;
-#[doc = "Oversample control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ovsampctl](ovsampctl) module"]
+#[doc = "Oversample control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ovsampctl](ovsampctl) module"]
 pub type OVSAMPCTL = crate::Reg<u32, _OVSAMPCTL>;
 #[allow(missing_docs)]
 #[doc(hidden)]

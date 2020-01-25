@@ -50,7 +50,7 @@ pub struct RegisterBlock {
     #[doc = "0x64 - Channel 4 memory base address register"]
     pub ch4maddr: CH4MADDR,
 }
-#[doc = "Interrupt flag register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [intf](intf) module"]
+#[doc = "Interrupt flag register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intf](intf) module"]
 pub type INTF = crate::Reg<u32, _INTF>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -59,7 +59,7 @@ pub struct _INTF;
 impl crate::Readable for INTF {}
 #[doc = "Interrupt flag register"]
 pub mod intf;
-#[doc = "Interrupt flag clear register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [intc](intc) module"]
+#[doc = "Interrupt flag clear register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intc](intc) module"]
 pub type INTC = crate::Reg<u32, _INTC>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -68,7 +68,7 @@ pub struct _INTC;
 impl crate::Writable for INTC {}
 #[doc = "Interrupt flag clear register"]
 pub mod intc;
-#[doc = "Channel 0 control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch0ctl](ch0ctl) module"]
+#[doc = "Channel 0 control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch0ctl](ch0ctl) module"]
 pub type CH0CTL = crate::Reg<u32, _CH0CTL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -79,7 +79,7 @@ impl crate::Readable for CH0CTL {}
 impl crate::Writable for CH0CTL {}
 #[doc = "Channel 0 control register"]
 pub mod ch0ctl;
-#[doc = "Channel 0 counter register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch0cnt](ch0cnt) module"]
+#[doc = "Channel 0 counter register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch0cnt](ch0cnt) module"]
 pub type CH0CNT = crate::Reg<u32, _CH0CNT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -90,7 +90,7 @@ impl crate::Readable for CH0CNT {}
 impl crate::Writable for CH0CNT {}
 #[doc = "Channel 0 counter register"]
 pub mod ch0cnt;
-#[doc = "Channel 0 peripheral base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch0paddr](ch0paddr) module"]
+#[doc = "Channel 0 peripheral base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch0paddr](ch0paddr) module"]
 pub type CH0PADDR = crate::Reg<u32, _CH0PADDR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -101,7 +101,7 @@ impl crate::Readable for CH0PADDR {}
 impl crate::Writable for CH0PADDR {}
 #[doc = "Channel 0 peripheral base address register"]
 pub mod ch0paddr;
-#[doc = "Channel 0 memory base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch0maddr](ch0maddr) module"]
+#[doc = "Channel 0 memory base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch0maddr](ch0maddr) module"]
 pub type CH0MADDR = crate::Reg<u32, _CH0MADDR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -112,7 +112,7 @@ impl crate::Readable for CH0MADDR {}
 impl crate::Writable for CH0MADDR {}
 #[doc = "Channel 0 memory base address register"]
 pub mod ch0maddr;
-#[doc = "Channel 1 control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch1ctl](ch1ctl) module"]
+#[doc = "Channel 1 control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch1ctl](ch1ctl) module"]
 pub type CH1CTL = crate::Reg<u32, _CH1CTL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -123,7 +123,7 @@ impl crate::Readable for CH1CTL {}
 impl crate::Writable for CH1CTL {}
 #[doc = "Channel 1 control register"]
 pub mod ch1ctl;
-#[doc = "Channel 1 counter register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch1cnt](ch1cnt) module"]
+#[doc = "Channel 1 counter register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch1cnt](ch1cnt) module"]
 pub type CH1CNT = crate::Reg<u32, _CH1CNT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -134,7 +134,7 @@ impl crate::Readable for CH1CNT {}
 impl crate::Writable for CH1CNT {}
 #[doc = "Channel 1 counter register"]
 pub mod ch1cnt;
-#[doc = "Channel 1 peripheral base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch1paddr](ch1paddr) module"]
+#[doc = "Channel 1 peripheral base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch1paddr](ch1paddr) module"]
 pub type CH1PADDR = crate::Reg<u32, _CH1PADDR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -145,7 +145,7 @@ impl crate::Readable for CH1PADDR {}
 impl crate::Writable for CH1PADDR {}
 #[doc = "Channel 1 peripheral base address register"]
 pub mod ch1paddr;
-#[doc = "Channel 1 memory base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch1maddr](ch1maddr) module"]
+#[doc = "Channel 1 memory base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch1maddr](ch1maddr) module"]
 pub type CH1MADDR = crate::Reg<u32, _CH1MADDR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -156,7 +156,7 @@ impl crate::Readable for CH1MADDR {}
 impl crate::Writable for CH1MADDR {}
 #[doc = "Channel 1 memory base address register"]
 pub mod ch1maddr;
-#[doc = "Channel 2 control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch2ctl](ch2ctl) module"]
+#[doc = "Channel 2 control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch2ctl](ch2ctl) module"]
 pub type CH2CTL = crate::Reg<u32, _CH2CTL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -167,7 +167,7 @@ impl crate::Readable for CH2CTL {}
 impl crate::Writable for CH2CTL {}
 #[doc = "Channel 2 control register"]
 pub mod ch2ctl;
-#[doc = "Channel 2 counter register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch2cnt](ch2cnt) module"]
+#[doc = "Channel 2 counter register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch2cnt](ch2cnt) module"]
 pub type CH2CNT = crate::Reg<u32, _CH2CNT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -178,7 +178,7 @@ impl crate::Readable for CH2CNT {}
 impl crate::Writable for CH2CNT {}
 #[doc = "Channel 2 counter register"]
 pub mod ch2cnt;
-#[doc = "Channel 2 peripheral base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch2paddr](ch2paddr) module"]
+#[doc = "Channel 2 peripheral base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch2paddr](ch2paddr) module"]
 pub type CH2PADDR = crate::Reg<u32, _CH2PADDR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -189,7 +189,7 @@ impl crate::Readable for CH2PADDR {}
 impl crate::Writable for CH2PADDR {}
 #[doc = "Channel 2 peripheral base address register"]
 pub mod ch2paddr;
-#[doc = "Channel 2 memory base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch2maddr](ch2maddr) module"]
+#[doc = "Channel 2 memory base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch2maddr](ch2maddr) module"]
 pub type CH2MADDR = crate::Reg<u32, _CH2MADDR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -200,7 +200,7 @@ impl crate::Readable for CH2MADDR {}
 impl crate::Writable for CH2MADDR {}
 #[doc = "Channel 2 memory base address register"]
 pub mod ch2maddr;
-#[doc = "Channel 3 control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch3ctl](ch3ctl) module"]
+#[doc = "Channel 3 control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch3ctl](ch3ctl) module"]
 pub type CH3CTL = crate::Reg<u32, _CH3CTL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -211,7 +211,7 @@ impl crate::Readable for CH3CTL {}
 impl crate::Writable for CH3CTL {}
 #[doc = "Channel 3 control register"]
 pub mod ch3ctl;
-#[doc = "Channel 3 counter register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch3cnt](ch3cnt) module"]
+#[doc = "Channel 3 counter register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch3cnt](ch3cnt) module"]
 pub type CH3CNT = crate::Reg<u32, _CH3CNT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -222,7 +222,7 @@ impl crate::Readable for CH3CNT {}
 impl crate::Writable for CH3CNT {}
 #[doc = "Channel 3 counter register"]
 pub mod ch3cnt;
-#[doc = "Channel 3 peripheral base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch3paddr](ch3paddr) module"]
+#[doc = "Channel 3 peripheral base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch3paddr](ch3paddr) module"]
 pub type CH3PADDR = crate::Reg<u32, _CH3PADDR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -233,7 +233,7 @@ impl crate::Readable for CH3PADDR {}
 impl crate::Writable for CH3PADDR {}
 #[doc = "Channel 3 peripheral base address register"]
 pub mod ch3paddr;
-#[doc = "Channel 3 memory base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch3maddr](ch3maddr) module"]
+#[doc = "Channel 3 memory base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch3maddr](ch3maddr) module"]
 pub type CH3MADDR = crate::Reg<u32, _CH3MADDR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -244,7 +244,7 @@ impl crate::Readable for CH3MADDR {}
 impl crate::Writable for CH3MADDR {}
 #[doc = "Channel 3 memory base address register"]
 pub mod ch3maddr;
-#[doc = "Channel 4 control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch4ctl](ch4ctl) module"]
+#[doc = "Channel 4 control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch4ctl](ch4ctl) module"]
 pub type CH4CTL = crate::Reg<u32, _CH4CTL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -255,7 +255,7 @@ impl crate::Readable for CH4CTL {}
 impl crate::Writable for CH4CTL {}
 #[doc = "Channel 4 control register"]
 pub mod ch4ctl;
-#[doc = "Channel 4 counter register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch4cnt](ch4cnt) module"]
+#[doc = "Channel 4 counter register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch4cnt](ch4cnt) module"]
 pub type CH4CNT = crate::Reg<u32, _CH4CNT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -266,7 +266,7 @@ impl crate::Readable for CH4CNT {}
 impl crate::Writable for CH4CNT {}
 #[doc = "Channel 4 counter register"]
 pub mod ch4cnt;
-#[doc = "Channel 4 peripheral base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch4paddr](ch4paddr) module"]
+#[doc = "Channel 4 peripheral base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch4paddr](ch4paddr) module"]
 pub type CH4PADDR = crate::Reg<u32, _CH4PADDR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -277,7 +277,7 @@ impl crate::Readable for CH4PADDR {}
 impl crate::Writable for CH4PADDR {}
 #[doc = "Channel 4 peripheral base address register"]
 pub mod ch4paddr;
-#[doc = "Channel 4 memory base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ch4maddr](ch4maddr) module"]
+#[doc = "Channel 4 memory base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch4maddr](ch4maddr) module"]
 pub type CH4MADDR = crate::Reg<u32, _CH4MADDR>;
 #[allow(missing_docs)]
 #[doc(hidden)]

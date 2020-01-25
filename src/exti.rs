@@ -14,7 +14,7 @@ pub struct RegisterBlock {
     #[doc = "0x14 - Pending register (EXTI_PD)"]
     pub pd: PD,
 }
-#[doc = "Interrupt enable register (EXTI_INTEN)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [inten](inten) module"]
+#[doc = "Interrupt enable register (EXTI_INTEN)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [inten](inten) module"]
 pub type INTEN = crate::Reg<u32, _INTEN>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -25,7 +25,7 @@ impl crate::Readable for INTEN {}
 impl crate::Writable for INTEN {}
 #[doc = "Interrupt enable register (EXTI_INTEN)"]
 pub mod inten;
-#[doc = "Event enable register (EXTI_EVEN)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [even](even) module"]
+#[doc = "Event enable register (EXTI_EVEN)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [even](even) module"]
 pub type EVEN = crate::Reg<u32, _EVEN>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -36,7 +36,7 @@ impl crate::Readable for EVEN {}
 impl crate::Writable for EVEN {}
 #[doc = "Event enable register (EXTI_EVEN)"]
 pub mod even;
-#[doc = "Rising Edge Trigger Enable register (EXTI_RTEN)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [rten](rten) module"]
+#[doc = "Rising Edge Trigger Enable register (EXTI_RTEN)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rten](rten) module"]
 pub type RTEN = crate::Reg<u32, _RTEN>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -47,7 +47,7 @@ impl crate::Readable for RTEN {}
 impl crate::Writable for RTEN {}
 #[doc = "Rising Edge Trigger Enable register (EXTI_RTEN)"]
 pub mod rten;
-#[doc = "Falling Egde Trigger Enable register (EXTI_FTEN)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [ften](ften) module"]
+#[doc = "Falling Egde Trigger Enable register (EXTI_FTEN)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ften](ften) module"]
 pub type FTEN = crate::Reg<u32, _FTEN>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -58,7 +58,7 @@ impl crate::Readable for FTEN {}
 impl crate::Writable for FTEN {}
 #[doc = "Falling Egde Trigger Enable register (EXTI_FTEN)"]
 pub mod ften;
-#[doc = "Software interrupt event register (EXTI_SWIEV)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [swiev](swiev) module"]
+#[doc = "Software interrupt event register (EXTI_SWIEV)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swiev](swiev) module"]
 pub type SWIEV = crate::Reg<u32, _SWIEV>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -69,7 +69,7 @@ impl crate::Readable for SWIEV {}
 impl crate::Writable for SWIEV {}
 #[doc = "Software interrupt event register (EXTI_SWIEV)"]
 pub mod swiev;
-#[doc = "Pending register (EXTI_PD)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about avaliable fields see [pd](pd) module"]
+#[doc = "Pending register (EXTI_PD)\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pd](pd) module"]
 pub type PD = crate::Reg<u32, _PD>;
 #[allow(missing_docs)]
 #[doc(hidden)]
