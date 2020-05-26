@@ -117,3 +117,19 @@ EXTI:
     _interrupts:
       EXTI_LVD:
         value: 20
+
+
+I2C0:
+  _add:
+    _registers:
+      FMPCFG:
+        description: "Fast mode plus configure register"
+        addressOffset: 0x90
+        size: 0x10
+        access: read-write
+        resetValue: 0x0000
+        fields:
+          FMPEN:
+            description: Fast mode plus enable
+            bitOffset: 0
+            bitWidth: 1

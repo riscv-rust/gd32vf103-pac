@@ -27,6 +27,9 @@ pub struct RegisterBlock {
     _reserved8: [u8; 2usize],
     #[doc = "0x20 - Rise time register"]
     pub rt: RT,
+    _reserved9: [u8; 110usize],
+    #[doc = "0x90 - Fast mode plus configure register"]
+    pub fmpcfg: FMPCFG,
 }
 #[doc = "Control register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl0](ctl0) module"]
 pub type CTL0 = crate::Reg<u16, _CTL0>;
@@ -125,3 +128,14 @@ impl crate::Readable for RT {}
 impl crate::Writable for RT {}
 #[doc = "Rise time register"]
 pub mod rt;
+#[doc = "Fast mode plus configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fmpcfg](fmpcfg) module"]
+pub type FMPCFG = crate::Reg<u16, _FMPCFG>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _FMPCFG;
+#[doc = "`read()` method returns [fmpcfg::R](fmpcfg::R) reader structure"]
+impl crate::Readable for FMPCFG {}
+#[doc = "`write(|w| ..)` method takes [fmpcfg::W](fmpcfg::W) writer structure"]
+impl crate::Writable for FMPCFG {}
+#[doc = "Fast mode plus configure register"]
+pub mod fmpcfg;
