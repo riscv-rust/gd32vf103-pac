@@ -2,8 +2,18 @@
 #[derive(Copy, Clone, Debug)]
 #[repr(u8)]
 pub enum Interrupt {
-    #[doc = "0 - WWDGT"]
-    WWDGT = 0,
+    #[doc = "3 - Software interrupt"]
+    INT_SFT = 3,
+    #[doc = "7 - Timer interrupt"]
+    INT_TMR = 7,
+    #[doc = "17 - Bus Error interrupt"]
+    INT_BWEI = 17,
+    #[doc = "18 - Performance Monitor interrupt"]
+    INT_PMOVI = 18,
+    #[doc = "19 - WWDGT"]
+    WWDGT = 19,
+    #[doc = "20 - EXTI_LVD"]
+    EXTI_LVD = 20,
     #[doc = "21 - Tamper"]
     TAMPER = 21,
     #[doc = "22 - RTC"]
@@ -131,7 +141,12 @@ impl Interrupt {
     #[inline]
     pub fn try_from(value: u8) -> Result<Self, TryFromInterruptError> {
         match value {
-            0 => Ok(Interrupt::WWDGT),
+            3 => Ok(Interrupt::INT_SFT),
+            7 => Ok(Interrupt::INT_TMR),
+            17 => Ok(Interrupt::INT_BWEI),
+            18 => Ok(Interrupt::INT_PMOVI),
+            19 => Ok(Interrupt::WWDGT),
+            20 => Ok(Interrupt::EXTI_LVD),
             21 => Ok(Interrupt::TAMPER),
             22 => Ok(Interrupt::RTC),
             23 => Ok(Interrupt::FMC),

@@ -41,6 +41,21 @@ ECLIC:
       "CLICINTCTL_*":
         name: CLICINTCTL
 
+  _add:
+    _interrupts:
+      INT_SFT:
+        value: 3
+        description: "Software interrupt"
+      INT_TMR:
+        value: 7
+        description: "Timer interrupt"
+      INT_BWEI:
+        value: 17
+        description: "Bus Error interrupt"
+      INT_PMOVI:
+        value: 18
+        description: "Performance Monitor interrupt"
+
 _add:
   CTIMER:
     description: "Core timer"
@@ -90,3 +105,15 @@ _add:
             description: Generate software interrupts
             bitOffset: 0
             bitWidth: 1
+
+WWDGT:
+  _modify:
+    _interrupts:
+      WWDGT:
+        value: 19
+
+EXTI:
+  _add:
+    _interrupts:
+      EXTI_LVD:
+        value: 20
