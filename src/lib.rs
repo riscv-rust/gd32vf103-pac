@@ -23,8 +23,6 @@
 #![no_std]
 extern crate bare_metal;
 extern crate riscv;
-#[cfg(feature = "rt")]
-extern crate riscv_rt;
 extern crate vcell;
 use core::marker::PhantomData;
 use core::ops::Deref;
