@@ -37,13 +37,16 @@ pub struct RegisterBlock {
     _reserved12: [u8; 6usize],
     #[doc = "0x34 - Channel 0 capture/compare value register"]
     pub ch0cv: CH0CV,
+    _reserved13: [u8; 2usize],
     #[doc = "0x38 - Channel 1 capture/compare value register"]
     pub ch1cv: CH1CV,
+    _reserved14: [u8; 2usize],
     #[doc = "0x3c - Channel 2 capture/compare value register"]
     pub ch2cv: CH2CV,
+    _reserved15: [u8; 2usize],
     #[doc = "0x40 - Channel 3 capture/compare value register"]
     pub ch3cv: CH3CV,
-    _reserved16: [u8; 4usize],
+    _reserved16: [u8; 6usize],
     #[doc = "0x48 - DMA configuration register"]
     pub dmacfg: DMACFG,
     _reserved17: [u8; 2usize],
@@ -245,7 +248,7 @@ impl crate::Writable for CAR {}
 #[doc = "Counter auto reload register"]
 pub mod car;
 #[doc = "Channel 0 capture/compare value register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch0cv](ch0cv) module"]
-pub type CH0CV = crate::Reg<u32, _CH0CV>;
+pub type CH0CV = crate::Reg<u16, _CH0CV>;
 #[allow(missing_docs)]
 #[doc(hidden)]
 pub struct _CH0CV;
@@ -256,7 +259,7 @@ impl crate::Writable for CH0CV {}
 #[doc = "Channel 0 capture/compare value register"]
 pub mod ch0cv;
 #[doc = "Channel 1 capture/compare value register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch1cv](ch1cv) module"]
-pub type CH1CV = crate::Reg<u32, _CH1CV>;
+pub type CH1CV = crate::Reg<u16, _CH1CV>;
 #[allow(missing_docs)]
 #[doc(hidden)]
 pub struct _CH1CV;
@@ -267,7 +270,7 @@ impl crate::Writable for CH1CV {}
 #[doc = "Channel 1 capture/compare value register"]
 pub mod ch1cv;
 #[doc = "Channel 2 capture/compare value register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch2cv](ch2cv) module"]
-pub type CH2CV = crate::Reg<u32, _CH2CV>;
+pub type CH2CV = crate::Reg<u16, _CH2CV>;
 #[allow(missing_docs)]
 #[doc(hidden)]
 pub struct _CH2CV;
@@ -278,7 +281,7 @@ impl crate::Writable for CH2CV {}
 #[doc = "Channel 2 capture/compare value register"]
 pub mod ch2cv;
 #[doc = "Channel 3 capture/compare value register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch3cv](ch3cv) module"]
-pub type CH3CV = crate::Reg<u32, _CH3CV>;
+pub type CH3CV = crate::Reg<u16, _CH3CV>;
 #[allow(missing_docs)]
 #[doc(hidden)]
 pub struct _CH3CV;
@@ -300,7 +303,7 @@ impl crate::Writable for DMACFG {}
 #[doc = "DMA configuration register"]
 pub mod dmacfg;
 #[doc = "DMA transfer buffer register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dmatb](dmatb) module"]
-pub type DMATB = crate::Reg<u32, _DMATB>;
+pub type DMATB = crate::Reg<u16, _DMATB>;
 #[allow(missing_docs)]
 #[doc(hidden)]
 pub struct _DMATB;

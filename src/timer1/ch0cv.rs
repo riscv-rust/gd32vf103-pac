@@ -1,10 +1,10 @@
 #[doc = "Reader of register CH0CV"]
-pub type R = crate::R<u32, super::CH0CV>;
+pub type R = crate::R<u16, super::CH0CV>;
 #[doc = "Writer for register CH0CV"]
-pub type W = crate::W<u32, super::CH0CV>;
+pub type W = crate::W<u16, super::CH0CV>;
 #[doc = "Register CH0CV `reset()`'s with value 0"]
 impl crate::ResetValue for super::CH0CV {
-    type Type = u32;
+    type Type = u16;
     #[inline(always)]
     fn reset_value() -> Self::Type {
         0
@@ -20,7 +20,7 @@ impl<'a> CH0VAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | ((value as u32) & 0xffff);
+        self.w.bits = (self.w.bits & !0xffff) | ((value as u16) & 0xffff);
         self.w
     }
 }

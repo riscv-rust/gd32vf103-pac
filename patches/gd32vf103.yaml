@@ -133,3 +133,10 @@ I2C0:
             description: Fast mode plus enable
             bitOffset: 0
             bitWidth: 1
+
+TIMER1:
+  _modify:
+    "CH*CV":
+      size: 0x10
+    DMATB:
+      size: 0x10
