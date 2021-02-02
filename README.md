@@ -1,6 +1,7 @@
 [![crates.io](https://img.shields.io/crates/d/gd32vf103-pac.svg)](https://crates.io/crates/gd32vf103-pac)
 [![crates.io](https://img.shields.io/crates/v/gd32vf103-pac.svg)](https://crates.io/crates/gd32vf103-pac)
-[![Build Status](https://travis-ci.org/riscv-rust/gd32vf103-pac.svg?branch=master)](https://travis-ci.org/riscv-rust/gd32vf103-pac)
+![Build Status](https://github.com/riscv-rust/gd32vf103-pac/workflows/CI/badge.svg)
+
 
 # `gd32vf103-pac`
 
