@@ -1,444 +1,172 @@
-#[doc = "Writer for register BC"]
-pub type W = crate::W<u32, super::BC>;
-#[doc = "Register BC `reset()`'s with value 0"]
-impl crate::ResetValue for super::BC {
-    type Type = u32;
+#[doc = "Register `BC` writer"]
+pub struct W(crate::W<BC_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<BC_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Write proxy for field `CR15`"]
-pub struct CR15_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR15_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u32) & 0x01) << 15);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Write proxy for field `CR14`"]
-pub struct CR14_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR14_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<BC_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
-        self.w
+    fn from(writer: crate::W<BC_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Write proxy for field `CR13`"]
-pub struct CR13_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR13_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
-        self.w
-    }
-}
-#[doc = "Write proxy for field `CR12`"]
-pub struct CR12_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR12_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
-        self.w
-    }
-}
-#[doc = "Write proxy for field `CR11`"]
-pub struct CR11_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR11_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
-        self.w
-    }
-}
-#[doc = "Write proxy for field `CR10`"]
-pub struct CR10_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR10_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
-        self.w
-    }
-}
-#[doc = "Write proxy for field `CR9`"]
-pub struct CR9_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR9_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
-        self.w
-    }
-}
-#[doc = "Write proxy for field `CR8`"]
-pub struct CR8_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR8_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Write proxy for field `CR7`"]
-pub struct CR7_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR7_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
-        self.w
-    }
-}
-#[doc = "Write proxy for field `CR6`"]
-pub struct CR6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR6_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Write proxy for field `CR5`"]
-pub struct CR5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Write proxy for field `CR4`"]
-pub struct CR4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Write proxy for field `CR3`"]
-pub struct CR3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Write proxy for field `CR2`"]
-pub struct CR2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Write proxy for field `CR1`"]
-pub struct CR1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
-    }
-}
-#[doc = "Write proxy for field `CR0`"]
-pub struct CR0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CR0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
-    }
-}
+#[doc = "Field `CR0` writer - Port 0 Clear bit"]
+pub type CR0_W<'a, const O: u8> = crate::BitWriter<'a, u32, BC_SPEC, bool, O>;
+#[doc = "Field `CR1` writer - Port 1 Clear bit"]
+pub type CR1_W<'a, const O: u8> = crate::BitWriter<'a, u32, BC_SPEC, bool, O>;
+#[doc = "Field `CR2` writer - Port 2 Clear bit"]
+pub type CR2_W<'a, const O: u8> = crate::BitWriter<'a, u32, BC_SPEC, bool, O>;
+#[doc = "Field `CR3` writer - Port 3 Clear bit"]
+pub type CR3_W<'a, const O: u8> = crate::BitWriter<'a, u32, BC_SPEC, bool, O>;
+#[doc = "Field `CR4` writer - Port 4 Clear bit"]
+pub type CR4_W<'a, const O: u8> = crate::BitWriter<'a, u32, BC_SPEC, bool, O>;
+#[doc = "Field `CR5` writer - Port 5 Clear bit"]
+pub type CR5_W<'a, const O: u8> = crate::BitWriter<'a, u32, BC_SPEC, bool, O>;
+#[doc = "Field `CR6` writer - Port 6 Clear bit"]
+pub type CR6_W<'a, const O: u8> = crate::BitWriter<'a, u32, BC_SPEC, bool, O>;
+#[doc = "Field `CR7` writer - Port 7 Clear bit"]
+pub type CR7_W<'a, const O: u8> = crate::BitWriter<'a, u32, BC_SPEC, bool, O>;
+#[doc = "Field `CR8` writer - Port 8 Clear bit"]
+pub type CR8_W<'a, const O: u8> = crate::BitWriter<'a, u32, BC_SPEC, bool, O>;
+#[doc = "Field `CR9` writer - Port 9 Clear bit"]
+pub type CR9_W<'a, const O: u8> = crate::BitWriter<'a, u32, BC_SPEC, bool, O>;
+#[doc = "Field `CR10` writer - Port 10 Clear bit"]
+pub type CR10_W<'a, const O: u8> = crate::BitWriter<'a, u32, BC_SPEC, bool, O>;
+#[doc = "Field `CR11` writer - Port 11 Clear bit"]
+pub type CR11_W<'a, const O: u8> = crate::BitWriter<'a, u32, BC_SPEC, bool, O>;
+#[doc = "Field `CR12` writer - Port 12 Clear bit"]
+pub type CR12_W<'a, const O: u8> = crate::BitWriter<'a, u32, BC_SPEC, bool, O>;
+#[doc = "Field `CR13` writer - Port 13 Clear bit"]
+pub type CR13_W<'a, const O: u8> = crate::BitWriter<'a, u32, BC_SPEC, bool, O>;
+#[doc = "Field `CR14` writer - Port 14 Clear bit"]
+pub type CR14_W<'a, const O: u8> = crate::BitWriter<'a, u32, BC_SPEC, bool, O>;
+#[doc = "Field `CR15` writer - Port 15 Clear bit"]
+pub type CR15_W<'a, const O: u8> = crate::BitWriter<'a, u32, BC_SPEC, bool, O>;
 impl W {
-    #[doc = "Bit 15 - Port 15 Clear bit"]
+    #[doc = "Bit 0 - Port 0 Clear bit"]
     #[inline(always)]
-    pub fn cr15(&mut self) -> CR15_W {
-        CR15_W { w: self }
-    }
-    #[doc = "Bit 14 - Port 14 Clear bit"]
-    #[inline(always)]
-    pub fn cr14(&mut self) -> CR14_W {
-        CR14_W { w: self }
-    }
-    #[doc = "Bit 13 - Port 13 Clear bit"]
-    #[inline(always)]
-    pub fn cr13(&mut self) -> CR13_W {
-        CR13_W { w: self }
-    }
-    #[doc = "Bit 12 - Port 12 Clear bit"]
-    #[inline(always)]
-    pub fn cr12(&mut self) -> CR12_W {
-        CR12_W { w: self }
-    }
-    #[doc = "Bit 11 - Port 11 Clear bit"]
-    #[inline(always)]
-    pub fn cr11(&mut self) -> CR11_W {
-        CR11_W { w: self }
-    }
-    #[doc = "Bit 10 - Port 10 Clear bit"]
-    #[inline(always)]
-    pub fn cr10(&mut self) -> CR10_W {
-        CR10_W { w: self }
-    }
-    #[doc = "Bit 9 - Port 9 Clear bit"]
-    #[inline(always)]
-    pub fn cr9(&mut self) -> CR9_W {
-        CR9_W { w: self }
-    }
-    #[doc = "Bit 8 - Port 8 Clear bit"]
-    #[inline(always)]
-    pub fn cr8(&mut self) -> CR8_W {
-        CR8_W { w: self }
-    }
-    #[doc = "Bit 7 - Port 7 Clear bit"]
-    #[inline(always)]
-    pub fn cr7(&mut self) -> CR7_W {
-        CR7_W { w: self }
-    }
-    #[doc = "Bit 6 - Port 6 Clear bit"]
-    #[inline(always)]
-    pub fn cr6(&mut self) -> CR6_W {
-        CR6_W { w: self }
-    }
-    #[doc = "Bit 5 - Port 5 Clear bit"]
-    #[inline(always)]
-    pub fn cr5(&mut self) -> CR5_W {
-        CR5_W { w: self }
-    }
-    #[doc = "Bit 4 - Port 4 Clear bit"]
-    #[inline(always)]
-    pub fn cr4(&mut self) -> CR4_W {
-        CR4_W { w: self }
-    }
-    #[doc = "Bit 3 - Port 3 Clear bit"]
-    #[inline(always)]
-    pub fn cr3(&mut self) -> CR3_W {
-        CR3_W { w: self }
-    }
-    #[doc = "Bit 2 - Port 2 Clear bit"]
-    #[inline(always)]
-    pub fn cr2(&mut self) -> CR2_W {
-        CR2_W { w: self }
+    #[must_use]
+    pub fn cr0(&mut self) -> CR0_W<0> {
+        CR0_W::new(self)
     }
     #[doc = "Bit 1 - Port 1 Clear bit"]
     #[inline(always)]
-    pub fn cr1(&mut self) -> CR1_W {
-        CR1_W { w: self }
+    #[must_use]
+    pub fn cr1(&mut self) -> CR1_W<1> {
+        CR1_W::new(self)
     }
-    #[doc = "Bit 0 - Port 0 Clear bit"]
+    #[doc = "Bit 2 - Port 2 Clear bit"]
     #[inline(always)]
-    pub fn cr0(&mut self) -> CR0_W {
-        CR0_W { w: self }
+    #[must_use]
+    pub fn cr2(&mut self) -> CR2_W<2> {
+        CR2_W::new(self)
     }
+    #[doc = "Bit 3 - Port 3 Clear bit"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr3(&mut self) -> CR3_W<3> {
+        CR3_W::new(self)
+    }
+    #[doc = "Bit 4 - Port 4 Clear bit"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr4(&mut self) -> CR4_W<4> {
+        CR4_W::new(self)
+    }
+    #[doc = "Bit 5 - Port 5 Clear bit"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr5(&mut self) -> CR5_W<5> {
+        CR5_W::new(self)
+    }
+    #[doc = "Bit 6 - Port 6 Clear bit"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr6(&mut self) -> CR6_W<6> {
+        CR6_W::new(self)
+    }
+    #[doc = "Bit 7 - Port 7 Clear bit"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr7(&mut self) -> CR7_W<7> {
+        CR7_W::new(self)
+    }
+    #[doc = "Bit 8 - Port 8 Clear bit"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr8(&mut self) -> CR8_W<8> {
+        CR8_W::new(self)
+    }
+    #[doc = "Bit 9 - Port 9 Clear bit"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr9(&mut self) -> CR9_W<9> {
+        CR9_W::new(self)
+    }
+    #[doc = "Bit 10 - Port 10 Clear bit"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr10(&mut self) -> CR10_W<10> {
+        CR10_W::new(self)
+    }
+    #[doc = "Bit 11 - Port 11 Clear bit"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr11(&mut self) -> CR11_W<11> {
+        CR11_W::new(self)
+    }
+    #[doc = "Bit 12 - Port 12 Clear bit"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr12(&mut self) -> CR12_W<12> {
+        CR12_W::new(self)
+    }
+    #[doc = "Bit 13 - Port 13 Clear bit"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr13(&mut self) -> CR13_W<13> {
+        CR13_W::new(self)
+    }
+    #[doc = "Bit 14 - Port 14 Clear bit"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr14(&mut self) -> CR14_W<14> {
+        CR14_W::new(self)
+    }
+    #[doc = "Bit 15 - Port 15 Clear bit"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cr15(&mut self) -> CR15_W<15> {
+        CR15_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Port bit clear register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bc](index.html) module"]
+pub struct BC_SPEC;
+impl crate::RegisterSpec for BC_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [bc::W](W) writer structure"]
+impl crate::Writable for BC_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets BC to value 0"]
+impl crate::Resettable for BC_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

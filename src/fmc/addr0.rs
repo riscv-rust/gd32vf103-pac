@@ -1,29 +1,52 @@
-#[doc = "Writer for register ADDR0"]
-pub type W = crate::W<u32, super::ADDR0>;
-#[doc = "Register ADDR0 `reset()`'s with value 0"]
-impl crate::ResetValue for super::ADDR0 {
-    type Type = u32;
+#[doc = "Register `ADDR0` writer"]
+pub struct W(crate::W<ADDR0_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<ADDR0_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Write proxy for field `ADDR`"]
-pub struct ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | ((value as u32) & 0xffff_ffff);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
+impl From<crate::W<ADDR0_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<ADDR0_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `ADDR` writer - Flash erase/program command address bits"]
+pub type ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADDR0_SPEC, u32, u32, 32, O>;
 impl W {
     #[doc = "Bits 0:31 - Flash erase/program command address bits"]
     #[inline(always)]
-    pub fn addr(&mut self) -> ADDR_W {
-        ADDR_W { w: self }
+    #[must_use]
+    pub fn addr(&mut self) -> ADDR_W<0> {
+        ADDR_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Address register 0\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr0](index.html) module"]
+pub struct ADDR0_SPEC;
+impl crate::RegisterSpec for ADDR0_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [addr0::W](W) writer structure"]
+impl crate::Writable for ADDR0_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets ADDR0 to value 0"]
+impl crate::Resettable for ADDR0_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

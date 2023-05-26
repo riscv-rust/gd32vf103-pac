@@ -1,492 +1,275 @@
-#[doc = "Reader of register INTEN"]
-pub type R = crate::R<u32, super::INTEN>;
-#[doc = "Writer for register INTEN"]
-pub type W = crate::W<u32, super::INTEN>;
-#[doc = "Register INTEN `reset()`'s with value 0"]
-impl crate::ResetValue for super::INTEN {
-    type Type = u32;
+#[doc = "Register `INTEN` reader"]
+pub struct R(crate::R<INTEN_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<INTEN_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `SLPWIE`"]
-pub type SLPWIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SLPWIE`"]
-pub struct SLPWIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLPWIE_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<INTEN_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | (((value as u32) & 0x01) << 17);
-        self.w
+    fn from(reader: crate::R<INTEN_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `WIE`"]
-pub type WIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WIE`"]
-pub struct WIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WIE_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `INTEN` writer"]
+pub struct W(crate::W<INTEN_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<INTEN_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `ERRIE`"]
-pub type ERRIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ERRIE`"]
-pub struct ERRIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ERRIE_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u32) & 0x01) << 15);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `ERRNIE`"]
-pub type ERRNIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ERRNIE`"]
-pub struct ERRNIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ERRNIE_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<INTEN_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
-        self.w
+    fn from(writer: crate::W<INTEN_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `BOIE`"]
-pub type BOIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `BOIE`"]
-pub struct BOIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BOIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
-        self.w
-    }
-}
-#[doc = "Reader of field `PERRIE`"]
-pub type PERRIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PERRIE`"]
-pub struct PERRIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PERRIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
-        self.w
-    }
-}
-#[doc = "Reader of field `WERRIE`"]
-pub type WERRIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WERRIE`"]
-pub struct WERRIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WERRIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Reader of field `RFOIE1`"]
-pub type RFOIE1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RFOIE1`"]
-pub struct RFOIE1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RFOIE1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Reader of field `RFFIE1`"]
-pub type RFFIE1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RFFIE1`"]
-pub struct RFFIE1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RFFIE1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Reader of field `RFNEIE1`"]
-pub type RFNEIE1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RFNEIE1`"]
-pub struct RFNEIE1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RFNEIE1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Reader of field `RFOIE0`"]
-pub type RFOIE0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RFOIE0`"]
-pub struct RFOIE0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RFOIE0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Reader of field `RFFIE0`"]
-pub type RFFIE0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RFFIE0`"]
-pub struct RFFIE0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RFFIE0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Reader of field `RFNEIE0`"]
-pub type RFNEIE0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RFNEIE0`"]
-pub struct RFNEIE0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RFNEIE0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
-    }
-}
-#[doc = "Reader of field `TMEIE`"]
-pub type TMEIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TMEIE`"]
-pub struct TMEIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TMEIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
-    }
-}
+#[doc = "Field `TMEIE` reader - Transmit mailbox empty interrupt enable"]
+pub type TMEIE_R = crate::BitReader<bool>;
+#[doc = "Field `TMEIE` writer - Transmit mailbox empty interrupt enable"]
+pub type TMEIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTEN_SPEC, bool, O>;
+#[doc = "Field `RFNEIE0` reader - Receive FIFO0 not empty interrupt enable"]
+pub type RFNEIE0_R = crate::BitReader<bool>;
+#[doc = "Field `RFNEIE0` writer - Receive FIFO0 not empty interrupt enable"]
+pub type RFNEIE0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTEN_SPEC, bool, O>;
+#[doc = "Field `RFFIE0` reader - Receive FIFO0 full interrupt enable"]
+pub type RFFIE0_R = crate::BitReader<bool>;
+#[doc = "Field `RFFIE0` writer - Receive FIFO0 full interrupt enable"]
+pub type RFFIE0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTEN_SPEC, bool, O>;
+#[doc = "Field `RFOIE0` reader - Receive FIFO0 overfull interrupt enable"]
+pub type RFOIE0_R = crate::BitReader<bool>;
+#[doc = "Field `RFOIE0` writer - Receive FIFO0 overfull interrupt enable"]
+pub type RFOIE0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTEN_SPEC, bool, O>;
+#[doc = "Field `RFNEIE1` reader - Receive FIFO1 not empty interrupt enable"]
+pub type RFNEIE1_R = crate::BitReader<bool>;
+#[doc = "Field `RFNEIE1` writer - Receive FIFO1 not empty interrupt enable"]
+pub type RFNEIE1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTEN_SPEC, bool, O>;
+#[doc = "Field `RFFIE1` reader - Receive FIFO1 full interrupt enable"]
+pub type RFFIE1_R = crate::BitReader<bool>;
+#[doc = "Field `RFFIE1` writer - Receive FIFO1 full interrupt enable"]
+pub type RFFIE1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTEN_SPEC, bool, O>;
+#[doc = "Field `RFOIE1` reader - Receive FIFO1 overfull interrupt enable"]
+pub type RFOIE1_R = crate::BitReader<bool>;
+#[doc = "Field `RFOIE1` writer - Receive FIFO1 overfull interrupt enable"]
+pub type RFOIE1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTEN_SPEC, bool, O>;
+#[doc = "Field `WERRIE` reader - Warning error interrupt enable"]
+pub type WERRIE_R = crate::BitReader<bool>;
+#[doc = "Field `WERRIE` writer - Warning error interrupt enable"]
+pub type WERRIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTEN_SPEC, bool, O>;
+#[doc = "Field `PERRIE` reader - Passive error interrupt enable"]
+pub type PERRIE_R = crate::BitReader<bool>;
+#[doc = "Field `PERRIE` writer - Passive error interrupt enable"]
+pub type PERRIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTEN_SPEC, bool, O>;
+#[doc = "Field `BOIE` reader - Bus-off interrupt enable"]
+pub type BOIE_R = crate::BitReader<bool>;
+#[doc = "Field `BOIE` writer - Bus-off interrupt enable"]
+pub type BOIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTEN_SPEC, bool, O>;
+#[doc = "Field `ERRNIE` reader - Error number interrupt enable"]
+pub type ERRNIE_R = crate::BitReader<bool>;
+#[doc = "Field `ERRNIE` writer - Error number interrupt enable"]
+pub type ERRNIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTEN_SPEC, bool, O>;
+#[doc = "Field `ERRIE` reader - Error interrupt enable"]
+pub type ERRIE_R = crate::BitReader<bool>;
+#[doc = "Field `ERRIE` writer - Error interrupt enable"]
+pub type ERRIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTEN_SPEC, bool, O>;
+#[doc = "Field `WIE` reader - Wakeup interrupt enable"]
+pub type WIE_R = crate::BitReader<bool>;
+#[doc = "Field `WIE` writer - Wakeup interrupt enable"]
+pub type WIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTEN_SPEC, bool, O>;
+#[doc = "Field `SLPWIE` reader - Sleep working interrupt enable"]
+pub type SLPWIE_R = crate::BitReader<bool>;
+#[doc = "Field `SLPWIE` writer - Sleep working interrupt enable"]
+pub type SLPWIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTEN_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 17 - Sleep working interrupt enable"]
+    #[doc = "Bit 0 - Transmit mailbox empty interrupt enable"]
     #[inline(always)]
-    pub fn slpwie(&self) -> SLPWIE_R {
-        SLPWIE_R::new(((self.bits >> 17) & 0x01) != 0)
-    }
-    #[doc = "Bit 16 - Wakeup interrupt enable"]
-    #[inline(always)]
-    pub fn wie(&self) -> WIE_R {
-        WIE_R::new(((self.bits >> 16) & 0x01) != 0)
-    }
-    #[doc = "Bit 15 - Error interrupt enable"]
-    #[inline(always)]
-    pub fn errie(&self) -> ERRIE_R {
-        ERRIE_R::new(((self.bits >> 15) & 0x01) != 0)
-    }
-    #[doc = "Bit 11 - Error number interrupt enable"]
-    #[inline(always)]
-    pub fn errnie(&self) -> ERRNIE_R {
-        ERRNIE_R::new(((self.bits >> 11) & 0x01) != 0)
-    }
-    #[doc = "Bit 10 - Bus-off interrupt enable"]
-    #[inline(always)]
-    pub fn boie(&self) -> BOIE_R {
-        BOIE_R::new(((self.bits >> 10) & 0x01) != 0)
-    }
-    #[doc = "Bit 9 - Passive error interrupt enable"]
-    #[inline(always)]
-    pub fn perrie(&self) -> PERRIE_R {
-        PERRIE_R::new(((self.bits >> 9) & 0x01) != 0)
-    }
-    #[doc = "Bit 8 - Warning error interrupt enable"]
-    #[inline(always)]
-    pub fn werrie(&self) -> WERRIE_R {
-        WERRIE_R::new(((self.bits >> 8) & 0x01) != 0)
-    }
-    #[doc = "Bit 6 - Receive FIFO1 overfull interrupt enable"]
-    #[inline(always)]
-    pub fn rfoie1(&self) -> RFOIE1_R {
-        RFOIE1_R::new(((self.bits >> 6) & 0x01) != 0)
-    }
-    #[doc = "Bit 5 - Receive FIFO1 full interrupt enable"]
-    #[inline(always)]
-    pub fn rffie1(&self) -> RFFIE1_R {
-        RFFIE1_R::new(((self.bits >> 5) & 0x01) != 0)
-    }
-    #[doc = "Bit 4 - Receive FIFO1 not empty interrupt enable"]
-    #[inline(always)]
-    pub fn rfneie1(&self) -> RFNEIE1_R {
-        RFNEIE1_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 3 - Receive FIFO0 overfull interrupt enable"]
-    #[inline(always)]
-    pub fn rfoie0(&self) -> RFOIE0_R {
-        RFOIE0_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2 - Receive FIFO0 full interrupt enable"]
-    #[inline(always)]
-    pub fn rffie0(&self) -> RFFIE0_R {
-        RFFIE0_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn tmeie(&self) -> TMEIE_R {
+        TMEIE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Receive FIFO0 not empty interrupt enable"]
     #[inline(always)]
     pub fn rfneie0(&self) -> RFNEIE0_R {
-        RFNEIE0_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Transmit mailbox empty interrupt enable"]
-    #[inline(always)]
-    pub fn tmeie(&self) -> TMEIE_R {
-        TMEIE_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 17 - Sleep working interrupt enable"]
-    #[inline(always)]
-    pub fn slpwie(&mut self) -> SLPWIE_W {
-        SLPWIE_W { w: self }
-    }
-    #[doc = "Bit 16 - Wakeup interrupt enable"]
-    #[inline(always)]
-    pub fn wie(&mut self) -> WIE_W {
-        WIE_W { w: self }
-    }
-    #[doc = "Bit 15 - Error interrupt enable"]
-    #[inline(always)]
-    pub fn errie(&mut self) -> ERRIE_W {
-        ERRIE_W { w: self }
-    }
-    #[doc = "Bit 11 - Error number interrupt enable"]
-    #[inline(always)]
-    pub fn errnie(&mut self) -> ERRNIE_W {
-        ERRNIE_W { w: self }
-    }
-    #[doc = "Bit 10 - Bus-off interrupt enable"]
-    #[inline(always)]
-    pub fn boie(&mut self) -> BOIE_W {
-        BOIE_W { w: self }
-    }
-    #[doc = "Bit 9 - Passive error interrupt enable"]
-    #[inline(always)]
-    pub fn perrie(&mut self) -> PERRIE_W {
-        PERRIE_W { w: self }
-    }
-    #[doc = "Bit 8 - Warning error interrupt enable"]
-    #[inline(always)]
-    pub fn werrie(&mut self) -> WERRIE_W {
-        WERRIE_W { w: self }
-    }
-    #[doc = "Bit 6 - Receive FIFO1 overfull interrupt enable"]
-    #[inline(always)]
-    pub fn rfoie1(&mut self) -> RFOIE1_W {
-        RFOIE1_W { w: self }
-    }
-    #[doc = "Bit 5 - Receive FIFO1 full interrupt enable"]
-    #[inline(always)]
-    pub fn rffie1(&mut self) -> RFFIE1_W {
-        RFFIE1_W { w: self }
-    }
-    #[doc = "Bit 4 - Receive FIFO1 not empty interrupt enable"]
-    #[inline(always)]
-    pub fn rfneie1(&mut self) -> RFNEIE1_W {
-        RFNEIE1_W { w: self }
-    }
-    #[doc = "Bit 3 - Receive FIFO0 overfull interrupt enable"]
-    #[inline(always)]
-    pub fn rfoie0(&mut self) -> RFOIE0_W {
-        RFOIE0_W { w: self }
+        RFNEIE0_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Receive FIFO0 full interrupt enable"]
     #[inline(always)]
-    pub fn rffie0(&mut self) -> RFFIE0_W {
-        RFFIE0_W { w: self }
+    pub fn rffie0(&self) -> RFFIE0_R {
+        RFFIE0_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Receive FIFO0 overfull interrupt enable"]
+    #[inline(always)]
+    pub fn rfoie0(&self) -> RFOIE0_R {
+        RFOIE0_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Receive FIFO1 not empty interrupt enable"]
+    #[inline(always)]
+    pub fn rfneie1(&self) -> RFNEIE1_R {
+        RFNEIE1_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Receive FIFO1 full interrupt enable"]
+    #[inline(always)]
+    pub fn rffie1(&self) -> RFFIE1_R {
+        RFFIE1_R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Receive FIFO1 overfull interrupt enable"]
+    #[inline(always)]
+    pub fn rfoie1(&self) -> RFOIE1_R {
+        RFOIE1_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Warning error interrupt enable"]
+    #[inline(always)]
+    pub fn werrie(&self) -> WERRIE_R {
+        WERRIE_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Passive error interrupt enable"]
+    #[inline(always)]
+    pub fn perrie(&self) -> PERRIE_R {
+        PERRIE_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Bus-off interrupt enable"]
+    #[inline(always)]
+    pub fn boie(&self) -> BOIE_R {
+        BOIE_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Error number interrupt enable"]
+    #[inline(always)]
+    pub fn errnie(&self) -> ERRNIE_R {
+        ERRNIE_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 15 - Error interrupt enable"]
+    #[inline(always)]
+    pub fn errie(&self) -> ERRIE_R {
+        ERRIE_R::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - Wakeup interrupt enable"]
+    #[inline(always)]
+    pub fn wie(&self) -> WIE_R {
+        WIE_R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 17 - Sleep working interrupt enable"]
+    #[inline(always)]
+    pub fn slpwie(&self) -> SLPWIE_R {
+        SLPWIE_R::new(((self.bits >> 17) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Transmit mailbox empty interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tmeie(&mut self) -> TMEIE_W<0> {
+        TMEIE_W::new(self)
     }
     #[doc = "Bit 1 - Receive FIFO0 not empty interrupt enable"]
     #[inline(always)]
-    pub fn rfneie0(&mut self) -> RFNEIE0_W {
-        RFNEIE0_W { w: self }
+    #[must_use]
+    pub fn rfneie0(&mut self) -> RFNEIE0_W<1> {
+        RFNEIE0_W::new(self)
     }
-    #[doc = "Bit 0 - Transmit mailbox empty interrupt enable"]
+    #[doc = "Bit 2 - Receive FIFO0 full interrupt enable"]
     #[inline(always)]
-    pub fn tmeie(&mut self) -> TMEIE_W {
-        TMEIE_W { w: self }
+    #[must_use]
+    pub fn rffie0(&mut self) -> RFFIE0_W<2> {
+        RFFIE0_W::new(self)
     }
+    #[doc = "Bit 3 - Receive FIFO0 overfull interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rfoie0(&mut self) -> RFOIE0_W<3> {
+        RFOIE0_W::new(self)
+    }
+    #[doc = "Bit 4 - Receive FIFO1 not empty interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rfneie1(&mut self) -> RFNEIE1_W<4> {
+        RFNEIE1_W::new(self)
+    }
+    #[doc = "Bit 5 - Receive FIFO1 full interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rffie1(&mut self) -> RFFIE1_W<5> {
+        RFFIE1_W::new(self)
+    }
+    #[doc = "Bit 6 - Receive FIFO1 overfull interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rfoie1(&mut self) -> RFOIE1_W<6> {
+        RFOIE1_W::new(self)
+    }
+    #[doc = "Bit 8 - Warning error interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn werrie(&mut self) -> WERRIE_W<8> {
+        WERRIE_W::new(self)
+    }
+    #[doc = "Bit 9 - Passive error interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn perrie(&mut self) -> PERRIE_W<9> {
+        PERRIE_W::new(self)
+    }
+    #[doc = "Bit 10 - Bus-off interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn boie(&mut self) -> BOIE_W<10> {
+        BOIE_W::new(self)
+    }
+    #[doc = "Bit 11 - Error number interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn errnie(&mut self) -> ERRNIE_W<11> {
+        ERRNIE_W::new(self)
+    }
+    #[doc = "Bit 15 - Error interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn errie(&mut self) -> ERRIE_W<15> {
+        ERRIE_W::new(self)
+    }
+    #[doc = "Bit 16 - Wakeup interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn wie(&mut self) -> WIE_W<16> {
+        WIE_W::new(self)
+    }
+    #[doc = "Bit 17 - Sleep working interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn slpwie(&mut self) -> SLPWIE_W<17> {
+        SLPWIE_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Interrupt enable register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [inten](index.html) module"]
+pub struct INTEN_SPEC;
+impl crate::RegisterSpec for INTEN_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [inten::R](R) reader structure"]
+impl crate::Readable for INTEN_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [inten::W](W) writer structure"]
+impl crate::Writable for INTEN_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets INTEN to value 0"]
+impl crate::Resettable for INTEN_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

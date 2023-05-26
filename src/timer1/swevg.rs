@@ -1,174 +1,92 @@
-#[doc = "Writer for register SWEVG"]
-pub type W = crate::W<u16, super::SWEVG>;
-#[doc = "Register SWEVG `reset()`'s with value 0"]
-impl crate::ResetValue for super::SWEVG {
-    type Type = u16;
+#[doc = "Register `SWEVG` writer"]
+pub struct W(crate::W<SWEVG_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<SWEVG_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Write proxy for field `TRGG`"]
-pub struct TRGG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRGG_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u16) & 0x01) << 6);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Write proxy for field `CH3G`"]
-pub struct CH3G_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH3G_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<SWEVG_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u16) & 0x01) << 4);
-        self.w
+    fn from(writer: crate::W<SWEVG_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Write proxy for field `CH2G`"]
-pub struct CH2G_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH2G_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u16) & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Write proxy for field `CH1G`"]
-pub struct CH1G_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH1G_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u16) & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Write proxy for field `CH0G`"]
-pub struct CH0G_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH0G_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u16) & 0x01) << 1);
-        self.w
-    }
-}
-#[doc = "Write proxy for field `UPG`"]
-pub struct UPG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UPG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u16) & 0x01);
-        self.w
-    }
-}
+#[doc = "Field `UPG` writer - Update generation"]
+pub type UPG_W<'a, const O: u8> = crate::BitWriter<'a, u16, SWEVG_SPEC, bool, O>;
+#[doc = "Field `CH0G` writer - Channel 0 capture or compare event generation"]
+pub type CH0G_W<'a, const O: u8> = crate::BitWriter<'a, u16, SWEVG_SPEC, bool, O>;
+#[doc = "Field `CH1G` writer - Channel 1 capture or compare event generation"]
+pub type CH1G_W<'a, const O: u8> = crate::BitWriter<'a, u16, SWEVG_SPEC, bool, O>;
+#[doc = "Field `CH2G` writer - Channel 2 capture or compare event generation"]
+pub type CH2G_W<'a, const O: u8> = crate::BitWriter<'a, u16, SWEVG_SPEC, bool, O>;
+#[doc = "Field `CH3G` writer - Channel 3 capture or compare event generation"]
+pub type CH3G_W<'a, const O: u8> = crate::BitWriter<'a, u16, SWEVG_SPEC, bool, O>;
+#[doc = "Field `TRGG` writer - Trigger event generation"]
+pub type TRGG_W<'a, const O: u8> = crate::BitWriter<'a, u16, SWEVG_SPEC, bool, O>;
 impl W {
-    #[doc = "Bit 6 - Trigger event generation"]
+    #[doc = "Bit 0 - Update generation"]
     #[inline(always)]
-    pub fn trgg(&mut self) -> TRGG_W {
-        TRGG_W { w: self }
-    }
-    #[doc = "Bit 4 - Channel 3 capture or compare event generation"]
-    #[inline(always)]
-    pub fn ch3g(&mut self) -> CH3G_W {
-        CH3G_W { w: self }
-    }
-    #[doc = "Bit 3 - Channel 2 capture or compare event generation"]
-    #[inline(always)]
-    pub fn ch2g(&mut self) -> CH2G_W {
-        CH2G_W { w: self }
-    }
-    #[doc = "Bit 2 - Channel 1 capture or compare event generation"]
-    #[inline(always)]
-    pub fn ch1g(&mut self) -> CH1G_W {
-        CH1G_W { w: self }
+    #[must_use]
+    pub fn upg(&mut self) -> UPG_W<0> {
+        UPG_W::new(self)
     }
     #[doc = "Bit 1 - Channel 0 capture or compare event generation"]
     #[inline(always)]
-    pub fn ch0g(&mut self) -> CH0G_W {
-        CH0G_W { w: self }
+    #[must_use]
+    pub fn ch0g(&mut self) -> CH0G_W<1> {
+        CH0G_W::new(self)
     }
-    #[doc = "Bit 0 - Update generation"]
+    #[doc = "Bit 2 - Channel 1 capture or compare event generation"]
     #[inline(always)]
-    pub fn upg(&mut self) -> UPG_W {
-        UPG_W { w: self }
+    #[must_use]
+    pub fn ch1g(&mut self) -> CH1G_W<2> {
+        CH1G_W::new(self)
     }
+    #[doc = "Bit 3 - Channel 2 capture or compare event generation"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch2g(&mut self) -> CH2G_W<3> {
+        CH2G_W::new(self)
+    }
+    #[doc = "Bit 4 - Channel 3 capture or compare event generation"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch3g(&mut self) -> CH3G_W<4> {
+        CH3G_W::new(self)
+    }
+    #[doc = "Bit 6 - Trigger event generation"]
+    #[inline(always)]
+    #[must_use]
+    pub fn trgg(&mut self) -> TRGG_W<6> {
+        TRGG_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "event generation register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swevg](index.html) module"]
+pub struct SWEVG_SPEC;
+impl crate::RegisterSpec for SWEVG_SPEC {
+    type Ux = u16;
+}
+#[doc = "`write(|w| ..)` method takes [swevg::W](W) writer structure"]
+impl crate::Writable for SWEVG_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets SWEVG to value 0"]
+impl crate::Resettable for SWEVG_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

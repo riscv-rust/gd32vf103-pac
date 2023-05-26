@@ -1,186 +1,140 @@
-#[doc = "Reader of register STAT"]
-pub type R = crate::R<u32, super::STAT>;
-#[doc = "Writer for register STAT"]
-pub type W = crate::W<u32, super::STAT>;
-#[doc = "Register STAT `reset()`'s with value 0"]
-impl crate::ResetValue for super::STAT {
-    type Type = u32;
+#[doc = "Register `STAT` reader"]
+pub struct R(crate::R<STAT_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<STAT_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `STRC`"]
-pub type STRC_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `STRC`"]
-pub struct STRC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STRC_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<STAT_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
+    fn from(reader: crate::R<STAT_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `STIC`"]
-pub type STIC_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `STIC`"]
-pub struct STIC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STIC_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `STAT` writer"]
+pub struct W(crate::W<STAT_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<STAT_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `EOIC`"]
-pub type EOIC_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `EOIC`"]
-pub struct EOIC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EOIC_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `EOC`"]
-pub type EOC_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `EOC`"]
-pub struct EOC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EOC_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<STAT_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn from(writer: crate::W<STAT_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `WDE`"]
-pub type WDE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WDE`"]
-pub struct WDE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
-    }
-}
+#[doc = "Field `WDE` reader - Analog watchdog event flag"]
+pub type WDE_R = crate::BitReader<bool>;
+#[doc = "Field `WDE` writer - Analog watchdog event flag"]
+pub type WDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, STAT_SPEC, bool, O>;
+#[doc = "Field `EOC` reader - End of group conversion flag"]
+pub type EOC_R = crate::BitReader<bool>;
+#[doc = "Field `EOC` writer - End of group conversion flag"]
+pub type EOC_W<'a, const O: u8> = crate::BitWriter<'a, u32, STAT_SPEC, bool, O>;
+#[doc = "Field `EOIC` reader - End of inserted group conversion flag"]
+pub type EOIC_R = crate::BitReader<bool>;
+#[doc = "Field `EOIC` writer - End of inserted group conversion flag"]
+pub type EOIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, STAT_SPEC, bool, O>;
+#[doc = "Field `STIC` reader - Start flag of inserted channel group"]
+pub type STIC_R = crate::BitReader<bool>;
+#[doc = "Field `STIC` writer - Start flag of inserted channel group"]
+pub type STIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, STAT_SPEC, bool, O>;
+#[doc = "Field `STRC` reader - Start flag of regular channel group"]
+pub type STRC_R = crate::BitReader<bool>;
+#[doc = "Field `STRC` writer - Start flag of regular channel group"]
+pub type STRC_W<'a, const O: u8> = crate::BitWriter<'a, u32, STAT_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 4 - Start flag of regular channel group"]
+    #[doc = "Bit 0 - Analog watchdog event flag"]
     #[inline(always)]
-    pub fn strc(&self) -> STRC_R {
-        STRC_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 3 - Start flag of inserted channel group"]
-    #[inline(always)]
-    pub fn stic(&self) -> STIC_R {
-        STIC_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2 - End of inserted group conversion flag"]
-    #[inline(always)]
-    pub fn eoic(&self) -> EOIC_R {
-        EOIC_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn wde(&self) -> WDE_R {
+        WDE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - End of group conversion flag"]
     #[inline(always)]
     pub fn eoc(&self) -> EOC_R {
-        EOC_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Analog watchdog event flag"]
-    #[inline(always)]
-    pub fn wde(&self) -> WDE_R {
-        WDE_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 4 - Start flag of regular channel group"]
-    #[inline(always)]
-    pub fn strc(&mut self) -> STRC_W {
-        STRC_W { w: self }
-    }
-    #[doc = "Bit 3 - Start flag of inserted channel group"]
-    #[inline(always)]
-    pub fn stic(&mut self) -> STIC_W {
-        STIC_W { w: self }
+        EOC_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - End of inserted group conversion flag"]
     #[inline(always)]
-    pub fn eoic(&mut self) -> EOIC_W {
-        EOIC_W { w: self }
+    pub fn eoic(&self) -> EOIC_R {
+        EOIC_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Start flag of inserted channel group"]
+    #[inline(always)]
+    pub fn stic(&self) -> STIC_R {
+        STIC_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Start flag of regular channel group"]
+    #[inline(always)]
+    pub fn strc(&self) -> STRC_R {
+        STRC_R::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Analog watchdog event flag"]
+    #[inline(always)]
+    #[must_use]
+    pub fn wde(&mut self) -> WDE_W<0> {
+        WDE_W::new(self)
     }
     #[doc = "Bit 1 - End of group conversion flag"]
     #[inline(always)]
-    pub fn eoc(&mut self) -> EOC_W {
-        EOC_W { w: self }
+    #[must_use]
+    pub fn eoc(&mut self) -> EOC_W<1> {
+        EOC_W::new(self)
     }
-    #[doc = "Bit 0 - Analog watchdog event flag"]
+    #[doc = "Bit 2 - End of inserted group conversion flag"]
     #[inline(always)]
-    pub fn wde(&mut self) -> WDE_W {
-        WDE_W { w: self }
+    #[must_use]
+    pub fn eoic(&mut self) -> EOIC_W<2> {
+        EOIC_W::new(self)
     }
+    #[doc = "Bit 3 - Start flag of inserted channel group"]
+    #[inline(always)]
+    #[must_use]
+    pub fn stic(&mut self) -> STIC_W<3> {
+        STIC_W::new(self)
+    }
+    #[doc = "Bit 4 - Start flag of regular channel group"]
+    #[inline(always)]
+    #[must_use]
+    pub fn strc(&mut self) -> STRC_W<4> {
+        STRC_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [stat](index.html) module"]
+pub struct STAT_SPEC;
+impl crate::RegisterSpec for STAT_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [stat::R](R) reader structure"]
+impl crate::Readable for STAT_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [stat::W](W) writer structure"]
+impl crate::Writable for STAT_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets STAT to value 0"]
+impl crate::Resettable for STAT_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

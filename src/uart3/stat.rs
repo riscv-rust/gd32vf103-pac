@@ -1,160 +1,152 @@
-#[doc = "Reader of register STAT"]
-pub type R = crate::R<u32, super::STAT>;
-#[doc = "Writer for register STAT"]
-pub type W = crate::W<u32, super::STAT>;
-#[doc = "Register STAT `reset()`'s with value 0xc0"]
-impl crate::ResetValue for super::STAT {
-    type Type = u32;
+#[doc = "Register `STAT` reader"]
+pub struct R(crate::R<STAT_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<STAT_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0xc0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `LBDF`"]
-pub type LBDF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `LBDF`"]
-pub struct LBDF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LBDF_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<STAT_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
-        self.w
+    fn from(reader: crate::R<STAT_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `TBE`"]
-pub type TBE_R = crate::R<bool, bool>;
-#[doc = "Reader of field `TC`"]
-pub type TC_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TC`"]
-pub struct TC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TC_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `STAT` writer"]
+pub struct W(crate::W<STAT_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<STAT_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `RBNE`"]
-pub type RBNE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RBNE`"]
-pub struct RBNE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RBNE_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `IDLEF`"]
-pub type IDLEF_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ORERR`"]
-pub type ORERR_R = crate::R<bool, bool>;
-#[doc = "Reader of field `NERR`"]
-pub type NERR_R = crate::R<bool, bool>;
-#[doc = "Reader of field `FERR`"]
-pub type FERR_R = crate::R<bool, bool>;
-#[doc = "Reader of field `PERR`"]
-pub type PERR_R = crate::R<bool, bool>;
+impl From<crate::W<STAT_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<STAT_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `PERR` reader - Parity error flag"]
+pub type PERR_R = crate::BitReader<bool>;
+#[doc = "Field `FERR` reader - Frame error flag"]
+pub type FERR_R = crate::BitReader<bool>;
+#[doc = "Field `NERR` reader - Noise error flag"]
+pub type NERR_R = crate::BitReader<bool>;
+#[doc = "Field `ORERR` reader - Overrun error"]
+pub type ORERR_R = crate::BitReader<bool>;
+#[doc = "Field `IDLEF` reader - IDLE frame detected flag"]
+pub type IDLEF_R = crate::BitReader<bool>;
+#[doc = "Field `RBNE` reader - Read data buffer not empty"]
+pub type RBNE_R = crate::BitReader<bool>;
+#[doc = "Field `RBNE` writer - Read data buffer not empty"]
+pub type RBNE_W<'a, const O: u8> = crate::BitWriter<'a, u32, STAT_SPEC, bool, O>;
+#[doc = "Field `TC` reader - Transmission complete"]
+pub type TC_R = crate::BitReader<bool>;
+#[doc = "Field `TC` writer - Transmission complete"]
+pub type TC_W<'a, const O: u8> = crate::BitWriter<'a, u32, STAT_SPEC, bool, O>;
+#[doc = "Field `TBE` reader - Transmit data buffer empty"]
+pub type TBE_R = crate::BitReader<bool>;
+#[doc = "Field `LBDF` reader - LIN break detection flag"]
+pub type LBDF_R = crate::BitReader<bool>;
+#[doc = "Field `LBDF` writer - LIN break detection flag"]
+pub type LBDF_W<'a, const O: u8> = crate::BitWriter<'a, u32, STAT_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 8 - LIN break detection flag"]
+    #[doc = "Bit 0 - Parity error flag"]
     #[inline(always)]
-    pub fn lbdf(&self) -> LBDF_R {
-        LBDF_R::new(((self.bits >> 8) & 0x01) != 0)
-    }
-    #[doc = "Bit 7 - Transmit data buffer empty"]
-    #[inline(always)]
-    pub fn tbe(&self) -> TBE_R {
-        TBE_R::new(((self.bits >> 7) & 0x01) != 0)
-    }
-    #[doc = "Bit 6 - Transmission complete"]
-    #[inline(always)]
-    pub fn tc(&self) -> TC_R {
-        TC_R::new(((self.bits >> 6) & 0x01) != 0)
-    }
-    #[doc = "Bit 5 - Read data buffer not empty"]
-    #[inline(always)]
-    pub fn rbne(&self) -> RBNE_R {
-        RBNE_R::new(((self.bits >> 5) & 0x01) != 0)
-    }
-    #[doc = "Bit 4 - IDLE frame detected flag"]
-    #[inline(always)]
-    pub fn idlef(&self) -> IDLEF_R {
-        IDLEF_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 3 - Overrun error"]
-    #[inline(always)]
-    pub fn orerr(&self) -> ORERR_R {
-        ORERR_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2 - Noise error flag"]
-    #[inline(always)]
-    pub fn nerr(&self) -> NERR_R {
-        NERR_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn perr(&self) -> PERR_R {
+        PERR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Frame error flag"]
     #[inline(always)]
     pub fn ferr(&self) -> FERR_R {
-        FERR_R::new(((self.bits >> 1) & 0x01) != 0)
+        FERR_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 0 - Parity error flag"]
+    #[doc = "Bit 2 - Noise error flag"]
     #[inline(always)]
-    pub fn perr(&self) -> PERR_R {
-        PERR_R::new((self.bits & 0x01) != 0)
+    pub fn nerr(&self) -> NERR_R {
+        NERR_R::new(((self.bits >> 2) & 1) != 0)
     }
-}
-impl W {
-    #[doc = "Bit 8 - LIN break detection flag"]
+    #[doc = "Bit 3 - Overrun error"]
     #[inline(always)]
-    pub fn lbdf(&mut self) -> LBDF_W {
-        LBDF_W { w: self }
+    pub fn orerr(&self) -> ORERR_R {
+        ORERR_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 6 - Transmission complete"]
+    #[doc = "Bit 4 - IDLE frame detected flag"]
     #[inline(always)]
-    pub fn tc(&mut self) -> TC_W {
-        TC_W { w: self }
+    pub fn idlef(&self) -> IDLEF_R {
+        IDLEF_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Read data buffer not empty"]
     #[inline(always)]
-    pub fn rbne(&mut self) -> RBNE_W {
-        RBNE_W { w: self }
+    pub fn rbne(&self) -> RBNE_R {
+        RBNE_R::new(((self.bits >> 5) & 1) != 0)
     }
+    #[doc = "Bit 6 - Transmission complete"]
+    #[inline(always)]
+    pub fn tc(&self) -> TC_R {
+        TC_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Transmit data buffer empty"]
+    #[inline(always)]
+    pub fn tbe(&self) -> TBE_R {
+        TBE_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - LIN break detection flag"]
+    #[inline(always)]
+    pub fn lbdf(&self) -> LBDF_R {
+        LBDF_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 5 - Read data buffer not empty"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rbne(&mut self) -> RBNE_W<5> {
+        RBNE_W::new(self)
+    }
+    #[doc = "Bit 6 - Transmission complete"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tc(&mut self) -> TC_W<6> {
+        TC_W::new(self)
+    }
+    #[doc = "Bit 8 - LIN break detection flag"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lbdf(&mut self) -> LBDF_W<8> {
+        LBDF_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [stat](index.html) module"]
+pub struct STAT_SPEC;
+impl crate::RegisterSpec for STAT_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [stat::R](R) reader structure"]
+impl crate::Readable for STAT_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [stat::W](W) writer structure"]
+impl crate::Writable for STAT_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets STAT to value 0xc0"]
+impl crate::Resettable for STAT_SPEC {
+    const RESET_VALUE: Self::Ux = 0xc0;
 }

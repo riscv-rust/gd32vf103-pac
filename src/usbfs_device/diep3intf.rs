@@ -1,193 +1,147 @@
-#[doc = "Reader of register DIEP3INTF"]
-pub type R = crate::R<u32, super::DIEP3INTF>;
-#[doc = "Writer for register DIEP3INTF"]
-pub type W = crate::W<u32, super::DIEP3INTF>;
-#[doc = "Register DIEP3INTF `reset()`'s with value 0x80"]
-impl crate::ResetValue for super::DIEP3INTF {
-    type Type = u32;
+#[doc = "Register `DIEP3INTF` reader"]
+pub struct R(crate::R<DIEP3INTF_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<DIEP3INTF_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0x80
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TXFE`"]
-pub type TXFE_R = crate::R<bool, bool>;
-#[doc = "Reader of field `IEPNE`"]
-pub type IEPNE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `IEPNE`"]
-pub struct IEPNE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IEPNE_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<DIEP3INTF_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
+    fn from(reader: crate::R<DIEP3INTF_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `EPTXFUD`"]
-pub type EPTXFUD_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `EPTXFUD`"]
-pub struct EPTXFUD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EPTXFUD_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `DIEP3INTF` writer"]
+pub struct W(crate::W<DIEP3INTF_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<DIEP3INTF_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CITO`"]
-pub type CITO_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CITO`"]
-pub struct CITO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CITO_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `EPDIS`"]
-pub type EPDIS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `EPDIS`"]
-pub struct EPDIS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EPDIS_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<DIEP3INTF_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn from(writer: crate::W<DIEP3INTF_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `TF`"]
-pub type TF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TF`"]
-pub struct TF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
-    }
-}
+#[doc = "Field `TF` reader - Transfer finished"]
+pub type TF_R = crate::BitReader<bool>;
+#[doc = "Field `TF` writer - Transfer finished"]
+pub type TF_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEP3INTF_SPEC, bool, O>;
+#[doc = "Field `EPDIS` reader - Endpoint finished"]
+pub type EPDIS_R = crate::BitReader<bool>;
+#[doc = "Field `EPDIS` writer - Endpoint finished"]
+pub type EPDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEP3INTF_SPEC, bool, O>;
+#[doc = "Field `CITO` reader - Control in timeout interrupt"]
+pub type CITO_R = crate::BitReader<bool>;
+#[doc = "Field `CITO` writer - Control in timeout interrupt"]
+pub type CITO_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEP3INTF_SPEC, bool, O>;
+#[doc = "Field `EPTXFUD` reader - Endpoint Tx FIFO underrun"]
+pub type EPTXFUD_R = crate::BitReader<bool>;
+#[doc = "Field `EPTXFUD` writer - Endpoint Tx FIFO underrun"]
+pub type EPTXFUD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEP3INTF_SPEC, bool, O>;
+#[doc = "Field `IEPNE` reader - IN endpoint NAK effective"]
+pub type IEPNE_R = crate::BitReader<bool>;
+#[doc = "Field `IEPNE` writer - IN endpoint NAK effective"]
+pub type IEPNE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEP3INTF_SPEC, bool, O>;
+#[doc = "Field `TXFE` reader - Transmit FIFO empty"]
+pub type TXFE_R = crate::BitReader<bool>;
 impl R {
-    #[doc = "Bit 7 - Transmit FIFO empty"]
+    #[doc = "Bit 0 - Transfer finished"]
     #[inline(always)]
-    pub fn txfe(&self) -> TXFE_R {
-        TXFE_R::new(((self.bits >> 7) & 0x01) != 0)
-    }
-    #[doc = "Bit 6 - IN endpoint NAK effective"]
-    #[inline(always)]
-    pub fn iepne(&self) -> IEPNE_R {
-        IEPNE_R::new(((self.bits >> 6) & 0x01) != 0)
-    }
-    #[doc = "Bit 4 - Endpoint Tx FIFO underrun"]
-    #[inline(always)]
-    pub fn eptxfud(&self) -> EPTXFUD_R {
-        EPTXFUD_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 3 - Control in timeout interrupt"]
-    #[inline(always)]
-    pub fn cito(&self) -> CITO_R {
-        CITO_R::new(((self.bits >> 3) & 0x01) != 0)
+    pub fn tf(&self) -> TF_R {
+        TF_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Endpoint finished"]
     #[inline(always)]
     pub fn epdis(&self) -> EPDIS_R {
-        EPDIS_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Transfer finished"]
-    #[inline(always)]
-    pub fn tf(&self) -> TF_R {
-        TF_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 6 - IN endpoint NAK effective"]
-    #[inline(always)]
-    pub fn iepne(&mut self) -> IEPNE_W {
-        IEPNE_W { w: self }
-    }
-    #[doc = "Bit 4 - Endpoint Tx FIFO underrun"]
-    #[inline(always)]
-    pub fn eptxfud(&mut self) -> EPTXFUD_W {
-        EPTXFUD_W { w: self }
+        EPDIS_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 3 - Control in timeout interrupt"]
     #[inline(always)]
-    pub fn cito(&mut self) -> CITO_W {
-        CITO_W { w: self }
+    pub fn cito(&self) -> CITO_R {
+        CITO_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Endpoint Tx FIFO underrun"]
+    #[inline(always)]
+    pub fn eptxfud(&self) -> EPTXFUD_R {
+        EPTXFUD_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 6 - IN endpoint NAK effective"]
+    #[inline(always)]
+    pub fn iepne(&self) -> IEPNE_R {
+        IEPNE_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Transmit FIFO empty"]
+    #[inline(always)]
+    pub fn txfe(&self) -> TXFE_R {
+        TXFE_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Transfer finished"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tf(&mut self) -> TF_W<0> {
+        TF_W::new(self)
     }
     #[doc = "Bit 1 - Endpoint finished"]
     #[inline(always)]
-    pub fn epdis(&mut self) -> EPDIS_W {
-        EPDIS_W { w: self }
+    #[must_use]
+    pub fn epdis(&mut self) -> EPDIS_W<1> {
+        EPDIS_W::new(self)
     }
-    #[doc = "Bit 0 - Transfer finished"]
+    #[doc = "Bit 3 - Control in timeout interrupt"]
     #[inline(always)]
-    pub fn tf(&mut self) -> TF_W {
-        TF_W { w: self }
+    #[must_use]
+    pub fn cito(&mut self) -> CITO_W<3> {
+        CITO_W::new(self)
     }
+    #[doc = "Bit 4 - Endpoint Tx FIFO underrun"]
+    #[inline(always)]
+    #[must_use]
+    pub fn eptxfud(&mut self) -> EPTXFUD_W<4> {
+        EPTXFUD_W::new(self)
+    }
+    #[doc = "Bit 6 - IN endpoint NAK effective"]
+    #[inline(always)]
+    #[must_use]
+    pub fn iepne(&mut self) -> IEPNE_W<6> {
+        IEPNE_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "device endpoint-3 interrupt register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [diep3intf](index.html) module"]
+pub struct DIEP3INTF_SPEC;
+impl crate::RegisterSpec for DIEP3INTF_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [diep3intf::R](R) reader structure"]
+impl crate::Readable for DIEP3INTF_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [diep3intf::W](W) writer structure"]
+impl crate::Writable for DIEP3INTF_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets DIEP3INTF to value 0x80"]
+impl crate::Resettable for DIEP3INTF_SPEC {
+    const RESET_VALUE: Self::Ux = 0x80;
 }

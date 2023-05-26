@@ -1,424 +1,245 @@
-#[doc = "Reader of register DMAINTEN"]
-pub type R = crate::R<u16, super::DMAINTEN>;
-#[doc = "Writer for register DMAINTEN"]
-pub type W = crate::W<u16, super::DMAINTEN>;
-#[doc = "Register DMAINTEN `reset()`'s with value 0"]
-impl crate::ResetValue for super::DMAINTEN {
-    type Type = u16;
+#[doc = "Register `DMAINTEN` reader"]
+pub struct R(crate::R<DMAINTEN_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<DMAINTEN_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TRGDEN`"]
-pub type TRGDEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TRGDEN`"]
-pub struct TRGDEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRGDEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<DMAINTEN_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u16) & 0x01) << 14);
-        self.w
+    fn from(reader: crate::R<DMAINTEN_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `CH3DEN`"]
-pub type CH3DEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH3DEN`"]
-pub struct CH3DEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH3DEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `DMAINTEN` writer"]
+pub struct W(crate::W<DMAINTEN_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<DMAINTEN_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u16) & 0x01) << 12);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CH2DEN`"]
-pub type CH2DEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH2DEN`"]
-pub struct CH2DEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH2DEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u16) & 0x01) << 11);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `CH1DEN`"]
-pub type CH1DEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH1DEN`"]
-pub struct CH1DEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH1DEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<DMAINTEN_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u16) & 0x01) << 10);
-        self.w
+    fn from(writer: crate::W<DMAINTEN_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `CH0DEN`"]
-pub type CH0DEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH0DEN`"]
-pub struct CH0DEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH0DEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u16) & 0x01) << 9);
-        self.w
-    }
-}
-#[doc = "Reader of field `UPDEN`"]
-pub type UPDEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UPDEN`"]
-pub struct UPDEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UPDEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u16) & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Reader of field `TRGIE`"]
-pub type TRGIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TRGIE`"]
-pub struct TRGIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRGIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u16) & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Reader of field `CH3IE`"]
-pub type CH3IE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH3IE`"]
-pub struct CH3IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH3IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u16) & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Reader of field `CH2IE`"]
-pub type CH2IE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH2IE`"]
-pub struct CH2IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH2IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u16) & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Reader of field `CH1IE`"]
-pub type CH1IE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH1IE`"]
-pub struct CH1IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH1IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u16) & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Reader of field `CH0IE`"]
-pub type CH0IE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH0IE`"]
-pub struct CH0IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH0IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u16) & 0x01) << 1);
-        self.w
-    }
-}
-#[doc = "Reader of field `UPIE`"]
-pub type UPIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UPIE`"]
-pub struct UPIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UPIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u16) & 0x01);
-        self.w
-    }
-}
+#[doc = "Field `UPIE` reader - Update interrupt enable"]
+pub type UPIE_R = crate::BitReader<bool>;
+#[doc = "Field `UPIE` writer - Update interrupt enable"]
+pub type UPIE_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMAINTEN_SPEC, bool, O>;
+#[doc = "Field `CH0IE` reader - Channel 0 capture/compare interrupt enable"]
+pub type CH0IE_R = crate::BitReader<bool>;
+#[doc = "Field `CH0IE` writer - Channel 0 capture/compare interrupt enable"]
+pub type CH0IE_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMAINTEN_SPEC, bool, O>;
+#[doc = "Field `CH1IE` reader - Channel 1 capture/compare interrupt enable"]
+pub type CH1IE_R = crate::BitReader<bool>;
+#[doc = "Field `CH1IE` writer - Channel 1 capture/compare interrupt enable"]
+pub type CH1IE_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMAINTEN_SPEC, bool, O>;
+#[doc = "Field `CH2IE` reader - Channel 2 capture/compare interrupt enable"]
+pub type CH2IE_R = crate::BitReader<bool>;
+#[doc = "Field `CH2IE` writer - Channel 2 capture/compare interrupt enable"]
+pub type CH2IE_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMAINTEN_SPEC, bool, O>;
+#[doc = "Field `CH3IE` reader - Channel 3 capture/compare interrupt enable"]
+pub type CH3IE_R = crate::BitReader<bool>;
+#[doc = "Field `CH3IE` writer - Channel 3 capture/compare interrupt enable"]
+pub type CH3IE_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMAINTEN_SPEC, bool, O>;
+#[doc = "Field `TRGIE` reader - Trigger interrupt enable"]
+pub type TRGIE_R = crate::BitReader<bool>;
+#[doc = "Field `TRGIE` writer - Trigger interrupt enable"]
+pub type TRGIE_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMAINTEN_SPEC, bool, O>;
+#[doc = "Field `UPDEN` reader - Update DMA request enable"]
+pub type UPDEN_R = crate::BitReader<bool>;
+#[doc = "Field `UPDEN` writer - Update DMA request enable"]
+pub type UPDEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMAINTEN_SPEC, bool, O>;
+#[doc = "Field `CH0DEN` reader - Channel 0 capture/compare DMA request enable"]
+pub type CH0DEN_R = crate::BitReader<bool>;
+#[doc = "Field `CH0DEN` writer - Channel 0 capture/compare DMA request enable"]
+pub type CH0DEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMAINTEN_SPEC, bool, O>;
+#[doc = "Field `CH1DEN` reader - Channel 1 capture/compare DMA request enable"]
+pub type CH1DEN_R = crate::BitReader<bool>;
+#[doc = "Field `CH1DEN` writer - Channel 1 capture/compare DMA request enable"]
+pub type CH1DEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMAINTEN_SPEC, bool, O>;
+#[doc = "Field `CH2DEN` reader - Channel 2 capture/compare DMA request enable"]
+pub type CH2DEN_R = crate::BitReader<bool>;
+#[doc = "Field `CH2DEN` writer - Channel 2 capture/compare DMA request enable"]
+pub type CH2DEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMAINTEN_SPEC, bool, O>;
+#[doc = "Field `CH3DEN` reader - Channel 3 capture/compare DMA request enable"]
+pub type CH3DEN_R = crate::BitReader<bool>;
+#[doc = "Field `CH3DEN` writer - Channel 3 capture/compare DMA request enable"]
+pub type CH3DEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMAINTEN_SPEC, bool, O>;
+#[doc = "Field `TRGDEN` reader - Trigger DMA request enable"]
+pub type TRGDEN_R = crate::BitReader<bool>;
+#[doc = "Field `TRGDEN` writer - Trigger DMA request enable"]
+pub type TRGDEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMAINTEN_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 14 - Trigger DMA request enable"]
+    #[doc = "Bit 0 - Update interrupt enable"]
     #[inline(always)]
-    pub fn trgden(&self) -> TRGDEN_R {
-        TRGDEN_R::new(((self.bits >> 14) & 0x01) != 0)
-    }
-    #[doc = "Bit 12 - Channel 3 capture/compare DMA request enable"]
-    #[inline(always)]
-    pub fn ch3den(&self) -> CH3DEN_R {
-        CH3DEN_R::new(((self.bits >> 12) & 0x01) != 0)
-    }
-    #[doc = "Bit 11 - Channel 2 capture/compare DMA request enable"]
-    #[inline(always)]
-    pub fn ch2den(&self) -> CH2DEN_R {
-        CH2DEN_R::new(((self.bits >> 11) & 0x01) != 0)
-    }
-    #[doc = "Bit 10 - Channel 1 capture/compare DMA request enable"]
-    #[inline(always)]
-    pub fn ch1den(&self) -> CH1DEN_R {
-        CH1DEN_R::new(((self.bits >> 10) & 0x01) != 0)
-    }
-    #[doc = "Bit 9 - Channel 0 capture/compare DMA request enable"]
-    #[inline(always)]
-    pub fn ch0den(&self) -> CH0DEN_R {
-        CH0DEN_R::new(((self.bits >> 9) & 0x01) != 0)
-    }
-    #[doc = "Bit 8 - Update DMA request enable"]
-    #[inline(always)]
-    pub fn upden(&self) -> UPDEN_R {
-        UPDEN_R::new(((self.bits >> 8) & 0x01) != 0)
-    }
-    #[doc = "Bit 6 - Trigger interrupt enable"]
-    #[inline(always)]
-    pub fn trgie(&self) -> TRGIE_R {
-        TRGIE_R::new(((self.bits >> 6) & 0x01) != 0)
-    }
-    #[doc = "Bit 4 - Channel 3 capture/compare interrupt enable"]
-    #[inline(always)]
-    pub fn ch3ie(&self) -> CH3IE_R {
-        CH3IE_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 3 - Channel 2 capture/compare interrupt enable"]
-    #[inline(always)]
-    pub fn ch2ie(&self) -> CH2IE_R {
-        CH2IE_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2 - Channel 1 capture/compare interrupt enable"]
-    #[inline(always)]
-    pub fn ch1ie(&self) -> CH1IE_R {
-        CH1IE_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn upie(&self) -> UPIE_R {
+        UPIE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Channel 0 capture/compare interrupt enable"]
     #[inline(always)]
     pub fn ch0ie(&self) -> CH0IE_R {
-        CH0IE_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Update interrupt enable"]
-    #[inline(always)]
-    pub fn upie(&self) -> UPIE_R {
-        UPIE_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 14 - Trigger DMA request enable"]
-    #[inline(always)]
-    pub fn trgden(&mut self) -> TRGDEN_W {
-        TRGDEN_W { w: self }
-    }
-    #[doc = "Bit 12 - Channel 3 capture/compare DMA request enable"]
-    #[inline(always)]
-    pub fn ch3den(&mut self) -> CH3DEN_W {
-        CH3DEN_W { w: self }
-    }
-    #[doc = "Bit 11 - Channel 2 capture/compare DMA request enable"]
-    #[inline(always)]
-    pub fn ch2den(&mut self) -> CH2DEN_W {
-        CH2DEN_W { w: self }
-    }
-    #[doc = "Bit 10 - Channel 1 capture/compare DMA request enable"]
-    #[inline(always)]
-    pub fn ch1den(&mut self) -> CH1DEN_W {
-        CH1DEN_W { w: self }
-    }
-    #[doc = "Bit 9 - Channel 0 capture/compare DMA request enable"]
-    #[inline(always)]
-    pub fn ch0den(&mut self) -> CH0DEN_W {
-        CH0DEN_W { w: self }
-    }
-    #[doc = "Bit 8 - Update DMA request enable"]
-    #[inline(always)]
-    pub fn upden(&mut self) -> UPDEN_W {
-        UPDEN_W { w: self }
-    }
-    #[doc = "Bit 6 - Trigger interrupt enable"]
-    #[inline(always)]
-    pub fn trgie(&mut self) -> TRGIE_W {
-        TRGIE_W { w: self }
-    }
-    #[doc = "Bit 4 - Channel 3 capture/compare interrupt enable"]
-    #[inline(always)]
-    pub fn ch3ie(&mut self) -> CH3IE_W {
-        CH3IE_W { w: self }
-    }
-    #[doc = "Bit 3 - Channel 2 capture/compare interrupt enable"]
-    #[inline(always)]
-    pub fn ch2ie(&mut self) -> CH2IE_W {
-        CH2IE_W { w: self }
+        CH0IE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Channel 1 capture/compare interrupt enable"]
     #[inline(always)]
-    pub fn ch1ie(&mut self) -> CH1IE_W {
-        CH1IE_W { w: self }
+    pub fn ch1ie(&self) -> CH1IE_R {
+        CH1IE_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Channel 2 capture/compare interrupt enable"]
+    #[inline(always)]
+    pub fn ch2ie(&self) -> CH2IE_R {
+        CH2IE_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Channel 3 capture/compare interrupt enable"]
+    #[inline(always)]
+    pub fn ch3ie(&self) -> CH3IE_R {
+        CH3IE_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Trigger interrupt enable"]
+    #[inline(always)]
+    pub fn trgie(&self) -> TRGIE_R {
+        TRGIE_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Update DMA request enable"]
+    #[inline(always)]
+    pub fn upden(&self) -> UPDEN_R {
+        UPDEN_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Channel 0 capture/compare DMA request enable"]
+    #[inline(always)]
+    pub fn ch0den(&self) -> CH0DEN_R {
+        CH0DEN_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Channel 1 capture/compare DMA request enable"]
+    #[inline(always)]
+    pub fn ch1den(&self) -> CH1DEN_R {
+        CH1DEN_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Channel 2 capture/compare DMA request enable"]
+    #[inline(always)]
+    pub fn ch2den(&self) -> CH2DEN_R {
+        CH2DEN_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - Channel 3 capture/compare DMA request enable"]
+    #[inline(always)]
+    pub fn ch3den(&self) -> CH3DEN_R {
+        CH3DEN_R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 14 - Trigger DMA request enable"]
+    #[inline(always)]
+    pub fn trgden(&self) -> TRGDEN_R {
+        TRGDEN_R::new(((self.bits >> 14) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Update interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn upie(&mut self) -> UPIE_W<0> {
+        UPIE_W::new(self)
     }
     #[doc = "Bit 1 - Channel 0 capture/compare interrupt enable"]
     #[inline(always)]
-    pub fn ch0ie(&mut self) -> CH0IE_W {
-        CH0IE_W { w: self }
+    #[must_use]
+    pub fn ch0ie(&mut self) -> CH0IE_W<1> {
+        CH0IE_W::new(self)
     }
-    #[doc = "Bit 0 - Update interrupt enable"]
+    #[doc = "Bit 2 - Channel 1 capture/compare interrupt enable"]
     #[inline(always)]
-    pub fn upie(&mut self) -> UPIE_W {
-        UPIE_W { w: self }
+    #[must_use]
+    pub fn ch1ie(&mut self) -> CH1IE_W<2> {
+        CH1IE_W::new(self)
     }
+    #[doc = "Bit 3 - Channel 2 capture/compare interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch2ie(&mut self) -> CH2IE_W<3> {
+        CH2IE_W::new(self)
+    }
+    #[doc = "Bit 4 - Channel 3 capture/compare interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch3ie(&mut self) -> CH3IE_W<4> {
+        CH3IE_W::new(self)
+    }
+    #[doc = "Bit 6 - Trigger interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn trgie(&mut self) -> TRGIE_W<6> {
+        TRGIE_W::new(self)
+    }
+    #[doc = "Bit 8 - Update DMA request enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn upden(&mut self) -> UPDEN_W<8> {
+        UPDEN_W::new(self)
+    }
+    #[doc = "Bit 9 - Channel 0 capture/compare DMA request enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch0den(&mut self) -> CH0DEN_W<9> {
+        CH0DEN_W::new(self)
+    }
+    #[doc = "Bit 10 - Channel 1 capture/compare DMA request enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch1den(&mut self) -> CH1DEN_W<10> {
+        CH1DEN_W::new(self)
+    }
+    #[doc = "Bit 11 - Channel 2 capture/compare DMA request enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch2den(&mut self) -> CH2DEN_W<11> {
+        CH2DEN_W::new(self)
+    }
+    #[doc = "Bit 12 - Channel 3 capture/compare DMA request enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch3den(&mut self) -> CH3DEN_W<12> {
+        CH3DEN_W::new(self)
+    }
+    #[doc = "Bit 14 - Trigger DMA request enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn trgden(&mut self) -> TRGDEN_W<14> {
+        TRGDEN_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "DMA/Interrupt enable register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dmainten](index.html) module"]
+pub struct DMAINTEN_SPEC;
+impl crate::RegisterSpec for DMAINTEN_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [dmainten::R](R) reader structure"]
+impl crate::Readable for DMAINTEN_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [dmainten::W](W) writer structure"]
+impl crate::Writable for DMAINTEN_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets DMAINTEN to value 0"]
+impl crate::Resettable for DMAINTEN_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

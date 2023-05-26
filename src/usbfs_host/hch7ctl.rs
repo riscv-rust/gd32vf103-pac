@@ -1,191 +1,75 @@
-#[doc = "Reader of register HCH7CTL"]
-pub type R = crate::R<u32, super::HCH7CTL>;
-#[doc = "Writer for register HCH7CTL"]
-pub type W = crate::W<u32, super::HCH7CTL>;
-#[doc = "Register HCH7CTL `reset()`'s with value 0"]
-impl crate::ResetValue for super::HCH7CTL {
-    type Type = u32;
+#[doc = "Register `HCH7CTL` reader"]
+pub struct R(crate::R<HCH7CTL_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<HCH7CTL_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `MPL`"]
-pub type MPL_R = crate::R<u16, u16>;
-#[doc = "Write proxy for field `MPL`"]
-pub struct MPL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MPL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<HCH7CTL_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07ff) | ((value as u32) & 0x07ff);
-        self.w
+    fn from(reader: crate::R<HCH7CTL_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `EPNUM`"]
-pub type EPNUM_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `EPNUM`"]
-pub struct EPNUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EPNUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+#[doc = "Register `HCH7CTL` writer"]
+pub struct W(crate::W<HCH7CTL_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<HCH7CTL_SPEC>;
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 11)) | (((value as u32) & 0x0f) << 11);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `EPDIR`"]
-pub type EPDIR_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `EPDIR`"]
-pub struct EPDIR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EPDIR_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u32) & 0x01) << 15);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `LSD`"]
-pub type LSD_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `LSD`"]
-pub struct LSD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LSD_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<HCH7CTL_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | (((value as u32) & 0x01) << 17);
-        self.w
+    fn from(writer: crate::W<HCH7CTL_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `EPTYPE`"]
-pub type EPTYPE_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `EPTYPE`"]
-pub struct EPTYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EPTYPE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 18)) | (((value as u32) & 0x03) << 18);
-        self.w
-    }
-}
-#[doc = "Reader of field `DAR`"]
-pub type DAR_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `DAR`"]
-pub struct DAR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DAR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x7f << 22)) | (((value as u32) & 0x7f) << 22);
-        self.w
-    }
-}
-#[doc = "Reader of field `ODDFRM`"]
-pub type ODDFRM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ODDFRM`"]
-pub struct ODDFRM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ODDFRM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | (((value as u32) & 0x01) << 29);
-        self.w
-    }
-}
-#[doc = "Reader of field `CDIS`"]
-pub type CDIS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CDIS`"]
-pub struct CDIS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CDIS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | (((value as u32) & 0x01) << 30);
-        self.w
-    }
-}
-#[doc = "Reader of field `CEN`"]
-pub type CEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CEN`"]
-pub struct CEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | (((value as u32) & 0x01) << 31);
-        self.w
-    }
-}
+#[doc = "Field `MPL` reader - Maximum packet size"]
+pub type MPL_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `MPL` writer - Maximum packet size"]
+pub type MPL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCH7CTL_SPEC, u16, u16, 11, O>;
+#[doc = "Field `EPNUM` reader - Endpoint number"]
+pub type EPNUM_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `EPNUM` writer - Endpoint number"]
+pub type EPNUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCH7CTL_SPEC, u8, u8, 4, O>;
+#[doc = "Field `EPDIR` reader - Endpoint direction"]
+pub type EPDIR_R = crate::BitReader<bool>;
+#[doc = "Field `EPDIR` writer - Endpoint direction"]
+pub type EPDIR_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH7CTL_SPEC, bool, O>;
+#[doc = "Field `LSD` reader - Low-speed device"]
+pub type LSD_R = crate::BitReader<bool>;
+#[doc = "Field `LSD` writer - Low-speed device"]
+pub type LSD_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH7CTL_SPEC, bool, O>;
+#[doc = "Field `EPTYPE` reader - Endpoint type"]
+pub type EPTYPE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `EPTYPE` writer - Endpoint type"]
+pub type EPTYPE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCH7CTL_SPEC, u8, u8, 2, O>;
+#[doc = "Field `DAR` reader - Device address"]
+pub type DAR_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DAR` writer - Device address"]
+pub type DAR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCH7CTL_SPEC, u8, u8, 7, O>;
+#[doc = "Field `ODDFRM` reader - Odd frame"]
+pub type ODDFRM_R = crate::BitReader<bool>;
+#[doc = "Field `ODDFRM` writer - Odd frame"]
+pub type ODDFRM_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH7CTL_SPEC, bool, O>;
+#[doc = "Field `CDIS` reader - Channel disable"]
+pub type CDIS_R = crate::BitReader<bool>;
+#[doc = "Field `CDIS` writer - Channel disable"]
+pub type CDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH7CTL_SPEC, bool, O>;
+#[doc = "Field `CEN` reader - Channel enable"]
+pub type CEN_R = crate::BitReader<bool>;
+#[doc = "Field `CEN` writer - Channel enable"]
+pub type CEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH7CTL_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:10 - Maximum packet size"]
     #[inline(always)]
@@ -200,17 +84,17 @@ impl R {
     #[doc = "Bit 15 - Endpoint direction"]
     #[inline(always)]
     pub fn epdir(&self) -> EPDIR_R {
-        EPDIR_R::new(((self.bits >> 15) & 0x01) != 0)
+        EPDIR_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 17 - Low-speed device"]
     #[inline(always)]
     pub fn lsd(&self) -> LSD_R {
-        LSD_R::new(((self.bits >> 17) & 0x01) != 0)
+        LSD_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bits 18:19 - Endpoint type"]
     #[inline(always)]
     pub fn eptype(&self) -> EPTYPE_R {
-        EPTYPE_R::new(((self.bits >> 18) & 0x03) as u8)
+        EPTYPE_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 22:28 - Device address"]
     #[inline(always)]
@@ -220,63 +104,97 @@ impl R {
     #[doc = "Bit 29 - Odd frame"]
     #[inline(always)]
     pub fn oddfrm(&self) -> ODDFRM_R {
-        ODDFRM_R::new(((self.bits >> 29) & 0x01) != 0)
+        ODDFRM_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Channel disable"]
     #[inline(always)]
     pub fn cdis(&self) -> CDIS_R {
-        CDIS_R::new(((self.bits >> 30) & 0x01) != 0)
+        CDIS_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Channel enable"]
     #[inline(always)]
     pub fn cen(&self) -> CEN_R {
-        CEN_R::new(((self.bits >> 31) & 0x01) != 0)
+        CEN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:10 - Maximum packet size"]
     #[inline(always)]
-    pub fn mpl(&mut self) -> MPL_W {
-        MPL_W { w: self }
+    #[must_use]
+    pub fn mpl(&mut self) -> MPL_W<0> {
+        MPL_W::new(self)
     }
     #[doc = "Bits 11:14 - Endpoint number"]
     #[inline(always)]
-    pub fn epnum(&mut self) -> EPNUM_W {
-        EPNUM_W { w: self }
+    #[must_use]
+    pub fn epnum(&mut self) -> EPNUM_W<11> {
+        EPNUM_W::new(self)
     }
     #[doc = "Bit 15 - Endpoint direction"]
     #[inline(always)]
-    pub fn epdir(&mut self) -> EPDIR_W {
-        EPDIR_W { w: self }
+    #[must_use]
+    pub fn epdir(&mut self) -> EPDIR_W<15> {
+        EPDIR_W::new(self)
     }
     #[doc = "Bit 17 - Low-speed device"]
     #[inline(always)]
-    pub fn lsd(&mut self) -> LSD_W {
-        LSD_W { w: self }
+    #[must_use]
+    pub fn lsd(&mut self) -> LSD_W<17> {
+        LSD_W::new(self)
     }
     #[doc = "Bits 18:19 - Endpoint type"]
     #[inline(always)]
-    pub fn eptype(&mut self) -> EPTYPE_W {
-        EPTYPE_W { w: self }
+    #[must_use]
+    pub fn eptype(&mut self) -> EPTYPE_W<18> {
+        EPTYPE_W::new(self)
     }
     #[doc = "Bits 22:28 - Device address"]
     #[inline(always)]
-    pub fn dar(&mut self) -> DAR_W {
-        DAR_W { w: self }
+    #[must_use]
+    pub fn dar(&mut self) -> DAR_W<22> {
+        DAR_W::new(self)
     }
     #[doc = "Bit 29 - Odd frame"]
     #[inline(always)]
-    pub fn oddfrm(&mut self) -> ODDFRM_W {
-        ODDFRM_W { w: self }
+    #[must_use]
+    pub fn oddfrm(&mut self) -> ODDFRM_W<29> {
+        ODDFRM_W::new(self)
     }
     #[doc = "Bit 30 - Channel disable"]
     #[inline(always)]
-    pub fn cdis(&mut self) -> CDIS_W {
-        CDIS_W { w: self }
+    #[must_use]
+    pub fn cdis(&mut self) -> CDIS_W<30> {
+        CDIS_W::new(self)
     }
     #[doc = "Bit 31 - Channel enable"]
     #[inline(always)]
-    pub fn cen(&mut self) -> CEN_W {
-        CEN_W { w: self }
+    #[must_use]
+    pub fn cen(&mut self) -> CEN_W<31> {
+        CEN_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "host channel-7 characteristics register (HCH7CTL)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hch7ctl](index.html) module"]
+pub struct HCH7CTL_SPEC;
+impl crate::RegisterSpec for HCH7CTL_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [hch7ctl::R](R) reader structure"]
+impl crate::Readable for HCH7CTL_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [hch7ctl::W](W) writer structure"]
+impl crate::Writable for HCH7CTL_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets HCH7CTL to value 0"]
+impl crate::Resettable for HCH7CTL_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

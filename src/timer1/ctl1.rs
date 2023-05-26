@@ -1,108 +1,110 @@
-#[doc = "Reader of register CTL1"]
-pub type R = crate::R<u16, super::CTL1>;
-#[doc = "Writer for register CTL1"]
-pub type W = crate::W<u16, super::CTL1>;
-#[doc = "Register CTL1 `reset()`'s with value 0"]
-impl crate::ResetValue for super::CTL1 {
-    type Type = u16;
+#[doc = "Register `CTL1` reader"]
+pub struct R(crate::R<CTL1_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CTL1_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TI0S`"]
-pub type TI0S_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TI0S`"]
-pub struct TI0S_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TI0S_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<CTL1_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u16) & 0x01) << 7);
-        self.w
+    fn from(reader: crate::R<CTL1_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `MMC`"]
-pub type MMC_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `MMC`"]
-pub struct MMC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MMC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+#[doc = "Register `CTL1` writer"]
+pub struct W(crate::W<CTL1_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CTL1_SPEC>;
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 4)) | (((value as u16) & 0x07) << 4);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `DMAS`"]
-pub type DMAS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DMAS`"]
-pub struct DMAS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMAS_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u16) & 0x01) << 3);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
+impl From<crate::W<CTL1_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<CTL1_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `DMAS` reader - DMA request source selection"]
+pub type DMAS_R = crate::BitReader<bool>;
+#[doc = "Field `DMAS` writer - DMA request source selection"]
+pub type DMAS_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL1_SPEC, bool, O>;
+#[doc = "Field `MMC` reader - Master mode control"]
+pub type MMC_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `MMC` writer - Master mode control"]
+pub type MMC_W<'a, const O: u8> = crate::FieldWriter<'a, u16, CTL1_SPEC, u8, u8, 3, O>;
+#[doc = "Field `TI0S` reader - Channel 0 trigger input selection"]
+pub type TI0S_R = crate::BitReader<bool>;
+#[doc = "Field `TI0S` writer - Channel 0 trigger input selection"]
+pub type TI0S_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL1_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 7 - Channel 0 trigger input selection"]
+    #[doc = "Bit 3 - DMA request source selection"]
     #[inline(always)]
-    pub fn ti0s(&self) -> TI0S_R {
-        TI0S_R::new(((self.bits >> 7) & 0x01) != 0)
+    pub fn dmas(&self) -> DMAS_R {
+        DMAS_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:6 - Master mode control"]
     #[inline(always)]
     pub fn mmc(&self) -> MMC_R {
-        MMC_R::new(((self.bits >> 4) & 0x07) as u8)
+        MMC_R::new(((self.bits >> 4) & 7) as u8)
     }
-    #[doc = "Bit 3 - DMA request source selection"]
+    #[doc = "Bit 7 - Channel 0 trigger input selection"]
     #[inline(always)]
-    pub fn dmas(&self) -> DMAS_R {
-        DMAS_R::new(((self.bits >> 3) & 0x01) != 0)
+    pub fn ti0s(&self) -> TI0S_R {
+        TI0S_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 7 - Channel 0 trigger input selection"]
+    #[doc = "Bit 3 - DMA request source selection"]
     #[inline(always)]
-    pub fn ti0s(&mut self) -> TI0S_W {
-        TI0S_W { w: self }
+    #[must_use]
+    pub fn dmas(&mut self) -> DMAS_W<3> {
+        DMAS_W::new(self)
     }
     #[doc = "Bits 4:6 - Master mode control"]
     #[inline(always)]
-    pub fn mmc(&mut self) -> MMC_W {
-        MMC_W { w: self }
+    #[must_use]
+    pub fn mmc(&mut self) -> MMC_W<4> {
+        MMC_W::new(self)
     }
-    #[doc = "Bit 3 - DMA request source selection"]
+    #[doc = "Bit 7 - Channel 0 trigger input selection"]
     #[inline(always)]
-    pub fn dmas(&mut self) -> DMAS_W {
-        DMAS_W { w: self }
+    #[must_use]
+    pub fn ti0s(&mut self) -> TI0S_W<7> {
+        TI0S_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "control register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl1](index.html) module"]
+pub struct CTL1_SPEC;
+impl crate::RegisterSpec for CTL1_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [ctl1::R](R) reader structure"]
+impl crate::Readable for CTL1_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [ctl1::W](W) writer structure"]
+impl crate::Writable for CTL1_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets CTL1 to value 0"]
+impl crate::Resettable for CTL1_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

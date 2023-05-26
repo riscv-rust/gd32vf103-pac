@@ -1,98 +1,110 @@
-#[doc = "Reader of register DOEP0LEN"]
-pub type R = crate::R<u32, super::DOEP0LEN>;
-#[doc = "Writer for register DOEP0LEN"]
-pub type W = crate::W<u32, super::DOEP0LEN>;
-#[doc = "Register DOEP0LEN `reset()`'s with value 0"]
-impl crate::ResetValue for super::DOEP0LEN {
-    type Type = u32;
+#[doc = "Register `DOEP0LEN` reader"]
+pub struct R(crate::R<DOEP0LEN_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<DOEP0LEN_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `STPCNT`"]
-pub type STPCNT_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `STPCNT`"]
-pub struct STPCNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STPCNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<DOEP0LEN_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 29)) | (((value as u32) & 0x03) << 29);
-        self.w
+    fn from(reader: crate::R<DOEP0LEN_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `PCNT`"]
-pub type PCNT_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PCNT`"]
-pub struct PCNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PCNT_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `DOEP0LEN` writer"]
+pub struct W(crate::W<DOEP0LEN_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<DOEP0LEN_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | (((value as u32) & 0x01) << 19);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TLEN`"]
-pub type TLEN_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `TLEN`"]
-pub struct TLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TLEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | ((value as u32) & 0x7f);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
+impl From<crate::W<DOEP0LEN_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<DOEP0LEN_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `TLEN` reader - Transfer length"]
+pub type TLEN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `TLEN` writer - Transfer length"]
+pub type TLEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOEP0LEN_SPEC, u8, u8, 7, O>;
+#[doc = "Field `PCNT` reader - Packet count"]
+pub type PCNT_R = crate::BitReader<bool>;
+#[doc = "Field `PCNT` writer - Packet count"]
+pub type PCNT_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEP0LEN_SPEC, bool, O>;
+#[doc = "Field `STPCNT` reader - SETUP packet count"]
+pub type STPCNT_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `STPCNT` writer - SETUP packet count"]
+pub type STPCNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOEP0LEN_SPEC, u8, u8, 2, O>;
 impl R {
-    #[doc = "Bits 29:30 - SETUP packet count"]
-    #[inline(always)]
-    pub fn stpcnt(&self) -> STPCNT_R {
-        STPCNT_R::new(((self.bits >> 29) & 0x03) as u8)
-    }
-    #[doc = "Bit 19 - Packet count"]
-    #[inline(always)]
-    pub fn pcnt(&self) -> PCNT_R {
-        PCNT_R::new(((self.bits >> 19) & 0x01) != 0)
-    }
     #[doc = "Bits 0:6 - Transfer length"]
     #[inline(always)]
     pub fn tlen(&self) -> TLEN_R {
         TLEN_R::new((self.bits & 0x7f) as u8)
     }
-}
-impl W {
+    #[doc = "Bit 19 - Packet count"]
+    #[inline(always)]
+    pub fn pcnt(&self) -> PCNT_R {
+        PCNT_R::new(((self.bits >> 19) & 1) != 0)
+    }
     #[doc = "Bits 29:30 - SETUP packet count"]
     #[inline(always)]
-    pub fn stpcnt(&mut self) -> STPCNT_W {
-        STPCNT_W { w: self }
+    pub fn stpcnt(&self) -> STPCNT_R {
+        STPCNT_R::new(((self.bits >> 29) & 3) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:6 - Transfer length"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tlen(&mut self) -> TLEN_W<0> {
+        TLEN_W::new(self)
     }
     #[doc = "Bit 19 - Packet count"]
     #[inline(always)]
-    pub fn pcnt(&mut self) -> PCNT_W {
-        PCNT_W { w: self }
+    #[must_use]
+    pub fn pcnt(&mut self) -> PCNT_W<19> {
+        PCNT_W::new(self)
     }
-    #[doc = "Bits 0:6 - Transfer length"]
+    #[doc = "Bits 29:30 - SETUP packet count"]
     #[inline(always)]
-    pub fn tlen(&mut self) -> TLEN_W {
-        TLEN_W { w: self }
+    #[must_use]
+    pub fn stpcnt(&mut self) -> STPCNT_W<29> {
+        STPCNT_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "device OUT endpoint-0 transfer length register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [doep0len](index.html) module"]
+pub struct DOEP0LEN_SPEC;
+impl crate::RegisterSpec for DOEP0LEN_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [doep0len::R](R) reader structure"]
+impl crate::Readable for DOEP0LEN_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [doep0len::W](W) writer structure"]
+impl crate::Writable for DOEP0LEN_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets DOEP0LEN to value 0"]
+impl crate::Resettable for DOEP0LEN_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

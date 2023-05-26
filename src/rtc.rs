@@ -22,101 +22,43 @@ pub struct RegisterBlock {
     #[doc = "0x24 - RTC alarm low register"]
     pub alrml: ALRML,
 }
-#[doc = "RTC interrupt enable register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [inten](inten) module"]
-pub type INTEN = crate::Reg<u32, _INTEN>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _INTEN;
-#[doc = "`read()` method returns [inten::R](inten::R) reader structure"]
-impl crate::Readable for INTEN {}
-#[doc = "`write(|w| ..)` method takes [inten::W](inten::W) writer structure"]
-impl crate::Writable for INTEN {}
+#[doc = "INTEN (rw) register accessor: an alias for `Reg<INTEN_SPEC>`"]
+pub type INTEN = crate::Reg<inten::INTEN_SPEC>;
 #[doc = "RTC interrupt enable register"]
 pub mod inten;
-#[doc = "control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl](ctl) module"]
-pub type CTL = crate::Reg<u32, _CTL>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CTL;
-#[doc = "`read()` method returns [ctl::R](ctl::R) reader structure"]
-impl crate::Readable for CTL {}
-#[doc = "`write(|w| ..)` method takes [ctl::W](ctl::W) writer structure"]
-impl crate::Writable for CTL {}
+#[doc = "CTL (rw) register accessor: an alias for `Reg<CTL_SPEC>`"]
+pub type CTL = crate::Reg<ctl::CTL_SPEC>;
 #[doc = "control register"]
 pub mod ctl;
-#[doc = "RTC prescaler high register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [psch](psch) module"]
-pub type PSCH = crate::Reg<u32, _PSCH>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _PSCH;
-#[doc = "`write(|w| ..)` method takes [psch::W](psch::W) writer structure"]
-impl crate::Writable for PSCH {}
+#[doc = "PSCH (w) register accessor: an alias for `Reg<PSCH_SPEC>`"]
+pub type PSCH = crate::Reg<psch::PSCH_SPEC>;
 #[doc = "RTC prescaler high register"]
 pub mod psch;
-#[doc = "RTC prescaler low register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pscl](pscl) module"]
-pub type PSCL = crate::Reg<u32, _PSCL>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _PSCL;
-#[doc = "`write(|w| ..)` method takes [pscl::W](pscl::W) writer structure"]
-impl crate::Writable for PSCL {}
+#[doc = "PSCL (w) register accessor: an alias for `Reg<PSCL_SPEC>`"]
+pub type PSCL = crate::Reg<pscl::PSCL_SPEC>;
 #[doc = "RTC prescaler low register"]
 pub mod pscl;
-#[doc = "RTC divider high register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [divh](divh) module"]
-pub type DIVH = crate::Reg<u32, _DIVH>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _DIVH;
-#[doc = "`read()` method returns [divh::R](divh::R) reader structure"]
-impl crate::Readable for DIVH {}
+#[doc = "DIVH (r) register accessor: an alias for `Reg<DIVH_SPEC>`"]
+pub type DIVH = crate::Reg<divh::DIVH_SPEC>;
 #[doc = "RTC divider high register"]
 pub mod divh;
-#[doc = "RTC divider low register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [divl](divl) module"]
-pub type DIVL = crate::Reg<u32, _DIVL>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _DIVL;
-#[doc = "`read()` method returns [divl::R](divl::R) reader structure"]
-impl crate::Readable for DIVL {}
+#[doc = "DIVL (r) register accessor: an alias for `Reg<DIVL_SPEC>`"]
+pub type DIVL = crate::Reg<divl::DIVL_SPEC>;
 #[doc = "RTC divider low register"]
 pub mod divl;
-#[doc = "RTC counter high register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cnth](cnth) module"]
-pub type CNTH = crate::Reg<u32, _CNTH>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNTH;
-#[doc = "`read()` method returns [cnth::R](cnth::R) reader structure"]
-impl crate::Readable for CNTH {}
-#[doc = "`write(|w| ..)` method takes [cnth::W](cnth::W) writer structure"]
-impl crate::Writable for CNTH {}
+#[doc = "CNTH (rw) register accessor: an alias for `Reg<CNTH_SPEC>`"]
+pub type CNTH = crate::Reg<cnth::CNTH_SPEC>;
 #[doc = "RTC counter high register"]
 pub mod cnth;
-#[doc = "RTC counter low register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cntl](cntl) module"]
-pub type CNTL = crate::Reg<u32, _CNTL>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CNTL;
-#[doc = "`read()` method returns [cntl::R](cntl::R) reader structure"]
-impl crate::Readable for CNTL {}
-#[doc = "`write(|w| ..)` method takes [cntl::W](cntl::W) writer structure"]
-impl crate::Writable for CNTL {}
+#[doc = "CNTL (rw) register accessor: an alias for `Reg<CNTL_SPEC>`"]
+pub type CNTL = crate::Reg<cntl::CNTL_SPEC>;
 #[doc = "RTC counter low register"]
 pub mod cntl;
-#[doc = "Alarm high register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [alrmh](alrmh) module"]
-pub type ALRMH = crate::Reg<u32, _ALRMH>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _ALRMH;
-#[doc = "`write(|w| ..)` method takes [alrmh::W](alrmh::W) writer structure"]
-impl crate::Writable for ALRMH {}
+#[doc = "ALRMH (w) register accessor: an alias for `Reg<ALRMH_SPEC>`"]
+pub type ALRMH = crate::Reg<alrmh::ALRMH_SPEC>;
 #[doc = "Alarm high register"]
 pub mod alrmh;
-#[doc = "RTC alarm low register\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [alrml](alrml) module"]
-pub type ALRML = crate::Reg<u32, _ALRML>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _ALRML;
-#[doc = "`write(|w| ..)` method takes [alrml::W](alrml::W) writer structure"]
-impl crate::Writable for ALRML {}
+#[doc = "ALRML (w) register accessor: an alias for `Reg<ALRML_SPEC>`"]
+pub type ALRML = crate::Reg<alrml::ALRML_SPEC>;
 #[doc = "RTC alarm low register"]
 pub mod alrml;

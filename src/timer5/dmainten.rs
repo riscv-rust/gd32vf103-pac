@@ -1,84 +1,95 @@
-#[doc = "Reader of register DMAINTEN"]
-pub type R = crate::R<u16, super::DMAINTEN>;
-#[doc = "Writer for register DMAINTEN"]
-pub type W = crate::W<u16, super::DMAINTEN>;
-#[doc = "Register DMAINTEN `reset()`'s with value 0"]
-impl crate::ResetValue for super::DMAINTEN {
-    type Type = u16;
+#[doc = "Register `DMAINTEN` reader"]
+pub struct R(crate::R<DMAINTEN_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<DMAINTEN_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `UPDEN`"]
-pub type UPDEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UPDEN`"]
-pub struct UPDEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UPDEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<DMAINTEN_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u16) & 0x01) << 8);
-        self.w
+    fn from(reader: crate::R<DMAINTEN_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `UPIE`"]
-pub type UPIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UPIE`"]
-pub struct UPIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UPIE_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `DMAINTEN` writer"]
+pub struct W(crate::W<DMAINTEN_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<DMAINTEN_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u16) & 0x01);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<DMAINTEN_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<DMAINTEN_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `UPIE` reader - Update interrupt enable"]
+pub type UPIE_R = crate::BitReader<bool>;
+#[doc = "Field `UPIE` writer - Update interrupt enable"]
+pub type UPIE_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMAINTEN_SPEC, bool, O>;
+#[doc = "Field `UPDEN` reader - Update DMA request enable"]
+pub type UPDEN_R = crate::BitReader<bool>;
+#[doc = "Field `UPDEN` writer - Update DMA request enable"]
+pub type UPDEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMAINTEN_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 8 - Update DMA request enable"]
-    #[inline(always)]
-    pub fn upden(&self) -> UPDEN_R {
-        UPDEN_R::new(((self.bits >> 8) & 0x01) != 0)
-    }
     #[doc = "Bit 0 - Update interrupt enable"]
     #[inline(always)]
     pub fn upie(&self) -> UPIE_R {
-        UPIE_R::new((self.bits & 0x01) != 0)
+        UPIE_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 8 - Update DMA request enable"]
+    #[inline(always)]
+    pub fn upden(&self) -> UPDEN_R {
+        UPDEN_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 8 - Update DMA request enable"]
-    #[inline(always)]
-    pub fn upden(&mut self) -> UPDEN_W {
-        UPDEN_W { w: self }
-    }
     #[doc = "Bit 0 - Update interrupt enable"]
     #[inline(always)]
-    pub fn upie(&mut self) -> UPIE_W {
-        UPIE_W { w: self }
+    #[must_use]
+    pub fn upie(&mut self) -> UPIE_W<0> {
+        UPIE_W::new(self)
     }
+    #[doc = "Bit 8 - Update DMA request enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn upden(&mut self) -> UPDEN_W<8> {
+        UPDEN_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "DMA/Interrupt enable register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dmainten](index.html) module"]
+pub struct DMAINTEN_SPEC;
+impl crate::RegisterSpec for DMAINTEN_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [dmainten::R](R) reader structure"]
+impl crate::Readable for DMAINTEN_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [dmainten::W](W) writer structure"]
+impl crate::Writable for DMAINTEN_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets DMAINTEN to value 0"]
+impl crate::Resettable for DMAINTEN_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

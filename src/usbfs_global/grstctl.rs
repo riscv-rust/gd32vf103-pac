@@ -1,174 +1,88 @@
-#[doc = "Reader of register GRSTCTL"]
-pub type R = crate::R<u32, super::GRSTCTL>;
-#[doc = "Writer for register GRSTCTL"]
-pub type W = crate::W<u32, super::GRSTCTL>;
-#[doc = "Register GRSTCTL `reset()`'s with value 0x8000_0000"]
-impl crate::ResetValue for super::GRSTCTL {
-    type Type = u32;
+#[doc = "Register `GRSTCTL` reader"]
+pub struct R(crate::R<GRSTCTL_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<GRSTCTL_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0x8000_0000
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CSRST`"]
-pub type CSRST_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CSRST`"]
-pub struct CSRST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CSRST_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<GRSTCTL_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<GRSTCTL_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `HCSRST`"]
-pub type HCSRST_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `HCSRST`"]
-pub struct HCSRST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HCSRST_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `GRSTCTL` writer"]
+pub struct W(crate::W<GRSTCTL_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<GRSTCTL_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `HFCRST`"]
-pub type HFCRST_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `HFCRST`"]
-pub struct HFCRST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HFCRST_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `RXFF`"]
-pub type RXFF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RXFF`"]
-pub struct RXFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXFF_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<GRSTCTL_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
+    fn from(writer: crate::W<GRSTCTL_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `TXFF`"]
-pub type TXFF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TXFF`"]
-pub struct TXFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXFF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Reader of field `TXFNUM`"]
-pub type TXFNUM_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `TXFNUM`"]
-pub struct TXFNUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXFNUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 6)) | (((value as u32) & 0x1f) << 6);
-        self.w
-    }
-}
+#[doc = "Field `CSRST` reader - Core soft reset"]
+pub type CSRST_R = crate::BitReader<bool>;
+#[doc = "Field `CSRST` writer - Core soft reset"]
+pub type CSRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, GRSTCTL_SPEC, bool, O>;
+#[doc = "Field `HCSRST` reader - HCLK soft reset"]
+pub type HCSRST_R = crate::BitReader<bool>;
+#[doc = "Field `HCSRST` writer - HCLK soft reset"]
+pub type HCSRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, GRSTCTL_SPEC, bool, O>;
+#[doc = "Field `HFCRST` reader - Host frame counter reset"]
+pub type HFCRST_R = crate::BitReader<bool>;
+#[doc = "Field `HFCRST` writer - Host frame counter reset"]
+pub type HFCRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, GRSTCTL_SPEC, bool, O>;
+#[doc = "Field `RXFF` reader - RxFIFO flush"]
+pub type RXFF_R = crate::BitReader<bool>;
+#[doc = "Field `RXFF` writer - RxFIFO flush"]
+pub type RXFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, GRSTCTL_SPEC, bool, O>;
+#[doc = "Field `TXFF` reader - TxFIFO flush"]
+pub type TXFF_R = crate::BitReader<bool>;
+#[doc = "Field `TXFF` writer - TxFIFO flush"]
+pub type TXFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, GRSTCTL_SPEC, bool, O>;
+#[doc = "Field `TXFNUM` reader - TxFIFO number"]
+pub type TXFNUM_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `TXFNUM` writer - TxFIFO number"]
+pub type TXFNUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GRSTCTL_SPEC, u8, u8, 5, O>;
 impl R {
     #[doc = "Bit 0 - Core soft reset"]
     #[inline(always)]
     pub fn csrst(&self) -> CSRST_R {
-        CSRST_R::new((self.bits & 0x01) != 0)
+        CSRST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - HCLK soft reset"]
     #[inline(always)]
     pub fn hcsrst(&self) -> HCSRST_R {
-        HCSRST_R::new(((self.bits >> 1) & 0x01) != 0)
+        HCSRST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Host frame counter reset"]
     #[inline(always)]
     pub fn hfcrst(&self) -> HFCRST_R {
-        HFCRST_R::new(((self.bits >> 2) & 0x01) != 0)
+        HFCRST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 4 - RxFIFO flush"]
     #[inline(always)]
     pub fn rxff(&self) -> RXFF_R {
-        RXFF_R::new(((self.bits >> 4) & 0x01) != 0)
+        RXFF_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - TxFIFO flush"]
     #[inline(always)]
     pub fn txff(&self) -> TXFF_R {
-        TXFF_R::new(((self.bits >> 5) & 0x01) != 0)
+        TXFF_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:10 - TxFIFO number"]
     #[inline(always)]
@@ -179,32 +93,63 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Core soft reset"]
     #[inline(always)]
-    pub fn csrst(&mut self) -> CSRST_W {
-        CSRST_W { w: self }
+    #[must_use]
+    pub fn csrst(&mut self) -> CSRST_W<0> {
+        CSRST_W::new(self)
     }
     #[doc = "Bit 1 - HCLK soft reset"]
     #[inline(always)]
-    pub fn hcsrst(&mut self) -> HCSRST_W {
-        HCSRST_W { w: self }
+    #[must_use]
+    pub fn hcsrst(&mut self) -> HCSRST_W<1> {
+        HCSRST_W::new(self)
     }
     #[doc = "Bit 2 - Host frame counter reset"]
     #[inline(always)]
-    pub fn hfcrst(&mut self) -> HFCRST_W {
-        HFCRST_W { w: self }
+    #[must_use]
+    pub fn hfcrst(&mut self) -> HFCRST_W<2> {
+        HFCRST_W::new(self)
     }
     #[doc = "Bit 4 - RxFIFO flush"]
     #[inline(always)]
-    pub fn rxff(&mut self) -> RXFF_W {
-        RXFF_W { w: self }
+    #[must_use]
+    pub fn rxff(&mut self) -> RXFF_W<4> {
+        RXFF_W::new(self)
     }
     #[doc = "Bit 5 - TxFIFO flush"]
     #[inline(always)]
-    pub fn txff(&mut self) -> TXFF_W {
-        TXFF_W { w: self }
+    #[must_use]
+    pub fn txff(&mut self) -> TXFF_W<5> {
+        TXFF_W::new(self)
     }
     #[doc = "Bits 6:10 - TxFIFO number"]
     #[inline(always)]
-    pub fn txfnum(&mut self) -> TXFNUM_W {
-        TXFNUM_W { w: self }
+    #[must_use]
+    pub fn txfnum(&mut self) -> TXFNUM_W<6> {
+        TXFNUM_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Global reset control register (USBFS_GRSTCTL)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [grstctl](index.html) module"]
+pub struct GRSTCTL_SPEC;
+impl crate::RegisterSpec for GRSTCTL_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [grstctl::R](R) reader structure"]
+impl crate::Readable for GRSTCTL_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [grstctl::W](W) writer structure"]
+impl crate::Writable for GRSTCTL_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets GRSTCTL to value 0x8000_0000"]
+impl crate::Resettable for GRSTCTL_SPEC {
+    const RESET_VALUE: Self::Ux = 0x8000_0000;
 }

@@ -1,275 +1,191 @@
-#[doc = "Reader of register HPCS"]
-pub type R = crate::R<u32, super::HPCS>;
-#[doc = "Writer for register HPCS"]
-pub type W = crate::W<u32, super::HPCS>;
-#[doc = "Register HPCS `reset()`'s with value 0"]
-impl crate::ResetValue for super::HPCS {
-    type Type = u32;
+#[doc = "Register `HPCS` reader"]
+pub struct R(crate::R<HPCS_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<HPCS_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `PCST`"]
-pub type PCST_R = crate::R<bool, bool>;
-#[doc = "Reader of field `PCD`"]
-pub type PCD_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PCD`"]
-pub struct PCD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PCD_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<HPCS_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn from(reader: crate::R<HPCS_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `PE`"]
-pub type PE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PE`"]
-pub struct PE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PE_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `HPCS` writer"]
+pub struct W(crate::W<HPCS_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<HPCS_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `PEDC`"]
-pub type PEDC_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PEDC`"]
-pub struct PEDC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PEDC_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `PREM`"]
-pub type PREM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PREM`"]
-pub struct PREM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PREM_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<HPCS_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
+    fn from(writer: crate::W<HPCS_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `PSP`"]
-pub type PSP_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PSP`"]
-pub struct PSP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PSP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
-        self.w
-    }
-}
-#[doc = "Reader of field `PRST`"]
-pub type PRST_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PRST`"]
-pub struct PRST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Reader of field `PLST`"]
-pub type PLST_R = crate::R<u8, u8>;
-#[doc = "Reader of field `PP`"]
-pub type PP_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PP`"]
-pub struct PP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
-        self.w
-    }
-}
-#[doc = "Reader of field `PS`"]
-pub type PS_R = crate::R<u8, u8>;
+#[doc = "Field `PCST` reader - Port connect status"]
+pub type PCST_R = crate::BitReader<bool>;
+#[doc = "Field `PCD` reader - Port connect detected"]
+pub type PCD_R = crate::BitReader<bool>;
+#[doc = "Field `PCD` writer - Port connect detected"]
+pub type PCD_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPCS_SPEC, bool, O>;
+#[doc = "Field `PE` reader - Port enable"]
+pub type PE_R = crate::BitReader<bool>;
+#[doc = "Field `PE` writer - Port enable"]
+pub type PE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPCS_SPEC, bool, O>;
+#[doc = "Field `PEDC` reader - Port enable/disable change"]
+pub type PEDC_R = crate::BitReader<bool>;
+#[doc = "Field `PEDC` writer - Port enable/disable change"]
+pub type PEDC_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPCS_SPEC, bool, O>;
+#[doc = "Field `PREM` reader - Port resume"]
+pub type PREM_R = crate::BitReader<bool>;
+#[doc = "Field `PREM` writer - Port resume"]
+pub type PREM_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPCS_SPEC, bool, O>;
+#[doc = "Field `PSP` reader - Port suspend"]
+pub type PSP_R = crate::BitReader<bool>;
+#[doc = "Field `PSP` writer - Port suspend"]
+pub type PSP_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPCS_SPEC, bool, O>;
+#[doc = "Field `PRST` reader - Port reset"]
+pub type PRST_R = crate::BitReader<bool>;
+#[doc = "Field `PRST` writer - Port reset"]
+pub type PRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPCS_SPEC, bool, O>;
+#[doc = "Field `PLST` reader - Port line status"]
+pub type PLST_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `PP` reader - Port power"]
+pub type PP_R = crate::BitReader<bool>;
+#[doc = "Field `PP` writer - Port power"]
+pub type PP_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPCS_SPEC, bool, O>;
+#[doc = "Field `PS` reader - Port speed"]
+pub type PS_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 0 - Port connect status"]
     #[inline(always)]
     pub fn pcst(&self) -> PCST_R {
-        PCST_R::new((self.bits & 0x01) != 0)
+        PCST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Port connect detected"]
     #[inline(always)]
     pub fn pcd(&self) -> PCD_R {
-        PCD_R::new(((self.bits >> 1) & 0x01) != 0)
+        PCD_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Port enable"]
     #[inline(always)]
     pub fn pe(&self) -> PE_R {
-        PE_R::new(((self.bits >> 2) & 0x01) != 0)
+        PE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Port enable/disable change"]
     #[inline(always)]
     pub fn pedc(&self) -> PEDC_R {
-        PEDC_R::new(((self.bits >> 3) & 0x01) != 0)
+        PEDC_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 6 - Port resume"]
     #[inline(always)]
     pub fn prem(&self) -> PREM_R {
-        PREM_R::new(((self.bits >> 6) & 0x01) != 0)
+        PREM_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Port suspend"]
     #[inline(always)]
     pub fn psp(&self) -> PSP_R {
-        PSP_R::new(((self.bits >> 7) & 0x01) != 0)
+        PSP_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Port reset"]
     #[inline(always)]
     pub fn prst(&self) -> PRST_R {
-        PRST_R::new(((self.bits >> 8) & 0x01) != 0)
+        PRST_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 10:11 - Port line status"]
     #[inline(always)]
     pub fn plst(&self) -> PLST_R {
-        PLST_R::new(((self.bits >> 10) & 0x03) as u8)
+        PLST_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bit 12 - Port power"]
     #[inline(always)]
     pub fn pp(&self) -> PP_R {
-        PP_R::new(((self.bits >> 12) & 0x01) != 0)
+        PP_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bits 17:18 - Port speed"]
     #[inline(always)]
     pub fn ps(&self) -> PS_R {
-        PS_R::new(((self.bits >> 17) & 0x03) as u8)
+        PS_R::new(((self.bits >> 17) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bit 1 - Port connect detected"]
     #[inline(always)]
-    pub fn pcd(&mut self) -> PCD_W {
-        PCD_W { w: self }
+    #[must_use]
+    pub fn pcd(&mut self) -> PCD_W<1> {
+        PCD_W::new(self)
     }
     #[doc = "Bit 2 - Port enable"]
     #[inline(always)]
-    pub fn pe(&mut self) -> PE_W {
-        PE_W { w: self }
+    #[must_use]
+    pub fn pe(&mut self) -> PE_W<2> {
+        PE_W::new(self)
     }
     #[doc = "Bit 3 - Port enable/disable change"]
     #[inline(always)]
-    pub fn pedc(&mut self) -> PEDC_W {
-        PEDC_W { w: self }
+    #[must_use]
+    pub fn pedc(&mut self) -> PEDC_W<3> {
+        PEDC_W::new(self)
     }
     #[doc = "Bit 6 - Port resume"]
     #[inline(always)]
-    pub fn prem(&mut self) -> PREM_W {
-        PREM_W { w: self }
+    #[must_use]
+    pub fn prem(&mut self) -> PREM_W<6> {
+        PREM_W::new(self)
     }
     #[doc = "Bit 7 - Port suspend"]
     #[inline(always)]
-    pub fn psp(&mut self) -> PSP_W {
-        PSP_W { w: self }
+    #[must_use]
+    pub fn psp(&mut self) -> PSP_W<7> {
+        PSP_W::new(self)
     }
     #[doc = "Bit 8 - Port reset"]
     #[inline(always)]
-    pub fn prst(&mut self) -> PRST_W {
-        PRST_W { w: self }
+    #[must_use]
+    pub fn prst(&mut self) -> PRST_W<8> {
+        PRST_W::new(self)
     }
     #[doc = "Bit 12 - Port power"]
     #[inline(always)]
-    pub fn pp(&mut self) -> PP_W {
-        PP_W { w: self }
+    #[must_use]
+    pub fn pp(&mut self) -> PP_W<12> {
+        PP_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Host port control and status register (USBFS_HPCS)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hpcs](index.html) module"]
+pub struct HPCS_SPEC;
+impl crate::RegisterSpec for HPCS_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [hpcs::R](R) reader structure"]
+impl crate::Readable for HPCS_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [hpcs::W](W) writer structure"]
+impl crate::Writable for HPCS_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets HPCS to value 0"]
+impl crate::Resettable for HPCS_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -1,968 +1,485 @@
-#[doc = "Reader of register FW"]
-pub type R = crate::R<u32, super::FW>;
-#[doc = "Writer for register FW"]
-pub type W = crate::W<u32, super::FW>;
-#[doc = "Register FW `reset()`'s with value 0"]
-impl crate::ResetValue for super::FW {
-    type Type = u32;
+#[doc = "Register `FW` reader"]
+pub struct R(crate::R<FW_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<FW_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `FW0`"]
-pub type FW0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW0`"]
-pub struct FW0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW0_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<FW_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<FW_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `FW1`"]
-pub type FW1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW1`"]
-pub struct FW1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW1_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `FW` writer"]
+pub struct W(crate::W<FW_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<FW_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `FW2`"]
-pub type FW2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW2`"]
-pub struct FW2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW2_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `FW3`"]
-pub type FW3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW3`"]
-pub struct FW3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW3_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<FW_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn from(writer: crate::W<FW_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `FW4`"]
-pub type FW4_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW4`"]
-pub struct FW4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW5`"]
-pub type FW5_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW5`"]
-pub struct FW5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW6`"]
-pub type FW6_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW6`"]
-pub struct FW6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW6_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW7`"]
-pub type FW7_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW7`"]
-pub struct FW7_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW7_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW8`"]
-pub type FW8_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW8`"]
-pub struct FW8_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW8_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW9`"]
-pub type FW9_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW9`"]
-pub struct FW9_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW9_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW10`"]
-pub type FW10_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW10`"]
-pub struct FW10_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW10_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW11`"]
-pub type FW11_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW11`"]
-pub struct FW11_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW11_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW12`"]
-pub type FW12_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW12`"]
-pub struct FW12_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW12_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW13`"]
-pub type FW13_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW13`"]
-pub struct FW13_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW13_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW14`"]
-pub type FW14_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW14`"]
-pub struct FW14_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW14_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW15`"]
-pub type FW15_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW15`"]
-pub struct FW15_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW15_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u32) & 0x01) << 15);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW16`"]
-pub type FW16_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW16`"]
-pub struct FW16_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW16_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW17`"]
-pub type FW17_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW17`"]
-pub struct FW17_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW17_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | (((value as u32) & 0x01) << 17);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW18`"]
-pub type FW18_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW18`"]
-pub struct FW18_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW18_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | (((value as u32) & 0x01) << 18);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW19`"]
-pub type FW19_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW19`"]
-pub struct FW19_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW19_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | (((value as u32) & 0x01) << 19);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW20`"]
-pub type FW20_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW20`"]
-pub struct FW20_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW20_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | (((value as u32) & 0x01) << 20);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW21`"]
-pub type FW21_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW21`"]
-pub struct FW21_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW21_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | (((value as u32) & 0x01) << 21);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW22`"]
-pub type FW22_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW22`"]
-pub struct FW22_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW22_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | (((value as u32) & 0x01) << 22);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW23`"]
-pub type FW23_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW23`"]
-pub struct FW23_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW23_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | (((value as u32) & 0x01) << 23);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW24`"]
-pub type FW24_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW24`"]
-pub struct FW24_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW24_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | (((value as u32) & 0x01) << 24);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW25`"]
-pub type FW25_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW25`"]
-pub struct FW25_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW25_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | (((value as u32) & 0x01) << 25);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW26`"]
-pub type FW26_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW26`"]
-pub struct FW26_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW26_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | (((value as u32) & 0x01) << 26);
-        self.w
-    }
-}
-#[doc = "Reader of field `FW27`"]
-pub type FW27_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FW27`"]
-pub struct FW27_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FW27_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | (((value as u32) & 0x01) << 27);
-        self.w
-    }
-}
+#[doc = "Field `FW0` reader - Filter working"]
+pub type FW0_R = crate::BitReader<bool>;
+#[doc = "Field `FW0` writer - Filter working"]
+pub type FW0_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW1` reader - Filter working"]
+pub type FW1_R = crate::BitReader<bool>;
+#[doc = "Field `FW1` writer - Filter working"]
+pub type FW1_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW2` reader - Filter working"]
+pub type FW2_R = crate::BitReader<bool>;
+#[doc = "Field `FW2` writer - Filter working"]
+pub type FW2_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW3` reader - Filter working"]
+pub type FW3_R = crate::BitReader<bool>;
+#[doc = "Field `FW3` writer - Filter working"]
+pub type FW3_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW4` reader - Filter working"]
+pub type FW4_R = crate::BitReader<bool>;
+#[doc = "Field `FW4` writer - Filter working"]
+pub type FW4_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW5` reader - Filter working"]
+pub type FW5_R = crate::BitReader<bool>;
+#[doc = "Field `FW5` writer - Filter working"]
+pub type FW5_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW6` reader - Filter working"]
+pub type FW6_R = crate::BitReader<bool>;
+#[doc = "Field `FW6` writer - Filter working"]
+pub type FW6_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW7` reader - Filter working"]
+pub type FW7_R = crate::BitReader<bool>;
+#[doc = "Field `FW7` writer - Filter working"]
+pub type FW7_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW8` reader - Filter working"]
+pub type FW8_R = crate::BitReader<bool>;
+#[doc = "Field `FW8` writer - Filter working"]
+pub type FW8_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW9` reader - Filter working"]
+pub type FW9_R = crate::BitReader<bool>;
+#[doc = "Field `FW9` writer - Filter working"]
+pub type FW9_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW10` reader - Filter working"]
+pub type FW10_R = crate::BitReader<bool>;
+#[doc = "Field `FW10` writer - Filter working"]
+pub type FW10_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW11` reader - Filter working"]
+pub type FW11_R = crate::BitReader<bool>;
+#[doc = "Field `FW11` writer - Filter working"]
+pub type FW11_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW12` reader - Filter working"]
+pub type FW12_R = crate::BitReader<bool>;
+#[doc = "Field `FW12` writer - Filter working"]
+pub type FW12_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW13` reader - Filter working"]
+pub type FW13_R = crate::BitReader<bool>;
+#[doc = "Field `FW13` writer - Filter working"]
+pub type FW13_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW14` reader - Filter working"]
+pub type FW14_R = crate::BitReader<bool>;
+#[doc = "Field `FW14` writer - Filter working"]
+pub type FW14_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW15` reader - Filter working"]
+pub type FW15_R = crate::BitReader<bool>;
+#[doc = "Field `FW15` writer - Filter working"]
+pub type FW15_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW16` reader - Filter working"]
+pub type FW16_R = crate::BitReader<bool>;
+#[doc = "Field `FW16` writer - Filter working"]
+pub type FW16_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW17` reader - Filter working"]
+pub type FW17_R = crate::BitReader<bool>;
+#[doc = "Field `FW17` writer - Filter working"]
+pub type FW17_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW18` reader - Filter working"]
+pub type FW18_R = crate::BitReader<bool>;
+#[doc = "Field `FW18` writer - Filter working"]
+pub type FW18_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW19` reader - Filter working"]
+pub type FW19_R = crate::BitReader<bool>;
+#[doc = "Field `FW19` writer - Filter working"]
+pub type FW19_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW20` reader - Filter working"]
+pub type FW20_R = crate::BitReader<bool>;
+#[doc = "Field `FW20` writer - Filter working"]
+pub type FW20_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW21` reader - Filter working"]
+pub type FW21_R = crate::BitReader<bool>;
+#[doc = "Field `FW21` writer - Filter working"]
+pub type FW21_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW22` reader - Filter working"]
+pub type FW22_R = crate::BitReader<bool>;
+#[doc = "Field `FW22` writer - Filter working"]
+pub type FW22_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW23` reader - Filter working"]
+pub type FW23_R = crate::BitReader<bool>;
+#[doc = "Field `FW23` writer - Filter working"]
+pub type FW23_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW24` reader - Filter working"]
+pub type FW24_R = crate::BitReader<bool>;
+#[doc = "Field `FW24` writer - Filter working"]
+pub type FW24_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW25` reader - Filter working"]
+pub type FW25_R = crate::BitReader<bool>;
+#[doc = "Field `FW25` writer - Filter working"]
+pub type FW25_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW26` reader - Filter working"]
+pub type FW26_R = crate::BitReader<bool>;
+#[doc = "Field `FW26` writer - Filter working"]
+pub type FW26_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
+#[doc = "Field `FW27` reader - Filter working"]
+pub type FW27_R = crate::BitReader<bool>;
+#[doc = "Field `FW27` writer - Filter working"]
+pub type FW27_W<'a, const O: u8> = crate::BitWriter<'a, u32, FW_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Filter working"]
     #[inline(always)]
     pub fn fw0(&self) -> FW0_R {
-        FW0_R::new((self.bits & 0x01) != 0)
+        FW0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Filter working"]
     #[inline(always)]
     pub fn fw1(&self) -> FW1_R {
-        FW1_R::new(((self.bits >> 1) & 0x01) != 0)
+        FW1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Filter working"]
     #[inline(always)]
     pub fn fw2(&self) -> FW2_R {
-        FW2_R::new(((self.bits >> 2) & 0x01) != 0)
+        FW2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Filter working"]
     #[inline(always)]
     pub fn fw3(&self) -> FW3_R {
-        FW3_R::new(((self.bits >> 3) & 0x01) != 0)
+        FW3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Filter working"]
     #[inline(always)]
     pub fn fw4(&self) -> FW4_R {
-        FW4_R::new(((self.bits >> 4) & 0x01) != 0)
+        FW4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Filter working"]
     #[inline(always)]
     pub fn fw5(&self) -> FW5_R {
-        FW5_R::new(((self.bits >> 5) & 0x01) != 0)
+        FW5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Filter working"]
     #[inline(always)]
     pub fn fw6(&self) -> FW6_R {
-        FW6_R::new(((self.bits >> 6) & 0x01) != 0)
+        FW6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Filter working"]
     #[inline(always)]
     pub fn fw7(&self) -> FW7_R {
-        FW7_R::new(((self.bits >> 7) & 0x01) != 0)
+        FW7_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Filter working"]
     #[inline(always)]
     pub fn fw8(&self) -> FW8_R {
-        FW8_R::new(((self.bits >> 8) & 0x01) != 0)
+        FW8_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Filter working"]
     #[inline(always)]
     pub fn fw9(&self) -> FW9_R {
-        FW9_R::new(((self.bits >> 9) & 0x01) != 0)
+        FW9_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Filter working"]
     #[inline(always)]
     pub fn fw10(&self) -> FW10_R {
-        FW10_R::new(((self.bits >> 10) & 0x01) != 0)
+        FW10_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Filter working"]
     #[inline(always)]
     pub fn fw11(&self) -> FW11_R {
-        FW11_R::new(((self.bits >> 11) & 0x01) != 0)
+        FW11_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Filter working"]
     #[inline(always)]
     pub fn fw12(&self) -> FW12_R {
-        FW12_R::new(((self.bits >> 12) & 0x01) != 0)
+        FW12_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Filter working"]
     #[inline(always)]
     pub fn fw13(&self) -> FW13_R {
-        FW13_R::new(((self.bits >> 13) & 0x01) != 0)
+        FW13_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Filter working"]
     #[inline(always)]
     pub fn fw14(&self) -> FW14_R {
-        FW14_R::new(((self.bits >> 14) & 0x01) != 0)
+        FW14_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Filter working"]
     #[inline(always)]
     pub fn fw15(&self) -> FW15_R {
-        FW15_R::new(((self.bits >> 15) & 0x01) != 0)
+        FW15_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Filter working"]
     #[inline(always)]
     pub fn fw16(&self) -> FW16_R {
-        FW16_R::new(((self.bits >> 16) & 0x01) != 0)
+        FW16_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Filter working"]
     #[inline(always)]
     pub fn fw17(&self) -> FW17_R {
-        FW17_R::new(((self.bits >> 17) & 0x01) != 0)
+        FW17_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Filter working"]
     #[inline(always)]
     pub fn fw18(&self) -> FW18_R {
-        FW18_R::new(((self.bits >> 18) & 0x01) != 0)
+        FW18_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Filter working"]
     #[inline(always)]
     pub fn fw19(&self) -> FW19_R {
-        FW19_R::new(((self.bits >> 19) & 0x01) != 0)
+        FW19_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Filter working"]
     #[inline(always)]
     pub fn fw20(&self) -> FW20_R {
-        FW20_R::new(((self.bits >> 20) & 0x01) != 0)
+        FW20_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Filter working"]
     #[inline(always)]
     pub fn fw21(&self) -> FW21_R {
-        FW21_R::new(((self.bits >> 21) & 0x01) != 0)
+        FW21_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Filter working"]
     #[inline(always)]
     pub fn fw22(&self) -> FW22_R {
-        FW22_R::new(((self.bits >> 22) & 0x01) != 0)
+        FW22_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Filter working"]
     #[inline(always)]
     pub fn fw23(&self) -> FW23_R {
-        FW23_R::new(((self.bits >> 23) & 0x01) != 0)
+        FW23_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - Filter working"]
     #[inline(always)]
     pub fn fw24(&self) -> FW24_R {
-        FW24_R::new(((self.bits >> 24) & 0x01) != 0)
+        FW24_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Filter working"]
     #[inline(always)]
     pub fn fw25(&self) -> FW25_R {
-        FW25_R::new(((self.bits >> 25) & 0x01) != 0)
+        FW25_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Filter working"]
     #[inline(always)]
     pub fn fw26(&self) -> FW26_R {
-        FW26_R::new(((self.bits >> 26) & 0x01) != 0)
+        FW26_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Filter working"]
     #[inline(always)]
     pub fn fw27(&self) -> FW27_R {
-        FW27_R::new(((self.bits >> 27) & 0x01) != 0)
+        FW27_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Filter working"]
     #[inline(always)]
-    pub fn fw0(&mut self) -> FW0_W {
-        FW0_W { w: self }
+    #[must_use]
+    pub fn fw0(&mut self) -> FW0_W<0> {
+        FW0_W::new(self)
     }
     #[doc = "Bit 1 - Filter working"]
     #[inline(always)]
-    pub fn fw1(&mut self) -> FW1_W {
-        FW1_W { w: self }
+    #[must_use]
+    pub fn fw1(&mut self) -> FW1_W<1> {
+        FW1_W::new(self)
     }
     #[doc = "Bit 2 - Filter working"]
     #[inline(always)]
-    pub fn fw2(&mut self) -> FW2_W {
-        FW2_W { w: self }
+    #[must_use]
+    pub fn fw2(&mut self) -> FW2_W<2> {
+        FW2_W::new(self)
     }
     #[doc = "Bit 3 - Filter working"]
     #[inline(always)]
-    pub fn fw3(&mut self) -> FW3_W {
-        FW3_W { w: self }
+    #[must_use]
+    pub fn fw3(&mut self) -> FW3_W<3> {
+        FW3_W::new(self)
     }
     #[doc = "Bit 4 - Filter working"]
     #[inline(always)]
-    pub fn fw4(&mut self) -> FW4_W {
-        FW4_W { w: self }
+    #[must_use]
+    pub fn fw4(&mut self) -> FW4_W<4> {
+        FW4_W::new(self)
     }
     #[doc = "Bit 5 - Filter working"]
     #[inline(always)]
-    pub fn fw5(&mut self) -> FW5_W {
-        FW5_W { w: self }
+    #[must_use]
+    pub fn fw5(&mut self) -> FW5_W<5> {
+        FW5_W::new(self)
     }
     #[doc = "Bit 6 - Filter working"]
     #[inline(always)]
-    pub fn fw6(&mut self) -> FW6_W {
-        FW6_W { w: self }
+    #[must_use]
+    pub fn fw6(&mut self) -> FW6_W<6> {
+        FW6_W::new(self)
     }
     #[doc = "Bit 7 - Filter working"]
     #[inline(always)]
-    pub fn fw7(&mut self) -> FW7_W {
-        FW7_W { w: self }
+    #[must_use]
+    pub fn fw7(&mut self) -> FW7_W<7> {
+        FW7_W::new(self)
     }
     #[doc = "Bit 8 - Filter working"]
     #[inline(always)]
-    pub fn fw8(&mut self) -> FW8_W {
-        FW8_W { w: self }
+    #[must_use]
+    pub fn fw8(&mut self) -> FW8_W<8> {
+        FW8_W::new(self)
     }
     #[doc = "Bit 9 - Filter working"]
     #[inline(always)]
-    pub fn fw9(&mut self) -> FW9_W {
-        FW9_W { w: self }
+    #[must_use]
+    pub fn fw9(&mut self) -> FW9_W<9> {
+        FW9_W::new(self)
     }
     #[doc = "Bit 10 - Filter working"]
     #[inline(always)]
-    pub fn fw10(&mut self) -> FW10_W {
-        FW10_W { w: self }
+    #[must_use]
+    pub fn fw10(&mut self) -> FW10_W<10> {
+        FW10_W::new(self)
     }
     #[doc = "Bit 11 - Filter working"]
     #[inline(always)]
-    pub fn fw11(&mut self) -> FW11_W {
-        FW11_W { w: self }
+    #[must_use]
+    pub fn fw11(&mut self) -> FW11_W<11> {
+        FW11_W::new(self)
     }
     #[doc = "Bit 12 - Filter working"]
     #[inline(always)]
-    pub fn fw12(&mut self) -> FW12_W {
-        FW12_W { w: self }
+    #[must_use]
+    pub fn fw12(&mut self) -> FW12_W<12> {
+        FW12_W::new(self)
     }
     #[doc = "Bit 13 - Filter working"]
     #[inline(always)]
-    pub fn fw13(&mut self) -> FW13_W {
-        FW13_W { w: self }
+    #[must_use]
+    pub fn fw13(&mut self) -> FW13_W<13> {
+        FW13_W::new(self)
     }
     #[doc = "Bit 14 - Filter working"]
     #[inline(always)]
-    pub fn fw14(&mut self) -> FW14_W {
-        FW14_W { w: self }
+    #[must_use]
+    pub fn fw14(&mut self) -> FW14_W<14> {
+        FW14_W::new(self)
     }
     #[doc = "Bit 15 - Filter working"]
     #[inline(always)]
-    pub fn fw15(&mut self) -> FW15_W {
-        FW15_W { w: self }
+    #[must_use]
+    pub fn fw15(&mut self) -> FW15_W<15> {
+        FW15_W::new(self)
     }
     #[doc = "Bit 16 - Filter working"]
     #[inline(always)]
-    pub fn fw16(&mut self) -> FW16_W {
-        FW16_W { w: self }
+    #[must_use]
+    pub fn fw16(&mut self) -> FW16_W<16> {
+        FW16_W::new(self)
     }
     #[doc = "Bit 17 - Filter working"]
     #[inline(always)]
-    pub fn fw17(&mut self) -> FW17_W {
-        FW17_W { w: self }
+    #[must_use]
+    pub fn fw17(&mut self) -> FW17_W<17> {
+        FW17_W::new(self)
     }
     #[doc = "Bit 18 - Filter working"]
     #[inline(always)]
-    pub fn fw18(&mut self) -> FW18_W {
-        FW18_W { w: self }
+    #[must_use]
+    pub fn fw18(&mut self) -> FW18_W<18> {
+        FW18_W::new(self)
     }
     #[doc = "Bit 19 - Filter working"]
     #[inline(always)]
-    pub fn fw19(&mut self) -> FW19_W {
-        FW19_W { w: self }
+    #[must_use]
+    pub fn fw19(&mut self) -> FW19_W<19> {
+        FW19_W::new(self)
     }
     #[doc = "Bit 20 - Filter working"]
     #[inline(always)]
-    pub fn fw20(&mut self) -> FW20_W {
-        FW20_W { w: self }
+    #[must_use]
+    pub fn fw20(&mut self) -> FW20_W<20> {
+        FW20_W::new(self)
     }
     #[doc = "Bit 21 - Filter working"]
     #[inline(always)]
-    pub fn fw21(&mut self) -> FW21_W {
-        FW21_W { w: self }
+    #[must_use]
+    pub fn fw21(&mut self) -> FW21_W<21> {
+        FW21_W::new(self)
     }
     #[doc = "Bit 22 - Filter working"]
     #[inline(always)]
-    pub fn fw22(&mut self) -> FW22_W {
-        FW22_W { w: self }
+    #[must_use]
+    pub fn fw22(&mut self) -> FW22_W<22> {
+        FW22_W::new(self)
     }
     #[doc = "Bit 23 - Filter working"]
     #[inline(always)]
-    pub fn fw23(&mut self) -> FW23_W {
-        FW23_W { w: self }
+    #[must_use]
+    pub fn fw23(&mut self) -> FW23_W<23> {
+        FW23_W::new(self)
     }
     #[doc = "Bit 24 - Filter working"]
     #[inline(always)]
-    pub fn fw24(&mut self) -> FW24_W {
-        FW24_W { w: self }
+    #[must_use]
+    pub fn fw24(&mut self) -> FW24_W<24> {
+        FW24_W::new(self)
     }
     #[doc = "Bit 25 - Filter working"]
     #[inline(always)]
-    pub fn fw25(&mut self) -> FW25_W {
-        FW25_W { w: self }
+    #[must_use]
+    pub fn fw25(&mut self) -> FW25_W<25> {
+        FW25_W::new(self)
     }
     #[doc = "Bit 26 - Filter working"]
     #[inline(always)]
-    pub fn fw26(&mut self) -> FW26_W {
-        FW26_W { w: self }
+    #[must_use]
+    pub fn fw26(&mut self) -> FW26_W<26> {
+        FW26_W::new(self)
     }
     #[doc = "Bit 27 - Filter working"]
     #[inline(always)]
-    pub fn fw27(&mut self) -> FW27_W {
-        FW27_W { w: self }
+    #[must_use]
+    pub fn fw27(&mut self) -> FW27_W<27> {
+        FW27_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Filter working register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fw](index.html) module"]
+pub struct FW_SPEC;
+impl crate::RegisterSpec for FW_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [fw::R](R) reader structure"]
+impl crate::Readable for FW_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [fw::W](W) writer structure"]
+impl crate::Writable for FW_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets FW to value 0"]
+impl crate::Resettable for FW_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

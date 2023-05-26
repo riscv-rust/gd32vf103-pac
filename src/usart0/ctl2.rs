@@ -1,390 +1,230 @@
-#[doc = "Reader of register CTL2"]
-pub type R = crate::R<u32, super::CTL2>;
-#[doc = "Writer for register CTL2"]
-pub type W = crate::W<u32, super::CTL2>;
-#[doc = "Register CTL2 `reset()`'s with value 0"]
-impl crate::ResetValue for super::CTL2 {
-    type Type = u32;
+#[doc = "Register `CTL2` reader"]
+pub struct R(crate::R<CTL2_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CTL2_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CTSIE`"]
-pub type CTSIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CTSIE`"]
-pub struct CTSIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CTSIE_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<CTL2_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
-        self.w
+    fn from(reader: crate::R<CTL2_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `CTSEN`"]
-pub type CTSEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CTSEN`"]
-pub struct CTSEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CTSEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `CTL2` writer"]
+pub struct W(crate::W<CTL2_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CTL2_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `RTSEN`"]
-pub type RTSEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RTSEN`"]
-pub struct RTSEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTSEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `DENT`"]
-pub type DENT_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DENT`"]
-pub struct DENT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DENT_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<CTL2_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
-        self.w
+    fn from(writer: crate::W<CTL2_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `DENR`"]
-pub type DENR_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DENR`"]
-pub struct DENR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DENR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Reader of field `SCEN`"]
-pub type SCEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SCEN`"]
-pub struct SCEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Reader of field `NKEN`"]
-pub type NKEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `NKEN`"]
-pub struct NKEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NKEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Reader of field `HDEN`"]
-pub type HDEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `HDEN`"]
-pub struct HDEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HDEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Reader of field `IRLP`"]
-pub type IRLP_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `IRLP`"]
-pub struct IRLP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IRLP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Reader of field `IREN`"]
-pub type IREN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `IREN`"]
-pub struct IREN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IREN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
-    }
-}
-#[doc = "Reader of field `ERRIE`"]
-pub type ERRIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ERRIE`"]
-pub struct ERRIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ERRIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
-    }
-}
+#[doc = "Field `ERRIE` reader - Error interrupt enable"]
+pub type ERRIE_R = crate::BitReader<bool>;
+#[doc = "Field `ERRIE` writer - Error interrupt enable"]
+pub type ERRIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL2_SPEC, bool, O>;
+#[doc = "Field `IREN` reader - IrDA mode enable"]
+pub type IREN_R = crate::BitReader<bool>;
+#[doc = "Field `IREN` writer - IrDA mode enable"]
+pub type IREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL2_SPEC, bool, O>;
+#[doc = "Field `IRLP` reader - IrDA low-power"]
+pub type IRLP_R = crate::BitReader<bool>;
+#[doc = "Field `IRLP` writer - IrDA low-power"]
+pub type IRLP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL2_SPEC, bool, O>;
+#[doc = "Field `HDEN` reader - Half-duplex selection"]
+pub type HDEN_R = crate::BitReader<bool>;
+#[doc = "Field `HDEN` writer - Half-duplex selection"]
+pub type HDEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL2_SPEC, bool, O>;
+#[doc = "Field `NKEN` reader - Smartcard NACK enable"]
+pub type NKEN_R = crate::BitReader<bool>;
+#[doc = "Field `NKEN` writer - Smartcard NACK enable"]
+pub type NKEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL2_SPEC, bool, O>;
+#[doc = "Field `SCEN` reader - Smartcard mode enable"]
+pub type SCEN_R = crate::BitReader<bool>;
+#[doc = "Field `SCEN` writer - Smartcard mode enable"]
+pub type SCEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL2_SPEC, bool, O>;
+#[doc = "Field `DENR` reader - DMA request enable for reception"]
+pub type DENR_R = crate::BitReader<bool>;
+#[doc = "Field `DENR` writer - DMA request enable for reception"]
+pub type DENR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL2_SPEC, bool, O>;
+#[doc = "Field `DENT` reader - DMA request enable for transmission"]
+pub type DENT_R = crate::BitReader<bool>;
+#[doc = "Field `DENT` writer - DMA request enable for transmission"]
+pub type DENT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL2_SPEC, bool, O>;
+#[doc = "Field `RTSEN` reader - RTS enable"]
+pub type RTSEN_R = crate::BitReader<bool>;
+#[doc = "Field `RTSEN` writer - RTS enable"]
+pub type RTSEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL2_SPEC, bool, O>;
+#[doc = "Field `CTSEN` reader - CTS enable"]
+pub type CTSEN_R = crate::BitReader<bool>;
+#[doc = "Field `CTSEN` writer - CTS enable"]
+pub type CTSEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL2_SPEC, bool, O>;
+#[doc = "Field `CTSIE` reader - CTS interrupt enable"]
+pub type CTSIE_R = crate::BitReader<bool>;
+#[doc = "Field `CTSIE` writer - CTS interrupt enable"]
+pub type CTSIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL2_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 10 - CTS interrupt enable"]
+    #[doc = "Bit 0 - Error interrupt enable"]
     #[inline(always)]
-    pub fn ctsie(&self) -> CTSIE_R {
-        CTSIE_R::new(((self.bits >> 10) & 0x01) != 0)
-    }
-    #[doc = "Bit 9 - CTS enable"]
-    #[inline(always)]
-    pub fn ctsen(&self) -> CTSEN_R {
-        CTSEN_R::new(((self.bits >> 9) & 0x01) != 0)
-    }
-    #[doc = "Bit 8 - RTS enable"]
-    #[inline(always)]
-    pub fn rtsen(&self) -> RTSEN_R {
-        RTSEN_R::new(((self.bits >> 8) & 0x01) != 0)
-    }
-    #[doc = "Bit 7 - DMA request enable for transmission"]
-    #[inline(always)]
-    pub fn dent(&self) -> DENT_R {
-        DENT_R::new(((self.bits >> 7) & 0x01) != 0)
-    }
-    #[doc = "Bit 6 - DMA request enable for reception"]
-    #[inline(always)]
-    pub fn denr(&self) -> DENR_R {
-        DENR_R::new(((self.bits >> 6) & 0x01) != 0)
-    }
-    #[doc = "Bit 5 - Smartcard mode enable"]
-    #[inline(always)]
-    pub fn scen(&self) -> SCEN_R {
-        SCEN_R::new(((self.bits >> 5) & 0x01) != 0)
-    }
-    #[doc = "Bit 4 - Smartcard NACK enable"]
-    #[inline(always)]
-    pub fn nken(&self) -> NKEN_R {
-        NKEN_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 3 - Half-duplex selection"]
-    #[inline(always)]
-    pub fn hden(&self) -> HDEN_R {
-        HDEN_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2 - IrDA low-power"]
-    #[inline(always)]
-    pub fn irlp(&self) -> IRLP_R {
-        IRLP_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn errie(&self) -> ERRIE_R {
+        ERRIE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - IrDA mode enable"]
     #[inline(always)]
     pub fn iren(&self) -> IREN_R {
-        IREN_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Error interrupt enable"]
-    #[inline(always)]
-    pub fn errie(&self) -> ERRIE_R {
-        ERRIE_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 10 - CTS interrupt enable"]
-    #[inline(always)]
-    pub fn ctsie(&mut self) -> CTSIE_W {
-        CTSIE_W { w: self }
-    }
-    #[doc = "Bit 9 - CTS enable"]
-    #[inline(always)]
-    pub fn ctsen(&mut self) -> CTSEN_W {
-        CTSEN_W { w: self }
-    }
-    #[doc = "Bit 8 - RTS enable"]
-    #[inline(always)]
-    pub fn rtsen(&mut self) -> RTSEN_W {
-        RTSEN_W { w: self }
-    }
-    #[doc = "Bit 7 - DMA request enable for transmission"]
-    #[inline(always)]
-    pub fn dent(&mut self) -> DENT_W {
-        DENT_W { w: self }
-    }
-    #[doc = "Bit 6 - DMA request enable for reception"]
-    #[inline(always)]
-    pub fn denr(&mut self) -> DENR_W {
-        DENR_W { w: self }
-    }
-    #[doc = "Bit 5 - Smartcard mode enable"]
-    #[inline(always)]
-    pub fn scen(&mut self) -> SCEN_W {
-        SCEN_W { w: self }
-    }
-    #[doc = "Bit 4 - Smartcard NACK enable"]
-    #[inline(always)]
-    pub fn nken(&mut self) -> NKEN_W {
-        NKEN_W { w: self }
-    }
-    #[doc = "Bit 3 - Half-duplex selection"]
-    #[inline(always)]
-    pub fn hden(&mut self) -> HDEN_W {
-        HDEN_W { w: self }
+        IREN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - IrDA low-power"]
     #[inline(always)]
-    pub fn irlp(&mut self) -> IRLP_W {
-        IRLP_W { w: self }
+    pub fn irlp(&self) -> IRLP_R {
+        IRLP_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Half-duplex selection"]
+    #[inline(always)]
+    pub fn hden(&self) -> HDEN_R {
+        HDEN_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Smartcard NACK enable"]
+    #[inline(always)]
+    pub fn nken(&self) -> NKEN_R {
+        NKEN_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Smartcard mode enable"]
+    #[inline(always)]
+    pub fn scen(&self) -> SCEN_R {
+        SCEN_R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - DMA request enable for reception"]
+    #[inline(always)]
+    pub fn denr(&self) -> DENR_R {
+        DENR_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - DMA request enable for transmission"]
+    #[inline(always)]
+    pub fn dent(&self) -> DENT_R {
+        DENT_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - RTS enable"]
+    #[inline(always)]
+    pub fn rtsen(&self) -> RTSEN_R {
+        RTSEN_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - CTS enable"]
+    #[inline(always)]
+    pub fn ctsen(&self) -> CTSEN_R {
+        CTSEN_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - CTS interrupt enable"]
+    #[inline(always)]
+    pub fn ctsie(&self) -> CTSIE_R {
+        CTSIE_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Error interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn errie(&mut self) -> ERRIE_W<0> {
+        ERRIE_W::new(self)
     }
     #[doc = "Bit 1 - IrDA mode enable"]
     #[inline(always)]
-    pub fn iren(&mut self) -> IREN_W {
-        IREN_W { w: self }
+    #[must_use]
+    pub fn iren(&mut self) -> IREN_W<1> {
+        IREN_W::new(self)
     }
-    #[doc = "Bit 0 - Error interrupt enable"]
+    #[doc = "Bit 2 - IrDA low-power"]
     #[inline(always)]
-    pub fn errie(&mut self) -> ERRIE_W {
-        ERRIE_W { w: self }
+    #[must_use]
+    pub fn irlp(&mut self) -> IRLP_W<2> {
+        IRLP_W::new(self)
     }
+    #[doc = "Bit 3 - Half-duplex selection"]
+    #[inline(always)]
+    #[must_use]
+    pub fn hden(&mut self) -> HDEN_W<3> {
+        HDEN_W::new(self)
+    }
+    #[doc = "Bit 4 - Smartcard NACK enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn nken(&mut self) -> NKEN_W<4> {
+        NKEN_W::new(self)
+    }
+    #[doc = "Bit 5 - Smartcard mode enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn scen(&mut self) -> SCEN_W<5> {
+        SCEN_W::new(self)
+    }
+    #[doc = "Bit 6 - DMA request enable for reception"]
+    #[inline(always)]
+    #[must_use]
+    pub fn denr(&mut self) -> DENR_W<6> {
+        DENR_W::new(self)
+    }
+    #[doc = "Bit 7 - DMA request enable for transmission"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dent(&mut self) -> DENT_W<7> {
+        DENT_W::new(self)
+    }
+    #[doc = "Bit 8 - RTS enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rtsen(&mut self) -> RTSEN_W<8> {
+        RTSEN_W::new(self)
+    }
+    #[doc = "Bit 9 - CTS enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ctsen(&mut self) -> CTSEN_W<9> {
+        CTSEN_W::new(self)
+    }
+    #[doc = "Bit 10 - CTS interrupt enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ctsie(&mut self) -> CTSIE_W<10> {
+        CTSIE_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Control register 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl2](index.html) module"]
+pub struct CTL2_SPEC;
+impl crate::RegisterSpec for CTL2_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [ctl2::R](R) reader structure"]
+impl crate::Readable for CTL2_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [ctl2::W](W) writer structure"]
+impl crate::Writable for CTL2_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets CTL2 to value 0"]
+impl crate::Resettable for CTL2_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

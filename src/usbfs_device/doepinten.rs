@@ -1,186 +1,140 @@
-#[doc = "Reader of register DOEPINTEN"]
-pub type R = crate::R<u32, super::DOEPINTEN>;
-#[doc = "Writer for register DOEPINTEN"]
-pub type W = crate::W<u32, super::DOEPINTEN>;
-#[doc = "Register DOEPINTEN `reset()`'s with value 0"]
-impl crate::ResetValue for super::DOEPINTEN {
-    type Type = u32;
+#[doc = "Register `DOEPINTEN` reader"]
+pub struct R(crate::R<DOEPINTEN_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<DOEPINTEN_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TFEN`"]
-pub type TFEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TFEN`"]
-pub struct TFEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TFEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<DOEPINTEN_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<DOEPINTEN_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `EPDISEN`"]
-pub type EPDISEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `EPDISEN`"]
-pub struct EPDISEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EPDISEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `DOEPINTEN` writer"]
+pub struct W(crate::W<DOEPINTEN_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<DOEPINTEN_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `STPFEN`"]
-pub type STPFEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `STPFEN`"]
-pub struct STPFEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STPFEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `EPRXFOVREN`"]
-pub type EPRXFOVREN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `EPRXFOVREN`"]
-pub struct EPRXFOVREN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EPRXFOVREN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<DOEPINTEN_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
+    fn from(writer: crate::W<DOEPINTEN_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `BTBSTPEN`"]
-pub type BTBSTPEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `BTBSTPEN`"]
-pub struct BTBSTPEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BTBSTPEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
-    }
-}
+#[doc = "Field `TFEN` reader - Transfer finished interrupt enable"]
+pub type TFEN_R = crate::BitReader<bool>;
+#[doc = "Field `TFEN` writer - Transfer finished interrupt enable"]
+pub type TFEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINTEN_SPEC, bool, O>;
+#[doc = "Field `EPDISEN` reader - Endpoint disabled interrupt enable"]
+pub type EPDISEN_R = crate::BitReader<bool>;
+#[doc = "Field `EPDISEN` writer - Endpoint disabled interrupt enable"]
+pub type EPDISEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINTEN_SPEC, bool, O>;
+#[doc = "Field `STPFEN` reader - SETUP phase finished interrupt enable"]
+pub type STPFEN_R = crate::BitReader<bool>;
+#[doc = "Field `STPFEN` writer - SETUP phase finished interrupt enable"]
+pub type STPFEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINTEN_SPEC, bool, O>;
+#[doc = "Field `EPRXFOVREN` reader - Endpoint Rx FIFO overrun interrupt enable"]
+pub type EPRXFOVREN_R = crate::BitReader<bool>;
+#[doc = "Field `EPRXFOVREN` writer - Endpoint Rx FIFO overrun interrupt enable"]
+pub type EPRXFOVREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINTEN_SPEC, bool, O>;
+#[doc = "Field `BTBSTPEN` reader - Back-to-back SETUP packets interrupt enable"]
+pub type BTBSTPEN_R = crate::BitReader<bool>;
+#[doc = "Field `BTBSTPEN` writer - Back-to-back SETUP packets interrupt enable"]
+pub type BTBSTPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINTEN_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Transfer finished interrupt enable"]
     #[inline(always)]
     pub fn tfen(&self) -> TFEN_R {
-        TFEN_R::new((self.bits & 0x01) != 0)
+        TFEN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt enable"]
     #[inline(always)]
     pub fn epdisen(&self) -> EPDISEN_R {
-        EPDISEN_R::new(((self.bits >> 1) & 0x01) != 0)
+        EPDISEN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 3 - SETUP phase finished interrupt enable"]
     #[inline(always)]
     pub fn stpfen(&self) -> STPFEN_R {
-        STPFEN_R::new(((self.bits >> 3) & 0x01) != 0)
+        STPFEN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Endpoint Rx FIFO overrun interrupt enable"]
     #[inline(always)]
     pub fn eprxfovren(&self) -> EPRXFOVREN_R {
-        EPRXFOVREN_R::new(((self.bits >> 4) & 0x01) != 0)
+        EPRXFOVREN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 6 - Back-to-back SETUP packets interrupt enable"]
     #[inline(always)]
     pub fn btbstpen(&self) -> BTBSTPEN_R {
-        BTBSTPEN_R::new(((self.bits >> 6) & 0x01) != 0)
+        BTBSTPEN_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Transfer finished interrupt enable"]
     #[inline(always)]
-    pub fn tfen(&mut self) -> TFEN_W {
-        TFEN_W { w: self }
+    #[must_use]
+    pub fn tfen(&mut self) -> TFEN_W<0> {
+        TFEN_W::new(self)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt enable"]
     #[inline(always)]
-    pub fn epdisen(&mut self) -> EPDISEN_W {
-        EPDISEN_W { w: self }
+    #[must_use]
+    pub fn epdisen(&mut self) -> EPDISEN_W<1> {
+        EPDISEN_W::new(self)
     }
     #[doc = "Bit 3 - SETUP phase finished interrupt enable"]
     #[inline(always)]
-    pub fn stpfen(&mut self) -> STPFEN_W {
-        STPFEN_W { w: self }
+    #[must_use]
+    pub fn stpfen(&mut self) -> STPFEN_W<3> {
+        STPFEN_W::new(self)
     }
     #[doc = "Bit 4 - Endpoint Rx FIFO overrun interrupt enable"]
     #[inline(always)]
-    pub fn eprxfovren(&mut self) -> EPRXFOVREN_W {
-        EPRXFOVREN_W { w: self }
+    #[must_use]
+    pub fn eprxfovren(&mut self) -> EPRXFOVREN_W<4> {
+        EPRXFOVREN_W::new(self)
     }
     #[doc = "Bit 6 - Back-to-back SETUP packets interrupt enable"]
     #[inline(always)]
-    pub fn btbstpen(&mut self) -> BTBSTPEN_W {
-        BTBSTPEN_W { w: self }
+    #[must_use]
+    pub fn btbstpen(&mut self) -> BTBSTPEN_W<6> {
+        BTBSTPEN_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "device OUT endpoint common interrupt enable register (DOEPINTEN)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [doepinten](index.html) module"]
+pub struct DOEPINTEN_SPEC;
+impl crate::RegisterSpec for DOEPINTEN_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [doepinten::R](R) reader structure"]
+impl crate::Readable for DOEPINTEN_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [doepinten::W](W) writer structure"]
+impl crate::Writable for DOEPINTEN_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets DOEPINTEN to value 0"]
+impl crate::Resettable for DOEPINTEN_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

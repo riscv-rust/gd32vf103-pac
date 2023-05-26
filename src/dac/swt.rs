@@ -1,66 +1,60 @@
-#[doc = "Writer for register SWT"]
-pub type W = crate::W<u32, super::SWT>;
-#[doc = "Register SWT `reset()`'s with value 0"]
-impl crate::ResetValue for super::SWT {
-    type Type = u32;
+#[doc = "Register `SWT` writer"]
+pub struct W(crate::W<SWT_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<SWT_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Write proxy for field `SWTR0`"]
-pub struct SWTR0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SWTR0_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Write proxy for field `SWTR1`"]
-pub struct SWTR1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SWTR1_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<SWT_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn from(writer: crate::W<SWT_SPEC>) -> Self {
+        W(writer)
     }
 }
+#[doc = "Field `SWTR0` writer - DAC0 software trigger"]
+pub type SWTR0_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWT_SPEC, bool, O>;
+#[doc = "Field `SWTR1` writer - DAC1 software trigger"]
+pub type SWTR1_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWT_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0 - DAC0 software trigger"]
     #[inline(always)]
-    pub fn swtr0(&mut self) -> SWTR0_W {
-        SWTR0_W { w: self }
+    #[must_use]
+    pub fn swtr0(&mut self) -> SWTR0_W<0> {
+        SWTR0_W::new(self)
     }
     #[doc = "Bit 1 - DAC1 software trigger"]
     #[inline(always)]
-    pub fn swtr1(&mut self) -> SWTR1_W {
-        SWTR1_W { w: self }
+    #[must_use]
+    pub fn swtr1(&mut self) -> SWTR1_W<1> {
+        SWTR1_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "software trigger register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swt](index.html) module"]
+pub struct SWT_SPEC;
+impl crate::RegisterSpec for SWT_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [swt::W](W) writer structure"]
+impl crate::Writable for SWT_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets SWT to value 0"]
+impl crate::Resettable for SWT_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }
