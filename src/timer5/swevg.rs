@@ -1,39 +1,52 @@
-#[doc = "Writer for register SWEVG"]
-pub type W = crate::W<u16, super::SWEVG>;
-#[doc = "Register SWEVG `reset()`'s with value 0"]
-impl crate::ResetValue for super::SWEVG {
-    type Type = u16;
+#[doc = "Register `SWEVG` writer"]
+pub struct W(crate::W<SWEVG_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<SWEVG_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Write proxy for field `UPG`"]
-pub struct UPG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UPG_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u16) & 0x01);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
+impl From<crate::W<SWEVG_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<SWEVG_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `UPG` writer - Update generation"]
+pub type UPG_W<'a, const O: u8> = crate::BitWriter<'a, u16, SWEVG_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0 - Update generation"]
     #[inline(always)]
-    pub fn upg(&mut self) -> UPG_W {
-        UPG_W { w: self }
+    #[must_use]
+    pub fn upg(&mut self) -> UPG_W<0> {
+        UPG_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "event generation register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swevg](index.html) module"]
+pub struct SWEVG_SPEC;
+impl crate::RegisterSpec for SWEVG_SPEC {
+    type Ux = u16;
+}
+#[doc = "`write(|w| ..)` method takes [swevg::W](W) writer structure"]
+impl crate::Writable for SWEVG_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets SWEVG to value 0"]
+impl crate::Resettable for SWEVG_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

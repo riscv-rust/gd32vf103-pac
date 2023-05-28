@@ -1,2 +1,2 @@
 #[cfg(feature = "rt")]
-extern crate riscv_rt;
+#[cfg(feature = "rt")]

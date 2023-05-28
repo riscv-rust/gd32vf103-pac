@@ -1,98 +1,110 @@
-#[doc = "Reader of register TMP2"]
-pub type R = crate::R<u32, super::TMP2>;
-#[doc = "Writer for register TMP2"]
-pub type W = crate::W<u32, super::TMP2>;
-#[doc = "Register TMP2 `reset()`'s with value 0"]
-impl crate::ResetValue for super::TMP2 {
-    type Type = u32;
+#[doc = "Register `TMP2` reader"]
+pub struct R(crate::R<TMP2_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<TMP2_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TS`"]
-pub type TS_R = crate::R<u16, u16>;
-#[doc = "Write proxy for field `TS`"]
-pub struct TS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<TMP2_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | (((value as u32) & 0xffff) << 16);
-        self.w
+    fn from(reader: crate::R<TMP2_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `TSEN`"]
-pub type TSEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TSEN`"]
-pub struct TSEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TSEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `TMP2` writer"]
+pub struct W(crate::W<TMP2_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<TMP2_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `DLENC`"]
-pub type DLENC_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `DLENC`"]
-pub struct DLENC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DLENC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
+impl From<crate::W<TMP2_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<TMP2_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `DLENC` reader - Data length code"]
+pub type DLENC_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DLENC` writer - Data length code"]
+pub type DLENC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TMP2_SPEC, u8, u8, 4, O>;
+#[doc = "Field `TSEN` reader - Time stamp enable"]
+pub type TSEN_R = crate::BitReader<bool>;
+#[doc = "Field `TSEN` writer - Time stamp enable"]
+pub type TSEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TMP2_SPEC, bool, O>;
+#[doc = "Field `TS` reader - Time stamp"]
+pub type TS_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `TS` writer - Time stamp"]
+pub type TS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TMP2_SPEC, u16, u16, 16, O>;
 impl R {
-    #[doc = "Bits 16:31 - Time stamp"]
-    #[inline(always)]
-    pub fn ts(&self) -> TS_R {
-        TS_R::new(((self.bits >> 16) & 0xffff) as u16)
-    }
-    #[doc = "Bit 8 - Time stamp enable"]
-    #[inline(always)]
-    pub fn tsen(&self) -> TSEN_R {
-        TSEN_R::new(((self.bits >> 8) & 0x01) != 0)
-    }
     #[doc = "Bits 0:3 - Data length code"]
     #[inline(always)]
     pub fn dlenc(&self) -> DLENC_R {
         DLENC_R::new((self.bits & 0x0f) as u8)
     }
-}
-impl W {
+    #[doc = "Bit 8 - Time stamp enable"]
+    #[inline(always)]
+    pub fn tsen(&self) -> TSEN_R {
+        TSEN_R::new(((self.bits >> 8) & 1) != 0)
+    }
     #[doc = "Bits 16:31 - Time stamp"]
     #[inline(always)]
-    pub fn ts(&mut self) -> TS_W {
-        TS_W { w: self }
+    pub fn ts(&self) -> TS_R {
+        TS_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+impl W {
+    #[doc = "Bits 0:3 - Data length code"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dlenc(&mut self) -> DLENC_W<0> {
+        DLENC_W::new(self)
     }
     #[doc = "Bit 8 - Time stamp enable"]
     #[inline(always)]
-    pub fn tsen(&mut self) -> TSEN_W {
-        TSEN_W { w: self }
+    #[must_use]
+    pub fn tsen(&mut self) -> TSEN_W<8> {
+        TSEN_W::new(self)
     }
-    #[doc = "Bits 0:3 - Data length code"]
+    #[doc = "Bits 16:31 - Time stamp"]
     #[inline(always)]
-    pub fn dlenc(&mut self) -> DLENC_W {
-        DLENC_W { w: self }
+    #[must_use]
+    pub fn ts(&mut self) -> TS_W<16> {
+        TS_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Transmit mailbox property register 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tmp2](index.html) module"]
+pub struct TMP2_SPEC;
+impl crate::RegisterSpec for TMP2_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [tmp2::R](R) reader structure"]
+impl crate::Readable for TMP2_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [tmp2::W](W) writer structure"]
+impl crate::Writable for TMP2_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets TMP2 to value 0"]
+impl crate::Resettable for TMP2_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -1,88 +1,110 @@
-#[doc = "Reader of register DIEP3LEN"]
-pub type R = crate::R<u32, super::DIEP3LEN>;
-#[doc = "Writer for register DIEP3LEN"]
-pub type W = crate::W<u32, super::DIEP3LEN>;
-#[doc = "Register DIEP3LEN `reset()`'s with value 0"]
-impl crate::ResetValue for super::DIEP3LEN {
-    type Type = u32;
+#[doc = "Register `DIEP3LEN` reader"]
+pub struct R(crate::R<DIEP3LEN_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<DIEP3LEN_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `MCPF`"]
-pub type MCPF_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `MCPF`"]
-pub struct MCPF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MCPF_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<DIEP3LEN_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 29)) | (((value as u32) & 0x03) << 29);
-        self.w
+    fn from(reader: crate::R<DIEP3LEN_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `PCNT`"]
-pub type PCNT_R = crate::R<u16, u16>;
-#[doc = "Write proxy for field `PCNT`"]
-pub struct PCNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PCNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+#[doc = "Register `DIEP3LEN` writer"]
+pub struct W(crate::W<DIEP3LEN_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<DIEP3LEN_SPEC>;
     #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 19)) | (((value as u32) & 0x03ff) << 19);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TLEN`"]
-pub type TLEN_R = crate::R<u32, u32>;
-#[doc = "Write proxy for field `TLEN`"]
-pub struct TLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TLEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0007_ffff) | ((value as u32) & 0x0007_ffff);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
+impl From<crate::W<DIEP3LEN_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<DIEP3LEN_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `TLEN` reader - Transfer length"]
+pub type TLEN_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `TLEN` writer - Transfer length"]
+pub type TLEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIEP3LEN_SPEC, u32, u32, 19, O>;
+#[doc = "Field `PCNT` reader - Packet count"]
+pub type PCNT_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `PCNT` writer - Packet count"]
+pub type PCNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIEP3LEN_SPEC, u16, u16, 10, O>;
+#[doc = "Field `MCPF` reader - Multi packet count per frame"]
+pub type MCPF_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `MCPF` writer - Multi packet count per frame"]
+pub type MCPF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIEP3LEN_SPEC, u8, u8, 2, O>;
 impl R {
-    #[doc = "Bits 29:30 - Multi packet count per frame"]
+    #[doc = "Bits 0:18 - Transfer length"]
     #[inline(always)]
-    pub fn mcpf(&self) -> MCPF_R {
-        MCPF_R::new(((self.bits >> 29) & 0x03) as u8)
+    pub fn tlen(&self) -> TLEN_R {
+        TLEN_R::new(self.bits & 0x0007_ffff)
     }
     #[doc = "Bits 19:28 - Packet count"]
     #[inline(always)]
     pub fn pcnt(&self) -> PCNT_R {
         PCNT_R::new(((self.bits >> 19) & 0x03ff) as u16)
     }
-    #[doc = "Bits 0:18 - Transfer length"]
+    #[doc = "Bits 29:30 - Multi packet count per frame"]
     #[inline(always)]
-    pub fn tlen(&self) -> TLEN_R {
-        TLEN_R::new((self.bits & 0x0007_ffff) as u32)
+    pub fn mcpf(&self) -> MCPF_R {
+        MCPF_R::new(((self.bits >> 29) & 3) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 29:30 - Multi packet count per frame"]
+    #[doc = "Bits 0:18 - Transfer length"]
     #[inline(always)]
-    pub fn mcpf(&mut self) -> MCPF_W {
-        MCPF_W { w: self }
+    #[must_use]
+    pub fn tlen(&mut self) -> TLEN_W<0> {
+        TLEN_W::new(self)
     }
     #[doc = "Bits 19:28 - Packet count"]
     #[inline(always)]
-    pub fn pcnt(&mut self) -> PCNT_W {
-        PCNT_W { w: self }
+    #[must_use]
+    pub fn pcnt(&mut self) -> PCNT_W<19> {
+        PCNT_W::new(self)
     }
-    #[doc = "Bits 0:18 - Transfer length"]
+    #[doc = "Bits 29:30 - Multi packet count per frame"]
     #[inline(always)]
-    pub fn tlen(&mut self) -> TLEN_W {
-        TLEN_W { w: self }
+    #[must_use]
+    pub fn mcpf(&mut self) -> MCPF_W<29> {
+        MCPF_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "device IN endpoint-3 transfer length register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [diep3len](index.html) module"]
+pub struct DIEP3LEN_SPEC;
+impl crate::RegisterSpec for DIEP3LEN_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [diep3len::R](R) reader structure"]
+impl crate::Readable for DIEP3LEN_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [diep3len::W](W) writer structure"]
+impl crate::Writable for DIEP3LEN_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets DIEP3LEN to value 0"]
+impl crate::Resettable for DIEP3LEN_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

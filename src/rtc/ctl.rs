@@ -1,220 +1,155 @@
-#[doc = "Reader of register CTL"]
-pub type R = crate::R<u32, super::CTL>;
-#[doc = "Writer for register CTL"]
-pub type W = crate::W<u32, super::CTL>;
-#[doc = "Register CTL `reset()`'s with value 0x20"]
-impl crate::ResetValue for super::CTL {
-    type Type = u32;
+#[doc = "Register `CTL` reader"]
+pub struct R(crate::R<CTL_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CTL_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0x20
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `LWOFF`"]
-pub type LWOFF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `LWOFF`"]
-pub struct LWOFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LWOFF_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<CTL_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
+    fn from(reader: crate::R<CTL_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `CMF`"]
-pub type CMF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CMF`"]
-pub struct CMF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CMF_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `CTL` writer"]
+pub struct W(crate::W<CTL_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CTL_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `RSYNF`"]
-pub type RSYNF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RSYNF`"]
-pub struct RSYNF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RSYNF_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `OVIF`"]
-pub type OVIF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `OVIF`"]
-pub struct OVIF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OVIF_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<CTL_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn from(writer: crate::W<CTL_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `ALRMIF`"]
-pub type ALRMIF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ALRMIF`"]
-pub struct ALRMIF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALRMIF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
-    }
-}
-#[doc = "Reader of field `SCIF`"]
-pub type SCIF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SCIF`"]
-pub struct SCIF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCIF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
-    }
-}
+#[doc = "Field `SCIF` reader - Sencond interrupt flag"]
+pub type SCIF_R = crate::BitReader<bool>;
+#[doc = "Field `SCIF` writer - Sencond interrupt flag"]
+pub type SCIF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+#[doc = "Field `ALRMIF` reader - Alarm interrupt flag"]
+pub type ALRMIF_R = crate::BitReader<bool>;
+#[doc = "Field `ALRMIF` writer - Alarm interrupt flag"]
+pub type ALRMIF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+#[doc = "Field `OVIF` reader - Overflow interrupt flag"]
+pub type OVIF_R = crate::BitReader<bool>;
+#[doc = "Field `OVIF` writer - Overflow interrupt flag"]
+pub type OVIF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+#[doc = "Field `RSYNF` reader - Registers synchronized flag"]
+pub type RSYNF_R = crate::BitReader<bool>;
+#[doc = "Field `RSYNF` writer - Registers synchronized flag"]
+pub type RSYNF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+#[doc = "Field `CMF` reader - Configuration mode flag"]
+pub type CMF_R = crate::BitReader<bool>;
+#[doc = "Field `CMF` writer - Configuration mode flag"]
+pub type CMF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+#[doc = "Field `LWOFF` reader - Last write operation finished flag"]
+pub type LWOFF_R = crate::BitReader<bool>;
+#[doc = "Field `LWOFF` writer - Last write operation finished flag"]
+pub type LWOFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 5 - Last write operation finished flag"]
+    #[doc = "Bit 0 - Sencond interrupt flag"]
     #[inline(always)]
-    pub fn lwoff(&self) -> LWOFF_R {
-        LWOFF_R::new(((self.bits >> 5) & 0x01) != 0)
-    }
-    #[doc = "Bit 4 - Configuration mode flag"]
-    #[inline(always)]
-    pub fn cmf(&self) -> CMF_R {
-        CMF_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 3 - Registers synchronized flag"]
-    #[inline(always)]
-    pub fn rsynf(&self) -> RSYNF_R {
-        RSYNF_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2 - Overflow interrupt flag"]
-    #[inline(always)]
-    pub fn ovif(&self) -> OVIF_R {
-        OVIF_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn scif(&self) -> SCIF_R {
+        SCIF_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Alarm interrupt flag"]
     #[inline(always)]
     pub fn alrmif(&self) -> ALRMIF_R {
-        ALRMIF_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Sencond interrupt flag"]
-    #[inline(always)]
-    pub fn scif(&self) -> SCIF_R {
-        SCIF_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 5 - Last write operation finished flag"]
-    #[inline(always)]
-    pub fn lwoff(&mut self) -> LWOFF_W {
-        LWOFF_W { w: self }
-    }
-    #[doc = "Bit 4 - Configuration mode flag"]
-    #[inline(always)]
-    pub fn cmf(&mut self) -> CMF_W {
-        CMF_W { w: self }
-    }
-    #[doc = "Bit 3 - Registers synchronized flag"]
-    #[inline(always)]
-    pub fn rsynf(&mut self) -> RSYNF_W {
-        RSYNF_W { w: self }
+        ALRMIF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Overflow interrupt flag"]
     #[inline(always)]
-    pub fn ovif(&mut self) -> OVIF_W {
-        OVIF_W { w: self }
+    pub fn ovif(&self) -> OVIF_R {
+        OVIF_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Registers synchronized flag"]
+    #[inline(always)]
+    pub fn rsynf(&self) -> RSYNF_R {
+        RSYNF_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Configuration mode flag"]
+    #[inline(always)]
+    pub fn cmf(&self) -> CMF_R {
+        CMF_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Last write operation finished flag"]
+    #[inline(always)]
+    pub fn lwoff(&self) -> LWOFF_R {
+        LWOFF_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Sencond interrupt flag"]
+    #[inline(always)]
+    #[must_use]
+    pub fn scif(&mut self) -> SCIF_W<0> {
+        SCIF_W::new(self)
     }
     #[doc = "Bit 1 - Alarm interrupt flag"]
     #[inline(always)]
-    pub fn alrmif(&mut self) -> ALRMIF_W {
-        ALRMIF_W { w: self }
+    #[must_use]
+    pub fn alrmif(&mut self) -> ALRMIF_W<1> {
+        ALRMIF_W::new(self)
     }
-    #[doc = "Bit 0 - Sencond interrupt flag"]
+    #[doc = "Bit 2 - Overflow interrupt flag"]
     #[inline(always)]
-    pub fn scif(&mut self) -> SCIF_W {
-        SCIF_W { w: self }
+    #[must_use]
+    pub fn ovif(&mut self) -> OVIF_W<2> {
+        OVIF_W::new(self)
     }
+    #[doc = "Bit 3 - Registers synchronized flag"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rsynf(&mut self) -> RSYNF_W<3> {
+        RSYNF_W::new(self)
+    }
+    #[doc = "Bit 4 - Configuration mode flag"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cmf(&mut self) -> CMF_W<4> {
+        CMF_W::new(self)
+    }
+    #[doc = "Bit 5 - Last write operation finished flag"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lwoff(&mut self) -> LWOFF_W<5> {
+        LWOFF_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl](index.html) module"]
+pub struct CTL_SPEC;
+impl crate::RegisterSpec for CTL_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [ctl::R](R) reader structure"]
+impl crate::Readable for CTL_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [ctl::W](W) writer structure"]
+impl crate::Writable for CTL_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets CTL to value 0x20"]
+impl crate::Resettable for CTL_SPEC {
+    const RESET_VALUE: Self::Ux = 0x20;
 }

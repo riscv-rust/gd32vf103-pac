@@ -1,322 +1,200 @@
-#[doc = "Reader of register HCH5INTEN"]
-pub type R = crate::R<u32, super::HCH5INTEN>;
-#[doc = "Writer for register HCH5INTEN"]
-pub type W = crate::W<u32, super::HCH5INTEN>;
-#[doc = "Register HCH5INTEN `reset()`'s with value 0"]
-impl crate::ResetValue for super::HCH5INTEN {
-    type Type = u32;
+#[doc = "Register `HCH5INTEN` reader"]
+pub struct R(crate::R<HCH5INTEN_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<HCH5INTEN_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TFIE`"]
-pub type TFIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TFIE`"]
-pub struct TFIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TFIE_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<HCH5INTEN_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<HCH5INTEN_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `CHIE`"]
-pub type CHIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CHIE`"]
-pub struct CHIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CHIE_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `HCH5INTEN` writer"]
+pub struct W(crate::W<HCH5INTEN_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<HCH5INTEN_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `STALLIE`"]
-pub type STALLIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `STALLIE`"]
-pub struct STALLIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STALLIE_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `NAKIE`"]
-pub type NAKIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `NAKIE`"]
-pub struct NAKIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NAKIE_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<HCH5INTEN_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
+    fn from(writer: crate::W<HCH5INTEN_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `ACKIE`"]
-pub type ACKIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ACKIE`"]
-pub struct ACKIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ACKIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Reader of field `USBERIE`"]
-pub type USBERIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `USBERIE`"]
-pub struct USBERIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USBERIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
-        self.w
-    }
-}
-#[doc = "Reader of field `BBERIE`"]
-pub type BBERIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `BBERIE`"]
-pub struct BBERIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BBERIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Reader of field `REQOVRIE`"]
-pub type REQOVRIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `REQOVRIE`"]
-pub struct REQOVRIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REQOVRIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
-        self.w
-    }
-}
-#[doc = "Reader of field `DTERIE`"]
-pub type DTERIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DTERIE`"]
-pub struct DTERIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DTERIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
-        self.w
-    }
-}
+#[doc = "Field `TFIE` reader - Transfer completed interrupt enable"]
+pub type TFIE_R = crate::BitReader<bool>;
+#[doc = "Field `TFIE` writer - Transfer completed interrupt enable"]
+pub type TFIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+#[doc = "Field `CHIE` reader - Channel halted interrupt enable"]
+pub type CHIE_R = crate::BitReader<bool>;
+#[doc = "Field `CHIE` writer - Channel halted interrupt enable"]
+pub type CHIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+#[doc = "Field `STALLIE` reader - STALL interrupt enable"]
+pub type STALLIE_R = crate::BitReader<bool>;
+#[doc = "Field `STALLIE` writer - STALL interrupt enable"]
+pub type STALLIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+#[doc = "Field `NAKIE` reader - NAK interrupt enable"]
+pub type NAKIE_R = crate::BitReader<bool>;
+#[doc = "Field `NAKIE` writer - NAK interrupt enable"]
+pub type NAKIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+#[doc = "Field `ACKIE` reader - ACK interrupt enable"]
+pub type ACKIE_R = crate::BitReader<bool>;
+#[doc = "Field `ACKIE` writer - ACK interrupt enable"]
+pub type ACKIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+#[doc = "Field `USBERIE` reader - USB bus error interrupt enable"]
+pub type USBERIE_R = crate::BitReader<bool>;
+#[doc = "Field `USBERIE` writer - USB bus error interrupt enable"]
+pub type USBERIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+#[doc = "Field `BBERIE` reader - Babble error interrupt enable"]
+pub type BBERIE_R = crate::BitReader<bool>;
+#[doc = "Field `BBERIE` writer - Babble error interrupt enable"]
+pub type BBERIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+#[doc = "Field `REQOVRIE` reader - request queue overrun interrupt enable"]
+pub type REQOVRIE_R = crate::BitReader<bool>;
+#[doc = "Field `REQOVRIE` writer - request queue overrun interrupt enable"]
+pub type REQOVRIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+#[doc = "Field `DTERIE` reader - Data toggle error interrupt enable"]
+pub type DTERIE_R = crate::BitReader<bool>;
+#[doc = "Field `DTERIE` writer - Data toggle error interrupt enable"]
+pub type DTERIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Transfer completed interrupt enable"]
     #[inline(always)]
     pub fn tfie(&self) -> TFIE_R {
-        TFIE_R::new((self.bits & 0x01) != 0)
+        TFIE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Channel halted interrupt enable"]
     #[inline(always)]
     pub fn chie(&self) -> CHIE_R {
-        CHIE_R::new(((self.bits >> 1) & 0x01) != 0)
+        CHIE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 3 - STALL interrupt enable"]
     #[inline(always)]
     pub fn stallie(&self) -> STALLIE_R {
-        STALLIE_R::new(((self.bits >> 3) & 0x01) != 0)
+        STALLIE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - NAK interrupt enable"]
     #[inline(always)]
     pub fn nakie(&self) -> NAKIE_R {
-        NAKIE_R::new(((self.bits >> 4) & 0x01) != 0)
+        NAKIE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - ACK interrupt enable"]
     #[inline(always)]
     pub fn ackie(&self) -> ACKIE_R {
-        ACKIE_R::new(((self.bits >> 5) & 0x01) != 0)
+        ACKIE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 7 - USB bus error interrupt enable"]
     #[inline(always)]
     pub fn usberie(&self) -> USBERIE_R {
-        USBERIE_R::new(((self.bits >> 7) & 0x01) != 0)
+        USBERIE_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Babble error interrupt enable"]
     #[inline(always)]
     pub fn bberie(&self) -> BBERIE_R {
-        BBERIE_R::new(((self.bits >> 8) & 0x01) != 0)
+        BBERIE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - request queue overrun interrupt enable"]
     #[inline(always)]
     pub fn reqovrie(&self) -> REQOVRIE_R {
-        REQOVRIE_R::new(((self.bits >> 9) & 0x01) != 0)
+        REQOVRIE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Data toggle error interrupt enable"]
     #[inline(always)]
     pub fn dterie(&self) -> DTERIE_R {
-        DTERIE_R::new(((self.bits >> 10) & 0x01) != 0)
+        DTERIE_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Transfer completed interrupt enable"]
     #[inline(always)]
-    pub fn tfie(&mut self) -> TFIE_W {
-        TFIE_W { w: self }
+    #[must_use]
+    pub fn tfie(&mut self) -> TFIE_W<0> {
+        TFIE_W::new(self)
     }
     #[doc = "Bit 1 - Channel halted interrupt enable"]
     #[inline(always)]
-    pub fn chie(&mut self) -> CHIE_W {
-        CHIE_W { w: self }
+    #[must_use]
+    pub fn chie(&mut self) -> CHIE_W<1> {
+        CHIE_W::new(self)
     }
     #[doc = "Bit 3 - STALL interrupt enable"]
     #[inline(always)]
-    pub fn stallie(&mut self) -> STALLIE_W {
-        STALLIE_W { w: self }
+    #[must_use]
+    pub fn stallie(&mut self) -> STALLIE_W<3> {
+        STALLIE_W::new(self)
     }
     #[doc = "Bit 4 - NAK interrupt enable"]
     #[inline(always)]
-    pub fn nakie(&mut self) -> NAKIE_W {
-        NAKIE_W { w: self }
+    #[must_use]
+    pub fn nakie(&mut self) -> NAKIE_W<4> {
+        NAKIE_W::new(self)
     }
     #[doc = "Bit 5 - ACK interrupt enable"]
     #[inline(always)]
-    pub fn ackie(&mut self) -> ACKIE_W {
-        ACKIE_W { w: self }
+    #[must_use]
+    pub fn ackie(&mut self) -> ACKIE_W<5> {
+        ACKIE_W::new(self)
     }
     #[doc = "Bit 7 - USB bus error interrupt enable"]
     #[inline(always)]
-    pub fn usberie(&mut self) -> USBERIE_W {
-        USBERIE_W { w: self }
+    #[must_use]
+    pub fn usberie(&mut self) -> USBERIE_W<7> {
+        USBERIE_W::new(self)
     }
     #[doc = "Bit 8 - Babble error interrupt enable"]
     #[inline(always)]
-    pub fn bberie(&mut self) -> BBERIE_W {
-        BBERIE_W { w: self }
+    #[must_use]
+    pub fn bberie(&mut self) -> BBERIE_W<8> {
+        BBERIE_W::new(self)
     }
     #[doc = "Bit 9 - request queue overrun interrupt enable"]
     #[inline(always)]
-    pub fn reqovrie(&mut self) -> REQOVRIE_W {
-        REQOVRIE_W { w: self }
+    #[must_use]
+    pub fn reqovrie(&mut self) -> REQOVRIE_W<9> {
+        REQOVRIE_W::new(self)
     }
     #[doc = "Bit 10 - Data toggle error interrupt enable"]
     #[inline(always)]
-    pub fn dterie(&mut self) -> DTERIE_W {
-        DTERIE_W { w: self }
+    #[must_use]
+    pub fn dterie(&mut self) -> DTERIE_W<10> {
+        DTERIE_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "host channel-5 interrupt enable register (HCH5INTEN)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hch5inten](index.html) module"]
+pub struct HCH5INTEN_SPEC;
+impl crate::RegisterSpec for HCH5INTEN_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [hch5inten::R](R) reader structure"]
+impl crate::Readable for HCH5INTEN_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [hch5inten::W](W) writer structure"]
+impl crate::Writable for HCH5INTEN_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets HCH5INTEN to value 0"]
+impl crate::Resettable for HCH5INTEN_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

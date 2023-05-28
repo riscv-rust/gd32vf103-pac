@@ -1,492 +1,275 @@
-#[doc = "Reader of register CTL0"]
-pub type R = crate::R<u16, super::CTL0>;
-#[doc = "Writer for register CTL0"]
-pub type W = crate::W<u16, super::CTL0>;
-#[doc = "Register CTL0 `reset()`'s with value 0"]
-impl crate::ResetValue for super::CTL0 {
-    type Type = u16;
+#[doc = "Register `CTL0` reader"]
+pub struct R(crate::R<CTL0_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CTL0_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `SRESET`"]
-pub type SRESET_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SRESET`"]
-pub struct SRESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SRESET_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<CTL0_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u16) & 0x01) << 15);
-        self.w
+    fn from(reader: crate::R<CTL0_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `SALT`"]
-pub type SALT_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SALT`"]
-pub struct SALT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SALT_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `CTL0` writer"]
+pub struct W(crate::W<CTL0_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CTL0_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u16) & 0x01) << 13);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `PECTRANS`"]
-pub type PECTRANS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PECTRANS`"]
-pub struct PECTRANS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PECTRANS_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u16) & 0x01) << 12);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `POAP`"]
-pub type POAP_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `POAP`"]
-pub struct POAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> POAP_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<CTL0_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u16) & 0x01) << 11);
-        self.w
+    fn from(writer: crate::W<CTL0_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `ACKEN`"]
-pub type ACKEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ACKEN`"]
-pub struct ACKEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ACKEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u16) & 0x01) << 10);
-        self.w
-    }
-}
-#[doc = "Reader of field `STOP`"]
-pub type STOP_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `STOP`"]
-pub struct STOP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STOP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u16) & 0x01) << 9);
-        self.w
-    }
-}
-#[doc = "Reader of field `START`"]
-pub type START_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `START`"]
-pub struct START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u16) & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Reader of field `SS`"]
-pub type SS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SS`"]
-pub struct SS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u16) & 0x01) << 7);
-        self.w
-    }
-}
-#[doc = "Reader of field `GCEN`"]
-pub type GCEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `GCEN`"]
-pub struct GCEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GCEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u16) & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Reader of field `PECEN`"]
-pub type PECEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PECEN`"]
-pub struct PECEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PECEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u16) & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Reader of field `ARPEN`"]
-pub type ARPEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ARPEN`"]
-pub struct ARPEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ARPEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u16) & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Reader of field `SMBSEL`"]
-pub type SMBSEL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SMBSEL`"]
-pub struct SMBSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SMBSEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u16) & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Reader of field `SMBEN`"]
-pub type SMBEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SMBEN`"]
-pub struct SMBEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SMBEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u16) & 0x01) << 1);
-        self.w
-    }
-}
-#[doc = "Reader of field `I2CEN`"]
-pub type I2CEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `I2CEN`"]
-pub struct I2CEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2CEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u16) & 0x01);
-        self.w
-    }
-}
+#[doc = "Field `I2CEN` reader - I2C peripheral enable"]
+pub type I2CEN_R = crate::BitReader<bool>;
+#[doc = "Field `I2CEN` writer - I2C peripheral enable"]
+pub type I2CEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `SMBEN` reader - SMBus/I2C mode switch"]
+pub type SMBEN_R = crate::BitReader<bool>;
+#[doc = "Field `SMBEN` writer - SMBus/I2C mode switch"]
+pub type SMBEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `SMBSEL` reader - SMBusType Selection"]
+pub type SMBSEL_R = crate::BitReader<bool>;
+#[doc = "Field `SMBSEL` writer - SMBusType Selection"]
+pub type SMBSEL_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `ARPEN` reader - ARP protocol in SMBus switch"]
+pub type ARPEN_R = crate::BitReader<bool>;
+#[doc = "Field `ARPEN` writer - ARP protocol in SMBus switch"]
+pub type ARPEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `PECEN` reader - PEC Calculation Switch"]
+pub type PECEN_R = crate::BitReader<bool>;
+#[doc = "Field `PECEN` writer - PEC Calculation Switch"]
+pub type PECEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `GCEN` reader - Whether or not to response to a General Call (0x00)"]
+pub type GCEN_R = crate::BitReader<bool>;
+#[doc = "Field `GCEN` writer - Whether or not to response to a General Call (0x00)"]
+pub type GCEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `SS` reader - Whether to stretch SCL low when data is not ready in slave mode"]
+pub type SS_R = crate::BitReader<bool>;
+#[doc = "Field `SS` writer - Whether to stretch SCL low when data is not ready in slave mode"]
+pub type SS_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `START` reader - Generate a START condition on I2C bus"]
+pub type START_R = crate::BitReader<bool>;
+#[doc = "Field `START` writer - Generate a START condition on I2C bus"]
+pub type START_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `STOP` reader - Generate a STOP condition on I2C bus"]
+pub type STOP_R = crate::BitReader<bool>;
+#[doc = "Field `STOP` writer - Generate a STOP condition on I2C bus"]
+pub type STOP_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `ACKEN` reader - Whether or not to send an ACK"]
+pub type ACKEN_R = crate::BitReader<bool>;
+#[doc = "Field `ACKEN` writer - Whether or not to send an ACK"]
+pub type ACKEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `POAP` reader - Position of ACK and PEC when receiving"]
+pub type POAP_R = crate::BitReader<bool>;
+#[doc = "Field `POAP` writer - Position of ACK and PEC when receiving"]
+pub type POAP_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `PECTRANS` reader - PEC Transfer"]
+pub type PECTRANS_R = crate::BitReader<bool>;
+#[doc = "Field `PECTRANS` writer - PEC Transfer"]
+pub type PECTRANS_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `SALT` reader - SMBus alert"]
+pub type SALT_R = crate::BitReader<bool>;
+#[doc = "Field `SALT` writer - SMBus alert"]
+pub type SALT_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `SRESET` reader - Software reset"]
+pub type SRESET_R = crate::BitReader<bool>;
+#[doc = "Field `SRESET` writer - Software reset"]
+pub type SRESET_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 15 - Software reset"]
+    #[doc = "Bit 0 - I2C peripheral enable"]
     #[inline(always)]
-    pub fn sreset(&self) -> SRESET_R {
-        SRESET_R::new(((self.bits >> 15) & 0x01) != 0)
-    }
-    #[doc = "Bit 13 - SMBus alert"]
-    #[inline(always)]
-    pub fn salt(&self) -> SALT_R {
-        SALT_R::new(((self.bits >> 13) & 0x01) != 0)
-    }
-    #[doc = "Bit 12 - PEC Transfer"]
-    #[inline(always)]
-    pub fn pectrans(&self) -> PECTRANS_R {
-        PECTRANS_R::new(((self.bits >> 12) & 0x01) != 0)
-    }
-    #[doc = "Bit 11 - Position of ACK and PEC when receiving"]
-    #[inline(always)]
-    pub fn poap(&self) -> POAP_R {
-        POAP_R::new(((self.bits >> 11) & 0x01) != 0)
-    }
-    #[doc = "Bit 10 - Whether or not to send an ACK"]
-    #[inline(always)]
-    pub fn acken(&self) -> ACKEN_R {
-        ACKEN_R::new(((self.bits >> 10) & 0x01) != 0)
-    }
-    #[doc = "Bit 9 - Generate a STOP condition on I2C bus"]
-    #[inline(always)]
-    pub fn stop(&self) -> STOP_R {
-        STOP_R::new(((self.bits >> 9) & 0x01) != 0)
-    }
-    #[doc = "Bit 8 - Generate a START condition on I2C bus"]
-    #[inline(always)]
-    pub fn start(&self) -> START_R {
-        START_R::new(((self.bits >> 8) & 0x01) != 0)
-    }
-    #[doc = "Bit 7 - Whether to stretch SCL low when data is not ready in slave mode"]
-    #[inline(always)]
-    pub fn ss(&self) -> SS_R {
-        SS_R::new(((self.bits >> 7) & 0x01) != 0)
-    }
-    #[doc = "Bit 6 - Whether or not to response to a General Call (0x00)"]
-    #[inline(always)]
-    pub fn gcen(&self) -> GCEN_R {
-        GCEN_R::new(((self.bits >> 6) & 0x01) != 0)
-    }
-    #[doc = "Bit 5 - PEC Calculation Switch"]
-    #[inline(always)]
-    pub fn pecen(&self) -> PECEN_R {
-        PECEN_R::new(((self.bits >> 5) & 0x01) != 0)
-    }
-    #[doc = "Bit 4 - ARP protocol in SMBus switch"]
-    #[inline(always)]
-    pub fn arpen(&self) -> ARPEN_R {
-        ARPEN_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 3 - SMBusType Selection"]
-    #[inline(always)]
-    pub fn smbsel(&self) -> SMBSEL_R {
-        SMBSEL_R::new(((self.bits >> 3) & 0x01) != 0)
+    pub fn i2cen(&self) -> I2CEN_R {
+        I2CEN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - SMBus/I2C mode switch"]
     #[inline(always)]
     pub fn smben(&self) -> SMBEN_R {
-        SMBEN_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - I2C peripheral enable"]
-    #[inline(always)]
-    pub fn i2cen(&self) -> I2CEN_R {
-        I2CEN_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 15 - Software reset"]
-    #[inline(always)]
-    pub fn sreset(&mut self) -> SRESET_W {
-        SRESET_W { w: self }
-    }
-    #[doc = "Bit 13 - SMBus alert"]
-    #[inline(always)]
-    pub fn salt(&mut self) -> SALT_W {
-        SALT_W { w: self }
-    }
-    #[doc = "Bit 12 - PEC Transfer"]
-    #[inline(always)]
-    pub fn pectrans(&mut self) -> PECTRANS_W {
-        PECTRANS_W { w: self }
-    }
-    #[doc = "Bit 11 - Position of ACK and PEC when receiving"]
-    #[inline(always)]
-    pub fn poap(&mut self) -> POAP_W {
-        POAP_W { w: self }
-    }
-    #[doc = "Bit 10 - Whether or not to send an ACK"]
-    #[inline(always)]
-    pub fn acken(&mut self) -> ACKEN_W {
-        ACKEN_W { w: self }
-    }
-    #[doc = "Bit 9 - Generate a STOP condition on I2C bus"]
-    #[inline(always)]
-    pub fn stop(&mut self) -> STOP_W {
-        STOP_W { w: self }
-    }
-    #[doc = "Bit 8 - Generate a START condition on I2C bus"]
-    #[inline(always)]
-    pub fn start(&mut self) -> START_W {
-        START_W { w: self }
-    }
-    #[doc = "Bit 7 - Whether to stretch SCL low when data is not ready in slave mode"]
-    #[inline(always)]
-    pub fn ss(&mut self) -> SS_W {
-        SS_W { w: self }
-    }
-    #[doc = "Bit 6 - Whether or not to response to a General Call (0x00)"]
-    #[inline(always)]
-    pub fn gcen(&mut self) -> GCEN_W {
-        GCEN_W { w: self }
-    }
-    #[doc = "Bit 5 - PEC Calculation Switch"]
-    #[inline(always)]
-    pub fn pecen(&mut self) -> PECEN_W {
-        PECEN_W { w: self }
-    }
-    #[doc = "Bit 4 - ARP protocol in SMBus switch"]
-    #[inline(always)]
-    pub fn arpen(&mut self) -> ARPEN_W {
-        ARPEN_W { w: self }
+        SMBEN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 3 - SMBusType Selection"]
     #[inline(always)]
-    pub fn smbsel(&mut self) -> SMBSEL_W {
-        SMBSEL_W { w: self }
+    pub fn smbsel(&self) -> SMBSEL_R {
+        SMBSEL_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - ARP protocol in SMBus switch"]
+    #[inline(always)]
+    pub fn arpen(&self) -> ARPEN_R {
+        ARPEN_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - PEC Calculation Switch"]
+    #[inline(always)]
+    pub fn pecen(&self) -> PECEN_R {
+        PECEN_R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Whether or not to response to a General Call (0x00)"]
+    #[inline(always)]
+    pub fn gcen(&self) -> GCEN_R {
+        GCEN_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Whether to stretch SCL low when data is not ready in slave mode"]
+    #[inline(always)]
+    pub fn ss(&self) -> SS_R {
+        SS_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - Generate a START condition on I2C bus"]
+    #[inline(always)]
+    pub fn start(&self) -> START_R {
+        START_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Generate a STOP condition on I2C bus"]
+    #[inline(always)]
+    pub fn stop(&self) -> STOP_R {
+        STOP_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Whether or not to send an ACK"]
+    #[inline(always)]
+    pub fn acken(&self) -> ACKEN_R {
+        ACKEN_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Position of ACK and PEC when receiving"]
+    #[inline(always)]
+    pub fn poap(&self) -> POAP_R {
+        POAP_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - PEC Transfer"]
+    #[inline(always)]
+    pub fn pectrans(&self) -> PECTRANS_R {
+        PECTRANS_R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - SMBus alert"]
+    #[inline(always)]
+    pub fn salt(&self) -> SALT_R {
+        SALT_R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 15 - Software reset"]
+    #[inline(always)]
+    pub fn sreset(&self) -> SRESET_R {
+        SRESET_R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - I2C peripheral enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn i2cen(&mut self) -> I2CEN_W<0> {
+        I2CEN_W::new(self)
     }
     #[doc = "Bit 1 - SMBus/I2C mode switch"]
     #[inline(always)]
-    pub fn smben(&mut self) -> SMBEN_W {
-        SMBEN_W { w: self }
+    #[must_use]
+    pub fn smben(&mut self) -> SMBEN_W<1> {
+        SMBEN_W::new(self)
     }
-    #[doc = "Bit 0 - I2C peripheral enable"]
+    #[doc = "Bit 3 - SMBusType Selection"]
     #[inline(always)]
-    pub fn i2cen(&mut self) -> I2CEN_W {
-        I2CEN_W { w: self }
+    #[must_use]
+    pub fn smbsel(&mut self) -> SMBSEL_W<3> {
+        SMBSEL_W::new(self)
     }
+    #[doc = "Bit 4 - ARP protocol in SMBus switch"]
+    #[inline(always)]
+    #[must_use]
+    pub fn arpen(&mut self) -> ARPEN_W<4> {
+        ARPEN_W::new(self)
+    }
+    #[doc = "Bit 5 - PEC Calculation Switch"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pecen(&mut self) -> PECEN_W<5> {
+        PECEN_W::new(self)
+    }
+    #[doc = "Bit 6 - Whether or not to response to a General Call (0x00)"]
+    #[inline(always)]
+    #[must_use]
+    pub fn gcen(&mut self) -> GCEN_W<6> {
+        GCEN_W::new(self)
+    }
+    #[doc = "Bit 7 - Whether to stretch SCL low when data is not ready in slave mode"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ss(&mut self) -> SS_W<7> {
+        SS_W::new(self)
+    }
+    #[doc = "Bit 8 - Generate a START condition on I2C bus"]
+    #[inline(always)]
+    #[must_use]
+    pub fn start(&mut self) -> START_W<8> {
+        START_W::new(self)
+    }
+    #[doc = "Bit 9 - Generate a STOP condition on I2C bus"]
+    #[inline(always)]
+    #[must_use]
+    pub fn stop(&mut self) -> STOP_W<9> {
+        STOP_W::new(self)
+    }
+    #[doc = "Bit 10 - Whether or not to send an ACK"]
+    #[inline(always)]
+    #[must_use]
+    pub fn acken(&mut self) -> ACKEN_W<10> {
+        ACKEN_W::new(self)
+    }
+    #[doc = "Bit 11 - Position of ACK and PEC when receiving"]
+    #[inline(always)]
+    #[must_use]
+    pub fn poap(&mut self) -> POAP_W<11> {
+        POAP_W::new(self)
+    }
+    #[doc = "Bit 12 - PEC Transfer"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pectrans(&mut self) -> PECTRANS_W<12> {
+        PECTRANS_W::new(self)
+    }
+    #[doc = "Bit 13 - SMBus alert"]
+    #[inline(always)]
+    #[must_use]
+    pub fn salt(&mut self) -> SALT_W<13> {
+        SALT_W::new(self)
+    }
+    #[doc = "Bit 15 - Software reset"]
+    #[inline(always)]
+    #[must_use]
+    pub fn sreset(&mut self) -> SRESET_W<15> {
+        SRESET_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Control register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl0](index.html) module"]
+pub struct CTL0_SPEC;
+impl crate::RegisterSpec for CTL0_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [ctl0::R](R) reader structure"]
+impl crate::Readable for CTL0_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [ctl0::W](W) writer structure"]
+impl crate::Writable for CTL0_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets CTL0 to value 0"]
+impl crate::Resettable for CTL0_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

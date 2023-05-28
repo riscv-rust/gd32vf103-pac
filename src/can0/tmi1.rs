@@ -1,166 +1,140 @@
-#[doc = "Reader of register TMI1"]
-pub type R = crate::R<u32, super::TMI1>;
-#[doc = "Writer for register TMI1"]
-pub type W = crate::W<u32, super::TMI1>;
-#[doc = "Register TMI1 `reset()`'s with value 0"]
-impl crate::ResetValue for super::TMI1 {
-    type Type = u32;
+#[doc = "Register `TMI1` reader"]
+pub struct R(crate::R<TMI1_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<TMI1_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `SFID_EFID`"]
-pub type SFID_EFID_R = crate::R<u16, u16>;
-#[doc = "Write proxy for field `SFID_EFID`"]
-pub struct SFID_EFID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SFID_EFID_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<TMI1_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07ff << 21)) | (((value as u32) & 0x07ff) << 21);
-        self.w
+    fn from(reader: crate::R<TMI1_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `EFID`"]
-pub type EFID_R = crate::R<u32, u32>;
-#[doc = "Write proxy for field `EFID`"]
-pub struct EFID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EFID_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+#[doc = "Register `TMI1` writer"]
+pub struct W(crate::W<TMI1_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<TMI1_SPEC>;
     #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0003_ffff << 3)) | (((value as u32) & 0x0003_ffff) << 3);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `FF`"]
-pub type FF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FF`"]
-pub struct FF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FF_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `FT`"]
-pub type FT_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FT`"]
-pub struct FT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FT_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<TMI1_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn from(writer: crate::W<TMI1_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `TEN`"]
-pub type TEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TEN`"]
-pub struct TEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
-    }
-}
+#[doc = "Field `TEN` reader - Transmit enable"]
+pub type TEN_R = crate::BitReader<bool>;
+#[doc = "Field `TEN` writer - Transmit enable"]
+pub type TEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TMI1_SPEC, bool, O>;
+#[doc = "Field `FT` reader - Frame type"]
+pub type FT_R = crate::BitReader<bool>;
+#[doc = "Field `FT` writer - Frame type"]
+pub type FT_W<'a, const O: u8> = crate::BitWriter<'a, u32, TMI1_SPEC, bool, O>;
+#[doc = "Field `FF` reader - Frame format"]
+pub type FF_R = crate::BitReader<bool>;
+#[doc = "Field `FF` writer - Frame format"]
+pub type FF_W<'a, const O: u8> = crate::BitWriter<'a, u32, TMI1_SPEC, bool, O>;
+#[doc = "Field `EFID` reader - The frame identifier"]
+pub type EFID_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `EFID` writer - The frame identifier"]
+pub type EFID_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TMI1_SPEC, u32, u32, 18, O>;
+#[doc = "Field `SFID_EFID` reader - The frame identifier"]
+pub type SFID_EFID_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `SFID_EFID` writer - The frame identifier"]
+pub type SFID_EFID_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TMI1_SPEC, u16, u16, 11, O>;
 impl R {
+    #[doc = "Bit 0 - Transmit enable"]
+    #[inline(always)]
+    pub fn ten(&self) -> TEN_R {
+        TEN_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Frame type"]
+    #[inline(always)]
+    pub fn ft(&self) -> FT_R {
+        FT_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Frame format"]
+    #[inline(always)]
+    pub fn ff(&self) -> FF_R {
+        FF_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bits 3:20 - The frame identifier"]
+    #[inline(always)]
+    pub fn efid(&self) -> EFID_R {
+        EFID_R::new((self.bits >> 3) & 0x0003_ffff)
+    }
     #[doc = "Bits 21:31 - The frame identifier"]
     #[inline(always)]
     pub fn sfid_efid(&self) -> SFID_EFID_R {
         SFID_EFID_R::new(((self.bits >> 21) & 0x07ff) as u16)
     }
-    #[doc = "Bits 3:20 - The frame identifier"]
-    #[inline(always)]
-    pub fn efid(&self) -> EFID_R {
-        EFID_R::new(((self.bits >> 3) & 0x0003_ffff) as u32)
-    }
-    #[doc = "Bit 2 - Frame format"]
-    #[inline(always)]
-    pub fn ff(&self) -> FF_R {
-        FF_R::new(((self.bits >> 2) & 0x01) != 0)
-    }
-    #[doc = "Bit 1 - Frame type"]
-    #[inline(always)]
-    pub fn ft(&self) -> FT_R {
-        FT_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Transmit enable"]
-    #[inline(always)]
-    pub fn ten(&self) -> TEN_R {
-        TEN_R::new((self.bits & 0x01) != 0)
-    }
 }
 impl W {
-    #[doc = "Bits 21:31 - The frame identifier"]
+    #[doc = "Bit 0 - Transmit enable"]
     #[inline(always)]
-    pub fn sfid_efid(&mut self) -> SFID_EFID_W {
-        SFID_EFID_W { w: self }
-    }
-    #[doc = "Bits 3:20 - The frame identifier"]
-    #[inline(always)]
-    pub fn efid(&mut self) -> EFID_W {
-        EFID_W { w: self }
-    }
-    #[doc = "Bit 2 - Frame format"]
-    #[inline(always)]
-    pub fn ff(&mut self) -> FF_W {
-        FF_W { w: self }
+    #[must_use]
+    pub fn ten(&mut self) -> TEN_W<0> {
+        TEN_W::new(self)
     }
     #[doc = "Bit 1 - Frame type"]
     #[inline(always)]
-    pub fn ft(&mut self) -> FT_W {
-        FT_W { w: self }
+    #[must_use]
+    pub fn ft(&mut self) -> FT_W<1> {
+        FT_W::new(self)
     }
-    #[doc = "Bit 0 - Transmit enable"]
+    #[doc = "Bit 2 - Frame format"]
     #[inline(always)]
-    pub fn ten(&mut self) -> TEN_W {
-        TEN_W { w: self }
+    #[must_use]
+    pub fn ff(&mut self) -> FF_W<2> {
+        FF_W::new(self)
     }
+    #[doc = "Bits 3:20 - The frame identifier"]
+    #[inline(always)]
+    #[must_use]
+    pub fn efid(&mut self) -> EFID_W<3> {
+        EFID_W::new(self)
+    }
+    #[doc = "Bits 21:31 - The frame identifier"]
+    #[inline(always)]
+    #[must_use]
+    pub fn sfid_efid(&mut self) -> SFID_EFID_W<21> {
+        SFID_EFID_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Transmit mailbox identifier register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tmi1](index.html) module"]
+pub struct TMI1_SPEC;
+impl crate::RegisterSpec for TMI1_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [tmi1::R](R) reader structure"]
+impl crate::Readable for TMI1_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [tmi1::W](W) writer structure"]
+impl crate::Writable for TMI1_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets TMI1 to value 0"]
+impl crate::Resettable for TMI1_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

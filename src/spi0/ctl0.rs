@@ -1,482 +1,275 @@
-#[doc = "Reader of register CTL0"]
-pub type R = crate::R<u16, super::CTL0>;
-#[doc = "Writer for register CTL0"]
-pub type W = crate::W<u16, super::CTL0>;
-#[doc = "Register CTL0 `reset()`'s with value 0"]
-impl crate::ResetValue for super::CTL0 {
-    type Type = u16;
+#[doc = "Register `CTL0` reader"]
+pub struct R(crate::R<CTL0_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CTL0_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `BDEN`"]
-pub type BDEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `BDEN`"]
-pub struct BDEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BDEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<CTL0_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u16) & 0x01) << 15);
-        self.w
+    fn from(reader: crate::R<CTL0_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `BDOEN`"]
-pub type BDOEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `BDOEN`"]
-pub struct BDOEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BDOEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `CTL0` writer"]
+pub struct W(crate::W<CTL0_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CTL0_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u16) & 0x01) << 14);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CRCEN`"]
-pub type CRCEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CRCEN`"]
-pub struct CRCEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRCEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u16) & 0x01) << 13);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `CRCNT`"]
-pub type CRCNT_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CRCNT`"]
-pub struct CRCNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRCNT_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<CTL0_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u16) & 0x01) << 12);
-        self.w
+    fn from(writer: crate::W<CTL0_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `FF16`"]
-pub type FF16_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FF16`"]
-pub struct FF16_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FF16_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u16) & 0x01) << 11);
-        self.w
-    }
-}
-#[doc = "Reader of field `RO`"]
-pub type RO_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RO`"]
-pub struct RO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u16) & 0x01) << 10);
-        self.w
-    }
-}
-#[doc = "Reader of field `SWNSSEN`"]
-pub type SWNSSEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SWNSSEN`"]
-pub struct SWNSSEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SWNSSEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u16) & 0x01) << 9);
-        self.w
-    }
-}
-#[doc = "Reader of field `SWNSS`"]
-pub type SWNSS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SWNSS`"]
-pub struct SWNSS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SWNSS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u16) & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Reader of field `LF`"]
-pub type LF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `LF`"]
-pub struct LF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u16) & 0x01) << 7);
-        self.w
-    }
-}
-#[doc = "Reader of field `SPIEN`"]
-pub type SPIEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SPIEN`"]
-pub struct SPIEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPIEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u16) & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Reader of field `PSC`"]
-pub type PSC_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `PSC`"]
-pub struct PSC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PSC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 3)) | (((value as u16) & 0x07) << 3);
-        self.w
-    }
-}
-#[doc = "Reader of field `MSTMOD`"]
-pub type MSTMOD_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `MSTMOD`"]
-pub struct MSTMOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MSTMOD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u16) & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Reader of field `CKPL`"]
-pub type CKPL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CKPL`"]
-pub struct CKPL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CKPL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u16) & 0x01) << 1);
-        self.w
-    }
-}
-#[doc = "Reader of field `CKPH`"]
-pub type CKPH_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CKPH`"]
-pub struct CKPH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CKPH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u16) & 0x01);
-        self.w
-    }
-}
+#[doc = "Field `CKPH` reader - Clock Phase Selection"]
+pub type CKPH_R = crate::BitReader<bool>;
+#[doc = "Field `CKPH` writer - Clock Phase Selection"]
+pub type CKPH_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `CKPL` reader - Clock polarity Selection"]
+pub type CKPL_R = crate::BitReader<bool>;
+#[doc = "Field `CKPL` writer - Clock polarity Selection"]
+pub type CKPL_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `MSTMOD` reader - Master Mode Enable"]
+pub type MSTMOD_R = crate::BitReader<bool>;
+#[doc = "Field `MSTMOD` writer - Master Mode Enable"]
+pub type MSTMOD_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `PSC` reader - Master Clock Prescaler Selection"]
+pub type PSC_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `PSC` writer - Master Clock Prescaler Selection"]
+pub type PSC_W<'a, const O: u8> = crate::FieldWriter<'a, u16, CTL0_SPEC, u8, u8, 3, O>;
+#[doc = "Field `SPIEN` reader - SPI enable"]
+pub type SPIEN_R = crate::BitReader<bool>;
+#[doc = "Field `SPIEN` writer - SPI enable"]
+pub type SPIEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `LF` reader - LSB First Mode"]
+pub type LF_R = crate::BitReader<bool>;
+#[doc = "Field `LF` writer - LSB First Mode"]
+pub type LF_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `SWNSS` reader - NSS Pin Selection In NSS Software Mode"]
+pub type SWNSS_R = crate::BitReader<bool>;
+#[doc = "Field `SWNSS` writer - NSS Pin Selection In NSS Software Mode"]
+pub type SWNSS_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `SWNSSEN` reader - NSS Software Mode Selection"]
+pub type SWNSSEN_R = crate::BitReader<bool>;
+#[doc = "Field `SWNSSEN` writer - NSS Software Mode Selection"]
+pub type SWNSSEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `RO` reader - Receive only"]
+pub type RO_R = crate::BitReader<bool>;
+#[doc = "Field `RO` writer - Receive only"]
+pub type RO_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `FF16` reader - Data frame format"]
+pub type FF16_R = crate::BitReader<bool>;
+#[doc = "Field `FF16` writer - Data frame format"]
+pub type FF16_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `CRCNT` reader - CRC Next Transfer"]
+pub type CRCNT_R = crate::BitReader<bool>;
+#[doc = "Field `CRCNT` writer - CRC Next Transfer"]
+pub type CRCNT_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `CRCEN` reader - CRC Calculation Enable"]
+pub type CRCEN_R = crate::BitReader<bool>;
+#[doc = "Field `CRCEN` writer - CRC Calculation Enable"]
+pub type CRCEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `BDOEN` reader - Bidirectional Transmit output enable"]
+pub type BDOEN_R = crate::BitReader<bool>;
+#[doc = "Field `BDOEN` writer - Bidirectional Transmit output enable"]
+pub type BDOEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `BDEN` reader - Bidirectional enable"]
+pub type BDEN_R = crate::BitReader<bool>;
+#[doc = "Field `BDEN` writer - Bidirectional enable"]
+pub type BDEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 15 - Bidirectional enable"]
+    #[doc = "Bit 0 - Clock Phase Selection"]
     #[inline(always)]
-    pub fn bden(&self) -> BDEN_R {
-        BDEN_R::new(((self.bits >> 15) & 0x01) != 0)
-    }
-    #[doc = "Bit 14 - Bidirectional Transmit output enable"]
-    #[inline(always)]
-    pub fn bdoen(&self) -> BDOEN_R {
-        BDOEN_R::new(((self.bits >> 14) & 0x01) != 0)
-    }
-    #[doc = "Bit 13 - CRC Calculation Enable"]
-    #[inline(always)]
-    pub fn crcen(&self) -> CRCEN_R {
-        CRCEN_R::new(((self.bits >> 13) & 0x01) != 0)
-    }
-    #[doc = "Bit 12 - CRC Next Transfer"]
-    #[inline(always)]
-    pub fn crcnt(&self) -> CRCNT_R {
-        CRCNT_R::new(((self.bits >> 12) & 0x01) != 0)
-    }
-    #[doc = "Bit 11 - Data frame format"]
-    #[inline(always)]
-    pub fn ff16(&self) -> FF16_R {
-        FF16_R::new(((self.bits >> 11) & 0x01) != 0)
-    }
-    #[doc = "Bit 10 - Receive only"]
-    #[inline(always)]
-    pub fn ro(&self) -> RO_R {
-        RO_R::new(((self.bits >> 10) & 0x01) != 0)
-    }
-    #[doc = "Bit 9 - NSS Software Mode Selection"]
-    #[inline(always)]
-    pub fn swnssen(&self) -> SWNSSEN_R {
-        SWNSSEN_R::new(((self.bits >> 9) & 0x01) != 0)
-    }
-    #[doc = "Bit 8 - NSS Pin Selection In NSS Software Mode"]
-    #[inline(always)]
-    pub fn swnss(&self) -> SWNSS_R {
-        SWNSS_R::new(((self.bits >> 8) & 0x01) != 0)
-    }
-    #[doc = "Bit 7 - LSB First Mode"]
-    #[inline(always)]
-    pub fn lf(&self) -> LF_R {
-        LF_R::new(((self.bits >> 7) & 0x01) != 0)
-    }
-    #[doc = "Bit 6 - SPI enable"]
-    #[inline(always)]
-    pub fn spien(&self) -> SPIEN_R {
-        SPIEN_R::new(((self.bits >> 6) & 0x01) != 0)
-    }
-    #[doc = "Bits 3:5 - Master Clock Prescaler Selection"]
-    #[inline(always)]
-    pub fn psc(&self) -> PSC_R {
-        PSC_R::new(((self.bits >> 3) & 0x07) as u8)
-    }
-    #[doc = "Bit 2 - Master Mode Enable"]
-    #[inline(always)]
-    pub fn mstmod(&self) -> MSTMOD_R {
-        MSTMOD_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn ckph(&self) -> CKPH_R {
+        CKPH_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Clock polarity Selection"]
     #[inline(always)]
     pub fn ckpl(&self) -> CKPL_R {
-        CKPL_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Clock Phase Selection"]
-    #[inline(always)]
-    pub fn ckph(&self) -> CKPH_R {
-        CKPH_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 15 - Bidirectional enable"]
-    #[inline(always)]
-    pub fn bden(&mut self) -> BDEN_W {
-        BDEN_W { w: self }
-    }
-    #[doc = "Bit 14 - Bidirectional Transmit output enable"]
-    #[inline(always)]
-    pub fn bdoen(&mut self) -> BDOEN_W {
-        BDOEN_W { w: self }
-    }
-    #[doc = "Bit 13 - CRC Calculation Enable"]
-    #[inline(always)]
-    pub fn crcen(&mut self) -> CRCEN_W {
-        CRCEN_W { w: self }
-    }
-    #[doc = "Bit 12 - CRC Next Transfer"]
-    #[inline(always)]
-    pub fn crcnt(&mut self) -> CRCNT_W {
-        CRCNT_W { w: self }
-    }
-    #[doc = "Bit 11 - Data frame format"]
-    #[inline(always)]
-    pub fn ff16(&mut self) -> FF16_W {
-        FF16_W { w: self }
-    }
-    #[doc = "Bit 10 - Receive only"]
-    #[inline(always)]
-    pub fn ro(&mut self) -> RO_W {
-        RO_W { w: self }
-    }
-    #[doc = "Bit 9 - NSS Software Mode Selection"]
-    #[inline(always)]
-    pub fn swnssen(&mut self) -> SWNSSEN_W {
-        SWNSSEN_W { w: self }
-    }
-    #[doc = "Bit 8 - NSS Pin Selection In NSS Software Mode"]
-    #[inline(always)]
-    pub fn swnss(&mut self) -> SWNSS_W {
-        SWNSS_W { w: self }
-    }
-    #[doc = "Bit 7 - LSB First Mode"]
-    #[inline(always)]
-    pub fn lf(&mut self) -> LF_W {
-        LF_W { w: self }
-    }
-    #[doc = "Bit 6 - SPI enable"]
-    #[inline(always)]
-    pub fn spien(&mut self) -> SPIEN_W {
-        SPIEN_W { w: self }
-    }
-    #[doc = "Bits 3:5 - Master Clock Prescaler Selection"]
-    #[inline(always)]
-    pub fn psc(&mut self) -> PSC_W {
-        PSC_W { w: self }
+        CKPL_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Master Mode Enable"]
     #[inline(always)]
-    pub fn mstmod(&mut self) -> MSTMOD_W {
-        MSTMOD_W { w: self }
+    pub fn mstmod(&self) -> MSTMOD_R {
+        MSTMOD_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bits 3:5 - Master Clock Prescaler Selection"]
+    #[inline(always)]
+    pub fn psc(&self) -> PSC_R {
+        PSC_R::new(((self.bits >> 3) & 7) as u8)
+    }
+    #[doc = "Bit 6 - SPI enable"]
+    #[inline(always)]
+    pub fn spien(&self) -> SPIEN_R {
+        SPIEN_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - LSB First Mode"]
+    #[inline(always)]
+    pub fn lf(&self) -> LF_R {
+        LF_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - NSS Pin Selection In NSS Software Mode"]
+    #[inline(always)]
+    pub fn swnss(&self) -> SWNSS_R {
+        SWNSS_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - NSS Software Mode Selection"]
+    #[inline(always)]
+    pub fn swnssen(&self) -> SWNSSEN_R {
+        SWNSSEN_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Receive only"]
+    #[inline(always)]
+    pub fn ro(&self) -> RO_R {
+        RO_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Data frame format"]
+    #[inline(always)]
+    pub fn ff16(&self) -> FF16_R {
+        FF16_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - CRC Next Transfer"]
+    #[inline(always)]
+    pub fn crcnt(&self) -> CRCNT_R {
+        CRCNT_R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - CRC Calculation Enable"]
+    #[inline(always)]
+    pub fn crcen(&self) -> CRCEN_R {
+        CRCEN_R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - Bidirectional Transmit output enable"]
+    #[inline(always)]
+    pub fn bdoen(&self) -> BDOEN_R {
+        BDOEN_R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - Bidirectional enable"]
+    #[inline(always)]
+    pub fn bden(&self) -> BDEN_R {
+        BDEN_R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Clock Phase Selection"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ckph(&mut self) -> CKPH_W<0> {
+        CKPH_W::new(self)
     }
     #[doc = "Bit 1 - Clock polarity Selection"]
     #[inline(always)]
-    pub fn ckpl(&mut self) -> CKPL_W {
-        CKPL_W { w: self }
+    #[must_use]
+    pub fn ckpl(&mut self) -> CKPL_W<1> {
+        CKPL_W::new(self)
     }
-    #[doc = "Bit 0 - Clock Phase Selection"]
+    #[doc = "Bit 2 - Master Mode Enable"]
     #[inline(always)]
-    pub fn ckph(&mut self) -> CKPH_W {
-        CKPH_W { w: self }
+    #[must_use]
+    pub fn mstmod(&mut self) -> MSTMOD_W<2> {
+        MSTMOD_W::new(self)
     }
+    #[doc = "Bits 3:5 - Master Clock Prescaler Selection"]
+    #[inline(always)]
+    #[must_use]
+    pub fn psc(&mut self) -> PSC_W<3> {
+        PSC_W::new(self)
+    }
+    #[doc = "Bit 6 - SPI enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn spien(&mut self) -> SPIEN_W<6> {
+        SPIEN_W::new(self)
+    }
+    #[doc = "Bit 7 - LSB First Mode"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lf(&mut self) -> LF_W<7> {
+        LF_W::new(self)
+    }
+    #[doc = "Bit 8 - NSS Pin Selection In NSS Software Mode"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swnss(&mut self) -> SWNSS_W<8> {
+        SWNSS_W::new(self)
+    }
+    #[doc = "Bit 9 - NSS Software Mode Selection"]
+    #[inline(always)]
+    #[must_use]
+    pub fn swnssen(&mut self) -> SWNSSEN_W<9> {
+        SWNSSEN_W::new(self)
+    }
+    #[doc = "Bit 10 - Receive only"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ro(&mut self) -> RO_W<10> {
+        RO_W::new(self)
+    }
+    #[doc = "Bit 11 - Data frame format"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ff16(&mut self) -> FF16_W<11> {
+        FF16_W::new(self)
+    }
+    #[doc = "Bit 12 - CRC Next Transfer"]
+    #[inline(always)]
+    #[must_use]
+    pub fn crcnt(&mut self) -> CRCNT_W<12> {
+        CRCNT_W::new(self)
+    }
+    #[doc = "Bit 13 - CRC Calculation Enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn crcen(&mut self) -> CRCEN_W<13> {
+        CRCEN_W::new(self)
+    }
+    #[doc = "Bit 14 - Bidirectional Transmit output enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn bdoen(&mut self) -> BDOEN_W<14> {
+        BDOEN_W::new(self)
+    }
+    #[doc = "Bit 15 - Bidirectional enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn bden(&mut self) -> BDEN_W<15> {
+        BDEN_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "control register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl0](index.html) module"]
+pub struct CTL0_SPEC;
+impl crate::RegisterSpec for CTL0_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [ctl0::R](R) reader structure"]
+impl crate::Readable for CTL0_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [ctl0::W](W) writer structure"]
+impl crate::Writable for CTL0_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets CTL0 to value 0"]
+impl crate::Resettable for CTL0_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

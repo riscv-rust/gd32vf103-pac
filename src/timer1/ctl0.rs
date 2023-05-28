@@ -1,268 +1,185 @@
-#[doc = "Reader of register CTL0"]
-pub type R = crate::R<u16, super::CTL0>;
-#[doc = "Writer for register CTL0"]
-pub type W = crate::W<u16, super::CTL0>;
-#[doc = "Register CTL0 `reset()`'s with value 0"]
-impl crate::ResetValue for super::CTL0 {
-    type Type = u16;
+#[doc = "Register `CTL0` reader"]
+pub struct R(crate::R<CTL0_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CTL0_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CKDIV`"]
-pub type CKDIV_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `CKDIV`"]
-pub struct CKDIV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CKDIV_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<CTL0_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | (((value as u16) & 0x03) << 8);
-        self.w
+    fn from(reader: crate::R<CTL0_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `ARSE`"]
-pub type ARSE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ARSE`"]
-pub struct ARSE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ARSE_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `CTL0` writer"]
+pub struct W(crate::W<CTL0_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CTL0_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u16) & 0x01) << 7);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CAM`"]
-pub type CAM_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `CAM`"]
-pub struct CAM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CAM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 5)) | (((value as u16) & 0x03) << 5);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `DIR`"]
-pub type DIR_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DIR`"]
-pub struct DIR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DIR_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<CTL0_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u16) & 0x01) << 4);
-        self.w
+    fn from(writer: crate::W<CTL0_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `SPM`"]
-pub type SPM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SPM`"]
-pub struct SPM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u16) & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Reader of field `UPS`"]
-pub type UPS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UPS`"]
-pub struct UPS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UPS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u16) & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Reader of field `UPDIS`"]
-pub type UPDIS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UPDIS`"]
-pub struct UPDIS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UPDIS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u16) & 0x01) << 1);
-        self.w
-    }
-}
-#[doc = "Reader of field `CEN`"]
-pub type CEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CEN`"]
-pub struct CEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u16) & 0x01);
-        self.w
-    }
-}
+#[doc = "Field `CEN` reader - Counter enable"]
+pub type CEN_R = crate::BitReader<bool>;
+#[doc = "Field `CEN` writer - Counter enable"]
+pub type CEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `UPDIS` reader - Update disable"]
+pub type UPDIS_R = crate::BitReader<bool>;
+#[doc = "Field `UPDIS` writer - Update disable"]
+pub type UPDIS_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `UPS` reader - Update source"]
+pub type UPS_R = crate::BitReader<bool>;
+#[doc = "Field `UPS` writer - Update source"]
+pub type UPS_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `SPM` reader - Single pulse mode"]
+pub type SPM_R = crate::BitReader<bool>;
+#[doc = "Field `SPM` writer - Single pulse mode"]
+pub type SPM_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `DIR` reader - Direction"]
+pub type DIR_R = crate::BitReader<bool>;
+#[doc = "Field `DIR` writer - Direction"]
+pub type DIR_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `CAM` reader - Counter aligns mode selection"]
+pub type CAM_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CAM` writer - Counter aligns mode selection"]
+pub type CAM_W<'a, const O: u8> = crate::FieldWriter<'a, u16, CTL0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `ARSE` reader - Auto-reload shadow enable"]
+pub type ARSE_R = crate::BitReader<bool>;
+#[doc = "Field `ARSE` writer - Auto-reload shadow enable"]
+pub type ARSE_W<'a, const O: u8> = crate::BitWriter<'a, u16, CTL0_SPEC, bool, O>;
+#[doc = "Field `CKDIV` reader - Clock division"]
+pub type CKDIV_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CKDIV` writer - Clock division"]
+pub type CKDIV_W<'a, const O: u8> = crate::FieldWriter<'a, u16, CTL0_SPEC, u8, u8, 2, O>;
 impl R {
-    #[doc = "Bits 8:9 - Clock division"]
+    #[doc = "Bit 0 - Counter enable"]
     #[inline(always)]
-    pub fn ckdiv(&self) -> CKDIV_R {
-        CKDIV_R::new(((self.bits >> 8) & 0x03) as u8)
-    }
-    #[doc = "Bit 7 - Auto-reload shadow enable"]
-    #[inline(always)]
-    pub fn arse(&self) -> ARSE_R {
-        ARSE_R::new(((self.bits >> 7) & 0x01) != 0)
-    }
-    #[doc = "Bits 5:6 - Counter aligns mode selection"]
-    #[inline(always)]
-    pub fn cam(&self) -> CAM_R {
-        CAM_R::new(((self.bits >> 5) & 0x03) as u8)
-    }
-    #[doc = "Bit 4 - Direction"]
-    #[inline(always)]
-    pub fn dir(&self) -> DIR_R {
-        DIR_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 3 - Single pulse mode"]
-    #[inline(always)]
-    pub fn spm(&self) -> SPM_R {
-        SPM_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2 - Update source"]
-    #[inline(always)]
-    pub fn ups(&self) -> UPS_R {
-        UPS_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn cen(&self) -> CEN_R {
+        CEN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Update disable"]
     #[inline(always)]
     pub fn updis(&self) -> UPDIS_R {
-        UPDIS_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Counter enable"]
-    #[inline(always)]
-    pub fn cen(&self) -> CEN_R {
-        CEN_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bits 8:9 - Clock division"]
-    #[inline(always)]
-    pub fn ckdiv(&mut self) -> CKDIV_W {
-        CKDIV_W { w: self }
-    }
-    #[doc = "Bit 7 - Auto-reload shadow enable"]
-    #[inline(always)]
-    pub fn arse(&mut self) -> ARSE_W {
-        ARSE_W { w: self }
-    }
-    #[doc = "Bits 5:6 - Counter aligns mode selection"]
-    #[inline(always)]
-    pub fn cam(&mut self) -> CAM_W {
-        CAM_W { w: self }
-    }
-    #[doc = "Bit 4 - Direction"]
-    #[inline(always)]
-    pub fn dir(&mut self) -> DIR_W {
-        DIR_W { w: self }
-    }
-    #[doc = "Bit 3 - Single pulse mode"]
-    #[inline(always)]
-    pub fn spm(&mut self) -> SPM_W {
-        SPM_W { w: self }
+        UPDIS_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Update source"]
     #[inline(always)]
-    pub fn ups(&mut self) -> UPS_W {
-        UPS_W { w: self }
+    pub fn ups(&self) -> UPS_R {
+        UPS_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Single pulse mode"]
+    #[inline(always)]
+    pub fn spm(&self) -> SPM_R {
+        SPM_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Direction"]
+    #[inline(always)]
+    pub fn dir(&self) -> DIR_R {
+        DIR_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bits 5:6 - Counter aligns mode selection"]
+    #[inline(always)]
+    pub fn cam(&self) -> CAM_R {
+        CAM_R::new(((self.bits >> 5) & 3) as u8)
+    }
+    #[doc = "Bit 7 - Auto-reload shadow enable"]
+    #[inline(always)]
+    pub fn arse(&self) -> ARSE_R {
+        ARSE_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bits 8:9 - Clock division"]
+    #[inline(always)]
+    pub fn ckdiv(&self) -> CKDIV_R {
+        CKDIV_R::new(((self.bits >> 8) & 3) as u8)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Counter enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cen(&mut self) -> CEN_W<0> {
+        CEN_W::new(self)
     }
     #[doc = "Bit 1 - Update disable"]
     #[inline(always)]
-    pub fn updis(&mut self) -> UPDIS_W {
-        UPDIS_W { w: self }
+    #[must_use]
+    pub fn updis(&mut self) -> UPDIS_W<1> {
+        UPDIS_W::new(self)
     }
-    #[doc = "Bit 0 - Counter enable"]
+    #[doc = "Bit 2 - Update source"]
     #[inline(always)]
-    pub fn cen(&mut self) -> CEN_W {
-        CEN_W { w: self }
+    #[must_use]
+    pub fn ups(&mut self) -> UPS_W<2> {
+        UPS_W::new(self)
     }
+    #[doc = "Bit 3 - Single pulse mode"]
+    #[inline(always)]
+    #[must_use]
+    pub fn spm(&mut self) -> SPM_W<3> {
+        SPM_W::new(self)
+    }
+    #[doc = "Bit 4 - Direction"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dir(&mut self) -> DIR_W<4> {
+        DIR_W::new(self)
+    }
+    #[doc = "Bits 5:6 - Counter aligns mode selection"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cam(&mut self) -> CAM_W<5> {
+        CAM_W::new(self)
+    }
+    #[doc = "Bit 7 - Auto-reload shadow enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn arse(&mut self) -> ARSE_W<7> {
+        ARSE_W::new(self)
+    }
+    #[doc = "Bits 8:9 - Clock division"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ckdiv(&mut self) -> CKDIV_W<8> {
+        CKDIV_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "control register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl0](index.html) module"]
+pub struct CTL0_SPEC;
+impl crate::RegisterSpec for CTL0_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [ctl0::R](R) reader structure"]
+impl crate::Readable for CTL0_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [ctl0::W](W) writer structure"]
+impl crate::Writable for CTL0_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets CTL0 to value 0"]
+impl crate::Resettable for CTL0_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

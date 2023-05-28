@@ -1,219 +1,93 @@
-#[doc = "Reader of register CTL"]
-pub type R = crate::R<u32, super::CTL>;
-#[doc = "Writer for register CTL"]
-pub type W = crate::W<u32, super::CTL>;
-#[doc = "Register CTL `reset()`'s with value 0x83"]
-impl crate::ResetValue for super::CTL {
-    type Type = u32;
+#[doc = "Register `CTL` reader"]
+pub struct R(crate::R<CTL_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CTL_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0x83
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `IRC8MEN`"]
-pub type IRC8MEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `IRC8MEN`"]
-pub struct IRC8MEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IRC8MEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<CTL_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<CTL_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `IRC8MSTB`"]
-pub type IRC8MSTB_R = crate::R<bool, bool>;
-#[doc = "Reader of field `IRC8MADJ`"]
-pub type IRC8MADJ_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `IRC8MADJ`"]
-pub struct IRC8MADJ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IRC8MADJ_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+#[doc = "Register `CTL` writer"]
+pub struct W(crate::W<CTL_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CTL_SPEC>;
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 3)) | (((value as u32) & 0x1f) << 3);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `IRC8MCALIB`"]
-pub type IRC8MCALIB_R = crate::R<u8, u8>;
-#[doc = "Reader of field `HXTALEN`"]
-pub type HXTALEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `HXTALEN`"]
-pub struct HXTALEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HXTALEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `HXTALSTB`"]
-pub type HXTALSTB_R = crate::R<bool, bool>;
-#[doc = "Reader of field `HXTALBPS`"]
-pub type HXTALBPS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `HXTALBPS`"]
-pub struct HXTALBPS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HXTALBPS_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<CTL_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | (((value as u32) & 0x01) << 18);
-        self.w
+    fn from(writer: crate::W<CTL_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `CKMEN`"]
-pub type CKMEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CKMEN`"]
-pub struct CKMEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CKMEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | (((value as u32) & 0x01) << 19);
-        self.w
-    }
-}
-#[doc = "Reader of field `PLLEN`"]
-pub type PLLEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PLLEN`"]
-pub struct PLLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PLLEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | (((value as u32) & 0x01) << 24);
-        self.w
-    }
-}
-#[doc = "Reader of field `PLLSTB`"]
-pub type PLLSTB_R = crate::R<bool, bool>;
-#[doc = "Reader of field `PLL1EN`"]
-pub type PLL1EN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PLL1EN`"]
-pub struct PLL1EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PLL1EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | (((value as u32) & 0x01) << 26);
-        self.w
-    }
-}
-#[doc = "Reader of field `PLL1STB`"]
-pub type PLL1STB_R = crate::R<bool, bool>;
-#[doc = "Reader of field `PLL2EN`"]
-pub type PLL2EN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PLL2EN`"]
-pub struct PLL2EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PLL2EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | (((value as u32) & 0x01) << 28);
-        self.w
-    }
-}
-#[doc = "Reader of field `PLL2STB`"]
-pub type PLL2STB_R = crate::R<bool, bool>;
+#[doc = "Field `IRC8MEN` reader - Internal 8MHz RC oscillator Enable"]
+pub type IRC8MEN_R = crate::BitReader<bool>;
+#[doc = "Field `IRC8MEN` writer - Internal 8MHz RC oscillator Enable"]
+pub type IRC8MEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+#[doc = "Field `IRC8MSTB` reader - IRC8M Internal 8MHz RC Oscillator stabilization Flag"]
+pub type IRC8MSTB_R = crate::BitReader<bool>;
+#[doc = "Field `IRC8MADJ` reader - Internal 8MHz RC Oscillator clock trim adjust value"]
+pub type IRC8MADJ_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `IRC8MADJ` writer - Internal 8MHz RC Oscillator clock trim adjust value"]
+pub type IRC8MADJ_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTL_SPEC, u8, u8, 5, O>;
+#[doc = "Field `IRC8MCALIB` reader - Internal 8MHz RC Oscillator calibration value register"]
+pub type IRC8MCALIB_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `HXTALEN` reader - External High Speed oscillator Enable"]
+pub type HXTALEN_R = crate::BitReader<bool>;
+#[doc = "Field `HXTALEN` writer - External High Speed oscillator Enable"]
+pub type HXTALEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+#[doc = "Field `HXTALSTB` reader - External crystal oscillator (HXTAL) clock stabilization flag"]
+pub type HXTALSTB_R = crate::BitReader<bool>;
+#[doc = "Field `HXTALBPS` reader - External crystal oscillator (HXTAL) clock bypass mode enable"]
+pub type HXTALBPS_R = crate::BitReader<bool>;
+#[doc = "Field `HXTALBPS` writer - External crystal oscillator (HXTAL) clock bypass mode enable"]
+pub type HXTALBPS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+#[doc = "Field `CKMEN` reader - HXTAL Clock Monitor Enable"]
+pub type CKMEN_R = crate::BitReader<bool>;
+#[doc = "Field `CKMEN` writer - HXTAL Clock Monitor Enable"]
+pub type CKMEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+#[doc = "Field `PLLEN` reader - PLL enable"]
+pub type PLLEN_R = crate::BitReader<bool>;
+#[doc = "Field `PLLEN` writer - PLL enable"]
+pub type PLLEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+#[doc = "Field `PLLSTB` reader - PLL Clock Stabilization Flag"]
+pub type PLLSTB_R = crate::BitReader<bool>;
+#[doc = "Field `PLL1EN` reader - PLL1 enable"]
+pub type PLL1EN_R = crate::BitReader<bool>;
+#[doc = "Field `PLL1EN` writer - PLL1 enable"]
+pub type PLL1EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+#[doc = "Field `PLL1STB` reader - PLL1 Clock Stabilization Flag"]
+pub type PLL1STB_R = crate::BitReader<bool>;
+#[doc = "Field `PLL2EN` reader - PLL2 enable"]
+pub type PLL2EN_R = crate::BitReader<bool>;
+#[doc = "Field `PLL2EN` writer - PLL2 enable"]
+pub type PLL2EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+#[doc = "Field `PLL2STB` reader - PLL2 Clock Stabilization Flag"]
+pub type PLL2STB_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Internal 8MHz RC oscillator Enable"]
     #[inline(always)]
     pub fn irc8men(&self) -> IRC8MEN_R {
-        IRC8MEN_R::new((self.bits & 0x01) != 0)
+        IRC8MEN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - IRC8M Internal 8MHz RC Oscillator stabilization Flag"]
     #[inline(always)]
     pub fn irc8mstb(&self) -> IRC8MSTB_R {
-        IRC8MSTB_R::new(((self.bits >> 1) & 0x01) != 0)
+        IRC8MSTB_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 3:7 - Internal 8MHz RC Oscillator clock trim adjust value"]
     #[inline(always)]
@@ -228,93 +102,126 @@ impl R {
     #[doc = "Bit 16 - External High Speed oscillator Enable"]
     #[inline(always)]
     pub fn hxtalen(&self) -> HXTALEN_R {
-        HXTALEN_R::new(((self.bits >> 16) & 0x01) != 0)
+        HXTALEN_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - External crystal oscillator (HXTAL) clock stabilization flag"]
     #[inline(always)]
     pub fn hxtalstb(&self) -> HXTALSTB_R {
-        HXTALSTB_R::new(((self.bits >> 17) & 0x01) != 0)
+        HXTALSTB_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - External crystal oscillator (HXTAL) clock bypass mode enable"]
     #[inline(always)]
     pub fn hxtalbps(&self) -> HXTALBPS_R {
-        HXTALBPS_R::new(((self.bits >> 18) & 0x01) != 0)
+        HXTALBPS_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - HXTAL Clock Monitor Enable"]
     #[inline(always)]
     pub fn ckmen(&self) -> CKMEN_R {
-        CKMEN_R::new(((self.bits >> 19) & 0x01) != 0)
+        CKMEN_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 24 - PLL enable"]
     #[inline(always)]
     pub fn pllen(&self) -> PLLEN_R {
-        PLLEN_R::new(((self.bits >> 24) & 0x01) != 0)
+        PLLEN_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - PLL Clock Stabilization Flag"]
     #[inline(always)]
     pub fn pllstb(&self) -> PLLSTB_R {
-        PLLSTB_R::new(((self.bits >> 25) & 0x01) != 0)
+        PLLSTB_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - PLL1 enable"]
     #[inline(always)]
     pub fn pll1en(&self) -> PLL1EN_R {
-        PLL1EN_R::new(((self.bits >> 26) & 0x01) != 0)
+        PLL1EN_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - PLL1 Clock Stabilization Flag"]
     #[inline(always)]
     pub fn pll1stb(&self) -> PLL1STB_R {
-        PLL1STB_R::new(((self.bits >> 27) & 0x01) != 0)
+        PLL1STB_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - PLL2 enable"]
     #[inline(always)]
     pub fn pll2en(&self) -> PLL2EN_R {
-        PLL2EN_R::new(((self.bits >> 28) & 0x01) != 0)
+        PLL2EN_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - PLL2 Clock Stabilization Flag"]
     #[inline(always)]
     pub fn pll2stb(&self) -> PLL2STB_R {
-        PLL2STB_R::new(((self.bits >> 29) & 0x01) != 0)
+        PLL2STB_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Internal 8MHz RC oscillator Enable"]
     #[inline(always)]
-    pub fn irc8men(&mut self) -> IRC8MEN_W {
-        IRC8MEN_W { w: self }
+    #[must_use]
+    pub fn irc8men(&mut self) -> IRC8MEN_W<0> {
+        IRC8MEN_W::new(self)
     }
     #[doc = "Bits 3:7 - Internal 8MHz RC Oscillator clock trim adjust value"]
     #[inline(always)]
-    pub fn irc8madj(&mut self) -> IRC8MADJ_W {
-        IRC8MADJ_W { w: self }
+    #[must_use]
+    pub fn irc8madj(&mut self) -> IRC8MADJ_W<3> {
+        IRC8MADJ_W::new(self)
     }
     #[doc = "Bit 16 - External High Speed oscillator Enable"]
     #[inline(always)]
-    pub fn hxtalen(&mut self) -> HXTALEN_W {
-        HXTALEN_W { w: self }
+    #[must_use]
+    pub fn hxtalen(&mut self) -> HXTALEN_W<16> {
+        HXTALEN_W::new(self)
     }
     #[doc = "Bit 18 - External crystal oscillator (HXTAL) clock bypass mode enable"]
     #[inline(always)]
-    pub fn hxtalbps(&mut self) -> HXTALBPS_W {
-        HXTALBPS_W { w: self }
+    #[must_use]
+    pub fn hxtalbps(&mut self) -> HXTALBPS_W<18> {
+        HXTALBPS_W::new(self)
     }
     #[doc = "Bit 19 - HXTAL Clock Monitor Enable"]
     #[inline(always)]
-    pub fn ckmen(&mut self) -> CKMEN_W {
-        CKMEN_W { w: self }
+    #[must_use]
+    pub fn ckmen(&mut self) -> CKMEN_W<19> {
+        CKMEN_W::new(self)
     }
     #[doc = "Bit 24 - PLL enable"]
     #[inline(always)]
-    pub fn pllen(&mut self) -> PLLEN_W {
-        PLLEN_W { w: self }
+    #[must_use]
+    pub fn pllen(&mut self) -> PLLEN_W<24> {
+        PLLEN_W::new(self)
     }
     #[doc = "Bit 26 - PLL1 enable"]
     #[inline(always)]
-    pub fn pll1en(&mut self) -> PLL1EN_W {
-        PLL1EN_W { w: self }
+    #[must_use]
+    pub fn pll1en(&mut self) -> PLL1EN_W<26> {
+        PLL1EN_W::new(self)
     }
     #[doc = "Bit 28 - PLL2 enable"]
     #[inline(always)]
-    pub fn pll2en(&mut self) -> PLL2EN_W {
-        PLL2EN_W { w: self }
+    #[must_use]
+    pub fn pll2en(&mut self) -> PLL2EN_W<28> {
+        PLL2EN_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl](index.html) module"]
+pub struct CTL_SPEC;
+impl crate::RegisterSpec for CTL_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [ctl::R](R) reader structure"]
+impl crate::Readable for CTL_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [ctl::W](W) writer structure"]
+impl crate::Writable for CTL_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets CTL to value 0x83"]
+impl crate::Resettable for CTL_SPEC {
+    const RESET_VALUE: Self::Ux = 0x83;
 }
