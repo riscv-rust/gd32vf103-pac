@@ -1,51 +1,19 @@
 #[doc = "Register `EC` reader"]
-pub struct R(crate::R<EC_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<EC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<EC_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<EC_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<EC_SPEC>;
 #[doc = "Register `EC` writer"]
-pub struct W(crate::W<EC_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<EC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<EC_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<EC_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<EC_SPEC>;
 #[doc = "Field `PIN` reader - Event output pin selection"]
-pub type PIN_R = crate::FieldReader<u8, u8>;
+pub type PIN_R = crate::FieldReader;
 #[doc = "Field `PIN` writer - Event output pin selection"]
-pub type PIN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EC_SPEC, u8, u8, 4, O>;
+pub type PIN_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `PORT` reader - Event output port selection"]
-pub type PORT_R = crate::FieldReader<u8, u8>;
+pub type PORT_R = crate::FieldReader;
 #[doc = "Field `PORT` writer - Event output port selection"]
-pub type PORT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EC_SPEC, u8, u8, 3, O>;
+pub type PORT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `EOE` reader - Event output enable"]
-pub type EOE_R = crate::BitReader<bool>;
+pub type EOE_R = crate::BitReader;
 #[doc = "Field `EOE` writer - Event output enable"]
-pub type EOE_W<'a, const O: u8> = crate::BitWriter<'a, u32, EC_SPEC, bool, O>;
+pub type EOE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:3 - Event output pin selection"]
     #[inline(always)]
@@ -67,44 +35,36 @@ impl W {
     #[doc = "Bits 0:3 - Event output pin selection"]
     #[inline(always)]
     #[must_use]
-    pub fn pin(&mut self) -> PIN_W<0> {
-        PIN_W::new(self)
+    pub fn pin(&mut self) -> PIN_W<EC_SPEC> {
+        PIN_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Event output port selection"]
     #[inline(always)]
     #[must_use]
-    pub fn port(&mut self) -> PORT_W<4> {
-        PORT_W::new(self)
+    pub fn port(&mut self) -> PORT_W<EC_SPEC> {
+        PORT_W::new(self, 4)
     }
     #[doc = "Bit 7 - Event output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn eoe(&mut self) -> EOE_W<7> {
-        EOE_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn eoe(&mut self) -> EOE_W<EC_SPEC> {
+        EOE_W::new(self, 7)
     }
 }
-#[doc = "Event control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ec](index.html) module"]
+#[doc = "Event control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ec::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ec::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EC_SPEC;
 impl crate::RegisterSpec for EC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ec::R](R) reader structure"]
-impl crate::Readable for EC_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ec::W](W) writer structure"]
+#[doc = "`read()` method returns [`ec::R`](R) reader structure"]
+impl crate::Readable for EC_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ec::W`](W) writer structure"]
 impl crate::Writable for EC_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EC to value 0"]
 impl crate::Resettable for EC_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

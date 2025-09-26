@@ -118,6 +118,11 @@ EXTI:
       EXTI_LVD:
         value: 20
 
+EXMC:
+  _add:
+    _interrupts:
+      EXMC:
+        value: 68
 
 I2C0:
   _add:

@@ -1,61 +1,29 @@
 #[doc = "Register `RSTSCK` reader"]
-pub struct R(crate::R<RSTSCK_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RSTSCK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RSTSCK_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RSTSCK_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RSTSCK_SPEC>;
 #[doc = "Register `RSTSCK` writer"]
-pub struct W(crate::W<RSTSCK_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RSTSCK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RSTSCK_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RSTSCK_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RSTSCK_SPEC>;
 #[doc = "Field `IRC40KEN` reader - IRC40K enable"]
-pub type IRC40KEN_R = crate::BitReader<bool>;
+pub type IRC40KEN_R = crate::BitReader;
 #[doc = "Field `IRC40KEN` writer - IRC40K enable"]
-pub type IRC40KEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RSTSCK_SPEC, bool, O>;
+pub type IRC40KEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IRC40KSTB` reader - IRC40K stabilization"]
-pub type IRC40KSTB_R = crate::BitReader<bool>;
+pub type IRC40KSTB_R = crate::BitReader;
 #[doc = "Field `RSTFC` reader - Reset flag clear"]
-pub type RSTFC_R = crate::BitReader<bool>;
+pub type RSTFC_R = crate::BitReader;
 #[doc = "Field `RSTFC` writer - Reset flag clear"]
-pub type RSTFC_W<'a, const O: u8> = crate::BitWriter<'a, u32, RSTSCK_SPEC, bool, O>;
+pub type RSTFC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPRSTF` reader - External PIN reset flag"]
-pub type EPRSTF_R = crate::BitReader<bool>;
+pub type EPRSTF_R = crate::BitReader;
 #[doc = "Field `PORRSTF` reader - Power reset flag"]
-pub type PORRSTF_R = crate::BitReader<bool>;
+pub type PORRSTF_R = crate::BitReader;
 #[doc = "Field `SWRSTF` reader - Software reset flag"]
-pub type SWRSTF_R = crate::BitReader<bool>;
+pub type SWRSTF_R = crate::BitReader;
 #[doc = "Field `FWDGTRSTF` reader - Free Watchdog timer reset flag"]
-pub type FWDGTRSTF_R = crate::BitReader<bool>;
+pub type FWDGTRSTF_R = crate::BitReader;
 #[doc = "Field `WWDGTRSTF` reader - Window watchdog timer reset flag"]
-pub type WWDGTRSTF_R = crate::BitReader<bool>;
+pub type WWDGTRSTF_R = crate::BitReader;
 #[doc = "Field `LPRSTF` reader - Low-power reset flag"]
-pub type LPRSTF_R = crate::BitReader<bool>;
+pub type LPRSTF_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - IRC40K enable"]
     #[inline(always)]
@@ -107,38 +75,30 @@ impl W {
     #[doc = "Bit 0 - IRC40K enable"]
     #[inline(always)]
     #[must_use]
-    pub fn irc40ken(&mut self) -> IRC40KEN_W<0> {
-        IRC40KEN_W::new(self)
+    pub fn irc40ken(&mut self) -> IRC40KEN_W<RSTSCK_SPEC> {
+        IRC40KEN_W::new(self, 0)
     }
     #[doc = "Bit 24 - Reset flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn rstfc(&mut self) -> RSTFC_W<24> {
-        RSTFC_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn rstfc(&mut self) -> RSTFC_W<RSTSCK_SPEC> {
+        RSTFC_W::new(self, 24)
     }
 }
-#[doc = "Reset source /clock register (RCU_RSTSCK)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rstsck](index.html) module"]
+#[doc = "Reset source /clock register (RCU_RSTSCK)\n\nYou can [`read`](crate::Reg::read) this register and get [`rstsck::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rstsck::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RSTSCK_SPEC;
 impl crate::RegisterSpec for RSTSCK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rstsck::R](R) reader structure"]
-impl crate::Readable for RSTSCK_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rstsck::W](W) writer structure"]
+#[doc = "`read()` method returns [`rstsck::R`](R) reader structure"]
+impl crate::Readable for RSTSCK_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rstsck::W`](W) writer structure"]
 impl crate::Writable for RSTSCK_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RSTSCK to value 0x0c00_0000"]
 impl crate::Resettable for RSTSCK_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0c00_0000;
+    const RESET_VALUE: u32 = 0x0c00_0000;
 }

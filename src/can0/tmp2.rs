@@ -1,51 +1,19 @@
 #[doc = "Register `TMP2` reader"]
-pub struct R(crate::R<TMP2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TMP2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TMP2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TMP2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TMP2_SPEC>;
 #[doc = "Register `TMP2` writer"]
-pub struct W(crate::W<TMP2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TMP2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TMP2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TMP2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TMP2_SPEC>;
 #[doc = "Field `DLENC` reader - Data length code"]
-pub type DLENC_R = crate::FieldReader<u8, u8>;
+pub type DLENC_R = crate::FieldReader;
 #[doc = "Field `DLENC` writer - Data length code"]
-pub type DLENC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TMP2_SPEC, u8, u8, 4, O>;
+pub type DLENC_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TSEN` reader - Time stamp enable"]
-pub type TSEN_R = crate::BitReader<bool>;
+pub type TSEN_R = crate::BitReader;
 #[doc = "Field `TSEN` writer - Time stamp enable"]
-pub type TSEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TMP2_SPEC, bool, O>;
+pub type TSEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TS` reader - Time stamp"]
-pub type TS_R = crate::FieldReader<u16, u16>;
+pub type TS_R = crate::FieldReader<u16>;
 #[doc = "Field `TS` writer - Time stamp"]
-pub type TS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TMP2_SPEC, u16, u16, 16, O>;
+pub type TS_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:3 - Data length code"]
     #[inline(always)]
@@ -67,44 +35,36 @@ impl W {
     #[doc = "Bits 0:3 - Data length code"]
     #[inline(always)]
     #[must_use]
-    pub fn dlenc(&mut self) -> DLENC_W<0> {
-        DLENC_W::new(self)
+    pub fn dlenc(&mut self) -> DLENC_W<TMP2_SPEC> {
+        DLENC_W::new(self, 0)
     }
     #[doc = "Bit 8 - Time stamp enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tsen(&mut self) -> TSEN_W<8> {
-        TSEN_W::new(self)
+    pub fn tsen(&mut self) -> TSEN_W<TMP2_SPEC> {
+        TSEN_W::new(self, 8)
     }
     #[doc = "Bits 16:31 - Time stamp"]
     #[inline(always)]
     #[must_use]
-    pub fn ts(&mut self) -> TS_W<16> {
-        TS_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn ts(&mut self) -> TS_W<TMP2_SPEC> {
+        TS_W::new(self, 16)
     }
 }
-#[doc = "Transmit mailbox property register 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tmp2](index.html) module"]
+#[doc = "Transmit mailbox property register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`tmp2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tmp2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TMP2_SPEC;
 impl crate::RegisterSpec for TMP2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tmp2::R](R) reader structure"]
-impl crate::Readable for TMP2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [tmp2::W](W) writer structure"]
+#[doc = "`read()` method returns [`tmp2::R`](R) reader structure"]
+impl crate::Readable for TMP2_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tmp2::W`](W) writer structure"]
 impl crate::Writable for TMP2_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TMP2 to value 0"]
 impl crate::Resettable for TMP2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -1,55 +1,23 @@
 #[doc = "Register `DCFG` reader"]
-pub struct R(crate::R<DCFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DCFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DCFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DCFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DCFG_SPEC>;
 #[doc = "Register `DCFG` writer"]
-pub struct W(crate::W<DCFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DCFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DCFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DCFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DCFG_SPEC>;
 #[doc = "Field `DS` reader - Device speed"]
-pub type DS_R = crate::FieldReader<u8, u8>;
+pub type DS_R = crate::FieldReader;
 #[doc = "Field `DS` writer - Device speed"]
-pub type DS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DCFG_SPEC, u8, u8, 2, O>;
+pub type DS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `NZLSOH` reader - Non-zero-length status OUT handshake"]
-pub type NZLSOH_R = crate::BitReader<bool>;
+pub type NZLSOH_R = crate::BitReader;
 #[doc = "Field `NZLSOH` writer - Non-zero-length status OUT handshake"]
-pub type NZLSOH_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCFG_SPEC, bool, O>;
+pub type NZLSOH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DAR` reader - Device address"]
-pub type DAR_R = crate::FieldReader<u8, u8>;
+pub type DAR_R = crate::FieldReader;
 #[doc = "Field `DAR` writer - Device address"]
-pub type DAR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DCFG_SPEC, u8, u8, 7, O>;
+pub type DAR_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `EOPFT` reader - end of periodic frame time"]
-pub type EOPFT_R = crate::FieldReader<u8, u8>;
+pub type EOPFT_R = crate::FieldReader;
 #[doc = "Field `EOPFT` writer - end of periodic frame time"]
-pub type EOPFT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DCFG_SPEC, u8, u8, 2, O>;
+pub type EOPFT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - Device speed"]
     #[inline(always)]
@@ -76,50 +44,42 @@ impl W {
     #[doc = "Bits 0:1 - Device speed"]
     #[inline(always)]
     #[must_use]
-    pub fn ds(&mut self) -> DS_W<0> {
-        DS_W::new(self)
+    pub fn ds(&mut self) -> DS_W<DCFG_SPEC> {
+        DS_W::new(self, 0)
     }
     #[doc = "Bit 2 - Non-zero-length status OUT handshake"]
     #[inline(always)]
     #[must_use]
-    pub fn nzlsoh(&mut self) -> NZLSOH_W<2> {
-        NZLSOH_W::new(self)
+    pub fn nzlsoh(&mut self) -> NZLSOH_W<DCFG_SPEC> {
+        NZLSOH_W::new(self, 2)
     }
     #[doc = "Bits 4:10 - Device address"]
     #[inline(always)]
     #[must_use]
-    pub fn dar(&mut self) -> DAR_W<4> {
-        DAR_W::new(self)
+    pub fn dar(&mut self) -> DAR_W<DCFG_SPEC> {
+        DAR_W::new(self, 4)
     }
     #[doc = "Bits 11:12 - end of periodic frame time"]
     #[inline(always)]
     #[must_use]
-    pub fn eopft(&mut self) -> EOPFT_W<11> {
-        EOPFT_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn eopft(&mut self) -> EOPFT_W<DCFG_SPEC> {
+        EOPFT_W::new(self, 11)
     }
 }
-#[doc = "device configuration register (DCFG)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dcfg](index.html) module"]
+#[doc = "device configuration register (DCFG)\n\nYou can [`read`](crate::Reg::read) this register and get [`dcfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dcfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DCFG_SPEC;
 impl crate::RegisterSpec for DCFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dcfg::R](R) reader structure"]
-impl crate::Readable for DCFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dcfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`dcfg::R`](R) reader structure"]
+impl crate::Readable for DCFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dcfg::W`](W) writer structure"]
 impl crate::Writable for DCFG_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DCFG to value 0"]
 impl crate::Resettable for DCFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

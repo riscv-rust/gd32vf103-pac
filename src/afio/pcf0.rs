@@ -1,103 +1,71 @@
 #[doc = "Register `PCF0` reader"]
-pub struct R(crate::R<PCF0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PCF0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PCF0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PCF0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PCF0_SPEC>;
 #[doc = "Register `PCF0` writer"]
-pub struct W(crate::W<PCF0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PCF0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PCF0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PCF0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PCF0_SPEC>;
 #[doc = "Field `SPI0_REMAP` reader - SPI0 remapping"]
-pub type SPI0_REMAP_R = crate::BitReader<bool>;
+pub type SPI0_REMAP_R = crate::BitReader;
 #[doc = "Field `SPI0_REMAP` writer - SPI0 remapping"]
-pub type SPI0_REMAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCF0_SPEC, bool, O>;
+pub type SPI0_REMAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C0_REMAP` reader - I2C0 remapping"]
-pub type I2C0_REMAP_R = crate::BitReader<bool>;
+pub type I2C0_REMAP_R = crate::BitReader;
 #[doc = "Field `I2C0_REMAP` writer - I2C0 remapping"]
-pub type I2C0_REMAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCF0_SPEC, bool, O>;
+pub type I2C0_REMAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USART0_REMAP` reader - USART0 remapping"]
-pub type USART0_REMAP_R = crate::BitReader<bool>;
+pub type USART0_REMAP_R = crate::BitReader;
 #[doc = "Field `USART0_REMAP` writer - USART0 remapping"]
-pub type USART0_REMAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCF0_SPEC, bool, O>;
+pub type USART0_REMAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USART1_REMAP` reader - USART1 remapping"]
-pub type USART1_REMAP_R = crate::BitReader<bool>;
+pub type USART1_REMAP_R = crate::BitReader;
 #[doc = "Field `USART1_REMAP` writer - USART1 remapping"]
-pub type USART1_REMAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCF0_SPEC, bool, O>;
+pub type USART1_REMAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USART2_REMAP` reader - USART2 remapping"]
-pub type USART2_REMAP_R = crate::FieldReader<u8, u8>;
+pub type USART2_REMAP_R = crate::FieldReader;
 #[doc = "Field `USART2_REMAP` writer - USART2 remapping"]
-pub type USART2_REMAP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PCF0_SPEC, u8, u8, 2, O>;
+pub type USART2_REMAP_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TIMER0_REMAP` reader - TIMER0 remapping"]
-pub type TIMER0_REMAP_R = crate::FieldReader<u8, u8>;
+pub type TIMER0_REMAP_R = crate::FieldReader;
 #[doc = "Field `TIMER0_REMAP` writer - TIMER0 remapping"]
-pub type TIMER0_REMAP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PCF0_SPEC, u8, u8, 2, O>;
+pub type TIMER0_REMAP_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TIMER1_REMAP` reader - TIMER1 remapping"]
-pub type TIMER1_REMAP_R = crate::FieldReader<u8, u8>;
+pub type TIMER1_REMAP_R = crate::FieldReader;
 #[doc = "Field `TIMER1_REMAP` writer - TIMER1 remapping"]
-pub type TIMER1_REMAP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PCF0_SPEC, u8, u8, 2, O>;
+pub type TIMER1_REMAP_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TIMER2_REMAP` reader - TIMER2 remapping"]
-pub type TIMER2_REMAP_R = crate::FieldReader<u8, u8>;
+pub type TIMER2_REMAP_R = crate::FieldReader;
 #[doc = "Field `TIMER2_REMAP` writer - TIMER2 remapping"]
-pub type TIMER2_REMAP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PCF0_SPEC, u8, u8, 2, O>;
+pub type TIMER2_REMAP_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TIMER3_REMAP` reader - TIMER3 remapping"]
-pub type TIMER3_REMAP_R = crate::BitReader<bool>;
+pub type TIMER3_REMAP_R = crate::BitReader;
 #[doc = "Field `TIMER3_REMAP` writer - TIMER3 remapping"]
-pub type TIMER3_REMAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCF0_SPEC, bool, O>;
+pub type TIMER3_REMAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAN0_REMAP` reader - CAN0 alternate interface remapping"]
-pub type CAN0_REMAP_R = crate::FieldReader<u8, u8>;
+pub type CAN0_REMAP_R = crate::FieldReader;
 #[doc = "Field `CAN0_REMAP` writer - CAN0 alternate interface remapping"]
-pub type CAN0_REMAP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PCF0_SPEC, u8, u8, 2, O>;
+pub type CAN0_REMAP_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PD01_REMAP` reader - Port D0/Port D1 mapping on OSC_IN/OSC_OUT"]
-pub type PD01_REMAP_R = crate::BitReader<bool>;
+pub type PD01_REMAP_R = crate::BitReader;
 #[doc = "Field `PD01_REMAP` writer - Port D0/Port D1 mapping on OSC_IN/OSC_OUT"]
-pub type PD01_REMAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCF0_SPEC, bool, O>;
+pub type PD01_REMAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER4CH3_IREMAP` reader - TIMER4 channel3 internal remapping"]
-pub type TIMER4CH3_IREMAP_R = crate::BitReader<bool>;
+pub type TIMER4CH3_IREMAP_R = crate::BitReader;
 #[doc = "Field `TIMER4CH3_IREMAP` writer - TIMER4 channel3 internal remapping"]
-pub type TIMER4CH3_IREMAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCF0_SPEC, bool, O>;
+pub type TIMER4CH3_IREMAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAN1_REMAP` reader - CAN1 I/O remapping"]
-pub type CAN1_REMAP_R = crate::BitReader<bool>;
+pub type CAN1_REMAP_R = crate::BitReader;
 #[doc = "Field `CAN1_REMAP` writer - CAN1 I/O remapping"]
-pub type CAN1_REMAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCF0_SPEC, bool, O>;
+pub type CAN1_REMAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWJ_CFG` reader - Serial wire JTAG configuration"]
-pub type SWJ_CFG_R = crate::FieldReader<u8, u8>;
+pub type SWJ_CFG_R = crate::FieldReader;
 #[doc = "Field `SWJ_CFG` writer - Serial wire JTAG configuration"]
-pub type SWJ_CFG_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PCF0_SPEC, u8, u8, 3, O>;
+pub type SWJ_CFG_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SPI2_REMAP` reader - SPI2/I2S2 remapping"]
-pub type SPI2_REMAP_R = crate::BitReader<bool>;
+pub type SPI2_REMAP_R = crate::BitReader;
 #[doc = "Field `SPI2_REMAP` writer - SPI2/I2S2 remapping"]
-pub type SPI2_REMAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCF0_SPEC, bool, O>;
+pub type SPI2_REMAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMER1ITI1_REMAP` reader - TIMER1 internal trigger 1 remapping"]
-pub type TIMER1ITI1_REMAP_R = crate::BitReader<bool>;
+pub type TIMER1ITI1_REMAP_R = crate::BitReader;
 #[doc = "Field `TIMER1ITI1_REMAP` writer - TIMER1 internal trigger 1 remapping"]
-pub type TIMER1ITI1_REMAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCF0_SPEC, bool, O>;
+pub type TIMER1ITI1_REMAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - SPI0 remapping"]
     #[inline(always)]
@@ -184,122 +152,114 @@ impl W {
     #[doc = "Bit 0 - SPI0 remapping"]
     #[inline(always)]
     #[must_use]
-    pub fn spi0_remap(&mut self) -> SPI0_REMAP_W<0> {
-        SPI0_REMAP_W::new(self)
+    pub fn spi0_remap(&mut self) -> SPI0_REMAP_W<PCF0_SPEC> {
+        SPI0_REMAP_W::new(self, 0)
     }
     #[doc = "Bit 1 - I2C0 remapping"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c0_remap(&mut self) -> I2C0_REMAP_W<1> {
-        I2C0_REMAP_W::new(self)
+    pub fn i2c0_remap(&mut self) -> I2C0_REMAP_W<PCF0_SPEC> {
+        I2C0_REMAP_W::new(self, 1)
     }
     #[doc = "Bit 2 - USART0 remapping"]
     #[inline(always)]
     #[must_use]
-    pub fn usart0_remap(&mut self) -> USART0_REMAP_W<2> {
-        USART0_REMAP_W::new(self)
+    pub fn usart0_remap(&mut self) -> USART0_REMAP_W<PCF0_SPEC> {
+        USART0_REMAP_W::new(self, 2)
     }
     #[doc = "Bit 3 - USART1 remapping"]
     #[inline(always)]
     #[must_use]
-    pub fn usart1_remap(&mut self) -> USART1_REMAP_W<3> {
-        USART1_REMAP_W::new(self)
+    pub fn usart1_remap(&mut self) -> USART1_REMAP_W<PCF0_SPEC> {
+        USART1_REMAP_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - USART2 remapping"]
     #[inline(always)]
     #[must_use]
-    pub fn usart2_remap(&mut self) -> USART2_REMAP_W<4> {
-        USART2_REMAP_W::new(self)
+    pub fn usart2_remap(&mut self) -> USART2_REMAP_W<PCF0_SPEC> {
+        USART2_REMAP_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - TIMER0 remapping"]
     #[inline(always)]
     #[must_use]
-    pub fn timer0_remap(&mut self) -> TIMER0_REMAP_W<6> {
-        TIMER0_REMAP_W::new(self)
+    pub fn timer0_remap(&mut self) -> TIMER0_REMAP_W<PCF0_SPEC> {
+        TIMER0_REMAP_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - TIMER1 remapping"]
     #[inline(always)]
     #[must_use]
-    pub fn timer1_remap(&mut self) -> TIMER1_REMAP_W<8> {
-        TIMER1_REMAP_W::new(self)
+    pub fn timer1_remap(&mut self) -> TIMER1_REMAP_W<PCF0_SPEC> {
+        TIMER1_REMAP_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - TIMER2 remapping"]
     #[inline(always)]
     #[must_use]
-    pub fn timer2_remap(&mut self) -> TIMER2_REMAP_W<10> {
-        TIMER2_REMAP_W::new(self)
+    pub fn timer2_remap(&mut self) -> TIMER2_REMAP_W<PCF0_SPEC> {
+        TIMER2_REMAP_W::new(self, 10)
     }
     #[doc = "Bit 12 - TIMER3 remapping"]
     #[inline(always)]
     #[must_use]
-    pub fn timer3_remap(&mut self) -> TIMER3_REMAP_W<12> {
-        TIMER3_REMAP_W::new(self)
+    pub fn timer3_remap(&mut self) -> TIMER3_REMAP_W<PCF0_SPEC> {
+        TIMER3_REMAP_W::new(self, 12)
     }
     #[doc = "Bits 13:14 - CAN0 alternate interface remapping"]
     #[inline(always)]
     #[must_use]
-    pub fn can0_remap(&mut self) -> CAN0_REMAP_W<13> {
-        CAN0_REMAP_W::new(self)
+    pub fn can0_remap(&mut self) -> CAN0_REMAP_W<PCF0_SPEC> {
+        CAN0_REMAP_W::new(self, 13)
     }
     #[doc = "Bit 15 - Port D0/Port D1 mapping on OSC_IN/OSC_OUT"]
     #[inline(always)]
     #[must_use]
-    pub fn pd01_remap(&mut self) -> PD01_REMAP_W<15> {
-        PD01_REMAP_W::new(self)
+    pub fn pd01_remap(&mut self) -> PD01_REMAP_W<PCF0_SPEC> {
+        PD01_REMAP_W::new(self, 15)
     }
     #[doc = "Bit 16 - TIMER4 channel3 internal remapping"]
     #[inline(always)]
     #[must_use]
-    pub fn timer4ch3_iremap(&mut self) -> TIMER4CH3_IREMAP_W<16> {
-        TIMER4CH3_IREMAP_W::new(self)
+    pub fn timer4ch3_iremap(&mut self) -> TIMER4CH3_IREMAP_W<PCF0_SPEC> {
+        TIMER4CH3_IREMAP_W::new(self, 16)
     }
     #[doc = "Bit 22 - CAN1 I/O remapping"]
     #[inline(always)]
     #[must_use]
-    pub fn can1_remap(&mut self) -> CAN1_REMAP_W<22> {
-        CAN1_REMAP_W::new(self)
+    pub fn can1_remap(&mut self) -> CAN1_REMAP_W<PCF0_SPEC> {
+        CAN1_REMAP_W::new(self, 22)
     }
     #[doc = "Bits 24:26 - Serial wire JTAG configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn swj_cfg(&mut self) -> SWJ_CFG_W<24> {
-        SWJ_CFG_W::new(self)
+    pub fn swj_cfg(&mut self) -> SWJ_CFG_W<PCF0_SPEC> {
+        SWJ_CFG_W::new(self, 24)
     }
     #[doc = "Bit 28 - SPI2/I2S2 remapping"]
     #[inline(always)]
     #[must_use]
-    pub fn spi2_remap(&mut self) -> SPI2_REMAP_W<28> {
-        SPI2_REMAP_W::new(self)
+    pub fn spi2_remap(&mut self) -> SPI2_REMAP_W<PCF0_SPEC> {
+        SPI2_REMAP_W::new(self, 28)
     }
     #[doc = "Bit 29 - TIMER1 internal trigger 1 remapping"]
     #[inline(always)]
     #[must_use]
-    pub fn timer1iti1_remap(&mut self) -> TIMER1ITI1_REMAP_W<29> {
-        TIMER1ITI1_REMAP_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn timer1iti1_remap(&mut self) -> TIMER1ITI1_REMAP_W<PCF0_SPEC> {
+        TIMER1ITI1_REMAP_W::new(self, 29)
     }
 }
-#[doc = "AFIO port configuration register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pcf0](index.html) module"]
+#[doc = "AFIO port configuration register 0\n\nYou can [`read`](crate::Reg::read) this register and get [`pcf0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pcf0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PCF0_SPEC;
 impl crate::RegisterSpec for PCF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pcf0::R](R) reader structure"]
-impl crate::Readable for PCF0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pcf0::W](W) writer structure"]
+#[doc = "`read()` method returns [`pcf0::R`](R) reader structure"]
+impl crate::Readable for PCF0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`pcf0::W`](W) writer structure"]
 impl crate::Writable for PCF0_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PCF0 to value 0"]
 impl crate::Resettable for PCF0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

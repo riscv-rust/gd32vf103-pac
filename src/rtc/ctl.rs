@@ -1,63 +1,31 @@
 #[doc = "Register `CTL` reader"]
-pub struct R(crate::R<CTL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CTL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CTL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CTL_SPEC>;
 #[doc = "Register `CTL` writer"]
-pub struct W(crate::W<CTL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CTL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CTL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CTL_SPEC>;
 #[doc = "Field `SCIF` reader - Sencond interrupt flag"]
-pub type SCIF_R = crate::BitReader<bool>;
+pub type SCIF_R = crate::BitReader;
 #[doc = "Field `SCIF` writer - Sencond interrupt flag"]
-pub type SCIF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type SCIF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALRMIF` reader - Alarm interrupt flag"]
-pub type ALRMIF_R = crate::BitReader<bool>;
+pub type ALRMIF_R = crate::BitReader;
 #[doc = "Field `ALRMIF` writer - Alarm interrupt flag"]
-pub type ALRMIF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type ALRMIF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVIF` reader - Overflow interrupt flag"]
-pub type OVIF_R = crate::BitReader<bool>;
+pub type OVIF_R = crate::BitReader;
 #[doc = "Field `OVIF` writer - Overflow interrupt flag"]
-pub type OVIF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type OVIF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RSYNF` reader - Registers synchronized flag"]
-pub type RSYNF_R = crate::BitReader<bool>;
+pub type RSYNF_R = crate::BitReader;
 #[doc = "Field `RSYNF` writer - Registers synchronized flag"]
-pub type RSYNF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type RSYNF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMF` reader - Configuration mode flag"]
-pub type CMF_R = crate::BitReader<bool>;
+pub type CMF_R = crate::BitReader;
 #[doc = "Field `CMF` writer - Configuration mode flag"]
-pub type CMF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type CMF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LWOFF` reader - Last write operation finished flag"]
-pub type LWOFF_R = crate::BitReader<bool>;
+pub type LWOFF_R = crate::BitReader;
 #[doc = "Field `LWOFF` writer - Last write operation finished flag"]
-pub type LWOFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type LWOFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Sencond interrupt flag"]
     #[inline(always)]
@@ -94,62 +62,54 @@ impl W {
     #[doc = "Bit 0 - Sencond interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn scif(&mut self) -> SCIF_W<0> {
-        SCIF_W::new(self)
+    pub fn scif(&mut self) -> SCIF_W<CTL_SPEC> {
+        SCIF_W::new(self, 0)
     }
     #[doc = "Bit 1 - Alarm interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn alrmif(&mut self) -> ALRMIF_W<1> {
-        ALRMIF_W::new(self)
+    pub fn alrmif(&mut self) -> ALRMIF_W<CTL_SPEC> {
+        ALRMIF_W::new(self, 1)
     }
     #[doc = "Bit 2 - Overflow interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ovif(&mut self) -> OVIF_W<2> {
-        OVIF_W::new(self)
+    pub fn ovif(&mut self) -> OVIF_W<CTL_SPEC> {
+        OVIF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Registers synchronized flag"]
     #[inline(always)]
     #[must_use]
-    pub fn rsynf(&mut self) -> RSYNF_W<3> {
-        RSYNF_W::new(self)
+    pub fn rsynf(&mut self) -> RSYNF_W<CTL_SPEC> {
+        RSYNF_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configuration mode flag"]
     #[inline(always)]
     #[must_use]
-    pub fn cmf(&mut self) -> CMF_W<4> {
-        CMF_W::new(self)
+    pub fn cmf(&mut self) -> CMF_W<CTL_SPEC> {
+        CMF_W::new(self, 4)
     }
     #[doc = "Bit 5 - Last write operation finished flag"]
     #[inline(always)]
     #[must_use]
-    pub fn lwoff(&mut self) -> LWOFF_W<5> {
-        LWOFF_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn lwoff(&mut self) -> LWOFF_W<CTL_SPEC> {
+        LWOFF_W::new(self, 5)
     }
 }
-#[doc = "control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl](index.html) module"]
+#[doc = "control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ctl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTL_SPEC;
 impl crate::RegisterSpec for CTL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctl::R](R) reader structure"]
-impl crate::Readable for CTL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ctl::W](W) writer structure"]
+#[doc = "`read()` method returns [`ctl::R`](R) reader structure"]
+impl crate::Readable for CTL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ctl::W`](W) writer structure"]
 impl crate::Writable for CTL_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTL to value 0x20"]
 impl crate::Resettable for CTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x20;
+    const RESET_VALUE: u32 = 0x20;
 }

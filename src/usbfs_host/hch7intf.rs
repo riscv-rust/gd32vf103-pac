@@ -1,75 +1,43 @@
 #[doc = "Register `HCH7INTF` reader"]
-pub struct R(crate::R<HCH7INTF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HCH7INTF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HCH7INTF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HCH7INTF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HCH7INTF_SPEC>;
 #[doc = "Register `HCH7INTF` writer"]
-pub struct W(crate::W<HCH7INTF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HCH7INTF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HCH7INTF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HCH7INTF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HCH7INTF_SPEC>;
 #[doc = "Field `TF` reader - Transfer finished"]
-pub type TF_R = crate::BitReader<bool>;
+pub type TF_R = crate::BitReader;
 #[doc = "Field `TF` writer - Transfer finished"]
-pub type TF_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH7INTF_SPEC, bool, O>;
+pub type TF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH` reader - Channel halted"]
-pub type CH_R = crate::BitReader<bool>;
+pub type CH_R = crate::BitReader;
 #[doc = "Field `CH` writer - Channel halted"]
-pub type CH_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH7INTF_SPEC, bool, O>;
+pub type CH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STALL` reader - STALL response received interrupt"]
-pub type STALL_R = crate::BitReader<bool>;
+pub type STALL_R = crate::BitReader;
 #[doc = "Field `STALL` writer - STALL response received interrupt"]
-pub type STALL_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH7INTF_SPEC, bool, O>;
+pub type STALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NAK` reader - NAK response received interrupt"]
-pub type NAK_R = crate::BitReader<bool>;
+pub type NAK_R = crate::BitReader;
 #[doc = "Field `NAK` writer - NAK response received interrupt"]
-pub type NAK_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH7INTF_SPEC, bool, O>;
+pub type NAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ACK` reader - ACK response received/transmitted interrupt"]
-pub type ACK_R = crate::BitReader<bool>;
+pub type ACK_R = crate::BitReader;
 #[doc = "Field `ACK` writer - ACK response received/transmitted interrupt"]
-pub type ACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH7INTF_SPEC, bool, O>;
+pub type ACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USBER` reader - USB bus error"]
-pub type USBER_R = crate::BitReader<bool>;
+pub type USBER_R = crate::BitReader;
 #[doc = "Field `USBER` writer - USB bus error"]
-pub type USBER_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH7INTF_SPEC, bool, O>;
+pub type USBER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BBER` reader - Babble error"]
-pub type BBER_R = crate::BitReader<bool>;
+pub type BBER_R = crate::BitReader;
 #[doc = "Field `BBER` writer - Babble error"]
-pub type BBER_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH7INTF_SPEC, bool, O>;
+pub type BBER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REQOVR` reader - Request queue overrun"]
-pub type REQOVR_R = crate::BitReader<bool>;
+pub type REQOVR_R = crate::BitReader;
 #[doc = "Field `REQOVR` writer - Request queue overrun"]
-pub type REQOVR_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH7INTF_SPEC, bool, O>;
+pub type REQOVR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTER` reader - Data toggle error"]
-pub type DTER_R = crate::BitReader<bool>;
+pub type DTER_R = crate::BitReader;
 #[doc = "Field `DTER` writer - Data toggle error"]
-pub type DTER_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH7INTF_SPEC, bool, O>;
+pub type DTER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transfer finished"]
     #[inline(always)]
@@ -121,80 +89,72 @@ impl W {
     #[doc = "Bit 0 - Transfer finished"]
     #[inline(always)]
     #[must_use]
-    pub fn tf(&mut self) -> TF_W<0> {
-        TF_W::new(self)
+    pub fn tf(&mut self) -> TF_W<HCH7INTF_SPEC> {
+        TF_W::new(self, 0)
     }
     #[doc = "Bit 1 - Channel halted"]
     #[inline(always)]
     #[must_use]
-    pub fn ch(&mut self) -> CH_W<1> {
-        CH_W::new(self)
+    pub fn ch(&mut self) -> CH_W<HCH7INTF_SPEC> {
+        CH_W::new(self, 1)
     }
     #[doc = "Bit 3 - STALL response received interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn stall(&mut self) -> STALL_W<3> {
-        STALL_W::new(self)
+    pub fn stall(&mut self) -> STALL_W<HCH7INTF_SPEC> {
+        STALL_W::new(self, 3)
     }
     #[doc = "Bit 4 - NAK response received interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn nak(&mut self) -> NAK_W<4> {
-        NAK_W::new(self)
+    pub fn nak(&mut self) -> NAK_W<HCH7INTF_SPEC> {
+        NAK_W::new(self, 4)
     }
     #[doc = "Bit 5 - ACK response received/transmitted interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn ack(&mut self) -> ACK_W<5> {
-        ACK_W::new(self)
+    pub fn ack(&mut self) -> ACK_W<HCH7INTF_SPEC> {
+        ACK_W::new(self, 5)
     }
     #[doc = "Bit 7 - USB bus error"]
     #[inline(always)]
     #[must_use]
-    pub fn usber(&mut self) -> USBER_W<7> {
-        USBER_W::new(self)
+    pub fn usber(&mut self) -> USBER_W<HCH7INTF_SPEC> {
+        USBER_W::new(self, 7)
     }
     #[doc = "Bit 8 - Babble error"]
     #[inline(always)]
     #[must_use]
-    pub fn bber(&mut self) -> BBER_W<8> {
-        BBER_W::new(self)
+    pub fn bber(&mut self) -> BBER_W<HCH7INTF_SPEC> {
+        BBER_W::new(self, 8)
     }
     #[doc = "Bit 9 - Request queue overrun"]
     #[inline(always)]
     #[must_use]
-    pub fn reqovr(&mut self) -> REQOVR_W<9> {
-        REQOVR_W::new(self)
+    pub fn reqovr(&mut self) -> REQOVR_W<HCH7INTF_SPEC> {
+        REQOVR_W::new(self, 9)
     }
     #[doc = "Bit 10 - Data toggle error"]
     #[inline(always)]
     #[must_use]
-    pub fn dter(&mut self) -> DTER_W<10> {
-        DTER_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn dter(&mut self) -> DTER_W<HCH7INTF_SPEC> {
+        DTER_W::new(self, 10)
     }
 }
-#[doc = "host channel-7 interrupt register (HCH7INTF)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hch7intf](index.html) module"]
+#[doc = "host channel-7 interrupt register (HCH7INTF)\n\nYou can [`read`](crate::Reg::read) this register and get [`hch7intf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hch7intf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCH7INTF_SPEC;
 impl crate::RegisterSpec for HCH7INTF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hch7intf::R](R) reader structure"]
-impl crate::Readable for HCH7INTF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hch7intf::W](W) writer structure"]
+#[doc = "`read()` method returns [`hch7intf::R`](R) reader structure"]
+impl crate::Readable for HCH7INTF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hch7intf::W`](W) writer structure"]
 impl crate::Writable for HCH7INTF_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HCH7INTF to value 0"]
 impl crate::Resettable for HCH7INTF_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

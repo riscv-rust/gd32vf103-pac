@@ -1,43 +1,11 @@
 #[doc = "Register `RT` reader"]
-pub struct R(crate::R<RT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RT_SPEC>;
 #[doc = "Register `RT` writer"]
-pub struct W(crate::W<RT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RT_SPEC>;
 #[doc = "Field `RISETIME` reader - Maximum rise time in master mode"]
-pub type RISETIME_R = crate::FieldReader<u8, u8>;
+pub type RISETIME_R = crate::FieldReader;
 #[doc = "Field `RISETIME` writer - Maximum rise time in master mode"]
-pub type RISETIME_W<'a, const O: u8> = crate::FieldWriter<'a, u16, RT_SPEC, u8, u8, 6, O>;
+pub type RISETIME_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5 - Maximum rise time in master mode"]
     #[inline(always)]
@@ -49,32 +17,24 @@ impl W {
     #[doc = "Bits 0:5 - Maximum rise time in master mode"]
     #[inline(always)]
     #[must_use]
-    pub fn risetime(&mut self) -> RISETIME_W<0> {
-        RISETIME_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn risetime(&mut self) -> RISETIME_W<RT_SPEC> {
+        RISETIME_W::new(self, 0)
     }
 }
-#[doc = "Rise time register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rt](index.html) module"]
+#[doc = "Rise time register\n\nYou can [`read`](crate::Reg::read) this register and get [`rt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RT_SPEC;
 impl crate::RegisterSpec for RT_SPEC {
     type Ux = u16;
 }
-#[doc = "`read()` method returns [rt::R](R) reader structure"]
-impl crate::Readable for RT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rt::W](W) writer structure"]
+#[doc = "`read()` method returns [`rt::R`](R) reader structure"]
+impl crate::Readable for RT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rt::W`](W) writer structure"]
 impl crate::Writable for RT_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets RT to value 0x02"]
 impl crate::Resettable for RT_SPEC {
-    const RESET_VALUE: Self::Ux = 0x02;
+    const RESET_VALUE: u16 = 0x02;
 }

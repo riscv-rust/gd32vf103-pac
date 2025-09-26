@@ -1,47 +1,15 @@
 #[doc = "Register `DAEPINTEN` reader"]
-pub struct R(crate::R<DAEPINTEN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DAEPINTEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DAEPINTEN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DAEPINTEN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DAEPINTEN_SPEC>;
 #[doc = "Register `DAEPINTEN` writer"]
-pub struct W(crate::W<DAEPINTEN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DAEPINTEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DAEPINTEN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DAEPINTEN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DAEPINTEN_SPEC>;
 #[doc = "Field `IEPIE` reader - IN EP interrupt interrupt enable bits"]
-pub type IEPIE_R = crate::FieldReader<u8, u8>;
+pub type IEPIE_R = crate::FieldReader;
 #[doc = "Field `IEPIE` writer - IN EP interrupt interrupt enable bits"]
-pub type IEPIE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DAEPINTEN_SPEC, u8, u8, 4, O>;
+pub type IEPIE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `OEPIE` reader - OUT endpoint interrupt enable bits"]
-pub type OEPIE_R = crate::FieldReader<u8, u8>;
+pub type OEPIE_R = crate::FieldReader;
 #[doc = "Field `OEPIE` writer - OUT endpoint interrupt enable bits"]
-pub type OEPIE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DAEPINTEN_SPEC, u8, u8, 4, O>;
+pub type OEPIE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - IN EP interrupt interrupt enable bits"]
     #[inline(always)]
@@ -58,38 +26,30 @@ impl W {
     #[doc = "Bits 0:3 - IN EP interrupt interrupt enable bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iepie(&mut self) -> IEPIE_W<0> {
-        IEPIE_W::new(self)
+    pub fn iepie(&mut self) -> IEPIE_W<DAEPINTEN_SPEC> {
+        IEPIE_W::new(self, 0)
     }
     #[doc = "Bits 16:19 - OUT endpoint interrupt enable bits"]
     #[inline(always)]
     #[must_use]
-    pub fn oepie(&mut self) -> OEPIE_W<16> {
-        OEPIE_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn oepie(&mut self) -> OEPIE_W<DAEPINTEN_SPEC> {
+        OEPIE_W::new(self, 16)
     }
 }
-#[doc = "Device all endpoints interrupt enable register (DAEPINTEN)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [daepinten](index.html) module"]
+#[doc = "Device all endpoints interrupt enable register (DAEPINTEN)\n\nYou can [`read`](crate::Reg::read) this register and get [`daepinten::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`daepinten::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DAEPINTEN_SPEC;
 impl crate::RegisterSpec for DAEPINTEN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [daepinten::R](R) reader structure"]
-impl crate::Readable for DAEPINTEN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [daepinten::W](W) writer structure"]
+#[doc = "`read()` method returns [`daepinten::R`](R) reader structure"]
+impl crate::Readable for DAEPINTEN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`daepinten::W`](W) writer structure"]
 impl crate::Writable for DAEPINTEN_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DAEPINTEN to value 0"]
 impl crate::Resettable for DAEPINTEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

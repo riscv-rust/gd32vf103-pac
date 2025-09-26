@@ -1,75 +1,43 @@
 #[doc = "Register `HCH5INTEN` reader"]
-pub struct R(crate::R<HCH5INTEN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HCH5INTEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HCH5INTEN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HCH5INTEN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HCH5INTEN_SPEC>;
 #[doc = "Register `HCH5INTEN` writer"]
-pub struct W(crate::W<HCH5INTEN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HCH5INTEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HCH5INTEN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HCH5INTEN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HCH5INTEN_SPEC>;
 #[doc = "Field `TFIE` reader - Transfer completed interrupt enable"]
-pub type TFIE_R = crate::BitReader<bool>;
+pub type TFIE_R = crate::BitReader;
 #[doc = "Field `TFIE` writer - Transfer completed interrupt enable"]
-pub type TFIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+pub type TFIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CHIE` reader - Channel halted interrupt enable"]
-pub type CHIE_R = crate::BitReader<bool>;
+pub type CHIE_R = crate::BitReader;
 #[doc = "Field `CHIE` writer - Channel halted interrupt enable"]
-pub type CHIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+pub type CHIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STALLIE` reader - STALL interrupt enable"]
-pub type STALLIE_R = crate::BitReader<bool>;
+pub type STALLIE_R = crate::BitReader;
 #[doc = "Field `STALLIE` writer - STALL interrupt enable"]
-pub type STALLIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+pub type STALLIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NAKIE` reader - NAK interrupt enable"]
-pub type NAKIE_R = crate::BitReader<bool>;
+pub type NAKIE_R = crate::BitReader;
 #[doc = "Field `NAKIE` writer - NAK interrupt enable"]
-pub type NAKIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+pub type NAKIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ACKIE` reader - ACK interrupt enable"]
-pub type ACKIE_R = crate::BitReader<bool>;
+pub type ACKIE_R = crate::BitReader;
 #[doc = "Field `ACKIE` writer - ACK interrupt enable"]
-pub type ACKIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+pub type ACKIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USBERIE` reader - USB bus error interrupt enable"]
-pub type USBERIE_R = crate::BitReader<bool>;
+pub type USBERIE_R = crate::BitReader;
 #[doc = "Field `USBERIE` writer - USB bus error interrupt enable"]
-pub type USBERIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+pub type USBERIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BBERIE` reader - Babble error interrupt enable"]
-pub type BBERIE_R = crate::BitReader<bool>;
+pub type BBERIE_R = crate::BitReader;
 #[doc = "Field `BBERIE` writer - Babble error interrupt enable"]
-pub type BBERIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+pub type BBERIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REQOVRIE` reader - request queue overrun interrupt enable"]
-pub type REQOVRIE_R = crate::BitReader<bool>;
+pub type REQOVRIE_R = crate::BitReader;
 #[doc = "Field `REQOVRIE` writer - request queue overrun interrupt enable"]
-pub type REQOVRIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+pub type REQOVRIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTERIE` reader - Data toggle error interrupt enable"]
-pub type DTERIE_R = crate::BitReader<bool>;
+pub type DTERIE_R = crate::BitReader;
 #[doc = "Field `DTERIE` writer - Data toggle error interrupt enable"]
-pub type DTERIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5INTEN_SPEC, bool, O>;
+pub type DTERIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transfer completed interrupt enable"]
     #[inline(always)]
@@ -121,80 +89,72 @@ impl W {
     #[doc = "Bit 0 - Transfer completed interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tfie(&mut self) -> TFIE_W<0> {
-        TFIE_W::new(self)
+    pub fn tfie(&mut self) -> TFIE_W<HCH5INTEN_SPEC> {
+        TFIE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Channel halted interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn chie(&mut self) -> CHIE_W<1> {
-        CHIE_W::new(self)
+    pub fn chie(&mut self) -> CHIE_W<HCH5INTEN_SPEC> {
+        CHIE_W::new(self, 1)
     }
     #[doc = "Bit 3 - STALL interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn stallie(&mut self) -> STALLIE_W<3> {
-        STALLIE_W::new(self)
+    pub fn stallie(&mut self) -> STALLIE_W<HCH5INTEN_SPEC> {
+        STALLIE_W::new(self, 3)
     }
     #[doc = "Bit 4 - NAK interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn nakie(&mut self) -> NAKIE_W<4> {
-        NAKIE_W::new(self)
+    pub fn nakie(&mut self) -> NAKIE_W<HCH5INTEN_SPEC> {
+        NAKIE_W::new(self, 4)
     }
     #[doc = "Bit 5 - ACK interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ackie(&mut self) -> ACKIE_W<5> {
-        ACKIE_W::new(self)
+    pub fn ackie(&mut self) -> ACKIE_W<HCH5INTEN_SPEC> {
+        ACKIE_W::new(self, 5)
     }
     #[doc = "Bit 7 - USB bus error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn usberie(&mut self) -> USBERIE_W<7> {
-        USBERIE_W::new(self)
+    pub fn usberie(&mut self) -> USBERIE_W<HCH5INTEN_SPEC> {
+        USBERIE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Babble error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn bberie(&mut self) -> BBERIE_W<8> {
-        BBERIE_W::new(self)
+    pub fn bberie(&mut self) -> BBERIE_W<HCH5INTEN_SPEC> {
+        BBERIE_W::new(self, 8)
     }
     #[doc = "Bit 9 - request queue overrun interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn reqovrie(&mut self) -> REQOVRIE_W<9> {
-        REQOVRIE_W::new(self)
+    pub fn reqovrie(&mut self) -> REQOVRIE_W<HCH5INTEN_SPEC> {
+        REQOVRIE_W::new(self, 9)
     }
     #[doc = "Bit 10 - Data toggle error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dterie(&mut self) -> DTERIE_W<10> {
-        DTERIE_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn dterie(&mut self) -> DTERIE_W<HCH5INTEN_SPEC> {
+        DTERIE_W::new(self, 10)
     }
 }
-#[doc = "host channel-5 interrupt enable register (HCH5INTEN)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hch5inten](index.html) module"]
+#[doc = "host channel-5 interrupt enable register (HCH5INTEN)\n\nYou can [`read`](crate::Reg::read) this register and get [`hch5inten::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hch5inten::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCH5INTEN_SPEC;
 impl crate::RegisterSpec for HCH5INTEN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hch5inten::R](R) reader structure"]
-impl crate::Readable for HCH5INTEN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hch5inten::W](W) writer structure"]
+#[doc = "`read()` method returns [`hch5inten::R`](R) reader structure"]
+impl crate::Readable for HCH5INTEN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hch5inten::W`](W) writer structure"]
 impl crate::Writable for HCH5INTEN_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HCH5INTEN to value 0"]
 impl crate::Resettable for HCH5INTEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

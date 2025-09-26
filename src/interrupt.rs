@@ -96,6 +96,8 @@ pub enum Interrupt {
     RTC_ALARM = 60,
     #[doc = "61 - USBFS_WKUP"]
     USBFS_WKUP = 61,
+    #[doc = "68 - EXMC"]
+    EXMC = 68,
     #[doc = "69 - TIMER4"]
     TIMER4 = 69,
     #[doc = "70 - SPI2"]
@@ -184,6 +186,7 @@ impl Interrupt {
             59 => Ok(Interrupt::EXTI_LINE15_10),
             60 => Ok(Interrupt::RTC_ALARM),
             61 => Ok(Interrupt::USBFS_WKUP),
+            68 => Ok(Interrupt::EXMC),
             69 => Ok(Interrupt::TIMER4),
             70 => Ok(Interrupt::SPI2),
             71 => Ok(Interrupt::UART3),

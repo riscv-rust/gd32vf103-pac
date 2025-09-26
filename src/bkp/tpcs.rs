@@ -1,59 +1,27 @@
 #[doc = "Register `TPCS` reader"]
-pub struct R(crate::R<TPCS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TPCS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TPCS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TPCS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TPCS_SPEC>;
 #[doc = "Register `TPCS` writer"]
-pub struct W(crate::W<TPCS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TPCS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TPCS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TPCS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TPCS_SPEC>;
 #[doc = "Field `TER` reader - Tamper event reset"]
-pub type TER_R = crate::BitReader<bool>;
+pub type TER_R = crate::BitReader;
 #[doc = "Field `TER` writer - Tamper event reset"]
-pub type TER_W<'a, const O: u8> = crate::BitWriter<'a, u16, TPCS_SPEC, bool, O>;
+pub type TER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIR` reader - Tamper interrupt reset"]
-pub type TIR_R = crate::BitReader<bool>;
+pub type TIR_R = crate::BitReader;
 #[doc = "Field `TIR` writer - Tamper interrupt reset"]
-pub type TIR_W<'a, const O: u8> = crate::BitWriter<'a, u16, TPCS_SPEC, bool, O>;
+pub type TIR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TPIE` reader - Tamper interrupt enable"]
-pub type TPIE_R = crate::BitReader<bool>;
+pub type TPIE_R = crate::BitReader;
 #[doc = "Field `TPIE` writer - Tamper interrupt enable"]
-pub type TPIE_W<'a, const O: u8> = crate::BitWriter<'a, u16, TPCS_SPEC, bool, O>;
+pub type TPIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TEF` reader - Tamper event flag"]
-pub type TEF_R = crate::BitReader<bool>;
+pub type TEF_R = crate::BitReader;
 #[doc = "Field `TEF` writer - Tamper event flag"]
-pub type TEF_W<'a, const O: u8> = crate::BitWriter<'a, u16, TPCS_SPEC, bool, O>;
+pub type TEF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIF` reader - Tamper interrupt flag"]
-pub type TIF_R = crate::BitReader<bool>;
+pub type TIF_R = crate::BitReader;
 #[doc = "Field `TIF` writer - Tamper interrupt flag"]
-pub type TIF_W<'a, const O: u8> = crate::BitWriter<'a, u16, TPCS_SPEC, bool, O>;
+pub type TIF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Tamper event reset"]
     #[inline(always)]
@@ -85,56 +53,48 @@ impl W {
     #[doc = "Bit 0 - Tamper event reset"]
     #[inline(always)]
     #[must_use]
-    pub fn ter(&mut self) -> TER_W<0> {
-        TER_W::new(self)
+    pub fn ter(&mut self) -> TER_W<TPCS_SPEC> {
+        TER_W::new(self, 0)
     }
     #[doc = "Bit 1 - Tamper interrupt reset"]
     #[inline(always)]
     #[must_use]
-    pub fn tir(&mut self) -> TIR_W<1> {
-        TIR_W::new(self)
+    pub fn tir(&mut self) -> TIR_W<TPCS_SPEC> {
+        TIR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Tamper interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tpie(&mut self) -> TPIE_W<2> {
-        TPIE_W::new(self)
+    pub fn tpie(&mut self) -> TPIE_W<TPCS_SPEC> {
+        TPIE_W::new(self, 2)
     }
     #[doc = "Bit 8 - Tamper event flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tef(&mut self) -> TEF_W<8> {
-        TEF_W::new(self)
+    pub fn tef(&mut self) -> TEF_W<TPCS_SPEC> {
+        TEF_W::new(self, 8)
     }
     #[doc = "Bit 9 - Tamper interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tif(&mut self) -> TIF_W<9> {
-        TIF_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn tif(&mut self) -> TIF_W<TPCS_SPEC> {
+        TIF_W::new(self, 9)
     }
 }
-#[doc = "Tamper control and status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tpcs](index.html) module"]
+#[doc = "Tamper control and status register\n\nYou can [`read`](crate::Reg::read) this register and get [`tpcs::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tpcs::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TPCS_SPEC;
 impl crate::RegisterSpec for TPCS_SPEC {
     type Ux = u16;
 }
-#[doc = "`read()` method returns [tpcs::R](R) reader structure"]
-impl crate::Readable for TPCS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [tpcs::W](W) writer structure"]
+#[doc = "`read()` method returns [`tpcs::R`](R) reader structure"]
+impl crate::Readable for TPCS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tpcs::W`](W) writer structure"]
 impl crate::Writable for TPCS_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets TPCS to value 0"]
 impl crate::Resettable for TPCS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u16 = 0;
 }

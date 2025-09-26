@@ -1,75 +1,43 @@
 #[doc = "Register `SNCTL0` reader"]
-pub struct R(crate::R<SNCTL0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SNCTL0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SNCTL0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SNCTL0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SNCTL0_SPEC>;
 #[doc = "Register `SNCTL0` writer"]
-pub struct W(crate::W<SNCTL0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SNCTL0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SNCTL0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SNCTL0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SNCTL0_SPEC>;
 #[doc = "Field `NRBKEN` reader - NOR bank enable"]
-pub type NRBKEN_R = crate::BitReader<bool>;
+pub type NRBKEN_R = crate::BitReader;
 #[doc = "Field `NRBKEN` writer - NOR bank enable"]
-pub type NRBKEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SNCTL0_SPEC, bool, O>;
+pub type NRBKEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NRMUX` reader - NOR bank memory address/data multiplexing"]
-pub type NRMUX_R = crate::BitReader<bool>;
+pub type NRMUX_R = crate::BitReader;
 #[doc = "Field `NRMUX` writer - NOR bank memory address/data multiplexing"]
-pub type NRMUX_W<'a, const O: u8> = crate::BitWriter<'a, u32, SNCTL0_SPEC, bool, O>;
+pub type NRMUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NRTP` reader - NOR bank memory type"]
-pub type NRTP_R = crate::FieldReader<u8, u8>;
+pub type NRTP_R = crate::FieldReader;
 #[doc = "Field `NRTP` writer - NOR bank memory type"]
-pub type NRTP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SNCTL0_SPEC, u8, u8, 2, O>;
+pub type NRTP_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `NRW` reader - NOR bank memory data bus width"]
-pub type NRW_R = crate::FieldReader<u8, u8>;
+pub type NRW_R = crate::FieldReader;
 #[doc = "Field `NRW` writer - NOR bank memory data bus width"]
-pub type NRW_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SNCTL0_SPEC, u8, u8, 2, O>;
+pub type NRW_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `NREN` reader - NOR Flash access enable"]
-pub type NREN_R = crate::BitReader<bool>;
+pub type NREN_R = crate::BitReader;
 #[doc = "Field `NREN` writer - NOR Flash access enable"]
-pub type NREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SNCTL0_SPEC, bool, O>;
+pub type NREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NRWTPOL` reader - NWAIT signal polarity"]
-pub type NRWTPOL_R = crate::BitReader<bool>;
+pub type NRWTPOL_R = crate::BitReader;
 #[doc = "Field `NRWTPOL` writer - NWAIT signal polarity"]
-pub type NRWTPOL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SNCTL0_SPEC, bool, O>;
+pub type NRWTPOL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WREN` reader - Write enable"]
-pub type WREN_R = crate::BitReader<bool>;
+pub type WREN_R = crate::BitReader;
 #[doc = "Field `WREN` writer - Write enable"]
-pub type WREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SNCTL0_SPEC, bool, O>;
+pub type WREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NRWTEN` reader - NWAIT signal enable"]
-pub type NRWTEN_R = crate::BitReader<bool>;
+pub type NRWTEN_R = crate::BitReader;
 #[doc = "Field `NRWTEN` writer - NWAIT signal enable"]
-pub type NRWTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SNCTL0_SPEC, bool, O>;
+pub type NRWTEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ASYNCWAIT` reader - Asynchronous wait"]
-pub type ASYNCWAIT_R = crate::BitReader<bool>;
+pub type ASYNCWAIT_R = crate::BitReader;
 #[doc = "Field `ASYNCWAIT` writer - Asynchronous wait"]
-pub type ASYNCWAIT_W<'a, const O: u8> = crate::BitWriter<'a, u32, SNCTL0_SPEC, bool, O>;
+pub type ASYNCWAIT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - NOR bank enable"]
     #[inline(always)]
@@ -121,80 +89,72 @@ impl W {
     #[doc = "Bit 0 - NOR bank enable"]
     #[inline(always)]
     #[must_use]
-    pub fn nrbken(&mut self) -> NRBKEN_W<0> {
-        NRBKEN_W::new(self)
+    pub fn nrbken(&mut self) -> NRBKEN_W<SNCTL0_SPEC> {
+        NRBKEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - NOR bank memory address/data multiplexing"]
     #[inline(always)]
     #[must_use]
-    pub fn nrmux(&mut self) -> NRMUX_W<1> {
-        NRMUX_W::new(self)
+    pub fn nrmux(&mut self) -> NRMUX_W<SNCTL0_SPEC> {
+        NRMUX_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - NOR bank memory type"]
     #[inline(always)]
     #[must_use]
-    pub fn nrtp(&mut self) -> NRTP_W<2> {
-        NRTP_W::new(self)
+    pub fn nrtp(&mut self) -> NRTP_W<SNCTL0_SPEC> {
+        NRTP_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - NOR bank memory data bus width"]
     #[inline(always)]
     #[must_use]
-    pub fn nrw(&mut self) -> NRW_W<4> {
-        NRW_W::new(self)
+    pub fn nrw(&mut self) -> NRW_W<SNCTL0_SPEC> {
+        NRW_W::new(self, 4)
     }
     #[doc = "Bit 6 - NOR Flash access enable"]
     #[inline(always)]
     #[must_use]
-    pub fn nren(&mut self) -> NREN_W<6> {
-        NREN_W::new(self)
+    pub fn nren(&mut self) -> NREN_W<SNCTL0_SPEC> {
+        NREN_W::new(self, 6)
     }
     #[doc = "Bit 9 - NWAIT signal polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn nrwtpol(&mut self) -> NRWTPOL_W<9> {
-        NRWTPOL_W::new(self)
+    pub fn nrwtpol(&mut self) -> NRWTPOL_W<SNCTL0_SPEC> {
+        NRWTPOL_W::new(self, 9)
     }
     #[doc = "Bit 12 - Write enable"]
     #[inline(always)]
     #[must_use]
-    pub fn wren(&mut self) -> WREN_W<12> {
-        WREN_W::new(self)
+    pub fn wren(&mut self) -> WREN_W<SNCTL0_SPEC> {
+        WREN_W::new(self, 12)
     }
     #[doc = "Bit 13 - NWAIT signal enable"]
     #[inline(always)]
     #[must_use]
-    pub fn nrwten(&mut self) -> NRWTEN_W<13> {
-        NRWTEN_W::new(self)
+    pub fn nrwten(&mut self) -> NRWTEN_W<SNCTL0_SPEC> {
+        NRWTEN_W::new(self, 13)
     }
     #[doc = "Bit 15 - Asynchronous wait"]
     #[inline(always)]
     #[must_use]
-    pub fn asyncwait(&mut self) -> ASYNCWAIT_W<15> {
-        ASYNCWAIT_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn asyncwait(&mut self) -> ASYNCWAIT_W<SNCTL0_SPEC> {
+        ASYNCWAIT_W::new(self, 15)
     }
 }
-#[doc = "SRAM/NOR flash control register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [snctl0](index.html) module"]
+#[doc = "SRAM/NOR flash control register 0\n\nYou can [`read`](crate::Reg::read) this register and get [`snctl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`snctl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SNCTL0_SPEC;
 impl crate::RegisterSpec for SNCTL0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [snctl0::R](R) reader structure"]
-impl crate::Readable for SNCTL0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [snctl0::W](W) writer structure"]
+#[doc = "`read()` method returns [`snctl0::R`](R) reader structure"]
+impl crate::Readable for SNCTL0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`snctl0::W`](W) writer structure"]
 impl crate::Writable for SNCTL0_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SNCTL0 to value 0x30da"]
 impl crate::Resettable for SNCTL0_SPEC {
-    const RESET_VALUE: Self::Ux = 0x30da;
+    const RESET_VALUE: u32 = 0x30da;
 }

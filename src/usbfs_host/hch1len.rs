@@ -1,51 +1,19 @@
 #[doc = "Register `HCH1LEN` reader"]
-pub struct R(crate::R<HCH1LEN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HCH1LEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HCH1LEN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HCH1LEN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HCH1LEN_SPEC>;
 #[doc = "Register `HCH1LEN` writer"]
-pub struct W(crate::W<HCH1LEN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HCH1LEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HCH1LEN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HCH1LEN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HCH1LEN_SPEC>;
 #[doc = "Field `TLEN` reader - Transfer length"]
-pub type TLEN_R = crate::FieldReader<u32, u32>;
+pub type TLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `TLEN` writer - Transfer length"]
-pub type TLEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCH1LEN_SPEC, u32, u32, 19, O>;
+pub type TLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 19, u32>;
 #[doc = "Field `PCNT` reader - Packet count"]
-pub type PCNT_R = crate::FieldReader<u16, u16>;
+pub type PCNT_R = crate::FieldReader<u16>;
 #[doc = "Field `PCNT` writer - Packet count"]
-pub type PCNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCH1LEN_SPEC, u16, u16, 10, O>;
+pub type PCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `DPID` reader - Data PID"]
-pub type DPID_R = crate::FieldReader<u8, u8>;
+pub type DPID_R = crate::FieldReader;
 #[doc = "Field `DPID` writer - Data PID"]
-pub type DPID_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCH1LEN_SPEC, u8, u8, 2, O>;
+pub type DPID_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:18 - Transfer length"]
     #[inline(always)]
@@ -67,44 +35,36 @@ impl W {
     #[doc = "Bits 0:18 - Transfer length"]
     #[inline(always)]
     #[must_use]
-    pub fn tlen(&mut self) -> TLEN_W<0> {
-        TLEN_W::new(self)
+    pub fn tlen(&mut self) -> TLEN_W<HCH1LEN_SPEC> {
+        TLEN_W::new(self, 0)
     }
     #[doc = "Bits 19:28 - Packet count"]
     #[inline(always)]
     #[must_use]
-    pub fn pcnt(&mut self) -> PCNT_W<19> {
-        PCNT_W::new(self)
+    pub fn pcnt(&mut self) -> PCNT_W<HCH1LEN_SPEC> {
+        PCNT_W::new(self, 19)
     }
     #[doc = "Bits 29:30 - Data PID"]
     #[inline(always)]
     #[must_use]
-    pub fn dpid(&mut self) -> DPID_W<29> {
-        DPID_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn dpid(&mut self) -> DPID_W<HCH1LEN_SPEC> {
+        DPID_W::new(self, 29)
     }
 }
-#[doc = "host channel-1 transfer length register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hch1len](index.html) module"]
+#[doc = "host channel-1 transfer length register\n\nYou can [`read`](crate::Reg::read) this register and get [`hch1len::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hch1len::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCH1LEN_SPEC;
 impl crate::RegisterSpec for HCH1LEN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hch1len::R](R) reader structure"]
-impl crate::Readable for HCH1LEN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hch1len::W](W) writer structure"]
+#[doc = "`read()` method returns [`hch1len::R`](R) reader structure"]
+impl crate::Readable for HCH1LEN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hch1len::W`](W) writer structure"]
 impl crate::Writable for HCH1LEN_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HCH1LEN to value 0"]
 impl crate::Resettable for HCH1LEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }
