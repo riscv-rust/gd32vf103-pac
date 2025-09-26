@@ -1,59 +1,27 @@
 #[doc = "Register `DIEPINTEN` reader"]
-pub struct R(crate::R<DIEPINTEN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DIEPINTEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DIEPINTEN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DIEPINTEN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DIEPINTEN_SPEC>;
 #[doc = "Register `DIEPINTEN` writer"]
-pub struct W(crate::W<DIEPINTEN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DIEPINTEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DIEPINTEN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DIEPINTEN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DIEPINTEN_SPEC>;
 #[doc = "Field `TFEN` reader - Transfer finished interrupt enable"]
-pub type TFEN_R = crate::BitReader<bool>;
+pub type TFEN_R = crate::BitReader;
 #[doc = "Field `TFEN` writer - Transfer finished interrupt enable"]
-pub type TFEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPINTEN_SPEC, bool, O>;
+pub type TFEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EPDISEN` reader - Endpoint disabled interrupt enable"]
-pub type EPDISEN_R = crate::BitReader<bool>;
+pub type EPDISEN_R = crate::BitReader;
 #[doc = "Field `EPDISEN` writer - Endpoint disabled interrupt enable"]
-pub type EPDISEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPINTEN_SPEC, bool, O>;
+pub type EPDISEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CITOEN` reader - Control IN timeout condition interrupt enable (Non-isochronous endpoints)"]
-pub type CITOEN_R = crate::BitReader<bool>;
+pub type CITOEN_R = crate::BitReader;
 #[doc = "Field `CITOEN` writer - Control IN timeout condition interrupt enable (Non-isochronous endpoints)"]
-pub type CITOEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPINTEN_SPEC, bool, O>;
+pub type CITOEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EPTXFUDEN` reader - Endpoint Tx FIFO underrun interrupt enable bit"]
-pub type EPTXFUDEN_R = crate::BitReader<bool>;
+pub type EPTXFUDEN_R = crate::BitReader;
 #[doc = "Field `EPTXFUDEN` writer - Endpoint Tx FIFO underrun interrupt enable bit"]
-pub type EPTXFUDEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPINTEN_SPEC, bool, O>;
+pub type EPTXFUDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IEPNEEN` reader - IN endpoint NAK effective interrupt enable"]
-pub type IEPNEEN_R = crate::BitReader<bool>;
+pub type IEPNEEN_R = crate::BitReader;
 #[doc = "Field `IEPNEEN` writer - IN endpoint NAK effective interrupt enable"]
-pub type IEPNEEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPINTEN_SPEC, bool, O>;
+pub type IEPNEEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Transfer finished interrupt enable"]
     #[inline(always)]
@@ -85,52 +53,53 @@ impl W {
     #[doc = "Bit 0 - Transfer finished interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tfen(&mut self) -> TFEN_W<0> {
+    pub fn tfen(&mut self) -> TFEN_W<DIEPINTEN_SPEC, 0> {
         TFEN_W::new(self)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn epdisen(&mut self) -> EPDISEN_W<1> {
+    pub fn epdisen(&mut self) -> EPDISEN_W<DIEPINTEN_SPEC, 1> {
         EPDISEN_W::new(self)
     }
     #[doc = "Bit 3 - Control IN timeout condition interrupt enable (Non-isochronous endpoints)"]
     #[inline(always)]
     #[must_use]
-    pub fn citoen(&mut self) -> CITOEN_W<3> {
+    pub fn citoen(&mut self) -> CITOEN_W<DIEPINTEN_SPEC, 3> {
         CITOEN_W::new(self)
     }
     #[doc = "Bit 4 - Endpoint Tx FIFO underrun interrupt enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn eptxfuden(&mut self) -> EPTXFUDEN_W<4> {
+    pub fn eptxfuden(&mut self) -> EPTXFUDEN_W<DIEPINTEN_SPEC, 4> {
         EPTXFUDEN_W::new(self)
     }
     #[doc = "Bit 6 - IN endpoint NAK effective interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn iepneen(&mut self) -> IEPNEEN_W<6> {
+    pub fn iepneen(&mut self) -> IEPNEEN_W<DIEPINTEN_SPEC, 6> {
         IEPNEEN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "device IN endpoint common interrupt mask register (DIEPINTEN)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [diepinten](index.html) module"]
+#[doc = "device IN endpoint common interrupt mask register (DIEPINTEN)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepinten::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepinten::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIEPINTEN_SPEC;
 impl crate::RegisterSpec for DIEPINTEN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [diepinten::R](R) reader structure"]
-impl crate::Readable for DIEPINTEN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [diepinten::W](W) writer structure"]
+#[doc = "`read()` method returns [`diepinten::R`](R) reader structure"]
+impl crate::Readable for DIEPINTEN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`diepinten::W`](W) writer structure"]
 impl crate::Writable for DIEPINTEN_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

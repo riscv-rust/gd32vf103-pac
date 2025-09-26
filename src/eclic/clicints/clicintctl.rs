@@ -1,44 +1,11 @@
 #[doc = "Register `CLICINTCTL` reader"]
-pub struct R(crate::R<CLICINTCTL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CLICINTCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CLICINTCTL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CLICINTCTL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CLICINTCTL_SPEC>;
 #[doc = "Register `CLICINTCTL` writer"]
-pub struct W(crate::W<CLICINTCTL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CLICINTCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CLICINTCTL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CLICINTCTL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CLICINTCTL_SPEC>;
 #[doc = "Field `LEVEL_PRIORITY` reader - LEVEL_PRIORITY"]
-pub type LEVEL_PRIORITY_R = crate::FieldReader<u8, u8>;
+pub type LEVEL_PRIORITY_R = crate::FieldReader;
 #[doc = "Field `LEVEL_PRIORITY` writer - LEVEL_PRIORITY"]
-pub type LEVEL_PRIORITY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u8, CLICINTCTL_SPEC, u8, u8, 8, O>;
+pub type LEVEL_PRIORITY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - LEVEL_PRIORITY"]
     #[inline(always)]
@@ -50,28 +17,29 @@ impl W {
     #[doc = "Bits 0:7 - LEVEL_PRIORITY"]
     #[inline(always)]
     #[must_use]
-    pub fn level_priority(&mut self) -> LEVEL_PRIORITY_W<0> {
+    pub fn level_priority(&mut self) -> LEVEL_PRIORITY_W<CLICINTCTL_SPEC, 0> {
         LEVEL_PRIORITY_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "clicintctl Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clicintctl](index.html) module"]
+#[doc = "clicintctl Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clicintctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clicintctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLICINTCTL_SPEC;
 impl crate::RegisterSpec for CLICINTCTL_SPEC {
     type Ux = u8;
 }
-#[doc = "`read()` method returns [clicintctl::R](R) reader structure"]
-impl crate::Readable for CLICINTCTL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [clicintctl::W](W) writer structure"]
+#[doc = "`read()` method returns [`clicintctl::R`](R) reader structure"]
+impl crate::Readable for CLICINTCTL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`clicintctl::W`](W) writer structure"]
 impl crate::Writable for CLICINTCTL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

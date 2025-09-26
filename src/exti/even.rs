@@ -1,115 +1,83 @@
 #[doc = "Register `EVEN` reader"]
-pub struct R(crate::R<EVEN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<EVEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<EVEN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<EVEN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<EVEN_SPEC>;
 #[doc = "Register `EVEN` writer"]
-pub struct W(crate::W<EVEN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<EVEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<EVEN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<EVEN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<EVEN_SPEC>;
 #[doc = "Field `EVEN0` reader - Enable Event on line 0"]
-pub type EVEN0_R = crate::BitReader<bool>;
+pub type EVEN0_R = crate::BitReader;
 #[doc = "Field `EVEN0` writer - Enable Event on line 0"]
-pub type EVEN0_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN1` reader - Enable Event on line 1"]
-pub type EVEN1_R = crate::BitReader<bool>;
+pub type EVEN1_R = crate::BitReader;
 #[doc = "Field `EVEN1` writer - Enable Event on line 1"]
-pub type EVEN1_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN2` reader - Enable Event on line 2"]
-pub type EVEN2_R = crate::BitReader<bool>;
+pub type EVEN2_R = crate::BitReader;
 #[doc = "Field `EVEN2` writer - Enable Event on line 2"]
-pub type EVEN2_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN3` reader - Enable Event on line 3"]
-pub type EVEN3_R = crate::BitReader<bool>;
+pub type EVEN3_R = crate::BitReader;
 #[doc = "Field `EVEN3` writer - Enable Event on line 3"]
-pub type EVEN3_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN4` reader - Enable Event on line 4"]
-pub type EVEN4_R = crate::BitReader<bool>;
+pub type EVEN4_R = crate::BitReader;
 #[doc = "Field `EVEN4` writer - Enable Event on line 4"]
-pub type EVEN4_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN5` reader - Enable Event on line 5"]
-pub type EVEN5_R = crate::BitReader<bool>;
+pub type EVEN5_R = crate::BitReader;
 #[doc = "Field `EVEN5` writer - Enable Event on line 5"]
-pub type EVEN5_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN6` reader - Enable Event on line 6"]
-pub type EVEN6_R = crate::BitReader<bool>;
+pub type EVEN6_R = crate::BitReader;
 #[doc = "Field `EVEN6` writer - Enable Event on line 6"]
-pub type EVEN6_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN7` reader - Enable Event on line 7"]
-pub type EVEN7_R = crate::BitReader<bool>;
+pub type EVEN7_R = crate::BitReader;
 #[doc = "Field `EVEN7` writer - Enable Event on line 7"]
-pub type EVEN7_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN8` reader - Enable Event on line 8"]
-pub type EVEN8_R = crate::BitReader<bool>;
+pub type EVEN8_R = crate::BitReader;
 #[doc = "Field `EVEN8` writer - Enable Event on line 8"]
-pub type EVEN8_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN9` reader - Enable Event on line 9"]
-pub type EVEN9_R = crate::BitReader<bool>;
+pub type EVEN9_R = crate::BitReader;
 #[doc = "Field `EVEN9` writer - Enable Event on line 9"]
-pub type EVEN9_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN9_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN10` reader - Enable Event on line 10"]
-pub type EVEN10_R = crate::BitReader<bool>;
+pub type EVEN10_R = crate::BitReader;
 #[doc = "Field `EVEN10` writer - Enable Event on line 10"]
-pub type EVEN10_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN11` reader - Enable Event on line 11"]
-pub type EVEN11_R = crate::BitReader<bool>;
+pub type EVEN11_R = crate::BitReader;
 #[doc = "Field `EVEN11` writer - Enable Event on line 11"]
-pub type EVEN11_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN11_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN12` reader - Enable Event on line 12"]
-pub type EVEN12_R = crate::BitReader<bool>;
+pub type EVEN12_R = crate::BitReader;
 #[doc = "Field `EVEN12` writer - Enable Event on line 12"]
-pub type EVEN12_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN12_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN13` reader - Enable Event on line 13"]
-pub type EVEN13_R = crate::BitReader<bool>;
+pub type EVEN13_R = crate::BitReader;
 #[doc = "Field `EVEN13` writer - Enable Event on line 13"]
-pub type EVEN13_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN13_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN14` reader - Enable Event on line 14"]
-pub type EVEN14_R = crate::BitReader<bool>;
+pub type EVEN14_R = crate::BitReader;
 #[doc = "Field `EVEN14` writer - Enable Event on line 14"]
-pub type EVEN14_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN14_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN15` reader - Enable Event on line 15"]
-pub type EVEN15_R = crate::BitReader<bool>;
+pub type EVEN15_R = crate::BitReader;
 #[doc = "Field `EVEN15` writer - Enable Event on line 15"]
-pub type EVEN15_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN15_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN16` reader - Enable Event on line 16"]
-pub type EVEN16_R = crate::BitReader<bool>;
+pub type EVEN16_R = crate::BitReader;
 #[doc = "Field `EVEN16` writer - Enable Event on line 16"]
-pub type EVEN16_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN16_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN17` reader - Enable Event on line 17"]
-pub type EVEN17_R = crate::BitReader<bool>;
+pub type EVEN17_R = crate::BitReader;
 #[doc = "Field `EVEN17` writer - Enable Event on line 17"]
-pub type EVEN17_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN17_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EVEN18` reader - Enable Event on line 18"]
-pub type EVEN18_R = crate::BitReader<bool>;
+pub type EVEN18_R = crate::BitReader;
 #[doc = "Field `EVEN18` writer - Enable Event on line 18"]
-pub type EVEN18_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVEN_SPEC, bool, O>;
+pub type EVEN18_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Enable Event on line 0"]
     #[inline(always)]
@@ -211,136 +179,137 @@ impl W {
     #[doc = "Bit 0 - Enable Event on line 0"]
     #[inline(always)]
     #[must_use]
-    pub fn even0(&mut self) -> EVEN0_W<0> {
+    pub fn even0(&mut self) -> EVEN0_W<EVEN_SPEC, 0> {
         EVEN0_W::new(self)
     }
     #[doc = "Bit 1 - Enable Event on line 1"]
     #[inline(always)]
     #[must_use]
-    pub fn even1(&mut self) -> EVEN1_W<1> {
+    pub fn even1(&mut self) -> EVEN1_W<EVEN_SPEC, 1> {
         EVEN1_W::new(self)
     }
     #[doc = "Bit 2 - Enable Event on line 2"]
     #[inline(always)]
     #[must_use]
-    pub fn even2(&mut self) -> EVEN2_W<2> {
+    pub fn even2(&mut self) -> EVEN2_W<EVEN_SPEC, 2> {
         EVEN2_W::new(self)
     }
     #[doc = "Bit 3 - Enable Event on line 3"]
     #[inline(always)]
     #[must_use]
-    pub fn even3(&mut self) -> EVEN3_W<3> {
+    pub fn even3(&mut self) -> EVEN3_W<EVEN_SPEC, 3> {
         EVEN3_W::new(self)
     }
     #[doc = "Bit 4 - Enable Event on line 4"]
     #[inline(always)]
     #[must_use]
-    pub fn even4(&mut self) -> EVEN4_W<4> {
+    pub fn even4(&mut self) -> EVEN4_W<EVEN_SPEC, 4> {
         EVEN4_W::new(self)
     }
     #[doc = "Bit 5 - Enable Event on line 5"]
     #[inline(always)]
     #[must_use]
-    pub fn even5(&mut self) -> EVEN5_W<5> {
+    pub fn even5(&mut self) -> EVEN5_W<EVEN_SPEC, 5> {
         EVEN5_W::new(self)
     }
     #[doc = "Bit 6 - Enable Event on line 6"]
     #[inline(always)]
     #[must_use]
-    pub fn even6(&mut self) -> EVEN6_W<6> {
+    pub fn even6(&mut self) -> EVEN6_W<EVEN_SPEC, 6> {
         EVEN6_W::new(self)
     }
     #[doc = "Bit 7 - Enable Event on line 7"]
     #[inline(always)]
     #[must_use]
-    pub fn even7(&mut self) -> EVEN7_W<7> {
+    pub fn even7(&mut self) -> EVEN7_W<EVEN_SPEC, 7> {
         EVEN7_W::new(self)
     }
     #[doc = "Bit 8 - Enable Event on line 8"]
     #[inline(always)]
     #[must_use]
-    pub fn even8(&mut self) -> EVEN8_W<8> {
+    pub fn even8(&mut self) -> EVEN8_W<EVEN_SPEC, 8> {
         EVEN8_W::new(self)
     }
     #[doc = "Bit 9 - Enable Event on line 9"]
     #[inline(always)]
     #[must_use]
-    pub fn even9(&mut self) -> EVEN9_W<9> {
+    pub fn even9(&mut self) -> EVEN9_W<EVEN_SPEC, 9> {
         EVEN9_W::new(self)
     }
     #[doc = "Bit 10 - Enable Event on line 10"]
     #[inline(always)]
     #[must_use]
-    pub fn even10(&mut self) -> EVEN10_W<10> {
+    pub fn even10(&mut self) -> EVEN10_W<EVEN_SPEC, 10> {
         EVEN10_W::new(self)
     }
     #[doc = "Bit 11 - Enable Event on line 11"]
     #[inline(always)]
     #[must_use]
-    pub fn even11(&mut self) -> EVEN11_W<11> {
+    pub fn even11(&mut self) -> EVEN11_W<EVEN_SPEC, 11> {
         EVEN11_W::new(self)
     }
     #[doc = "Bit 12 - Enable Event on line 12"]
     #[inline(always)]
     #[must_use]
-    pub fn even12(&mut self) -> EVEN12_W<12> {
+    pub fn even12(&mut self) -> EVEN12_W<EVEN_SPEC, 12> {
         EVEN12_W::new(self)
     }
     #[doc = "Bit 13 - Enable Event on line 13"]
     #[inline(always)]
     #[must_use]
-    pub fn even13(&mut self) -> EVEN13_W<13> {
+    pub fn even13(&mut self) -> EVEN13_W<EVEN_SPEC, 13> {
         EVEN13_W::new(self)
     }
     #[doc = "Bit 14 - Enable Event on line 14"]
     #[inline(always)]
     #[must_use]
-    pub fn even14(&mut self) -> EVEN14_W<14> {
+    pub fn even14(&mut self) -> EVEN14_W<EVEN_SPEC, 14> {
         EVEN14_W::new(self)
     }
     #[doc = "Bit 15 - Enable Event on line 15"]
     #[inline(always)]
     #[must_use]
-    pub fn even15(&mut self) -> EVEN15_W<15> {
+    pub fn even15(&mut self) -> EVEN15_W<EVEN_SPEC, 15> {
         EVEN15_W::new(self)
     }
     #[doc = "Bit 16 - Enable Event on line 16"]
     #[inline(always)]
     #[must_use]
-    pub fn even16(&mut self) -> EVEN16_W<16> {
+    pub fn even16(&mut self) -> EVEN16_W<EVEN_SPEC, 16> {
         EVEN16_W::new(self)
     }
     #[doc = "Bit 17 - Enable Event on line 17"]
     #[inline(always)]
     #[must_use]
-    pub fn even17(&mut self) -> EVEN17_W<17> {
+    pub fn even17(&mut self) -> EVEN17_W<EVEN_SPEC, 17> {
         EVEN17_W::new(self)
     }
     #[doc = "Bit 18 - Enable Event on line 18"]
     #[inline(always)]
     #[must_use]
-    pub fn even18(&mut self) -> EVEN18_W<18> {
+    pub fn even18(&mut self) -> EVEN18_W<EVEN_SPEC, 18> {
         EVEN18_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Event enable register (EXTI_EVEN)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [even](index.html) module"]
+#[doc = "Event enable register (EXTI_EVEN)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`even::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`even::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EVEN_SPEC;
 impl crate::RegisterSpec for EVEN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [even::R](R) reader structure"]
-impl crate::Readable for EVEN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [even::W](W) writer structure"]
+#[doc = "`read()` method returns [`even::R`](R) reader structure"]
+impl crate::Readable for EVEN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`even::W`](W) writer structure"]
 impl crate::Writable for EVEN_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

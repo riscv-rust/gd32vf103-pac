@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Before running this script, install the required software:
-# cargo install svd2rust --version=0.28.0
-# cargo install form --version=0.10.0
+# cargo install svd2rust --version=0.30.0
+# cargo install form --version=0.13.0
 # pip3 install --upgrade --user svdtools
 
 set -x

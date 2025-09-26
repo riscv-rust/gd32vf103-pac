@@ -1,63 +1,31 @@
 #[doc = "Register `GUSBCS` reader"]
-pub struct R(crate::R<GUSBCS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GUSBCS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GUSBCS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GUSBCS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GUSBCS_SPEC>;
 #[doc = "Register `GUSBCS` writer"]
-pub struct W(crate::W<GUSBCS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GUSBCS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GUSBCS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GUSBCS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GUSBCS_SPEC>;
 #[doc = "Field `TOC` reader - Timeout calibration"]
-pub type TOC_R = crate::FieldReader<u8, u8>;
+pub type TOC_R = crate::FieldReader;
 #[doc = "Field `TOC` writer - Timeout calibration"]
-pub type TOC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GUSBCS_SPEC, u8, u8, 3, O>;
+pub type TOC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `SRPCEN` reader - SRP capability enable"]
-pub type SRPCEN_R = crate::BitReader<bool>;
+pub type SRPCEN_R = crate::BitReader;
 #[doc = "Field `SRPCEN` writer - SRP capability enable"]
-pub type SRPCEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GUSBCS_SPEC, bool, O>;
+pub type SRPCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HNPCEN` reader - HNP capability enable"]
-pub type HNPCEN_R = crate::BitReader<bool>;
+pub type HNPCEN_R = crate::BitReader;
 #[doc = "Field `HNPCEN` writer - HNP capability enable"]
-pub type HNPCEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GUSBCS_SPEC, bool, O>;
+pub type HNPCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `UTT` reader - USB turnaround time"]
-pub type UTT_R = crate::FieldReader<u8, u8>;
+pub type UTT_R = crate::FieldReader;
 #[doc = "Field `UTT` writer - USB turnaround time"]
-pub type UTT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GUSBCS_SPEC, u8, u8, 4, O>;
+pub type UTT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `FHM` reader - Force host mode"]
-pub type FHM_R = crate::BitReader<bool>;
+pub type FHM_R = crate::BitReader;
 #[doc = "Field `FHM` writer - Force host mode"]
-pub type FHM_W<'a, const O: u8> = crate::BitWriter<'a, u32, GUSBCS_SPEC, bool, O>;
+pub type FHM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FDM` reader - Force device mode"]
-pub type FDM_R = crate::BitReader<bool>;
+pub type FDM_R = crate::BitReader;
 #[doc = "Field `FDM` writer - Force device mode"]
-pub type FDM_W<'a, const O: u8> = crate::BitWriter<'a, u32, GUSBCS_SPEC, bool, O>;
+pub type FDM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:2 - Timeout calibration"]
     #[inline(always)]
@@ -94,58 +62,59 @@ impl W {
     #[doc = "Bits 0:2 - Timeout calibration"]
     #[inline(always)]
     #[must_use]
-    pub fn toc(&mut self) -> TOC_W<0> {
+    pub fn toc(&mut self) -> TOC_W<GUSBCS_SPEC, 0> {
         TOC_W::new(self)
     }
     #[doc = "Bit 8 - SRP capability enable"]
     #[inline(always)]
     #[must_use]
-    pub fn srpcen(&mut self) -> SRPCEN_W<8> {
+    pub fn srpcen(&mut self) -> SRPCEN_W<GUSBCS_SPEC, 8> {
         SRPCEN_W::new(self)
     }
     #[doc = "Bit 9 - HNP capability enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hnpcen(&mut self) -> HNPCEN_W<9> {
+    pub fn hnpcen(&mut self) -> HNPCEN_W<GUSBCS_SPEC, 9> {
         HNPCEN_W::new(self)
     }
     #[doc = "Bits 10:13 - USB turnaround time"]
     #[inline(always)]
     #[must_use]
-    pub fn utt(&mut self) -> UTT_W<10> {
+    pub fn utt(&mut self) -> UTT_W<GUSBCS_SPEC, 10> {
         UTT_W::new(self)
     }
     #[doc = "Bit 29 - Force host mode"]
     #[inline(always)]
     #[must_use]
-    pub fn fhm(&mut self) -> FHM_W<29> {
+    pub fn fhm(&mut self) -> FHM_W<GUSBCS_SPEC, 29> {
         FHM_W::new(self)
     }
     #[doc = "Bit 30 - Force device mode"]
     #[inline(always)]
     #[must_use]
-    pub fn fdm(&mut self) -> FDM_W<30> {
+    pub fn fdm(&mut self) -> FDM_W<GUSBCS_SPEC, 30> {
         FDM_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Global USB control and status register (USBFS_GUSBCSR)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gusbcs](index.html) module"]
+#[doc = "Global USB control and status register (USBFS_GUSBCSR)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gusbcs::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gusbcs::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GUSBCS_SPEC;
 impl crate::RegisterSpec for GUSBCS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gusbcs::R](R) reader structure"]
-impl crate::Readable for GUSBCS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gusbcs::W](W) writer structure"]
+#[doc = "`read()` method returns [`gusbcs::R`](R) reader structure"]
+impl crate::Readable for GUSBCS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gusbcs::W`](W) writer structure"]
 impl crate::Writable for GUSBCS_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

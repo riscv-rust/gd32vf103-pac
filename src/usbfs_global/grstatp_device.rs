@@ -1,26 +1,13 @@
 #[doc = "Register `GRSTATP_Device` reader"]
-pub struct R(crate::R<GRSTATP_DEVICE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GRSTATP_DEVICE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GRSTATP_DEVICE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GRSTATP_DEVICE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GRSTATP_DEVICE_SPEC>;
 #[doc = "Field `EPNUM` reader - Endpoint number"]
-pub type EPNUM_R = crate::FieldReader<u8, u8>;
+pub type EPNUM_R = crate::FieldReader;
 #[doc = "Field `BCOUNT` reader - Byte count"]
-pub type BCOUNT_R = crate::FieldReader<u16, u16>;
+pub type BCOUNT_R = crate::FieldReader<u16>;
 #[doc = "Field `DPID` reader - Data PID"]
-pub type DPID_R = crate::FieldReader<u8, u8>;
+pub type DPID_R = crate::FieldReader;
 #[doc = "Field `RPCKST` reader - Recieve packet status"]
-pub type RPCKST_R = crate::FieldReader<u8, u8>;
+pub type RPCKST_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:3 - Endpoint number"]
     #[inline(always)]
@@ -43,15 +30,13 @@ impl R {
         RPCKST_R::new(((self.bits >> 17) & 0x0f) as u8)
     }
 }
-#[doc = "Global Receive status pop(Device mode)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [grstatp_device](index.html) module"]
+#[doc = "Global Receive status pop(Device mode)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`grstatp_device::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GRSTATP_DEVICE_SPEC;
 impl crate::RegisterSpec for GRSTATP_DEVICE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [grstatp_device::R](R) reader structure"]
-impl crate::Readable for GRSTATP_DEVICE_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`grstatp_device::R`](R) reader structure"]
+impl crate::Readable for GRSTATP_DEVICE_SPEC {}
 #[doc = "`reset()` method sets GRSTATP_Device to value 0"]
 impl crate::Resettable for GRSTATP_DEVICE_SPEC {
     const RESET_VALUE: Self::Ux = 0;

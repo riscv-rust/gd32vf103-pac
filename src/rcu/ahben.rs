@@ -1,67 +1,35 @@
 #[doc = "Register `AHBEN` reader"]
-pub struct R(crate::R<AHBEN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<AHBEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<AHBEN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<AHBEN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<AHBEN_SPEC>;
 #[doc = "Register `AHBEN` writer"]
-pub struct W(crate::W<AHBEN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<AHBEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<AHBEN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<AHBEN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<AHBEN_SPEC>;
 #[doc = "Field `DMA0EN` reader - DMA0 clock enable"]
-pub type DMA0EN_R = crate::BitReader<bool>;
+pub type DMA0EN_R = crate::BitReader;
 #[doc = "Field `DMA0EN` writer - DMA0 clock enable"]
-pub type DMA0EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, AHBEN_SPEC, bool, O>;
+pub type DMA0EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DMA1EN` reader - DMA1 clock enable"]
-pub type DMA1EN_R = crate::BitReader<bool>;
+pub type DMA1EN_R = crate::BitReader;
 #[doc = "Field `DMA1EN` writer - DMA1 clock enable"]
-pub type DMA1EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, AHBEN_SPEC, bool, O>;
+pub type DMA1EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SRAMSPEN` reader - SRAM interface clock enable when sleep mode"]
-pub type SRAMSPEN_R = crate::BitReader<bool>;
+pub type SRAMSPEN_R = crate::BitReader;
 #[doc = "Field `SRAMSPEN` writer - SRAM interface clock enable when sleep mode"]
-pub type SRAMSPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, AHBEN_SPEC, bool, O>;
+pub type SRAMSPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FMCSPEN` reader - FMC clock enable when sleep mode"]
-pub type FMCSPEN_R = crate::BitReader<bool>;
+pub type FMCSPEN_R = crate::BitReader;
 #[doc = "Field `FMCSPEN` writer - FMC clock enable when sleep mode"]
-pub type FMCSPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, AHBEN_SPEC, bool, O>;
+pub type FMCSPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CRCEN` reader - CRC clock enable"]
-pub type CRCEN_R = crate::BitReader<bool>;
+pub type CRCEN_R = crate::BitReader;
 #[doc = "Field `CRCEN` writer - CRC clock enable"]
-pub type CRCEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, AHBEN_SPEC, bool, O>;
+pub type CRCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EXMCEN` reader - EXMC clock enable"]
-pub type EXMCEN_R = crate::BitReader<bool>;
+pub type EXMCEN_R = crate::BitReader;
 #[doc = "Field `EXMCEN` writer - EXMC clock enable"]
-pub type EXMCEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, AHBEN_SPEC, bool, O>;
+pub type EXMCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `USBFSEN` reader - USBFS clock enable"]
-pub type USBFSEN_R = crate::BitReader<bool>;
+pub type USBFSEN_R = crate::BitReader;
 #[doc = "Field `USBFSEN` writer - USBFS clock enable"]
-pub type USBFSEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, AHBEN_SPEC, bool, O>;
+pub type USBFSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - DMA0 clock enable"]
     #[inline(always)]
@@ -103,64 +71,65 @@ impl W {
     #[doc = "Bit 0 - DMA0 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dma0en(&mut self) -> DMA0EN_W<0> {
+    pub fn dma0en(&mut self) -> DMA0EN_W<AHBEN_SPEC, 0> {
         DMA0EN_W::new(self)
     }
     #[doc = "Bit 1 - DMA1 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dma1en(&mut self) -> DMA1EN_W<1> {
+    pub fn dma1en(&mut self) -> DMA1EN_W<AHBEN_SPEC, 1> {
         DMA1EN_W::new(self)
     }
     #[doc = "Bit 2 - SRAM interface clock enable when sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn sramspen(&mut self) -> SRAMSPEN_W<2> {
+    pub fn sramspen(&mut self) -> SRAMSPEN_W<AHBEN_SPEC, 2> {
         SRAMSPEN_W::new(self)
     }
     #[doc = "Bit 4 - FMC clock enable when sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn fmcspen(&mut self) -> FMCSPEN_W<4> {
+    pub fn fmcspen(&mut self) -> FMCSPEN_W<AHBEN_SPEC, 4> {
         FMCSPEN_W::new(self)
     }
     #[doc = "Bit 6 - CRC clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn crcen(&mut self) -> CRCEN_W<6> {
+    pub fn crcen(&mut self) -> CRCEN_W<AHBEN_SPEC, 6> {
         CRCEN_W::new(self)
     }
     #[doc = "Bit 8 - EXMC clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn exmcen(&mut self) -> EXMCEN_W<8> {
+    pub fn exmcen(&mut self) -> EXMCEN_W<AHBEN_SPEC, 8> {
         EXMCEN_W::new(self)
     }
     #[doc = "Bit 12 - USBFS clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn usbfsen(&mut self) -> USBFSEN_W<12> {
+    pub fn usbfsen(&mut self) -> USBFSEN_W<AHBEN_SPEC, 12> {
         USBFSEN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "AHB enable register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ahben](index.html) module"]
+#[doc = "AHB enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ahben::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ahben::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AHBEN_SPEC;
 impl crate::RegisterSpec for AHBEN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ahben::R](R) reader structure"]
-impl crate::Readable for AHBEN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ahben::W](W) writer structure"]
+#[doc = "`read()` method returns [`ahben::R`](R) reader structure"]
+impl crate::Readable for AHBEN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ahben::W`](W) writer structure"]
 impl crate::Writable for AHBEN_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

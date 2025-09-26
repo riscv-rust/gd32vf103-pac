@@ -1,87 +1,55 @@
 #[doc = "Register `INTF` reader"]
-pub struct R(crate::R<INTF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INTF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INTF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INTF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INTF_SPEC>;
 #[doc = "Register `INTF` writer"]
-pub struct W(crate::W<INTF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<INTF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<INTF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<INTF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<INTF_SPEC>;
 #[doc = "Field `UPIF` reader - Update interrupt flag"]
-pub type UPIF_R = crate::BitReader<bool>;
+pub type UPIF_R = crate::BitReader;
 #[doc = "Field `UPIF` writer - Update interrupt flag"]
-pub type UPIF_W<'a, const O: u8> = crate::BitWriter<'a, u16, INTF_SPEC, bool, O>;
+pub type UPIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH0IF` reader - Channel 0 capture/compare interrupt flag"]
-pub type CH0IF_R = crate::BitReader<bool>;
+pub type CH0IF_R = crate::BitReader;
 #[doc = "Field `CH0IF` writer - Channel 0 capture/compare interrupt flag"]
-pub type CH0IF_W<'a, const O: u8> = crate::BitWriter<'a, u16, INTF_SPEC, bool, O>;
+pub type CH0IF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH1IF` reader - Channel 1 capture/compare interrupt flag"]
-pub type CH1IF_R = crate::BitReader<bool>;
+pub type CH1IF_R = crate::BitReader;
 #[doc = "Field `CH1IF` writer - Channel 1 capture/compare interrupt flag"]
-pub type CH1IF_W<'a, const O: u8> = crate::BitWriter<'a, u16, INTF_SPEC, bool, O>;
+pub type CH1IF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH2IF` reader - Channel 2 capture/compare interrupt flag"]
-pub type CH2IF_R = crate::BitReader<bool>;
+pub type CH2IF_R = crate::BitReader;
 #[doc = "Field `CH2IF` writer - Channel 2 capture/compare interrupt flag"]
-pub type CH2IF_W<'a, const O: u8> = crate::BitWriter<'a, u16, INTF_SPEC, bool, O>;
+pub type CH2IF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH3IF` reader - Channel 3 capture/compare interrupt flag"]
-pub type CH3IF_R = crate::BitReader<bool>;
+pub type CH3IF_R = crate::BitReader;
 #[doc = "Field `CH3IF` writer - Channel 3 capture/compare interrupt flag"]
-pub type CH3IF_W<'a, const O: u8> = crate::BitWriter<'a, u16, INTF_SPEC, bool, O>;
+pub type CH3IF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CMTIF` reader - Channel commutation interrupt flag"]
-pub type CMTIF_R = crate::BitReader<bool>;
+pub type CMTIF_R = crate::BitReader;
 #[doc = "Field `CMTIF` writer - Channel commutation interrupt flag"]
-pub type CMTIF_W<'a, const O: u8> = crate::BitWriter<'a, u16, INTF_SPEC, bool, O>;
+pub type CMTIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TRGIF` reader - Trigger interrupt flag"]
-pub type TRGIF_R = crate::BitReader<bool>;
+pub type TRGIF_R = crate::BitReader;
 #[doc = "Field `TRGIF` writer - Trigger interrupt flag"]
-pub type TRGIF_W<'a, const O: u8> = crate::BitWriter<'a, u16, INTF_SPEC, bool, O>;
+pub type TRGIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BRKIF` reader - Break interrupt flag"]
-pub type BRKIF_R = crate::BitReader<bool>;
+pub type BRKIF_R = crate::BitReader;
 #[doc = "Field `BRKIF` writer - Break interrupt flag"]
-pub type BRKIF_W<'a, const O: u8> = crate::BitWriter<'a, u16, INTF_SPEC, bool, O>;
+pub type BRKIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH0OF` reader - Channel 0 over capture flag"]
-pub type CH0OF_R = crate::BitReader<bool>;
+pub type CH0OF_R = crate::BitReader;
 #[doc = "Field `CH0OF` writer - Channel 0 over capture flag"]
-pub type CH0OF_W<'a, const O: u8> = crate::BitWriter<'a, u16, INTF_SPEC, bool, O>;
+pub type CH0OF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH1OF` reader - Channel 1 over capture flag"]
-pub type CH1OF_R = crate::BitReader<bool>;
+pub type CH1OF_R = crate::BitReader;
 #[doc = "Field `CH1OF` writer - Channel 1 over capture flag"]
-pub type CH1OF_W<'a, const O: u8> = crate::BitWriter<'a, u16, INTF_SPEC, bool, O>;
+pub type CH1OF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH2OF` reader - Channel 2 over capture flag"]
-pub type CH2OF_R = crate::BitReader<bool>;
+pub type CH2OF_R = crate::BitReader;
 #[doc = "Field `CH2OF` writer - Channel 2 over capture flag"]
-pub type CH2OF_W<'a, const O: u8> = crate::BitWriter<'a, u16, INTF_SPEC, bool, O>;
+pub type CH2OF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH3OF` reader - Channel 3 over capture flag"]
-pub type CH3OF_R = crate::BitReader<bool>;
+pub type CH3OF_R = crate::BitReader;
 #[doc = "Field `CH3OF` writer - Channel 3 over capture flag"]
-pub type CH3OF_W<'a, const O: u8> = crate::BitWriter<'a, u16, INTF_SPEC, bool, O>;
+pub type CH3OF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Update interrupt flag"]
     #[inline(always)]
@@ -148,94 +116,95 @@ impl W {
     #[doc = "Bit 0 - Update interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn upif(&mut self) -> UPIF_W<0> {
+    pub fn upif(&mut self) -> UPIF_W<INTF_SPEC, 0> {
         UPIF_W::new(self)
     }
     #[doc = "Bit 1 - Channel 0 capture/compare interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ch0if(&mut self) -> CH0IF_W<1> {
+    pub fn ch0if(&mut self) -> CH0IF_W<INTF_SPEC, 1> {
         CH0IF_W::new(self)
     }
     #[doc = "Bit 2 - Channel 1 capture/compare interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ch1if(&mut self) -> CH1IF_W<2> {
+    pub fn ch1if(&mut self) -> CH1IF_W<INTF_SPEC, 2> {
         CH1IF_W::new(self)
     }
     #[doc = "Bit 3 - Channel 2 capture/compare interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ch2if(&mut self) -> CH2IF_W<3> {
+    pub fn ch2if(&mut self) -> CH2IF_W<INTF_SPEC, 3> {
         CH2IF_W::new(self)
     }
     #[doc = "Bit 4 - Channel 3 capture/compare interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ch3if(&mut self) -> CH3IF_W<4> {
+    pub fn ch3if(&mut self) -> CH3IF_W<INTF_SPEC, 4> {
         CH3IF_W::new(self)
     }
     #[doc = "Bit 5 - Channel commutation interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn cmtif(&mut self) -> CMTIF_W<5> {
+    pub fn cmtif(&mut self) -> CMTIF_W<INTF_SPEC, 5> {
         CMTIF_W::new(self)
     }
     #[doc = "Bit 6 - Trigger interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn trgif(&mut self) -> TRGIF_W<6> {
+    pub fn trgif(&mut self) -> TRGIF_W<INTF_SPEC, 6> {
         TRGIF_W::new(self)
     }
     #[doc = "Bit 7 - Break interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn brkif(&mut self) -> BRKIF_W<7> {
+    pub fn brkif(&mut self) -> BRKIF_W<INTF_SPEC, 7> {
         BRKIF_W::new(self)
     }
     #[doc = "Bit 9 - Channel 0 over capture flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ch0of(&mut self) -> CH0OF_W<9> {
+    pub fn ch0of(&mut self) -> CH0OF_W<INTF_SPEC, 9> {
         CH0OF_W::new(self)
     }
     #[doc = "Bit 10 - Channel 1 over capture flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ch1of(&mut self) -> CH1OF_W<10> {
+    pub fn ch1of(&mut self) -> CH1OF_W<INTF_SPEC, 10> {
         CH1OF_W::new(self)
     }
     #[doc = "Bit 11 - Channel 2 over capture flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ch2of(&mut self) -> CH2OF_W<11> {
+    pub fn ch2of(&mut self) -> CH2OF_W<INTF_SPEC, 11> {
         CH2OF_W::new(self)
     }
     #[doc = "Bit 12 - Channel 3 over capture flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ch3of(&mut self) -> CH3OF_W<12> {
+    pub fn ch3of(&mut self) -> CH3OF_W<INTF_SPEC, 12> {
         CH3OF_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt flag register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intf](index.html) module"]
+#[doc = "Interrupt flag register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTF_SPEC;
 impl crate::RegisterSpec for INTF_SPEC {
     type Ux = u16;
 }
-#[doc = "`read()` method returns [intf::R](R) reader structure"]
-impl crate::Readable for INTF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [intf::W](W) writer structure"]
+#[doc = "`read()` method returns [`intf::R`](R) reader structure"]
+impl crate::Readable for INTF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`intf::W`](W) writer structure"]
 impl crate::Writable for INTF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

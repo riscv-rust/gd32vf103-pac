@@ -1,67 +1,35 @@
 #[doc = "Register `CFG1` reader"]
-pub struct R(crate::R<CFG1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CFG1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CFG1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CFG1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CFG1_SPEC>;
 #[doc = "Register `CFG1` writer"]
-pub struct W(crate::W<CFG1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CFG1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CFG1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CFG1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CFG1_SPEC>;
 #[doc = "Field `PREDV0` reader - PREDV0 division factor"]
-pub type PREDV0_R = crate::FieldReader<u8, u8>;
+pub type PREDV0_R = crate::FieldReader;
 #[doc = "Field `PREDV0` writer - PREDV0 division factor"]
-pub type PREDV0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG1_SPEC, u8, u8, 4, O>;
+pub type PREDV0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `PREDV1` reader - PREDV1 division factor"]
-pub type PREDV1_R = crate::FieldReader<u8, u8>;
+pub type PREDV1_R = crate::FieldReader;
 #[doc = "Field `PREDV1` writer - PREDV1 division factor"]
-pub type PREDV1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG1_SPEC, u8, u8, 4, O>;
+pub type PREDV1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `PLL1MF` reader - The PLL1 clock multiplication factor"]
-pub type PLL1MF_R = crate::FieldReader<u8, u8>;
+pub type PLL1MF_R = crate::FieldReader;
 #[doc = "Field `PLL1MF` writer - The PLL1 clock multiplication factor"]
-pub type PLL1MF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG1_SPEC, u8, u8, 4, O>;
+pub type PLL1MF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `PLL2MF` reader - The PLL2 clock multiplication factor"]
-pub type PLL2MF_R = crate::FieldReader<u8, u8>;
+pub type PLL2MF_R = crate::FieldReader;
 #[doc = "Field `PLL2MF` writer - The PLL2 clock multiplication factor"]
-pub type PLL2MF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG1_SPEC, u8, u8, 4, O>;
+pub type PLL2MF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `PREDV0SEL` reader - PREDV0 input Clock Source Selection"]
-pub type PREDV0SEL_R = crate::BitReader<bool>;
+pub type PREDV0SEL_R = crate::BitReader;
 #[doc = "Field `PREDV0SEL` writer - PREDV0 input Clock Source Selection"]
-pub type PREDV0SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, O>;
+pub type PREDV0SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `I2S1SEL` reader - I2S1 Clock Source Selection"]
-pub type I2S1SEL_R = crate::BitReader<bool>;
+pub type I2S1SEL_R = crate::BitReader;
 #[doc = "Field `I2S1SEL` writer - I2S1 Clock Source Selection"]
-pub type I2S1SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, O>;
+pub type I2S1SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `I2S2SEL` reader - I2S2 Clock Source Selection"]
-pub type I2S2SEL_R = crate::BitReader<bool>;
+pub type I2S2SEL_R = crate::BitReader;
 #[doc = "Field `I2S2SEL` writer - I2S2 Clock Source Selection"]
-pub type I2S2SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG1_SPEC, bool, O>;
+pub type I2S2SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:3 - PREDV0 division factor"]
     #[inline(always)]
@@ -103,64 +71,65 @@ impl W {
     #[doc = "Bits 0:3 - PREDV0 division factor"]
     #[inline(always)]
     #[must_use]
-    pub fn predv0(&mut self) -> PREDV0_W<0> {
+    pub fn predv0(&mut self) -> PREDV0_W<CFG1_SPEC, 0> {
         PREDV0_W::new(self)
     }
     #[doc = "Bits 4:7 - PREDV1 division factor"]
     #[inline(always)]
     #[must_use]
-    pub fn predv1(&mut self) -> PREDV1_W<4> {
+    pub fn predv1(&mut self) -> PREDV1_W<CFG1_SPEC, 4> {
         PREDV1_W::new(self)
     }
     #[doc = "Bits 8:11 - The PLL1 clock multiplication factor"]
     #[inline(always)]
     #[must_use]
-    pub fn pll1mf(&mut self) -> PLL1MF_W<8> {
+    pub fn pll1mf(&mut self) -> PLL1MF_W<CFG1_SPEC, 8> {
         PLL1MF_W::new(self)
     }
     #[doc = "Bits 12:15 - The PLL2 clock multiplication factor"]
     #[inline(always)]
     #[must_use]
-    pub fn pll2mf(&mut self) -> PLL2MF_W<12> {
+    pub fn pll2mf(&mut self) -> PLL2MF_W<CFG1_SPEC, 12> {
         PLL2MF_W::new(self)
     }
     #[doc = "Bit 16 - PREDV0 input Clock Source Selection"]
     #[inline(always)]
     #[must_use]
-    pub fn predv0sel(&mut self) -> PREDV0SEL_W<16> {
+    pub fn predv0sel(&mut self) -> PREDV0SEL_W<CFG1_SPEC, 16> {
         PREDV0SEL_W::new(self)
     }
     #[doc = "Bit 17 - I2S1 Clock Source Selection"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s1sel(&mut self) -> I2S1SEL_W<17> {
+    pub fn i2s1sel(&mut self) -> I2S1SEL_W<CFG1_SPEC, 17> {
         I2S1SEL_W::new(self)
     }
     #[doc = "Bit 18 - I2S2 Clock Source Selection"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s2sel(&mut self) -> I2S2SEL_W<18> {
+    pub fn i2s2sel(&mut self) -> I2S2SEL_W<CFG1_SPEC, 18> {
         I2S2SEL_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Clock Configuration register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cfg1](index.html) module"]
+#[doc = "Clock Configuration register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfg1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfg1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CFG1_SPEC;
 impl crate::RegisterSpec for CFG1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cfg1::R](R) reader structure"]
-impl crate::Readable for CFG1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cfg1::W](W) writer structure"]
+#[doc = "`read()` method returns [`cfg1::R`](R) reader structure"]
+impl crate::Readable for CFG1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`cfg1::W`](W) writer structure"]
 impl crate::Writable for CFG1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

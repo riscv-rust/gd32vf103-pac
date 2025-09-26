@@ -1,75 +1,43 @@
 #[doc = "Register `HCH5CTL` reader"]
-pub struct R(crate::R<HCH5CTL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HCH5CTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HCH5CTL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HCH5CTL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HCH5CTL_SPEC>;
 #[doc = "Register `HCH5CTL` writer"]
-pub struct W(crate::W<HCH5CTL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HCH5CTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HCH5CTL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HCH5CTL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HCH5CTL_SPEC>;
 #[doc = "Field `MPL` reader - Maximum packet size"]
-pub type MPL_R = crate::FieldReader<u16, u16>;
+pub type MPL_R = crate::FieldReader<u16>;
 #[doc = "Field `MPL` writer - Maximum packet size"]
-pub type MPL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCH5CTL_SPEC, u16, u16, 11, O>;
+pub type MPL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
 #[doc = "Field `EPNUM` reader - Endpoint number"]
-pub type EPNUM_R = crate::FieldReader<u8, u8>;
+pub type EPNUM_R = crate::FieldReader;
 #[doc = "Field `EPNUM` writer - Endpoint number"]
-pub type EPNUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCH5CTL_SPEC, u8, u8, 4, O>;
+pub type EPNUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `EPDIR` reader - Endpoint direction"]
-pub type EPDIR_R = crate::BitReader<bool>;
+pub type EPDIR_R = crate::BitReader;
 #[doc = "Field `EPDIR` writer - Endpoint direction"]
-pub type EPDIR_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5CTL_SPEC, bool, O>;
+pub type EPDIR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LSD` reader - Low-speed device"]
-pub type LSD_R = crate::BitReader<bool>;
+pub type LSD_R = crate::BitReader;
 #[doc = "Field `LSD` writer - Low-speed device"]
-pub type LSD_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5CTL_SPEC, bool, O>;
+pub type LSD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EPTYPE` reader - Endpoint type"]
-pub type EPTYPE_R = crate::FieldReader<u8, u8>;
+pub type EPTYPE_R = crate::FieldReader;
 #[doc = "Field `EPTYPE` writer - Endpoint type"]
-pub type EPTYPE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCH5CTL_SPEC, u8, u8, 2, O>;
+pub type EPTYPE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `DAR` reader - Device address"]
-pub type DAR_R = crate::FieldReader<u8, u8>;
+pub type DAR_R = crate::FieldReader;
 #[doc = "Field `DAR` writer - Device address"]
-pub type DAR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCH5CTL_SPEC, u8, u8, 7, O>;
+pub type DAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
 #[doc = "Field `ODDFRM` reader - Odd frame"]
-pub type ODDFRM_R = crate::BitReader<bool>;
+pub type ODDFRM_R = crate::BitReader;
 #[doc = "Field `ODDFRM` writer - Odd frame"]
-pub type ODDFRM_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5CTL_SPEC, bool, O>;
+pub type ODDFRM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CDIS` reader - Channel disable"]
-pub type CDIS_R = crate::BitReader<bool>;
+pub type CDIS_R = crate::BitReader;
 #[doc = "Field `CDIS` writer - Channel disable"]
-pub type CDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5CTL_SPEC, bool, O>;
+pub type CDIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CEN` reader - Channel enable"]
-pub type CEN_R = crate::BitReader<bool>;
+pub type CEN_R = crate::BitReader;
 #[doc = "Field `CEN` writer - Channel enable"]
-pub type CEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCH5CTL_SPEC, bool, O>;
+pub type CEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:10 - Maximum packet size"]
     #[inline(always)]
@@ -121,76 +89,77 @@ impl W {
     #[doc = "Bits 0:10 - Maximum packet size"]
     #[inline(always)]
     #[must_use]
-    pub fn mpl(&mut self) -> MPL_W<0> {
+    pub fn mpl(&mut self) -> MPL_W<HCH5CTL_SPEC, 0> {
         MPL_W::new(self)
     }
     #[doc = "Bits 11:14 - Endpoint number"]
     #[inline(always)]
     #[must_use]
-    pub fn epnum(&mut self) -> EPNUM_W<11> {
+    pub fn epnum(&mut self) -> EPNUM_W<HCH5CTL_SPEC, 11> {
         EPNUM_W::new(self)
     }
     #[doc = "Bit 15 - Endpoint direction"]
     #[inline(always)]
     #[must_use]
-    pub fn epdir(&mut self) -> EPDIR_W<15> {
+    pub fn epdir(&mut self) -> EPDIR_W<HCH5CTL_SPEC, 15> {
         EPDIR_W::new(self)
     }
     #[doc = "Bit 17 - Low-speed device"]
     #[inline(always)]
     #[must_use]
-    pub fn lsd(&mut self) -> LSD_W<17> {
+    pub fn lsd(&mut self) -> LSD_W<HCH5CTL_SPEC, 17> {
         LSD_W::new(self)
     }
     #[doc = "Bits 18:19 - Endpoint type"]
     #[inline(always)]
     #[must_use]
-    pub fn eptype(&mut self) -> EPTYPE_W<18> {
+    pub fn eptype(&mut self) -> EPTYPE_W<HCH5CTL_SPEC, 18> {
         EPTYPE_W::new(self)
     }
     #[doc = "Bits 22:28 - Device address"]
     #[inline(always)]
     #[must_use]
-    pub fn dar(&mut self) -> DAR_W<22> {
+    pub fn dar(&mut self) -> DAR_W<HCH5CTL_SPEC, 22> {
         DAR_W::new(self)
     }
     #[doc = "Bit 29 - Odd frame"]
     #[inline(always)]
     #[must_use]
-    pub fn oddfrm(&mut self) -> ODDFRM_W<29> {
+    pub fn oddfrm(&mut self) -> ODDFRM_W<HCH5CTL_SPEC, 29> {
         ODDFRM_W::new(self)
     }
     #[doc = "Bit 30 - Channel disable"]
     #[inline(always)]
     #[must_use]
-    pub fn cdis(&mut self) -> CDIS_W<30> {
+    pub fn cdis(&mut self) -> CDIS_W<HCH5CTL_SPEC, 30> {
         CDIS_W::new(self)
     }
     #[doc = "Bit 31 - Channel enable"]
     #[inline(always)]
     #[must_use]
-    pub fn cen(&mut self) -> CEN_W<31> {
+    pub fn cen(&mut self) -> CEN_W<HCH5CTL_SPEC, 31> {
         CEN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "host channel-5 characteristics register (HCH5CTL)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hch5ctl](index.html) module"]
+#[doc = "host channel-5 characteristics register (HCH5CTL)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hch5ctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hch5ctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCH5CTL_SPEC;
 impl crate::RegisterSpec for HCH5CTL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hch5ctl::R](R) reader structure"]
-impl crate::Readable for HCH5CTL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hch5ctl::W](W) writer structure"]
+#[doc = "`read()` method returns [`hch5ctl::R`](R) reader structure"]
+impl crate::Readable for HCH5CTL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hch5ctl::W`](W) writer structure"]
 impl crate::Writable for HCH5CTL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

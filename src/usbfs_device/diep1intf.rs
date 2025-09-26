@@ -1,61 +1,29 @@
 #[doc = "Register `DIEP1INTF` reader"]
-pub struct R(crate::R<DIEP1INTF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DIEP1INTF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DIEP1INTF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DIEP1INTF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DIEP1INTF_SPEC>;
 #[doc = "Register `DIEP1INTF` writer"]
-pub struct W(crate::W<DIEP1INTF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DIEP1INTF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DIEP1INTF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DIEP1INTF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DIEP1INTF_SPEC>;
 #[doc = "Field `TF` reader - Transfer finished"]
-pub type TF_R = crate::BitReader<bool>;
+pub type TF_R = crate::BitReader;
 #[doc = "Field `TF` writer - Transfer finished"]
-pub type TF_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEP1INTF_SPEC, bool, O>;
+pub type TF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EPDIS` reader - Endpoint finished"]
-pub type EPDIS_R = crate::BitReader<bool>;
+pub type EPDIS_R = crate::BitReader;
 #[doc = "Field `EPDIS` writer - Endpoint finished"]
-pub type EPDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEP1INTF_SPEC, bool, O>;
+pub type EPDIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CITO` reader - Control in timeout interrupt"]
-pub type CITO_R = crate::BitReader<bool>;
+pub type CITO_R = crate::BitReader;
 #[doc = "Field `CITO` writer - Control in timeout interrupt"]
-pub type CITO_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEP1INTF_SPEC, bool, O>;
+pub type CITO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EPTXFUD` reader - Endpoint Tx FIFO underrun"]
-pub type EPTXFUD_R = crate::BitReader<bool>;
+pub type EPTXFUD_R = crate::BitReader;
 #[doc = "Field `EPTXFUD` writer - Endpoint Tx FIFO underrun"]
-pub type EPTXFUD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEP1INTF_SPEC, bool, O>;
+pub type EPTXFUD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IEPNE` reader - IN endpoint NAK effective"]
-pub type IEPNE_R = crate::BitReader<bool>;
+pub type IEPNE_R = crate::BitReader;
 #[doc = "Field `IEPNE` writer - IN endpoint NAK effective"]
-pub type IEPNE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEP1INTF_SPEC, bool, O>;
+pub type IEPNE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TXFE` reader - Transmit FIFO empty"]
-pub type TXFE_R = crate::BitReader<bool>;
+pub type TXFE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Transfer finished"]
     #[inline(always)]
@@ -92,52 +60,53 @@ impl W {
     #[doc = "Bit 0 - Transfer finished"]
     #[inline(always)]
     #[must_use]
-    pub fn tf(&mut self) -> TF_W<0> {
+    pub fn tf(&mut self) -> TF_W<DIEP1INTF_SPEC, 0> {
         TF_W::new(self)
     }
     #[doc = "Bit 1 - Endpoint finished"]
     #[inline(always)]
     #[must_use]
-    pub fn epdis(&mut self) -> EPDIS_W<1> {
+    pub fn epdis(&mut self) -> EPDIS_W<DIEP1INTF_SPEC, 1> {
         EPDIS_W::new(self)
     }
     #[doc = "Bit 3 - Control in timeout interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn cito(&mut self) -> CITO_W<3> {
+    pub fn cito(&mut self) -> CITO_W<DIEP1INTF_SPEC, 3> {
         CITO_W::new(self)
     }
     #[doc = "Bit 4 - Endpoint Tx FIFO underrun"]
     #[inline(always)]
     #[must_use]
-    pub fn eptxfud(&mut self) -> EPTXFUD_W<4> {
+    pub fn eptxfud(&mut self) -> EPTXFUD_W<DIEP1INTF_SPEC, 4> {
         EPTXFUD_W::new(self)
     }
     #[doc = "Bit 6 - IN endpoint NAK effective"]
     #[inline(always)]
     #[must_use]
-    pub fn iepne(&mut self) -> IEPNE_W<6> {
+    pub fn iepne(&mut self) -> IEPNE_W<DIEP1INTF_SPEC, 6> {
         IEPNE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "device endpoint-1 interrupt register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [diep1intf](index.html) module"]
+#[doc = "device endpoint-1 interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diep1intf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diep1intf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIEP1INTF_SPEC;
 impl crate::RegisterSpec for DIEP1INTF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [diep1intf::R](R) reader structure"]
-impl crate::Readable for DIEP1INTF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [diep1intf::W](W) writer structure"]
+#[doc = "`read()` method returns [`diep1intf::R`](R) reader structure"]
+impl crate::Readable for DIEP1INTF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`diep1intf::W`](W) writer structure"]
 impl crate::Writable for DIEP1INTF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,107 +1,75 @@
 #[doc = "Register `LOCK` reader"]
-pub struct R(crate::R<LOCK_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<LOCK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<LOCK_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<LOCK_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<LOCK_SPEC>;
 #[doc = "Register `LOCK` writer"]
-pub struct W(crate::W<LOCK_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<LOCK_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<LOCK_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<LOCK_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<LOCK_SPEC>;
 #[doc = "Field `LK0` reader - Port Lock bit 0"]
-pub type LK0_R = crate::BitReader<bool>;
+pub type LK0_R = crate::BitReader;
 #[doc = "Field `LK0` writer - Port Lock bit 0"]
-pub type LK0_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LK0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LK1` reader - Port Lock bit 1"]
-pub type LK1_R = crate::BitReader<bool>;
+pub type LK1_R = crate::BitReader;
 #[doc = "Field `LK1` writer - Port Lock bit 1"]
-pub type LK1_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LK1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LK2` reader - Port Lock bit 2"]
-pub type LK2_R = crate::BitReader<bool>;
+pub type LK2_R = crate::BitReader;
 #[doc = "Field `LK2` writer - Port Lock bit 2"]
-pub type LK2_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LK2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LK3` reader - Port Lock bit 3"]
-pub type LK3_R = crate::BitReader<bool>;
+pub type LK3_R = crate::BitReader;
 #[doc = "Field `LK3` writer - Port Lock bit 3"]
-pub type LK3_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LK3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LK4` reader - Port Lock bit 4"]
-pub type LK4_R = crate::BitReader<bool>;
+pub type LK4_R = crate::BitReader;
 #[doc = "Field `LK4` writer - Port Lock bit 4"]
-pub type LK4_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LK4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LK5` reader - Port Lock bit 5"]
-pub type LK5_R = crate::BitReader<bool>;
+pub type LK5_R = crate::BitReader;
 #[doc = "Field `LK5` writer - Port Lock bit 5"]
-pub type LK5_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LK5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LK6` reader - Port Lock bit 6"]
-pub type LK6_R = crate::BitReader<bool>;
+pub type LK6_R = crate::BitReader;
 #[doc = "Field `LK6` writer - Port Lock bit 6"]
-pub type LK6_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LK6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LK7` reader - Port Lock bit 7"]
-pub type LK7_R = crate::BitReader<bool>;
+pub type LK7_R = crate::BitReader;
 #[doc = "Field `LK7` writer - Port Lock bit 7"]
-pub type LK7_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LK7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LK8` reader - Port Lock bit 8"]
-pub type LK8_R = crate::BitReader<bool>;
+pub type LK8_R = crate::BitReader;
 #[doc = "Field `LK8` writer - Port Lock bit 8"]
-pub type LK8_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LK8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LK9` reader - Port Lock bit 9"]
-pub type LK9_R = crate::BitReader<bool>;
+pub type LK9_R = crate::BitReader;
 #[doc = "Field `LK9` writer - Port Lock bit 9"]
-pub type LK9_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LK9_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LK10` reader - Port Lock bit 10"]
-pub type LK10_R = crate::BitReader<bool>;
+pub type LK10_R = crate::BitReader;
 #[doc = "Field `LK10` writer - Port Lock bit 10"]
-pub type LK10_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LK10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LK11` reader - Port Lock bit 11"]
-pub type LK11_R = crate::BitReader<bool>;
+pub type LK11_R = crate::BitReader;
 #[doc = "Field `LK11` writer - Port Lock bit 11"]
-pub type LK11_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LK11_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LK12` reader - Port Lock bit 12"]
-pub type LK12_R = crate::BitReader<bool>;
+pub type LK12_R = crate::BitReader;
 #[doc = "Field `LK12` writer - Port Lock bit 12"]
-pub type LK12_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LK12_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LK13` reader - Port Lock bit 13"]
-pub type LK13_R = crate::BitReader<bool>;
+pub type LK13_R = crate::BitReader;
 #[doc = "Field `LK13` writer - Port Lock bit 13"]
-pub type LK13_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LK13_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LK14` reader - Port Lock bit 14"]
-pub type LK14_R = crate::BitReader<bool>;
+pub type LK14_R = crate::BitReader;
 #[doc = "Field `LK14` writer - Port Lock bit 14"]
-pub type LK14_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LK14_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LK15` reader - Port Lock bit 15"]
-pub type LK15_R = crate::BitReader<bool>;
+pub type LK15_R = crate::BitReader;
 #[doc = "Field `LK15` writer - Port Lock bit 15"]
-pub type LK15_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LK15_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LKK` reader - Lock sequence key"]
-pub type LKK_R = crate::BitReader<bool>;
+pub type LKK_R = crate::BitReader;
 #[doc = "Field `LKK` writer - Lock sequence key"]
-pub type LKK_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOCK_SPEC, bool, O>;
+pub type LKK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Port Lock bit 0"]
     #[inline(always)]
@@ -193,124 +161,125 @@ impl W {
     #[doc = "Bit 0 - Port Lock bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn lk0(&mut self) -> LK0_W<0> {
+    pub fn lk0(&mut self) -> LK0_W<LOCK_SPEC, 0> {
         LK0_W::new(self)
     }
     #[doc = "Bit 1 - Port Lock bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn lk1(&mut self) -> LK1_W<1> {
+    pub fn lk1(&mut self) -> LK1_W<LOCK_SPEC, 1> {
         LK1_W::new(self)
     }
     #[doc = "Bit 2 - Port Lock bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn lk2(&mut self) -> LK2_W<2> {
+    pub fn lk2(&mut self) -> LK2_W<LOCK_SPEC, 2> {
         LK2_W::new(self)
     }
     #[doc = "Bit 3 - Port Lock bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn lk3(&mut self) -> LK3_W<3> {
+    pub fn lk3(&mut self) -> LK3_W<LOCK_SPEC, 3> {
         LK3_W::new(self)
     }
     #[doc = "Bit 4 - Port Lock bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn lk4(&mut self) -> LK4_W<4> {
+    pub fn lk4(&mut self) -> LK4_W<LOCK_SPEC, 4> {
         LK4_W::new(self)
     }
     #[doc = "Bit 5 - Port Lock bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn lk5(&mut self) -> LK5_W<5> {
+    pub fn lk5(&mut self) -> LK5_W<LOCK_SPEC, 5> {
         LK5_W::new(self)
     }
     #[doc = "Bit 6 - Port Lock bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn lk6(&mut self) -> LK6_W<6> {
+    pub fn lk6(&mut self) -> LK6_W<LOCK_SPEC, 6> {
         LK6_W::new(self)
     }
     #[doc = "Bit 7 - Port Lock bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn lk7(&mut self) -> LK7_W<7> {
+    pub fn lk7(&mut self) -> LK7_W<LOCK_SPEC, 7> {
         LK7_W::new(self)
     }
     #[doc = "Bit 8 - Port Lock bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn lk8(&mut self) -> LK8_W<8> {
+    pub fn lk8(&mut self) -> LK8_W<LOCK_SPEC, 8> {
         LK8_W::new(self)
     }
     #[doc = "Bit 9 - Port Lock bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn lk9(&mut self) -> LK9_W<9> {
+    pub fn lk9(&mut self) -> LK9_W<LOCK_SPEC, 9> {
         LK9_W::new(self)
     }
     #[doc = "Bit 10 - Port Lock bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn lk10(&mut self) -> LK10_W<10> {
+    pub fn lk10(&mut self) -> LK10_W<LOCK_SPEC, 10> {
         LK10_W::new(self)
     }
     #[doc = "Bit 11 - Port Lock bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn lk11(&mut self) -> LK11_W<11> {
+    pub fn lk11(&mut self) -> LK11_W<LOCK_SPEC, 11> {
         LK11_W::new(self)
     }
     #[doc = "Bit 12 - Port Lock bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn lk12(&mut self) -> LK12_W<12> {
+    pub fn lk12(&mut self) -> LK12_W<LOCK_SPEC, 12> {
         LK12_W::new(self)
     }
     #[doc = "Bit 13 - Port Lock bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn lk13(&mut self) -> LK13_W<13> {
+    pub fn lk13(&mut self) -> LK13_W<LOCK_SPEC, 13> {
         LK13_W::new(self)
     }
     #[doc = "Bit 14 - Port Lock bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn lk14(&mut self) -> LK14_W<14> {
+    pub fn lk14(&mut self) -> LK14_W<LOCK_SPEC, 14> {
         LK14_W::new(self)
     }
     #[doc = "Bit 15 - Port Lock bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn lk15(&mut self) -> LK15_W<15> {
+    pub fn lk15(&mut self) -> LK15_W<LOCK_SPEC, 15> {
         LK15_W::new(self)
     }
     #[doc = "Bit 16 - Lock sequence key"]
     #[inline(always)]
     #[must_use]
-    pub fn lkk(&mut self) -> LKK_W<16> {
+    pub fn lkk(&mut self) -> LKK_W<LOCK_SPEC, 16> {
         LKK_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "GPIO port configuration lock register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lock](index.html) module"]
+#[doc = "GPIO port configuration lock register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lock::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lock::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LOCK_SPEC;
 impl crate::RegisterSpec for LOCK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lock::R](R) reader structure"]
-impl crate::Readable for LOCK_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [lock::W](W) writer structure"]
+#[doc = "`read()` method returns [`lock::R`](R) reader structure"]
+impl crate::Readable for LOCK_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`lock::W`](W) writer structure"]
 impl crate::Writable for LOCK_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

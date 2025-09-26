@@ -1,34 +1,21 @@
 #[doc = "Register `STAT1` reader"]
-pub struct R(crate::R<STAT1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<STAT1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<STAT1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<STAT1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<STAT1_SPEC>;
 #[doc = "Field `MASTER` reader - A flag indicating whether I2C block is in master or slave mode"]
-pub type MASTER_R = crate::BitReader<bool>;
+pub type MASTER_R = crate::BitReader;
 #[doc = "Field `I2CBSY` reader - Busy flag"]
-pub type I2CBSY_R = crate::BitReader<bool>;
+pub type I2CBSY_R = crate::BitReader;
 #[doc = "Field `TR` reader - Whether the I2C is a transmitter or a receiver"]
-pub type TR_R = crate::BitReader<bool>;
+pub type TR_R = crate::BitReader;
 #[doc = "Field `RXGC` reader - General call address (00h) received"]
-pub type RXGC_R = crate::BitReader<bool>;
+pub type RXGC_R = crate::BitReader;
 #[doc = "Field `DEFSMB` reader - Default address of SMBusDevice"]
-pub type DEFSMB_R = crate::BitReader<bool>;
+pub type DEFSMB_R = crate::BitReader;
 #[doc = "Field `HSTSMB` reader - SMBus Host Header detected in slave mode"]
-pub type HSTSMB_R = crate::BitReader<bool>;
+pub type HSTSMB_R = crate::BitReader;
 #[doc = "Field `DUMODF` reader - Dual Flag in slave mode"]
-pub type DUMODF_R = crate::BitReader<bool>;
+pub type DUMODF_R = crate::BitReader;
 #[doc = "Field `PECV` reader - Packet Error Checking Value that calculated by hardware when PEC is enabled"]
-pub type PECV_R = crate::FieldReader<u8, u8>;
+pub type PECV_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - A flag indicating whether I2C block is in master or slave mode"]
     #[inline(always)]
@@ -71,15 +58,13 @@ impl R {
         PECV_R::new(((self.bits >> 8) & 0xff) as u8)
     }
 }
-#[doc = "Transfer status register 1\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [stat1](index.html) module"]
+#[doc = "Transfer status register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stat1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STAT1_SPEC;
 impl crate::RegisterSpec for STAT1_SPEC {
     type Ux = u16;
 }
-#[doc = "`read()` method returns [stat1::R](R) reader structure"]
-impl crate::Readable for STAT1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`stat1::R`](R) reader structure"]
+impl crate::Readable for STAT1_SPEC {}
 #[doc = "`reset()` method sets STAT1 to value 0"]
 impl crate::Resettable for STAT1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

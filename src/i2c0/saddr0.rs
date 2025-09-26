@@ -1,55 +1,23 @@
 #[doc = "Register `SADDR0` reader"]
-pub struct R(crate::R<SADDR0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SADDR0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SADDR0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SADDR0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SADDR0_SPEC>;
 #[doc = "Register `SADDR0` writer"]
-pub struct W(crate::W<SADDR0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SADDR0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SADDR0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SADDR0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SADDR0_SPEC>;
 #[doc = "Field `ADDRESS0` reader - Bit 0 of a 10-bit address"]
-pub type ADDRESS0_R = crate::BitReader<bool>;
+pub type ADDRESS0_R = crate::BitReader;
 #[doc = "Field `ADDRESS0` writer - Bit 0 of a 10-bit address"]
-pub type ADDRESS0_W<'a, const O: u8> = crate::BitWriter<'a, u16, SADDR0_SPEC, bool, O>;
+pub type ADDRESS0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ADDRESS7_1` reader - 7-bit address or bits 7:1 of a 10-bit address"]
-pub type ADDRESS7_1_R = crate::FieldReader<u8, u8>;
+pub type ADDRESS7_1_R = crate::FieldReader;
 #[doc = "Field `ADDRESS7_1` writer - 7-bit address or bits 7:1 of a 10-bit address"]
-pub type ADDRESS7_1_W<'a, const O: u8> = crate::FieldWriter<'a, u16, SADDR0_SPEC, u8, u8, 7, O>;
+pub type ADDRESS7_1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
 #[doc = "Field `ADDRESS9_8` reader - Highest two bits of a 10-bit address"]
-pub type ADDRESS9_8_R = crate::FieldReader<u8, u8>;
+pub type ADDRESS9_8_R = crate::FieldReader;
 #[doc = "Field `ADDRESS9_8` writer - Highest two bits of a 10-bit address"]
-pub type ADDRESS9_8_W<'a, const O: u8> = crate::FieldWriter<'a, u16, SADDR0_SPEC, u8, u8, 2, O>;
+pub type ADDRESS9_8_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `ADDFORMAT` reader - Address mode for the I2C slave"]
-pub type ADDFORMAT_R = crate::BitReader<bool>;
+pub type ADDFORMAT_R = crate::BitReader;
 #[doc = "Field `ADDFORMAT` writer - Address mode for the I2C slave"]
-pub type ADDFORMAT_W<'a, const O: u8> = crate::BitWriter<'a, u16, SADDR0_SPEC, bool, O>;
+pub type ADDFORMAT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Bit 0 of a 10-bit address"]
     #[inline(always)]
@@ -76,46 +44,47 @@ impl W {
     #[doc = "Bit 0 - Bit 0 of a 10-bit address"]
     #[inline(always)]
     #[must_use]
-    pub fn address0(&mut self) -> ADDRESS0_W<0> {
+    pub fn address0(&mut self) -> ADDRESS0_W<SADDR0_SPEC, 0> {
         ADDRESS0_W::new(self)
     }
     #[doc = "Bits 1:7 - 7-bit address or bits 7:1 of a 10-bit address"]
     #[inline(always)]
     #[must_use]
-    pub fn address7_1(&mut self) -> ADDRESS7_1_W<1> {
+    pub fn address7_1(&mut self) -> ADDRESS7_1_W<SADDR0_SPEC, 1> {
         ADDRESS7_1_W::new(self)
     }
     #[doc = "Bits 8:9 - Highest two bits of a 10-bit address"]
     #[inline(always)]
     #[must_use]
-    pub fn address9_8(&mut self) -> ADDRESS9_8_W<8> {
+    pub fn address9_8(&mut self) -> ADDRESS9_8_W<SADDR0_SPEC, 8> {
         ADDRESS9_8_W::new(self)
     }
     #[doc = "Bit 15 - Address mode for the I2C slave"]
     #[inline(always)]
     #[must_use]
-    pub fn addformat(&mut self) -> ADDFORMAT_W<15> {
+    pub fn addformat(&mut self) -> ADDFORMAT_W<SADDR0_SPEC, 15> {
         ADDFORMAT_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Slave address register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [saddr0](index.html) module"]
+#[doc = "Slave address register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`saddr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`saddr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SADDR0_SPEC;
 impl crate::RegisterSpec for SADDR0_SPEC {
     type Ux = u16;
 }
-#[doc = "`read()` method returns [saddr0::R](R) reader structure"]
-impl crate::Readable for SADDR0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [saddr0::W](W) writer structure"]
+#[doc = "`read()` method returns [`saddr0::R`](R) reader structure"]
+impl crate::Readable for SADDR0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`saddr0::W`](W) writer structure"]
 impl crate::Writable for SADDR0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

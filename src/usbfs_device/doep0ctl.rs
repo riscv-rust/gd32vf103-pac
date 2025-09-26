@@ -1,65 +1,33 @@
 #[doc = "Register `DOEP0CTL` reader"]
-pub struct R(crate::R<DOEP0CTL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DOEP0CTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DOEP0CTL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DOEP0CTL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DOEP0CTL_SPEC>;
 #[doc = "Register `DOEP0CTL` writer"]
-pub struct W(crate::W<DOEP0CTL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DOEP0CTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DOEP0CTL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DOEP0CTL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DOEP0CTL_SPEC>;
 #[doc = "Field `MPL` reader - Maximum packet length"]
-pub type MPL_R = crate::FieldReader<u8, u8>;
+pub type MPL_R = crate::FieldReader;
 #[doc = "Field `EPACT` reader - Endpoint active"]
-pub type EPACT_R = crate::BitReader<bool>;
+pub type EPACT_R = crate::BitReader;
 #[doc = "Field `NAKS` reader - NAK status"]
-pub type NAKS_R = crate::BitReader<bool>;
+pub type NAKS_R = crate::BitReader;
 #[doc = "Field `EPTYPE` reader - Endpoint type"]
-pub type EPTYPE_R = crate::FieldReader<u8, u8>;
+pub type EPTYPE_R = crate::FieldReader;
 #[doc = "Field `SNOOP` reader - Snoop mode"]
-pub type SNOOP_R = crate::BitReader<bool>;
+pub type SNOOP_R = crate::BitReader;
 #[doc = "Field `SNOOP` writer - Snoop mode"]
-pub type SNOOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEP0CTL_SPEC, bool, O>;
+pub type SNOOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `STALL` reader - STALL handshake"]
-pub type STALL_R = crate::BitReader<bool>;
+pub type STALL_R = crate::BitReader;
 #[doc = "Field `STALL` writer - STALL handshake"]
-pub type STALL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEP0CTL_SPEC, bool, O>;
+pub type STALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CNAK` writer - Clear NAK"]
-pub type CNAK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEP0CTL_SPEC, bool, O>;
+pub type CNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SNAK` writer - Set NAK"]
-pub type SNAK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEP0CTL_SPEC, bool, O>;
+pub type SNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EPD` reader - Endpoint disable"]
-pub type EPD_R = crate::BitReader<bool>;
+pub type EPD_R = crate::BitReader;
 #[doc = "Field `EPEN` reader - Endpoint enable"]
-pub type EPEN_R = crate::BitReader<bool>;
+pub type EPEN_R = crate::BitReader;
 #[doc = "Field `EPEN` writer - Endpoint enable"]
-pub type EPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEP0CTL_SPEC, bool, O>;
+pub type EPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:1 - Maximum packet length"]
     #[inline(always)]
@@ -106,52 +74,53 @@ impl W {
     #[doc = "Bit 20 - Snoop mode"]
     #[inline(always)]
     #[must_use]
-    pub fn snoop(&mut self) -> SNOOP_W<20> {
+    pub fn snoop(&mut self) -> SNOOP_W<DOEP0CTL_SPEC, 20> {
         SNOOP_W::new(self)
     }
     #[doc = "Bit 21 - STALL handshake"]
     #[inline(always)]
     #[must_use]
-    pub fn stall(&mut self) -> STALL_W<21> {
+    pub fn stall(&mut self) -> STALL_W<DOEP0CTL_SPEC, 21> {
         STALL_W::new(self)
     }
     #[doc = "Bit 26 - Clear NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn cnak(&mut self) -> CNAK_W<26> {
+    pub fn cnak(&mut self) -> CNAK_W<DOEP0CTL_SPEC, 26> {
         CNAK_W::new(self)
     }
     #[doc = "Bit 27 - Set NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn snak(&mut self) -> SNAK_W<27> {
+    pub fn snak(&mut self) -> SNAK_W<DOEP0CTL_SPEC, 27> {
         SNAK_W::new(self)
     }
     #[doc = "Bit 31 - Endpoint enable"]
     #[inline(always)]
     #[must_use]
-    pub fn epen(&mut self) -> EPEN_W<31> {
+    pub fn epen(&mut self) -> EPEN_W<DOEP0CTL_SPEC, 31> {
         EPEN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "device endpoint-0 control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [doep0ctl](index.html) module"]
+#[doc = "device endpoint-0 control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doep0ctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doep0ctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DOEP0CTL_SPEC;
 impl crate::RegisterSpec for DOEP0CTL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [doep0ctl::R](R) reader structure"]
-impl crate::Readable for DOEP0CTL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [doep0ctl::W](W) writer structure"]
+#[doc = "`read()` method returns [`doep0ctl::R`](R) reader structure"]
+impl crate::Readable for DOEP0CTL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`doep0ctl::W`](W) writer structure"]
 impl crate::Writable for DOEP0CTL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,24 +1,11 @@
 #[doc = "Register `DSTAT` reader"]
-pub struct R(crate::R<DSTAT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DSTAT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DSTAT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DSTAT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DSTAT_SPEC>;
 #[doc = "Field `SPST` reader - Suspend status"]
-pub type SPST_R = crate::BitReader<bool>;
+pub type SPST_R = crate::BitReader;
 #[doc = "Field `ES` reader - Enumerated speed"]
-pub type ES_R = crate::FieldReader<u8, u8>;
+pub type ES_R = crate::FieldReader;
 #[doc = "Field `FNRSOF` reader - Frame number of the received SOF"]
-pub type FNRSOF_R = crate::FieldReader<u16, u16>;
+pub type FNRSOF_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bit 0 - Suspend status"]
     #[inline(always)]
@@ -36,15 +23,13 @@ impl R {
         FNRSOF_R::new(((self.bits >> 8) & 0x3fff) as u16)
     }
 }
-#[doc = "device status register (DSTAT)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dstat](index.html) module"]
+#[doc = "device status register (DSTAT)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dstat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DSTAT_SPEC;
 impl crate::RegisterSpec for DSTAT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dstat::R](R) reader structure"]
-impl crate::Readable for DSTAT_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`dstat::R`](R) reader structure"]
+impl crate::Readable for DSTAT_SPEC {}
 #[doc = "`reset()` method sets DSTAT to value 0"]
 impl crate::Resettable for DSTAT_SPEC {
     const RESET_VALUE: Self::Ux = 0;

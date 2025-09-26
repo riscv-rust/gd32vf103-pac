@@ -1,115 +1,83 @@
 #[doc = "Register `PD` reader"]
-pub struct R(crate::R<PD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PD_SPEC>;
 #[doc = "Register `PD` writer"]
-pub struct W(crate::W<PD_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PD_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PD_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PD_SPEC>;
 #[doc = "Field `PD0` reader - Interrupt pending status of line 0"]
-pub type PD0_R = crate::BitReader<bool>;
+pub type PD0_R = crate::BitReader;
 #[doc = "Field `PD0` writer - Interrupt pending status of line 0"]
-pub type PD0_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD1` reader - Interrupt pending status of line 1"]
-pub type PD1_R = crate::BitReader<bool>;
+pub type PD1_R = crate::BitReader;
 #[doc = "Field `PD1` writer - Interrupt pending status of line 1"]
-pub type PD1_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD2` reader - Interrupt pending status of line 2"]
-pub type PD2_R = crate::BitReader<bool>;
+pub type PD2_R = crate::BitReader;
 #[doc = "Field `PD2` writer - Interrupt pending status of line 2"]
-pub type PD2_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD3` reader - Interrupt pending status of line 3"]
-pub type PD3_R = crate::BitReader<bool>;
+pub type PD3_R = crate::BitReader;
 #[doc = "Field `PD3` writer - Interrupt pending status of line 3"]
-pub type PD3_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD4` reader - Interrupt pending status of line 4"]
-pub type PD4_R = crate::BitReader<bool>;
+pub type PD4_R = crate::BitReader;
 #[doc = "Field `PD4` writer - Interrupt pending status of line 4"]
-pub type PD4_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD5` reader - Interrupt pending status of line 5"]
-pub type PD5_R = crate::BitReader<bool>;
+pub type PD5_R = crate::BitReader;
 #[doc = "Field `PD5` writer - Interrupt pending status of line 5"]
-pub type PD5_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD6` reader - Interrupt pending status of line 6"]
-pub type PD6_R = crate::BitReader<bool>;
+pub type PD6_R = crate::BitReader;
 #[doc = "Field `PD6` writer - Interrupt pending status of line 6"]
-pub type PD6_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD7` reader - Interrupt pending status of line 7"]
-pub type PD7_R = crate::BitReader<bool>;
+pub type PD7_R = crate::BitReader;
 #[doc = "Field `PD7` writer - Interrupt pending status of line 7"]
-pub type PD7_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD8` reader - Interrupt pending status of line 8"]
-pub type PD8_R = crate::BitReader<bool>;
+pub type PD8_R = crate::BitReader;
 #[doc = "Field `PD8` writer - Interrupt pending status of line 8"]
-pub type PD8_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD9` reader - Interrupt pending status of line 9"]
-pub type PD9_R = crate::BitReader<bool>;
+pub type PD9_R = crate::BitReader;
 #[doc = "Field `PD9` writer - Interrupt pending status of line 9"]
-pub type PD9_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD9_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD10` reader - Interrupt pending status of line 10"]
-pub type PD10_R = crate::BitReader<bool>;
+pub type PD10_R = crate::BitReader;
 #[doc = "Field `PD10` writer - Interrupt pending status of line 10"]
-pub type PD10_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD11` reader - Interrupt pending status of line 11"]
-pub type PD11_R = crate::BitReader<bool>;
+pub type PD11_R = crate::BitReader;
 #[doc = "Field `PD11` writer - Interrupt pending status of line 11"]
-pub type PD11_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD11_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD12` reader - Interrupt pending status of line 12"]
-pub type PD12_R = crate::BitReader<bool>;
+pub type PD12_R = crate::BitReader;
 #[doc = "Field `PD12` writer - Interrupt pending status of line 12"]
-pub type PD12_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD12_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD13` reader - Interrupt pending status of line 13"]
-pub type PD13_R = crate::BitReader<bool>;
+pub type PD13_R = crate::BitReader;
 #[doc = "Field `PD13` writer - Interrupt pending status of line 13"]
-pub type PD13_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD13_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD14` reader - Interrupt pending status of line 14"]
-pub type PD14_R = crate::BitReader<bool>;
+pub type PD14_R = crate::BitReader;
 #[doc = "Field `PD14` writer - Interrupt pending status of line 14"]
-pub type PD14_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD14_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD15` reader - Interrupt pending status of line 15"]
-pub type PD15_R = crate::BitReader<bool>;
+pub type PD15_R = crate::BitReader;
 #[doc = "Field `PD15` writer - Interrupt pending status of line 15"]
-pub type PD15_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD15_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD16` reader - Interrupt pending status of line 16"]
-pub type PD16_R = crate::BitReader<bool>;
+pub type PD16_R = crate::BitReader;
 #[doc = "Field `PD16` writer - Interrupt pending status of line 16"]
-pub type PD16_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD16_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD17` reader - Interrupt pending status of line 17"]
-pub type PD17_R = crate::BitReader<bool>;
+pub type PD17_R = crate::BitReader;
 #[doc = "Field `PD17` writer - Interrupt pending status of line 17"]
-pub type PD17_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD17_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PD18` reader - Interrupt pending status of line 18"]
-pub type PD18_R = crate::BitReader<bool>;
+pub type PD18_R = crate::BitReader;
 #[doc = "Field `PD18` writer - Interrupt pending status of line 18"]
-pub type PD18_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_SPEC, bool, O>;
+pub type PD18_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Interrupt pending status of line 0"]
     #[inline(always)]
@@ -211,136 +179,137 @@ impl W {
     #[doc = "Bit 0 - Interrupt pending status of line 0"]
     #[inline(always)]
     #[must_use]
-    pub fn pd0(&mut self) -> PD0_W<0> {
+    pub fn pd0(&mut self) -> PD0_W<PD_SPEC, 0> {
         PD0_W::new(self)
     }
     #[doc = "Bit 1 - Interrupt pending status of line 1"]
     #[inline(always)]
     #[must_use]
-    pub fn pd1(&mut self) -> PD1_W<1> {
+    pub fn pd1(&mut self) -> PD1_W<PD_SPEC, 1> {
         PD1_W::new(self)
     }
     #[doc = "Bit 2 - Interrupt pending status of line 2"]
     #[inline(always)]
     #[must_use]
-    pub fn pd2(&mut self) -> PD2_W<2> {
+    pub fn pd2(&mut self) -> PD2_W<PD_SPEC, 2> {
         PD2_W::new(self)
     }
     #[doc = "Bit 3 - Interrupt pending status of line 3"]
     #[inline(always)]
     #[must_use]
-    pub fn pd3(&mut self) -> PD3_W<3> {
+    pub fn pd3(&mut self) -> PD3_W<PD_SPEC, 3> {
         PD3_W::new(self)
     }
     #[doc = "Bit 4 - Interrupt pending status of line 4"]
     #[inline(always)]
     #[must_use]
-    pub fn pd4(&mut self) -> PD4_W<4> {
+    pub fn pd4(&mut self) -> PD4_W<PD_SPEC, 4> {
         PD4_W::new(self)
     }
     #[doc = "Bit 5 - Interrupt pending status of line 5"]
     #[inline(always)]
     #[must_use]
-    pub fn pd5(&mut self) -> PD5_W<5> {
+    pub fn pd5(&mut self) -> PD5_W<PD_SPEC, 5> {
         PD5_W::new(self)
     }
     #[doc = "Bit 6 - Interrupt pending status of line 6"]
     #[inline(always)]
     #[must_use]
-    pub fn pd6(&mut self) -> PD6_W<6> {
+    pub fn pd6(&mut self) -> PD6_W<PD_SPEC, 6> {
         PD6_W::new(self)
     }
     #[doc = "Bit 7 - Interrupt pending status of line 7"]
     #[inline(always)]
     #[must_use]
-    pub fn pd7(&mut self) -> PD7_W<7> {
+    pub fn pd7(&mut self) -> PD7_W<PD_SPEC, 7> {
         PD7_W::new(self)
     }
     #[doc = "Bit 8 - Interrupt pending status of line 8"]
     #[inline(always)]
     #[must_use]
-    pub fn pd8(&mut self) -> PD8_W<8> {
+    pub fn pd8(&mut self) -> PD8_W<PD_SPEC, 8> {
         PD8_W::new(self)
     }
     #[doc = "Bit 9 - Interrupt pending status of line 9"]
     #[inline(always)]
     #[must_use]
-    pub fn pd9(&mut self) -> PD9_W<9> {
+    pub fn pd9(&mut self) -> PD9_W<PD_SPEC, 9> {
         PD9_W::new(self)
     }
     #[doc = "Bit 10 - Interrupt pending status of line 10"]
     #[inline(always)]
     #[must_use]
-    pub fn pd10(&mut self) -> PD10_W<10> {
+    pub fn pd10(&mut self) -> PD10_W<PD_SPEC, 10> {
         PD10_W::new(self)
     }
     #[doc = "Bit 11 - Interrupt pending status of line 11"]
     #[inline(always)]
     #[must_use]
-    pub fn pd11(&mut self) -> PD11_W<11> {
+    pub fn pd11(&mut self) -> PD11_W<PD_SPEC, 11> {
         PD11_W::new(self)
     }
     #[doc = "Bit 12 - Interrupt pending status of line 12"]
     #[inline(always)]
     #[must_use]
-    pub fn pd12(&mut self) -> PD12_W<12> {
+    pub fn pd12(&mut self) -> PD12_W<PD_SPEC, 12> {
         PD12_W::new(self)
     }
     #[doc = "Bit 13 - Interrupt pending status of line 13"]
     #[inline(always)]
     #[must_use]
-    pub fn pd13(&mut self) -> PD13_W<13> {
+    pub fn pd13(&mut self) -> PD13_W<PD_SPEC, 13> {
         PD13_W::new(self)
     }
     #[doc = "Bit 14 - Interrupt pending status of line 14"]
     #[inline(always)]
     #[must_use]
-    pub fn pd14(&mut self) -> PD14_W<14> {
+    pub fn pd14(&mut self) -> PD14_W<PD_SPEC, 14> {
         PD14_W::new(self)
     }
     #[doc = "Bit 15 - Interrupt pending status of line 15"]
     #[inline(always)]
     #[must_use]
-    pub fn pd15(&mut self) -> PD15_W<15> {
+    pub fn pd15(&mut self) -> PD15_W<PD_SPEC, 15> {
         PD15_W::new(self)
     }
     #[doc = "Bit 16 - Interrupt pending status of line 16"]
     #[inline(always)]
     #[must_use]
-    pub fn pd16(&mut self) -> PD16_W<16> {
+    pub fn pd16(&mut self) -> PD16_W<PD_SPEC, 16> {
         PD16_W::new(self)
     }
     #[doc = "Bit 17 - Interrupt pending status of line 17"]
     #[inline(always)]
     #[must_use]
-    pub fn pd17(&mut self) -> PD17_W<17> {
+    pub fn pd17(&mut self) -> PD17_W<PD_SPEC, 17> {
         PD17_W::new(self)
     }
     #[doc = "Bit 18 - Interrupt pending status of line 18"]
     #[inline(always)]
     #[must_use]
-    pub fn pd18(&mut self) -> PD18_W<18> {
+    pub fn pd18(&mut self) -> PD18_W<PD_SPEC, 18> {
         PD18_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Pending register (EXTI_PD)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pd](index.html) module"]
+#[doc = "Pending register (EXTI_PD)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pd::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pd::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PD_SPEC;
 impl crate::RegisterSpec for PD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pd::R](R) reader structure"]
-impl crate::Readable for PD_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [pd::W](W) writer structure"]
+#[doc = "`read()` method returns [`pd::R`](R) reader structure"]
+impl crate::Readable for PD_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`pd::W`](W) writer structure"]
 impl crate::Writable for PD_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

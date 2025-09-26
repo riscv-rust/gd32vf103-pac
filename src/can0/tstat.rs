@@ -1,113 +1,81 @@
 #[doc = "Register `TSTAT` reader"]
-pub struct R(crate::R<TSTAT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TSTAT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TSTAT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TSTAT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TSTAT_SPEC>;
 #[doc = "Register `TSTAT` writer"]
-pub struct W(crate::W<TSTAT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TSTAT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TSTAT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TSTAT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TSTAT_SPEC>;
 #[doc = "Field `MTF0` reader - Mailbox 0 transmit finished"]
-pub type MTF0_R = crate::BitReader<bool>;
+pub type MTF0_R = crate::BitReader;
 #[doc = "Field `MTF0` writer - Mailbox 0 transmit finished"]
-pub type MTF0_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSTAT_SPEC, bool, O>;
+pub type MTF0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MTFNERR0` reader - Mailbox 0 transmit finished and no error"]
-pub type MTFNERR0_R = crate::BitReader<bool>;
+pub type MTFNERR0_R = crate::BitReader;
 #[doc = "Field `MTFNERR0` writer - Mailbox 0 transmit finished and no error"]
-pub type MTFNERR0_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSTAT_SPEC, bool, O>;
+pub type MTFNERR0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MAL0` reader - Mailbox 0 arbitration lost"]
-pub type MAL0_R = crate::BitReader<bool>;
+pub type MAL0_R = crate::BitReader;
 #[doc = "Field `MAL0` writer - Mailbox 0 arbitration lost"]
-pub type MAL0_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSTAT_SPEC, bool, O>;
+pub type MAL0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MTE0` reader - Mailbox 0 transmit error"]
-pub type MTE0_R = crate::BitReader<bool>;
+pub type MTE0_R = crate::BitReader;
 #[doc = "Field `MTE0` writer - Mailbox 0 transmit error"]
-pub type MTE0_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSTAT_SPEC, bool, O>;
+pub type MTE0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MST0` reader - Mailbox 0 stop transmitting"]
-pub type MST0_R = crate::BitReader<bool>;
+pub type MST0_R = crate::BitReader;
 #[doc = "Field `MST0` writer - Mailbox 0 stop transmitting"]
-pub type MST0_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSTAT_SPEC, bool, O>;
+pub type MST0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MTF1` reader - Mailbox 1 transmit finished"]
-pub type MTF1_R = crate::BitReader<bool>;
+pub type MTF1_R = crate::BitReader;
 #[doc = "Field `MTF1` writer - Mailbox 1 transmit finished"]
-pub type MTF1_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSTAT_SPEC, bool, O>;
+pub type MTF1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MTFNERR1` reader - Mailbox 1 transmit finished and no error"]
-pub type MTFNERR1_R = crate::BitReader<bool>;
+pub type MTFNERR1_R = crate::BitReader;
 #[doc = "Field `MTFNERR1` writer - Mailbox 1 transmit finished and no error"]
-pub type MTFNERR1_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSTAT_SPEC, bool, O>;
+pub type MTFNERR1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MAL1` reader - Mailbox 1 arbitration lost"]
-pub type MAL1_R = crate::BitReader<bool>;
+pub type MAL1_R = crate::BitReader;
 #[doc = "Field `MAL1` writer - Mailbox 1 arbitration lost"]
-pub type MAL1_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSTAT_SPEC, bool, O>;
+pub type MAL1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MTE1` reader - Mailbox 1 transmit error"]
-pub type MTE1_R = crate::BitReader<bool>;
+pub type MTE1_R = crate::BitReader;
 #[doc = "Field `MTE1` writer - Mailbox 1 transmit error"]
-pub type MTE1_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSTAT_SPEC, bool, O>;
+pub type MTE1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MST1` reader - Mailbox 1 stop transmitting"]
-pub type MST1_R = crate::BitReader<bool>;
+pub type MST1_R = crate::BitReader;
 #[doc = "Field `MST1` writer - Mailbox 1 stop transmitting"]
-pub type MST1_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSTAT_SPEC, bool, O>;
+pub type MST1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MTF2` reader - Mailbox 2 transmit finished"]
-pub type MTF2_R = crate::BitReader<bool>;
+pub type MTF2_R = crate::BitReader;
 #[doc = "Field `MTF2` writer - Mailbox 2 transmit finished"]
-pub type MTF2_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSTAT_SPEC, bool, O>;
+pub type MTF2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MTFNERR2` reader - Mailbox 2 transmit finished and no error"]
-pub type MTFNERR2_R = crate::BitReader<bool>;
+pub type MTFNERR2_R = crate::BitReader;
 #[doc = "Field `MTFNERR2` writer - Mailbox 2 transmit finished and no error"]
-pub type MTFNERR2_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSTAT_SPEC, bool, O>;
+pub type MTFNERR2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MAL2` reader - Mailbox 2 arbitration lost"]
-pub type MAL2_R = crate::BitReader<bool>;
+pub type MAL2_R = crate::BitReader;
 #[doc = "Field `MAL2` writer - Mailbox 2 arbitration lost"]
-pub type MAL2_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSTAT_SPEC, bool, O>;
+pub type MAL2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MTE2` reader - Mailbox 2 transmit error"]
-pub type MTE2_R = crate::BitReader<bool>;
+pub type MTE2_R = crate::BitReader;
 #[doc = "Field `MTE2` writer - Mailbox 2 transmit error"]
-pub type MTE2_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSTAT_SPEC, bool, O>;
+pub type MTE2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MST2` reader - Mailbox 2 stop transmitting"]
-pub type MST2_R = crate::BitReader<bool>;
+pub type MST2_R = crate::BitReader;
 #[doc = "Field `MST2` writer - Mailbox 2 stop transmitting"]
-pub type MST2_W<'a, const O: u8> = crate::BitWriter<'a, u32, TSTAT_SPEC, bool, O>;
+pub type MST2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `NUM` reader - number of the transmit FIFO mailbox in which the frame will be transmitted if at least one mailbox is empty"]
-pub type NUM_R = crate::FieldReader<u8, u8>;
+pub type NUM_R = crate::FieldReader;
 #[doc = "Field `TME0` reader - Transmit mailbox 0 empty"]
-pub type TME0_R = crate::BitReader<bool>;
+pub type TME0_R = crate::BitReader;
 #[doc = "Field `TME1` reader - Transmit mailbox 1 empty"]
-pub type TME1_R = crate::BitReader<bool>;
+pub type TME1_R = crate::BitReader;
 #[doc = "Field `TME2` reader - Transmit mailbox 2 empty"]
-pub type TME2_R = crate::BitReader<bool>;
+pub type TME2_R = crate::BitReader;
 #[doc = "Field `TMLS0` reader - Transmit mailbox 0 last sending in transmit FIFO"]
-pub type TMLS0_R = crate::BitReader<bool>;
+pub type TMLS0_R = crate::BitReader;
 #[doc = "Field `TMLS1` reader - Transmit mailbox 1 last sending in transmit FIFO"]
-pub type TMLS1_R = crate::BitReader<bool>;
+pub type TMLS1_R = crate::BitReader;
 #[doc = "Field `TMLS2` reader - Transmit mailbox 2 last sending in transmit FIFO"]
-pub type TMLS2_R = crate::BitReader<bool>;
+pub type TMLS2_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Mailbox 0 transmit finished"]
     #[inline(always)]
@@ -224,112 +192,113 @@ impl W {
     #[doc = "Bit 0 - Mailbox 0 transmit finished"]
     #[inline(always)]
     #[must_use]
-    pub fn mtf0(&mut self) -> MTF0_W<0> {
+    pub fn mtf0(&mut self) -> MTF0_W<TSTAT_SPEC, 0> {
         MTF0_W::new(self)
     }
     #[doc = "Bit 1 - Mailbox 0 transmit finished and no error"]
     #[inline(always)]
     #[must_use]
-    pub fn mtfnerr0(&mut self) -> MTFNERR0_W<1> {
+    pub fn mtfnerr0(&mut self) -> MTFNERR0_W<TSTAT_SPEC, 1> {
         MTFNERR0_W::new(self)
     }
     #[doc = "Bit 2 - Mailbox 0 arbitration lost"]
     #[inline(always)]
     #[must_use]
-    pub fn mal0(&mut self) -> MAL0_W<2> {
+    pub fn mal0(&mut self) -> MAL0_W<TSTAT_SPEC, 2> {
         MAL0_W::new(self)
     }
     #[doc = "Bit 3 - Mailbox 0 transmit error"]
     #[inline(always)]
     #[must_use]
-    pub fn mte0(&mut self) -> MTE0_W<3> {
+    pub fn mte0(&mut self) -> MTE0_W<TSTAT_SPEC, 3> {
         MTE0_W::new(self)
     }
     #[doc = "Bit 7 - Mailbox 0 stop transmitting"]
     #[inline(always)]
     #[must_use]
-    pub fn mst0(&mut self) -> MST0_W<7> {
+    pub fn mst0(&mut self) -> MST0_W<TSTAT_SPEC, 7> {
         MST0_W::new(self)
     }
     #[doc = "Bit 8 - Mailbox 1 transmit finished"]
     #[inline(always)]
     #[must_use]
-    pub fn mtf1(&mut self) -> MTF1_W<8> {
+    pub fn mtf1(&mut self) -> MTF1_W<TSTAT_SPEC, 8> {
         MTF1_W::new(self)
     }
     #[doc = "Bit 9 - Mailbox 1 transmit finished and no error"]
     #[inline(always)]
     #[must_use]
-    pub fn mtfnerr1(&mut self) -> MTFNERR1_W<9> {
+    pub fn mtfnerr1(&mut self) -> MTFNERR1_W<TSTAT_SPEC, 9> {
         MTFNERR1_W::new(self)
     }
     #[doc = "Bit 10 - Mailbox 1 arbitration lost"]
     #[inline(always)]
     #[must_use]
-    pub fn mal1(&mut self) -> MAL1_W<10> {
+    pub fn mal1(&mut self) -> MAL1_W<TSTAT_SPEC, 10> {
         MAL1_W::new(self)
     }
     #[doc = "Bit 11 - Mailbox 1 transmit error"]
     #[inline(always)]
     #[must_use]
-    pub fn mte1(&mut self) -> MTE1_W<11> {
+    pub fn mte1(&mut self) -> MTE1_W<TSTAT_SPEC, 11> {
         MTE1_W::new(self)
     }
     #[doc = "Bit 15 - Mailbox 1 stop transmitting"]
     #[inline(always)]
     #[must_use]
-    pub fn mst1(&mut self) -> MST1_W<15> {
+    pub fn mst1(&mut self) -> MST1_W<TSTAT_SPEC, 15> {
         MST1_W::new(self)
     }
     #[doc = "Bit 16 - Mailbox 2 transmit finished"]
     #[inline(always)]
     #[must_use]
-    pub fn mtf2(&mut self) -> MTF2_W<16> {
+    pub fn mtf2(&mut self) -> MTF2_W<TSTAT_SPEC, 16> {
         MTF2_W::new(self)
     }
     #[doc = "Bit 17 - Mailbox 2 transmit finished and no error"]
     #[inline(always)]
     #[must_use]
-    pub fn mtfnerr2(&mut self) -> MTFNERR2_W<17> {
+    pub fn mtfnerr2(&mut self) -> MTFNERR2_W<TSTAT_SPEC, 17> {
         MTFNERR2_W::new(self)
     }
     #[doc = "Bit 18 - Mailbox 2 arbitration lost"]
     #[inline(always)]
     #[must_use]
-    pub fn mal2(&mut self) -> MAL2_W<18> {
+    pub fn mal2(&mut self) -> MAL2_W<TSTAT_SPEC, 18> {
         MAL2_W::new(self)
     }
     #[doc = "Bit 19 - Mailbox 2 transmit error"]
     #[inline(always)]
     #[must_use]
-    pub fn mte2(&mut self) -> MTE2_W<19> {
+    pub fn mte2(&mut self) -> MTE2_W<TSTAT_SPEC, 19> {
         MTE2_W::new(self)
     }
     #[doc = "Bit 23 - Mailbox 2 stop transmitting"]
     #[inline(always)]
     #[must_use]
-    pub fn mst2(&mut self) -> MST2_W<23> {
+    pub fn mst2(&mut self) -> MST2_W<TSTAT_SPEC, 23> {
         MST2_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Transmit status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tstat](index.html) module"]
+#[doc = "Transmit status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tstat::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tstat::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TSTAT_SPEC;
 impl crate::RegisterSpec for TSTAT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tstat::R](R) reader structure"]
-impl crate::Readable for TSTAT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [tstat::W](W) writer structure"]
+#[doc = "`read()` method returns [`tstat::R`](R) reader structure"]
+impl crate::Readable for TSTAT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tstat::W`](W) writer structure"]
 impl crate::Writable for TSTAT_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

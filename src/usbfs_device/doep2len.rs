@@ -1,52 +1,19 @@
 #[doc = "Register `DOEP2LEN` reader"]
-pub struct R(crate::R<DOEP2LEN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DOEP2LEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DOEP2LEN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DOEP2LEN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DOEP2LEN_SPEC>;
 #[doc = "Register `DOEP2LEN` writer"]
-pub struct W(crate::W<DOEP2LEN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DOEP2LEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DOEP2LEN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DOEP2LEN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DOEP2LEN_SPEC>;
 #[doc = "Field `TLEN` reader - Transfer length"]
-pub type TLEN_R = crate::FieldReader<u32, u32>;
+pub type TLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `TLEN` writer - Transfer length"]
-pub type TLEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOEP2LEN_SPEC, u32, u32, 19, O>;
+pub type TLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 19, O, u32>;
 #[doc = "Field `PCNT` reader - Packet count"]
-pub type PCNT_R = crate::FieldReader<u16, u16>;
+pub type PCNT_R = crate::FieldReader<u16>;
 #[doc = "Field `PCNT` writer - Packet count"]
-pub type PCNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOEP2LEN_SPEC, u16, u16, 10, O>;
+pub type PCNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
 #[doc = "Field `STPCNT_RXDPID` reader - SETUP packet count/Received data PID"]
-pub type STPCNT_RXDPID_R = crate::FieldReader<u8, u8>;
+pub type STPCNT_RXDPID_R = crate::FieldReader;
 #[doc = "Field `STPCNT_RXDPID` writer - SETUP packet count/Received data PID"]
-pub type STPCNT_RXDPID_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DOEP2LEN_SPEC, u8, u8, 2, O>;
+pub type STPCNT_RXDPID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 impl R {
     #[doc = "Bits 0:18 - Transfer length"]
     #[inline(always)]
@@ -68,40 +35,41 @@ impl W {
     #[doc = "Bits 0:18 - Transfer length"]
     #[inline(always)]
     #[must_use]
-    pub fn tlen(&mut self) -> TLEN_W<0> {
+    pub fn tlen(&mut self) -> TLEN_W<DOEP2LEN_SPEC, 0> {
         TLEN_W::new(self)
     }
     #[doc = "Bits 19:28 - Packet count"]
     #[inline(always)]
     #[must_use]
-    pub fn pcnt(&mut self) -> PCNT_W<19> {
+    pub fn pcnt(&mut self) -> PCNT_W<DOEP2LEN_SPEC, 19> {
         PCNT_W::new(self)
     }
     #[doc = "Bits 29:30 - SETUP packet count/Received data PID"]
     #[inline(always)]
     #[must_use]
-    pub fn stpcnt_rxdpid(&mut self) -> STPCNT_RXDPID_W<29> {
+    pub fn stpcnt_rxdpid(&mut self) -> STPCNT_RXDPID_W<DOEP2LEN_SPEC, 29> {
         STPCNT_RXDPID_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "device OUT endpoint-2 transfer length register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [doep2len](index.html) module"]
+#[doc = "device OUT endpoint-2 transfer length register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doep2len::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doep2len::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DOEP2LEN_SPEC;
 impl crate::RegisterSpec for DOEP2LEN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [doep2len::R](R) reader structure"]
-impl crate::Readable for DOEP2LEN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [doep2len::W](W) writer structure"]
+#[doc = "`read()` method returns [`doep2len::R`](R) reader structure"]
+impl crate::Readable for DOEP2LEN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`doep2len::W`](W) writer structure"]
 impl crate::Writable for DOEP2LEN_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

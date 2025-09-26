@@ -1,133 +1,101 @@
 #[doc = "Register `GINTEN` reader"]
-pub struct R(crate::R<GINTEN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GINTEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GINTEN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GINTEN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GINTEN_SPEC>;
 #[doc = "Register `GINTEN` writer"]
-pub struct W(crate::W<GINTEN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GINTEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GINTEN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GINTEN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GINTEN_SPEC>;
 #[doc = "Field `MFIE` reader - Mode fault interrupt enable"]
-pub type MFIE_R = crate::BitReader<bool>;
+pub type MFIE_R = crate::BitReader;
 #[doc = "Field `MFIE` writer - Mode fault interrupt enable"]
-pub type MFIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type MFIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OTGIE` reader - OTG interrupt enable"]
-pub type OTGIE_R = crate::BitReader<bool>;
+pub type OTGIE_R = crate::BitReader;
 #[doc = "Field `OTGIE` writer - OTG interrupt enable"]
-pub type OTGIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type OTGIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SOFIE` reader - Start of frame interrupt enable"]
-pub type SOFIE_R = crate::BitReader<bool>;
+pub type SOFIE_R = crate::BitReader;
 #[doc = "Field `SOFIE` writer - Start of frame interrupt enable"]
-pub type SOFIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type SOFIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RXFNEIE` reader - Receive FIFO non-empty interrupt enable"]
-pub type RXFNEIE_R = crate::BitReader<bool>;
+pub type RXFNEIE_R = crate::BitReader;
 #[doc = "Field `RXFNEIE` writer - Receive FIFO non-empty interrupt enable"]
-pub type RXFNEIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type RXFNEIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `NPTXFEIE` reader - Non-periodic TxFIFO empty interrupt enable"]
-pub type NPTXFEIE_R = crate::BitReader<bool>;
+pub type NPTXFEIE_R = crate::BitReader;
 #[doc = "Field `NPTXFEIE` writer - Non-periodic TxFIFO empty interrupt enable"]
-pub type NPTXFEIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type NPTXFEIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GNPINAKIE` reader - Global non-periodic IN NAK effective interrupt enable"]
-pub type GNPINAKIE_R = crate::BitReader<bool>;
+pub type GNPINAKIE_R = crate::BitReader;
 #[doc = "Field `GNPINAKIE` writer - Global non-periodic IN NAK effective interrupt enable"]
-pub type GNPINAKIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type GNPINAKIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GONAKIE` reader - Global OUT NAK effective interrupt enable"]
-pub type GONAKIE_R = crate::BitReader<bool>;
+pub type GONAKIE_R = crate::BitReader;
 #[doc = "Field `GONAKIE` writer - Global OUT NAK effective interrupt enable"]
-pub type GONAKIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type GONAKIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ESPIE` reader - Early suspend interrupt enable"]
-pub type ESPIE_R = crate::BitReader<bool>;
+pub type ESPIE_R = crate::BitReader;
 #[doc = "Field `ESPIE` writer - Early suspend interrupt enable"]
-pub type ESPIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type ESPIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SPIE` reader - USB suspend interrupt enable"]
-pub type SPIE_R = crate::BitReader<bool>;
+pub type SPIE_R = crate::BitReader;
 #[doc = "Field `SPIE` writer - USB suspend interrupt enable"]
-pub type SPIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type SPIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RSTIE` reader - USB reset interrupt enable"]
-pub type RSTIE_R = crate::BitReader<bool>;
+pub type RSTIE_R = crate::BitReader;
 #[doc = "Field `RSTIE` writer - USB reset interrupt enable"]
-pub type RSTIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type RSTIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ENUMFIE` reader - Enumeration finish interrupt enable"]
-pub type ENUMFIE_R = crate::BitReader<bool>;
+pub type ENUMFIE_R = crate::BitReader;
 #[doc = "Field `ENUMFIE` writer - Enumeration finish interrupt enable"]
-pub type ENUMFIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type ENUMFIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ISOOPDIE` reader - Isochronous OUT packet dropped interrupt enable"]
-pub type ISOOPDIE_R = crate::BitReader<bool>;
+pub type ISOOPDIE_R = crate::BitReader;
 #[doc = "Field `ISOOPDIE` writer - Isochronous OUT packet dropped interrupt enable"]
-pub type ISOOPDIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type ISOOPDIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EOPFIE` reader - End of periodic frame interrupt enable"]
-pub type EOPFIE_R = crate::BitReader<bool>;
+pub type EOPFIE_R = crate::BitReader;
 #[doc = "Field `EOPFIE` writer - End of periodic frame interrupt enable"]
-pub type EOPFIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type EOPFIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IEPIE` reader - IN endpoints interrupt enable"]
-pub type IEPIE_R = crate::BitReader<bool>;
+pub type IEPIE_R = crate::BitReader;
 #[doc = "Field `IEPIE` writer - IN endpoints interrupt enable"]
-pub type IEPIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type IEPIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OEPIE` reader - OUT endpoints interrupt enable"]
-pub type OEPIE_R = crate::BitReader<bool>;
+pub type OEPIE_R = crate::BitReader;
 #[doc = "Field `OEPIE` writer - OUT endpoints interrupt enable"]
-pub type OEPIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type OEPIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ISOINCIE` reader - isochronous IN transfer not complete interrupt enable"]
-pub type ISOINCIE_R = crate::BitReader<bool>;
+pub type ISOINCIE_R = crate::BitReader;
 #[doc = "Field `ISOINCIE` writer - isochronous IN transfer not complete interrupt enable"]
-pub type ISOINCIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type ISOINCIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PXNCIE_ISOONCIE` reader - periodic transfer not compelete Interrupt enable(Host mode)/isochronous OUT transfer not complete interrupt enable(Device mode)"]
-pub type PXNCIE_ISOONCIE_R = crate::BitReader<bool>;
+pub type PXNCIE_ISOONCIE_R = crate::BitReader;
 #[doc = "Field `PXNCIE_ISOONCIE` writer - periodic transfer not compelete Interrupt enable(Host mode)/isochronous OUT transfer not complete interrupt enable(Device mode)"]
-pub type PXNCIE_ISOONCIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type PXNCIE_ISOONCIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HPIE` reader - Host port interrupt enable"]
-pub type HPIE_R = crate::BitReader<bool>;
+pub type HPIE_R = crate::BitReader;
 #[doc = "Field `HCIE` reader - Host channels interrupt enable"]
-pub type HCIE_R = crate::BitReader<bool>;
+pub type HCIE_R = crate::BitReader;
 #[doc = "Field `HCIE` writer - Host channels interrupt enable"]
-pub type HCIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type HCIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PTXFEIE` reader - Periodic TxFIFO empty interrupt enable"]
-pub type PTXFEIE_R = crate::BitReader<bool>;
+pub type PTXFEIE_R = crate::BitReader;
 #[doc = "Field `PTXFEIE` writer - Periodic TxFIFO empty interrupt enable"]
-pub type PTXFEIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type PTXFEIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IDPSCIE` reader - ID pin status change interrupt enable"]
-pub type IDPSCIE_R = crate::BitReader<bool>;
+pub type IDPSCIE_R = crate::BitReader;
 #[doc = "Field `IDPSCIE` writer - ID pin status change interrupt enable"]
-pub type IDPSCIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type IDPSCIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DISCIE` reader - Disconnect interrupt enable"]
-pub type DISCIE_R = crate::BitReader<bool>;
+pub type DISCIE_R = crate::BitReader;
 #[doc = "Field `DISCIE` writer - Disconnect interrupt enable"]
-pub type DISCIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type DISCIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SESIE` reader - Session interrupt enable"]
-pub type SESIE_R = crate::BitReader<bool>;
+pub type SESIE_R = crate::BitReader;
 #[doc = "Field `SESIE` writer - Session interrupt enable"]
-pub type SESIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type SESIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `WKUPIE` reader - Wakeup interrupt enable"]
-pub type WKUPIE_R = crate::BitReader<bool>;
+pub type WKUPIE_R = crate::BitReader;
 #[doc = "Field `WKUPIE` writer - Wakeup interrupt enable"]
-pub type WKUPIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTEN_SPEC, bool, O>;
+pub type WKUPIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 1 - Mode fault interrupt enable"]
     #[inline(always)]
@@ -254,160 +222,161 @@ impl W {
     #[doc = "Bit 1 - Mode fault interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn mfie(&mut self) -> MFIE_W<1> {
+    pub fn mfie(&mut self) -> MFIE_W<GINTEN_SPEC, 1> {
         MFIE_W::new(self)
     }
     #[doc = "Bit 2 - OTG interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn otgie(&mut self) -> OTGIE_W<2> {
+    pub fn otgie(&mut self) -> OTGIE_W<GINTEN_SPEC, 2> {
         OTGIE_W::new(self)
     }
     #[doc = "Bit 3 - Start of frame interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sofie(&mut self) -> SOFIE_W<3> {
+    pub fn sofie(&mut self) -> SOFIE_W<GINTEN_SPEC, 3> {
         SOFIE_W::new(self)
     }
     #[doc = "Bit 4 - Receive FIFO non-empty interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfneie(&mut self) -> RXFNEIE_W<4> {
+    pub fn rxfneie(&mut self) -> RXFNEIE_W<GINTEN_SPEC, 4> {
         RXFNEIE_W::new(self)
     }
     #[doc = "Bit 5 - Non-periodic TxFIFO empty interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn nptxfeie(&mut self) -> NPTXFEIE_W<5> {
+    pub fn nptxfeie(&mut self) -> NPTXFEIE_W<GINTEN_SPEC, 5> {
         NPTXFEIE_W::new(self)
     }
     #[doc = "Bit 6 - Global non-periodic IN NAK effective interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn gnpinakie(&mut self) -> GNPINAKIE_W<6> {
+    pub fn gnpinakie(&mut self) -> GNPINAKIE_W<GINTEN_SPEC, 6> {
         GNPINAKIE_W::new(self)
     }
     #[doc = "Bit 7 - Global OUT NAK effective interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn gonakie(&mut self) -> GONAKIE_W<7> {
+    pub fn gonakie(&mut self) -> GONAKIE_W<GINTEN_SPEC, 7> {
         GONAKIE_W::new(self)
     }
     #[doc = "Bit 10 - Early suspend interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn espie(&mut self) -> ESPIE_W<10> {
+    pub fn espie(&mut self) -> ESPIE_W<GINTEN_SPEC, 10> {
         ESPIE_W::new(self)
     }
     #[doc = "Bit 11 - USB suspend interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn spie(&mut self) -> SPIE_W<11> {
+    pub fn spie(&mut self) -> SPIE_W<GINTEN_SPEC, 11> {
         SPIE_W::new(self)
     }
     #[doc = "Bit 12 - USB reset interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rstie(&mut self) -> RSTIE_W<12> {
+    pub fn rstie(&mut self) -> RSTIE_W<GINTEN_SPEC, 12> {
         RSTIE_W::new(self)
     }
     #[doc = "Bit 13 - Enumeration finish interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn enumfie(&mut self) -> ENUMFIE_W<13> {
+    pub fn enumfie(&mut self) -> ENUMFIE_W<GINTEN_SPEC, 13> {
         ENUMFIE_W::new(self)
     }
     #[doc = "Bit 14 - Isochronous OUT packet dropped interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn isoopdie(&mut self) -> ISOOPDIE_W<14> {
+    pub fn isoopdie(&mut self) -> ISOOPDIE_W<GINTEN_SPEC, 14> {
         ISOOPDIE_W::new(self)
     }
     #[doc = "Bit 15 - End of periodic frame interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn eopfie(&mut self) -> EOPFIE_W<15> {
+    pub fn eopfie(&mut self) -> EOPFIE_W<GINTEN_SPEC, 15> {
         EOPFIE_W::new(self)
     }
     #[doc = "Bit 18 - IN endpoints interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn iepie(&mut self) -> IEPIE_W<18> {
+    pub fn iepie(&mut self) -> IEPIE_W<GINTEN_SPEC, 18> {
         IEPIE_W::new(self)
     }
     #[doc = "Bit 19 - OUT endpoints interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn oepie(&mut self) -> OEPIE_W<19> {
+    pub fn oepie(&mut self) -> OEPIE_W<GINTEN_SPEC, 19> {
         OEPIE_W::new(self)
     }
     #[doc = "Bit 20 - isochronous IN transfer not complete interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn isoincie(&mut self) -> ISOINCIE_W<20> {
+    pub fn isoincie(&mut self) -> ISOINCIE_W<GINTEN_SPEC, 20> {
         ISOINCIE_W::new(self)
     }
     #[doc = "Bit 21 - periodic transfer not compelete Interrupt enable(Host mode)/isochronous OUT transfer not complete interrupt enable(Device mode)"]
     #[inline(always)]
     #[must_use]
-    pub fn pxncie_isooncie(&mut self) -> PXNCIE_ISOONCIE_W<21> {
+    pub fn pxncie_isooncie(&mut self) -> PXNCIE_ISOONCIE_W<GINTEN_SPEC, 21> {
         PXNCIE_ISOONCIE_W::new(self)
     }
     #[doc = "Bit 25 - Host channels interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hcie(&mut self) -> HCIE_W<25> {
+    pub fn hcie(&mut self) -> HCIE_W<GINTEN_SPEC, 25> {
         HCIE_W::new(self)
     }
     #[doc = "Bit 26 - Periodic TxFIFO empty interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ptxfeie(&mut self) -> PTXFEIE_W<26> {
+    pub fn ptxfeie(&mut self) -> PTXFEIE_W<GINTEN_SPEC, 26> {
         PTXFEIE_W::new(self)
     }
     #[doc = "Bit 28 - ID pin status change interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn idpscie(&mut self) -> IDPSCIE_W<28> {
+    pub fn idpscie(&mut self) -> IDPSCIE_W<GINTEN_SPEC, 28> {
         IDPSCIE_W::new(self)
     }
     #[doc = "Bit 29 - Disconnect interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn discie(&mut self) -> DISCIE_W<29> {
+    pub fn discie(&mut self) -> DISCIE_W<GINTEN_SPEC, 29> {
         DISCIE_W::new(self)
     }
     #[doc = "Bit 30 - Session interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sesie(&mut self) -> SESIE_W<30> {
+    pub fn sesie(&mut self) -> SESIE_W<GINTEN_SPEC, 30> {
         SESIE_W::new(self)
     }
     #[doc = "Bit 31 - Wakeup interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn wkupie(&mut self) -> WKUPIE_W<31> {
+    pub fn wkupie(&mut self) -> WKUPIE_W<GINTEN_SPEC, 31> {
         WKUPIE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Global interrupt enable register (USBFS_GINTEN)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ginten](index.html) module"]
+#[doc = "Global interrupt enable register (USBFS_GINTEN)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ginten::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ginten::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GINTEN_SPEC;
 impl crate::RegisterSpec for GINTEN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ginten::R](R) reader structure"]
-impl crate::Readable for GINTEN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ginten::W](W) writer structure"]
+#[doc = "`read()` method returns [`ginten::R`](R) reader structure"]
+impl crate::Readable for GINTEN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ginten::W`](W) writer structure"]
 impl crate::Writable for GINTEN_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

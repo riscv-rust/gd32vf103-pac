@@ -1,26 +1,13 @@
 #[doc = "Register `RFIFOMDATA01` reader"]
-pub struct R(crate::R<RFIFOMDATA01_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RFIFOMDATA01_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RFIFOMDATA01_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RFIFOMDATA01_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RFIFOMDATA01_SPEC>;
 #[doc = "Field `DB0` reader - Data byte 0"]
-pub type DB0_R = crate::FieldReader<u8, u8>;
+pub type DB0_R = crate::FieldReader;
 #[doc = "Field `DB1` reader - Data byte 1"]
-pub type DB1_R = crate::FieldReader<u8, u8>;
+pub type DB1_R = crate::FieldReader;
 #[doc = "Field `DB2` reader - Data byte 2"]
-pub type DB2_R = crate::FieldReader<u8, u8>;
+pub type DB2_R = crate::FieldReader;
 #[doc = "Field `DB3` reader - Data byte 3"]
-pub type DB3_R = crate::FieldReader<u8, u8>;
+pub type DB3_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - Data byte 0"]
     #[inline(always)]
@@ -43,15 +30,13 @@ impl R {
         DB3_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
-#[doc = "Receive FIFO1 mailbox data0 register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rfifomdata01](index.html) module"]
+#[doc = "Receive FIFO1 mailbox data0 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfifomdata01::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RFIFOMDATA01_SPEC;
 impl crate::RegisterSpec for RFIFOMDATA01_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rfifomdata01::R](R) reader structure"]
-impl crate::Readable for RFIFOMDATA01_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`rfifomdata01::R`](R) reader structure"]
+impl crate::Readable for RFIFOMDATA01_SPEC {}
 #[doc = "`reset()` method sets RFIFOMDATA01 to value 0"]
 impl crate::Resettable for RFIFOMDATA01_SPEC {
     const RESET_VALUE: Self::Ux = 0;

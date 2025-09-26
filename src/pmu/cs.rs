@@ -1,49 +1,17 @@
 #[doc = "Register `CS` reader"]
-pub struct R(crate::R<CS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CS_SPEC>;
 #[doc = "Register `CS` writer"]
-pub struct W(crate::W<CS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CS_SPEC>;
 #[doc = "Field `WUF` reader - Wakeup flag"]
-pub type WUF_R = crate::BitReader<bool>;
+pub type WUF_R = crate::BitReader;
 #[doc = "Field `STBF` reader - Standby flag"]
-pub type STBF_R = crate::BitReader<bool>;
+pub type STBF_R = crate::BitReader;
 #[doc = "Field `LVDF` reader - Low Voltage Detector Status Flag"]
-pub type LVDF_R = crate::BitReader<bool>;
+pub type LVDF_R = crate::BitReader;
 #[doc = "Field `WUPEN` reader - Enable WKUP pin"]
-pub type WUPEN_R = crate::BitReader<bool>;
+pub type WUPEN_R = crate::BitReader;
 #[doc = "Field `WUPEN` writer - Enable WKUP pin"]
-pub type WUPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CS_SPEC, bool, O>;
+pub type WUPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Wakeup flag"]
     #[inline(always)]
@@ -70,28 +38,29 @@ impl W {
     #[doc = "Bit 8 - Enable WKUP pin"]
     #[inline(always)]
     #[must_use]
-    pub fn wupen(&mut self) -> WUPEN_W<8> {
+    pub fn wupen(&mut self) -> WUPEN_W<CS_SPEC, 8> {
         WUPEN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "power control/status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cs](index.html) module"]
+#[doc = "power control/status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cs::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cs::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CS_SPEC;
 impl crate::RegisterSpec for CS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cs::R](R) reader structure"]
-impl crate::Readable for CS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cs::W](W) writer structure"]
+#[doc = "`read()` method returns [`cs::R`](R) reader structure"]
+impl crate::Readable for CS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`cs::W`](W) writer structure"]
 impl crate::Writable for CS_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

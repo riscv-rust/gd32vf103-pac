@@ -45,6 +45,7 @@ PROVIDE(USART2 = DefaultHandler);
 PROVIDE(EXTI_LINE15_10 = DefaultHandler);
 PROVIDE(RTC_ALARM = DefaultHandler);
 PROVIDE(USBFS_WKUP = DefaultHandler);
+PROVIDE(EXMC = DefaultHandler);
 PROVIDE(TIMER4 = DefaultHandler);
 PROVIDE(SPI2 = DefaultHandler);
 PROVIDE(UART3 = DefaultHandler);

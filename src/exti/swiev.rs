@@ -1,115 +1,83 @@
 #[doc = "Register `SWIEV` reader"]
-pub struct R(crate::R<SWIEV_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SWIEV_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SWIEV_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SWIEV_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SWIEV_SPEC>;
 #[doc = "Register `SWIEV` writer"]
-pub struct W(crate::W<SWIEV_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SWIEV_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SWIEV_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SWIEV_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SWIEV_SPEC>;
 #[doc = "Field `SWIEV0` reader - Interrupt/Event software trigger on line 0"]
-pub type SWIEV0_R = crate::BitReader<bool>;
+pub type SWIEV0_R = crate::BitReader;
 #[doc = "Field `SWIEV0` writer - Interrupt/Event software trigger on line 0"]
-pub type SWIEV0_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV1` reader - Interrupt/Event software trigger on line 1"]
-pub type SWIEV1_R = crate::BitReader<bool>;
+pub type SWIEV1_R = crate::BitReader;
 #[doc = "Field `SWIEV1` writer - Interrupt/Event software trigger on line 1"]
-pub type SWIEV1_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV2` reader - Interrupt/Event software trigger on line 2"]
-pub type SWIEV2_R = crate::BitReader<bool>;
+pub type SWIEV2_R = crate::BitReader;
 #[doc = "Field `SWIEV2` writer - Interrupt/Event software trigger on line 2"]
-pub type SWIEV2_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV3` reader - Interrupt/Event software trigger on line 3"]
-pub type SWIEV3_R = crate::BitReader<bool>;
+pub type SWIEV3_R = crate::BitReader;
 #[doc = "Field `SWIEV3` writer - Interrupt/Event software trigger on line 3"]
-pub type SWIEV3_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV4` reader - Interrupt/Event software trigger on line 4"]
-pub type SWIEV4_R = crate::BitReader<bool>;
+pub type SWIEV4_R = crate::BitReader;
 #[doc = "Field `SWIEV4` writer - Interrupt/Event software trigger on line 4"]
-pub type SWIEV4_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV5` reader - Interrupt/Event software trigger on line 5"]
-pub type SWIEV5_R = crate::BitReader<bool>;
+pub type SWIEV5_R = crate::BitReader;
 #[doc = "Field `SWIEV5` writer - Interrupt/Event software trigger on line 5"]
-pub type SWIEV5_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV6` reader - Interrupt/Event software trigger on line 6"]
-pub type SWIEV6_R = crate::BitReader<bool>;
+pub type SWIEV6_R = crate::BitReader;
 #[doc = "Field `SWIEV6` writer - Interrupt/Event software trigger on line 6"]
-pub type SWIEV6_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV7` reader - Interrupt/Event software trigger on line 7"]
-pub type SWIEV7_R = crate::BitReader<bool>;
+pub type SWIEV7_R = crate::BitReader;
 #[doc = "Field `SWIEV7` writer - Interrupt/Event software trigger on line 7"]
-pub type SWIEV7_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV8` reader - Interrupt/Event software trigger on line 8"]
-pub type SWIEV8_R = crate::BitReader<bool>;
+pub type SWIEV8_R = crate::BitReader;
 #[doc = "Field `SWIEV8` writer - Interrupt/Event software trigger on line 8"]
-pub type SWIEV8_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV9` reader - Interrupt/Event software trigger on line 9"]
-pub type SWIEV9_R = crate::BitReader<bool>;
+pub type SWIEV9_R = crate::BitReader;
 #[doc = "Field `SWIEV9` writer - Interrupt/Event software trigger on line 9"]
-pub type SWIEV9_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV9_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV10` reader - Interrupt/Event software trigger on line 10"]
-pub type SWIEV10_R = crate::BitReader<bool>;
+pub type SWIEV10_R = crate::BitReader;
 #[doc = "Field `SWIEV10` writer - Interrupt/Event software trigger on line 10"]
-pub type SWIEV10_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV11` reader - Interrupt/Event software trigger on line 11"]
-pub type SWIEV11_R = crate::BitReader<bool>;
+pub type SWIEV11_R = crate::BitReader;
 #[doc = "Field `SWIEV11` writer - Interrupt/Event software trigger on line 11"]
-pub type SWIEV11_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV11_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV12` reader - Interrupt/Event software trigger on line 12"]
-pub type SWIEV12_R = crate::BitReader<bool>;
+pub type SWIEV12_R = crate::BitReader;
 #[doc = "Field `SWIEV12` writer - Interrupt/Event software trigger on line 12"]
-pub type SWIEV12_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV12_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV13` reader - Interrupt/Event software trigger on line 13"]
-pub type SWIEV13_R = crate::BitReader<bool>;
+pub type SWIEV13_R = crate::BitReader;
 #[doc = "Field `SWIEV13` writer - Interrupt/Event software trigger on line 13"]
-pub type SWIEV13_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV13_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV14` reader - Interrupt/Event software trigger on line 14"]
-pub type SWIEV14_R = crate::BitReader<bool>;
+pub type SWIEV14_R = crate::BitReader;
 #[doc = "Field `SWIEV14` writer - Interrupt/Event software trigger on line 14"]
-pub type SWIEV14_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV14_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV15` reader - Interrupt/Event software trigger on line 15"]
-pub type SWIEV15_R = crate::BitReader<bool>;
+pub type SWIEV15_R = crate::BitReader;
 #[doc = "Field `SWIEV15` writer - Interrupt/Event software trigger on line 15"]
-pub type SWIEV15_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV15_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV16` reader - Interrupt/Event software trigger on line 16"]
-pub type SWIEV16_R = crate::BitReader<bool>;
+pub type SWIEV16_R = crate::BitReader;
 #[doc = "Field `SWIEV16` writer - Interrupt/Event software trigger on line 16"]
-pub type SWIEV16_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV16_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV17` reader - Interrupt/Event software trigger on line 17"]
-pub type SWIEV17_R = crate::BitReader<bool>;
+pub type SWIEV17_R = crate::BitReader;
 #[doc = "Field `SWIEV17` writer - Interrupt/Event software trigger on line 17"]
-pub type SWIEV17_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV17_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SWIEV18` reader - Interrupt/Event software trigger on line 18"]
-pub type SWIEV18_R = crate::BitReader<bool>;
+pub type SWIEV18_R = crate::BitReader;
 #[doc = "Field `SWIEV18` writer - Interrupt/Event software trigger on line 18"]
-pub type SWIEV18_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWIEV_SPEC, bool, O>;
+pub type SWIEV18_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Interrupt/Event software trigger on line 0"]
     #[inline(always)]
@@ -211,136 +179,137 @@ impl W {
     #[doc = "Bit 0 - Interrupt/Event software trigger on line 0"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev0(&mut self) -> SWIEV0_W<0> {
+    pub fn swiev0(&mut self) -> SWIEV0_W<SWIEV_SPEC, 0> {
         SWIEV0_W::new(self)
     }
     #[doc = "Bit 1 - Interrupt/Event software trigger on line 1"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev1(&mut self) -> SWIEV1_W<1> {
+    pub fn swiev1(&mut self) -> SWIEV1_W<SWIEV_SPEC, 1> {
         SWIEV1_W::new(self)
     }
     #[doc = "Bit 2 - Interrupt/Event software trigger on line 2"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev2(&mut self) -> SWIEV2_W<2> {
+    pub fn swiev2(&mut self) -> SWIEV2_W<SWIEV_SPEC, 2> {
         SWIEV2_W::new(self)
     }
     #[doc = "Bit 3 - Interrupt/Event software trigger on line 3"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev3(&mut self) -> SWIEV3_W<3> {
+    pub fn swiev3(&mut self) -> SWIEV3_W<SWIEV_SPEC, 3> {
         SWIEV3_W::new(self)
     }
     #[doc = "Bit 4 - Interrupt/Event software trigger on line 4"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev4(&mut self) -> SWIEV4_W<4> {
+    pub fn swiev4(&mut self) -> SWIEV4_W<SWIEV_SPEC, 4> {
         SWIEV4_W::new(self)
     }
     #[doc = "Bit 5 - Interrupt/Event software trigger on line 5"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev5(&mut self) -> SWIEV5_W<5> {
+    pub fn swiev5(&mut self) -> SWIEV5_W<SWIEV_SPEC, 5> {
         SWIEV5_W::new(self)
     }
     #[doc = "Bit 6 - Interrupt/Event software trigger on line 6"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev6(&mut self) -> SWIEV6_W<6> {
+    pub fn swiev6(&mut self) -> SWIEV6_W<SWIEV_SPEC, 6> {
         SWIEV6_W::new(self)
     }
     #[doc = "Bit 7 - Interrupt/Event software trigger on line 7"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev7(&mut self) -> SWIEV7_W<7> {
+    pub fn swiev7(&mut self) -> SWIEV7_W<SWIEV_SPEC, 7> {
         SWIEV7_W::new(self)
     }
     #[doc = "Bit 8 - Interrupt/Event software trigger on line 8"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev8(&mut self) -> SWIEV8_W<8> {
+    pub fn swiev8(&mut self) -> SWIEV8_W<SWIEV_SPEC, 8> {
         SWIEV8_W::new(self)
     }
     #[doc = "Bit 9 - Interrupt/Event software trigger on line 9"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev9(&mut self) -> SWIEV9_W<9> {
+    pub fn swiev9(&mut self) -> SWIEV9_W<SWIEV_SPEC, 9> {
         SWIEV9_W::new(self)
     }
     #[doc = "Bit 10 - Interrupt/Event software trigger on line 10"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev10(&mut self) -> SWIEV10_W<10> {
+    pub fn swiev10(&mut self) -> SWIEV10_W<SWIEV_SPEC, 10> {
         SWIEV10_W::new(self)
     }
     #[doc = "Bit 11 - Interrupt/Event software trigger on line 11"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev11(&mut self) -> SWIEV11_W<11> {
+    pub fn swiev11(&mut self) -> SWIEV11_W<SWIEV_SPEC, 11> {
         SWIEV11_W::new(self)
     }
     #[doc = "Bit 12 - Interrupt/Event software trigger on line 12"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev12(&mut self) -> SWIEV12_W<12> {
+    pub fn swiev12(&mut self) -> SWIEV12_W<SWIEV_SPEC, 12> {
         SWIEV12_W::new(self)
     }
     #[doc = "Bit 13 - Interrupt/Event software trigger on line 13"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev13(&mut self) -> SWIEV13_W<13> {
+    pub fn swiev13(&mut self) -> SWIEV13_W<SWIEV_SPEC, 13> {
         SWIEV13_W::new(self)
     }
     #[doc = "Bit 14 - Interrupt/Event software trigger on line 14"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev14(&mut self) -> SWIEV14_W<14> {
+    pub fn swiev14(&mut self) -> SWIEV14_W<SWIEV_SPEC, 14> {
         SWIEV14_W::new(self)
     }
     #[doc = "Bit 15 - Interrupt/Event software trigger on line 15"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev15(&mut self) -> SWIEV15_W<15> {
+    pub fn swiev15(&mut self) -> SWIEV15_W<SWIEV_SPEC, 15> {
         SWIEV15_W::new(self)
     }
     #[doc = "Bit 16 - Interrupt/Event software trigger on line 16"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev16(&mut self) -> SWIEV16_W<16> {
+    pub fn swiev16(&mut self) -> SWIEV16_W<SWIEV_SPEC, 16> {
         SWIEV16_W::new(self)
     }
     #[doc = "Bit 17 - Interrupt/Event software trigger on line 17"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev17(&mut self) -> SWIEV17_W<17> {
+    pub fn swiev17(&mut self) -> SWIEV17_W<SWIEV_SPEC, 17> {
         SWIEV17_W::new(self)
     }
     #[doc = "Bit 18 - Interrupt/Event software trigger on line 18"]
     #[inline(always)]
     #[must_use]
-    pub fn swiev18(&mut self) -> SWIEV18_W<18> {
+    pub fn swiev18(&mut self) -> SWIEV18_W<SWIEV_SPEC, 18> {
         SWIEV18_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Software interrupt event register (EXTI_SWIEV)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swiev](index.html) module"]
+#[doc = "Software interrupt event register (EXTI_SWIEV)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`swiev::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`swiev::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SWIEV_SPEC;
 impl crate::RegisterSpec for SWIEV_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [swiev::R](R) reader structure"]
-impl crate::Readable for SWIEV_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [swiev::W](W) writer structure"]
+#[doc = "`read()` method returns [`swiev::R`](R) reader structure"]
+impl crate::Readable for SWIEV_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`swiev::W`](W) writer structure"]
 impl crate::Writable for SWIEV_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

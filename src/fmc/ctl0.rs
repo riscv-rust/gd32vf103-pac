@@ -1,79 +1,47 @@
 #[doc = "Register `CTL0` reader"]
-pub struct R(crate::R<CTL0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CTL0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CTL0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CTL0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CTL0_SPEC>;
 #[doc = "Register `CTL0` writer"]
-pub struct W(crate::W<CTL0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CTL0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CTL0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CTL0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CTL0_SPEC>;
 #[doc = "Field `PG` reader - Main flash program for bank0 command bit"]
-pub type PG_R = crate::BitReader<bool>;
+pub type PG_R = crate::BitReader;
 #[doc = "Field `PG` writer - Main flash program for bank0 command bit"]
-pub type PG_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL0_SPEC, bool, O>;
+pub type PG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PER` reader - Main flash page erase for bank0 command bit"]
-pub type PER_R = crate::BitReader<bool>;
+pub type PER_R = crate::BitReader;
 #[doc = "Field `PER` writer - Main flash page erase for bank0 command bit"]
-pub type PER_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL0_SPEC, bool, O>;
+pub type PER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MER` reader - Main flash mass erase for bank0 command bit"]
-pub type MER_R = crate::BitReader<bool>;
+pub type MER_R = crate::BitReader;
 #[doc = "Field `MER` writer - Main flash mass erase for bank0 command bit"]
-pub type MER_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL0_SPEC, bool, O>;
+pub type MER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OBPG` reader - Option bytes program command bit"]
-pub type OBPG_R = crate::BitReader<bool>;
+pub type OBPG_R = crate::BitReader;
 #[doc = "Field `OBPG` writer - Option bytes program command bit"]
-pub type OBPG_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL0_SPEC, bool, O>;
+pub type OBPG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OBER` reader - Option bytes erase command bit"]
-pub type OBER_R = crate::BitReader<bool>;
+pub type OBER_R = crate::BitReader;
 #[doc = "Field `OBER` writer - Option bytes erase command bit"]
-pub type OBER_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL0_SPEC, bool, O>;
+pub type OBER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `START` reader - Send erase command to FMC bit"]
-pub type START_R = crate::BitReader<bool>;
+pub type START_R = crate::BitReader;
 #[doc = "Field `START` writer - Send erase command to FMC bit"]
-pub type START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL0_SPEC, bool, O>;
+pub type START_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LK` reader - FMC_CTL0 lock bit"]
-pub type LK_R = crate::BitReader<bool>;
+pub type LK_R = crate::BitReader;
 #[doc = "Field `LK` writer - FMC_CTL0 lock bit"]
-pub type LK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL0_SPEC, bool, O>;
+pub type LK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OBWEN` reader - Option byte erase/program enable bit"]
-pub type OBWEN_R = crate::BitReader<bool>;
+pub type OBWEN_R = crate::BitReader;
 #[doc = "Field `OBWEN` writer - Option byte erase/program enable bit"]
-pub type OBWEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL0_SPEC, bool, O>;
+pub type OBWEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ERRIE` reader - Error interrupt enable bit"]
-pub type ERRIE_R = crate::BitReader<bool>;
+pub type ERRIE_R = crate::BitReader;
 #[doc = "Field `ERRIE` writer - Error interrupt enable bit"]
-pub type ERRIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL0_SPEC, bool, O>;
+pub type ERRIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ENDIE` reader - End of operation interrupt enable bit"]
-pub type ENDIE_R = crate::BitReader<bool>;
+pub type ENDIE_R = crate::BitReader;
 #[doc = "Field `ENDIE` writer - End of operation interrupt enable bit"]
-pub type ENDIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL0_SPEC, bool, O>;
+pub type ENDIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Main flash program for bank0 command bit"]
     #[inline(always)]
@@ -130,82 +98,83 @@ impl W {
     #[doc = "Bit 0 - Main flash program for bank0 command bit"]
     #[inline(always)]
     #[must_use]
-    pub fn pg(&mut self) -> PG_W<0> {
+    pub fn pg(&mut self) -> PG_W<CTL0_SPEC, 0> {
         PG_W::new(self)
     }
     #[doc = "Bit 1 - Main flash page erase for bank0 command bit"]
     #[inline(always)]
     #[must_use]
-    pub fn per(&mut self) -> PER_W<1> {
+    pub fn per(&mut self) -> PER_W<CTL0_SPEC, 1> {
         PER_W::new(self)
     }
     #[doc = "Bit 2 - Main flash mass erase for bank0 command bit"]
     #[inline(always)]
     #[must_use]
-    pub fn mer(&mut self) -> MER_W<2> {
+    pub fn mer(&mut self) -> MER_W<CTL0_SPEC, 2> {
         MER_W::new(self)
     }
     #[doc = "Bit 4 - Option bytes program command bit"]
     #[inline(always)]
     #[must_use]
-    pub fn obpg(&mut self) -> OBPG_W<4> {
+    pub fn obpg(&mut self) -> OBPG_W<CTL0_SPEC, 4> {
         OBPG_W::new(self)
     }
     #[doc = "Bit 5 - Option bytes erase command bit"]
     #[inline(always)]
     #[must_use]
-    pub fn ober(&mut self) -> OBER_W<5> {
+    pub fn ober(&mut self) -> OBER_W<CTL0_SPEC, 5> {
         OBER_W::new(self)
     }
     #[doc = "Bit 6 - Send erase command to FMC bit"]
     #[inline(always)]
     #[must_use]
-    pub fn start(&mut self) -> START_W<6> {
+    pub fn start(&mut self) -> START_W<CTL0_SPEC, 6> {
         START_W::new(self)
     }
     #[doc = "Bit 7 - FMC_CTL0 lock bit"]
     #[inline(always)]
     #[must_use]
-    pub fn lk(&mut self) -> LK_W<7> {
+    pub fn lk(&mut self) -> LK_W<CTL0_SPEC, 7> {
         LK_W::new(self)
     }
     #[doc = "Bit 9 - Option byte erase/program enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn obwen(&mut self) -> OBWEN_W<9> {
+    pub fn obwen(&mut self) -> OBWEN_W<CTL0_SPEC, 9> {
         OBWEN_W::new(self)
     }
     #[doc = "Bit 10 - Error interrupt enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn errie(&mut self) -> ERRIE_W<10> {
+    pub fn errie(&mut self) -> ERRIE_W<CTL0_SPEC, 10> {
         ERRIE_W::new(self)
     }
     #[doc = "Bit 12 - End of operation interrupt enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn endie(&mut self) -> ENDIE_W<12> {
+    pub fn endie(&mut self) -> ENDIE_W<CTL0_SPEC, 12> {
         ENDIE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Control register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl0](index.html) module"]
+#[doc = "Control register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctl0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctl0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTL0_SPEC;
 impl crate::RegisterSpec for CTL0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctl0::R](R) reader structure"]
-impl crate::Readable for CTL0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ctl0::W](W) writer structure"]
+#[doc = "`read()` method returns [`ctl0::R`](R) reader structure"]
+impl crate::Readable for CTL0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ctl0::W`](W) writer structure"]
 impl crate::Writable for CTL0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

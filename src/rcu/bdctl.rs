@@ -1,61 +1,29 @@
 #[doc = "Register `BDCTL` reader"]
-pub struct R(crate::R<BDCTL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<BDCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<BDCTL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<BDCTL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<BDCTL_SPEC>;
 #[doc = "Register `BDCTL` writer"]
-pub struct W(crate::W<BDCTL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<BDCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<BDCTL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<BDCTL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<BDCTL_SPEC>;
 #[doc = "Field `LXTALEN` reader - LXTAL enable"]
-pub type LXTALEN_R = crate::BitReader<bool>;
+pub type LXTALEN_R = crate::BitReader;
 #[doc = "Field `LXTALEN` writer - LXTAL enable"]
-pub type LXTALEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, BDCTL_SPEC, bool, O>;
+pub type LXTALEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LXTALSTB` reader - External low-speed oscillator stabilization"]
-pub type LXTALSTB_R = crate::BitReader<bool>;
+pub type LXTALSTB_R = crate::BitReader;
 #[doc = "Field `LXTALBPS` reader - LXTAL bypass mode enable"]
-pub type LXTALBPS_R = crate::BitReader<bool>;
+pub type LXTALBPS_R = crate::BitReader;
 #[doc = "Field `LXTALBPS` writer - LXTAL bypass mode enable"]
-pub type LXTALBPS_W<'a, const O: u8> = crate::BitWriter<'a, u32, BDCTL_SPEC, bool, O>;
+pub type LXTALBPS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RTCSRC` reader - RTC clock entry selection"]
-pub type RTCSRC_R = crate::FieldReader<u8, u8>;
+pub type RTCSRC_R = crate::FieldReader;
 #[doc = "Field `RTCSRC` writer - RTC clock entry selection"]
-pub type RTCSRC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BDCTL_SPEC, u8, u8, 2, O>;
+pub type RTCSRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `RTCEN` reader - RTC clock enable"]
-pub type RTCEN_R = crate::BitReader<bool>;
+pub type RTCEN_R = crate::BitReader;
 #[doc = "Field `RTCEN` writer - RTC clock enable"]
-pub type RTCEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, BDCTL_SPEC, bool, O>;
+pub type RTCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BKPRST` reader - Backup domain reset"]
-pub type BKPRST_R = crate::BitReader<bool>;
+pub type BKPRST_R = crate::BitReader;
 #[doc = "Field `BKPRST` writer - Backup domain reset"]
-pub type BKPRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, BDCTL_SPEC, bool, O>;
+pub type BKPRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - LXTAL enable"]
     #[inline(always)]
@@ -92,52 +60,53 @@ impl W {
     #[doc = "Bit 0 - LXTAL enable"]
     #[inline(always)]
     #[must_use]
-    pub fn lxtalen(&mut self) -> LXTALEN_W<0> {
+    pub fn lxtalen(&mut self) -> LXTALEN_W<BDCTL_SPEC, 0> {
         LXTALEN_W::new(self)
     }
     #[doc = "Bit 2 - LXTAL bypass mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn lxtalbps(&mut self) -> LXTALBPS_W<2> {
+    pub fn lxtalbps(&mut self) -> LXTALBPS_W<BDCTL_SPEC, 2> {
         LXTALBPS_W::new(self)
     }
     #[doc = "Bits 8:9 - RTC clock entry selection"]
     #[inline(always)]
     #[must_use]
-    pub fn rtcsrc(&mut self) -> RTCSRC_W<8> {
+    pub fn rtcsrc(&mut self) -> RTCSRC_W<BDCTL_SPEC, 8> {
         RTCSRC_W::new(self)
     }
     #[doc = "Bit 15 - RTC clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rtcen(&mut self) -> RTCEN_W<15> {
+    pub fn rtcen(&mut self) -> RTCEN_W<BDCTL_SPEC, 15> {
         RTCEN_W::new(self)
     }
     #[doc = "Bit 16 - Backup domain reset"]
     #[inline(always)]
     #[must_use]
-    pub fn bkprst(&mut self) -> BKPRST_W<16> {
+    pub fn bkprst(&mut self) -> BKPRST_W<BDCTL_SPEC, 16> {
         BKPRST_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Backup domain control register (RCU_BDCTL)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bdctl](index.html) module"]
+#[doc = "Backup domain control register (RCU_BDCTL)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bdctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bdctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BDCTL_SPEC;
 impl crate::RegisterSpec for BDCTL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [bdctl::R](R) reader structure"]
-impl crate::Readable for BDCTL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [bdctl::W](W) writer structure"]
+#[doc = "`read()` method returns [`bdctl::R`](R) reader structure"]
+impl crate::Readable for BDCTL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`bdctl::W`](W) writer structure"]
 impl crate::Writable for BDCTL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

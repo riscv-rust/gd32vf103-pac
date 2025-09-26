@@ -1,50 +1,37 @@
 #[doc = "Register `ISTAT` reader"]
-pub struct R(crate::R<ISTAT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<ISTAT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<ISTAT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<ISTAT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ISTAT_SPEC>;
 #[doc = "Field `ISTAT0` reader - Port input status"]
-pub type ISTAT0_R = crate::BitReader<bool>;
+pub type ISTAT0_R = crate::BitReader;
 #[doc = "Field `ISTAT1` reader - Port input status"]
-pub type ISTAT1_R = crate::BitReader<bool>;
+pub type ISTAT1_R = crate::BitReader;
 #[doc = "Field `ISTAT2` reader - Port input status"]
-pub type ISTAT2_R = crate::BitReader<bool>;
+pub type ISTAT2_R = crate::BitReader;
 #[doc = "Field `ISTAT3` reader - Port input status"]
-pub type ISTAT3_R = crate::BitReader<bool>;
+pub type ISTAT3_R = crate::BitReader;
 #[doc = "Field `ISTAT4` reader - Port input status"]
-pub type ISTAT4_R = crate::BitReader<bool>;
+pub type ISTAT4_R = crate::BitReader;
 #[doc = "Field `ISTAT5` reader - Port input status"]
-pub type ISTAT5_R = crate::BitReader<bool>;
+pub type ISTAT5_R = crate::BitReader;
 #[doc = "Field `ISTAT6` reader - Port input status"]
-pub type ISTAT6_R = crate::BitReader<bool>;
+pub type ISTAT6_R = crate::BitReader;
 #[doc = "Field `ISTAT7` reader - Port input status"]
-pub type ISTAT7_R = crate::BitReader<bool>;
+pub type ISTAT7_R = crate::BitReader;
 #[doc = "Field `ISTAT8` reader - Port input status"]
-pub type ISTAT8_R = crate::BitReader<bool>;
+pub type ISTAT8_R = crate::BitReader;
 #[doc = "Field `ISTAT9` reader - Port input status"]
-pub type ISTAT9_R = crate::BitReader<bool>;
+pub type ISTAT9_R = crate::BitReader;
 #[doc = "Field `ISTAT10` reader - Port input status"]
-pub type ISTAT10_R = crate::BitReader<bool>;
+pub type ISTAT10_R = crate::BitReader;
 #[doc = "Field `ISTAT11` reader - Port input status"]
-pub type ISTAT11_R = crate::BitReader<bool>;
+pub type ISTAT11_R = crate::BitReader;
 #[doc = "Field `ISTAT12` reader - Port input status"]
-pub type ISTAT12_R = crate::BitReader<bool>;
+pub type ISTAT12_R = crate::BitReader;
 #[doc = "Field `ISTAT13` reader - Port input status"]
-pub type ISTAT13_R = crate::BitReader<bool>;
+pub type ISTAT13_R = crate::BitReader;
 #[doc = "Field `ISTAT14` reader - Port input status"]
-pub type ISTAT14_R = crate::BitReader<bool>;
+pub type ISTAT14_R = crate::BitReader;
 #[doc = "Field `ISTAT15` reader - Port input status"]
-pub type ISTAT15_R = crate::BitReader<bool>;
+pub type ISTAT15_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Port input status"]
     #[inline(always)]
@@ -127,15 +114,13 @@ impl R {
         ISTAT15_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
-#[doc = "Port input status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [istat](index.html) module"]
+#[doc = "Port input status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`istat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ISTAT_SPEC;
 impl crate::RegisterSpec for ISTAT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [istat::R](R) reader structure"]
-impl crate::Readable for ISTAT_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`istat::R`](R) reader structure"]
+impl crate::Readable for ISTAT_SPEC {}
 #[doc = "`reset()` method sets ISTAT to value 0"]
 impl crate::Resettable for ISTAT_SPEC {
     const RESET_VALUE: Self::Ux = 0;

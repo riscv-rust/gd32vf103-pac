@@ -1,22 +1,9 @@
 #[doc = "Register `DAEPINT` reader"]
-pub struct R(crate::R<DAEPINT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DAEPINT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DAEPINT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DAEPINT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DAEPINT_SPEC>;
 #[doc = "Field `IEPITB` reader - Device all IN endpoint interrupt bits"]
-pub type IEPITB_R = crate::FieldReader<u8, u8>;
+pub type IEPITB_R = crate::FieldReader;
 #[doc = "Field `OEPITB` reader - Device all OUT endpoint interrupt bits"]
-pub type OEPITB_R = crate::FieldReader<u8, u8>;
+pub type OEPITB_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:3 - Device all IN endpoint interrupt bits"]
     #[inline(always)]
@@ -29,15 +16,13 @@ impl R {
         OEPITB_R::new(((self.bits >> 16) & 0x0f) as u8)
     }
 }
-#[doc = "device all endpoints interrupt register (DAEPINT)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [daepint](index.html) module"]
+#[doc = "device all endpoints interrupt register (DAEPINT)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`daepint::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DAEPINT_SPEC;
 impl crate::RegisterSpec for DAEPINT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [daepint::R](R) reader structure"]
-impl crate::Readable for DAEPINT_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`daepint::R`](R) reader structure"]
+impl crate::Readable for DAEPINT_SPEC {}
 #[doc = "`reset()` method sets DAEPINT to value 0"]
 impl crate::Resettable for DAEPINT_SPEC {
     const RESET_VALUE: Self::Ux = 0;
